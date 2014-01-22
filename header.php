@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]> <html class="ie7" <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 8 ]> <html class="ie8" <?php language_attributes(); ?>> <![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html <?php language_attributes(); ?>>
+<!--<![endif]-->
+
+<head>
+
+<?php wp_head(); // wp_head hook. Hybdid Core adds wp_title and viewport automatically. And some other stuff from library/functions/head.php. ?>
+
+</head>
+
+<body <?php hybrid_attr( 'body' ); ?>>
+
+	<div id="container" <?php if( get_theme_mod( 'layout_boxed' ) ) echo 'class="mina-olen-boxed"'; ?>>
+	
+		<?php get_sidebar( 'header' ); // Loads the sidebar-header.php template. ?>
+	
+		<?php get_template_part( 'menu', 'primary' ); // Loads the menu-primary.php template. ?>
+		
+		<header <?php hybrid_attr( 'header' ); ?>>
+		
+			<div class="wrap">
+			
+			<?php if ( display_header_text() ) { // If user chooses to display header text. ?>
+
+				<div id="branding">
+					<h1 id="site-title">
+						<a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home">
+							<?php bloginfo( 'name' ); ?>
+						</a>
+					</h1>
+					<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
+				</div><!-- #branding -->
+				
+			<?php } ?>
+				
+				<?php if ( is_page_template( 'pages/front-page.php' ) && ( get_theme_mod( 'callout_url' ) && get_theme_mod( 'callout_url_text' ) || get_theme_mod( 'callout_text' ) ) ) {
+							/* Callout link in Front Page template. */
+							echo '<div id="mina-olen-callout-url"><div id="mina-olen-callout-text">' . esc_attr( get_theme_mod( 'callout_text' ) ) . '</div><a class="mina-olen-callout-button" href="' . esc_url( get_theme_mod( 'callout_url' ) ) . '">' . esc_attr( get_theme_mod( 'callout_url_text' ) ) . '</a></div>';
+				} ?>
+				
+				<?php get_template_part( 'menu', 'secondary' ); // Loads the menu-secondary.php template. ?>
+				
+			</div><!-- .wrap -->
+
+		</header><!-- #header -->
+
+		<?php // if ( get_header_image() ) echo '<img class="header-image" src="' . esc_url( get_header_image() ) . '" alt="" />'; ?>
+
+		<?php if ( current_theme_supports( 'breadcrumb-trail' ) ) {
+			 
+			breadcrumb_trail( array( 'container' => 'nav', 'separator' => __( '&#47;', 'mina-olen' ), 'show_on_front' => false, 'show_browse' => false, 'before' => '<div class="wrap">', 'after' => '</div>' ) );
+			
+		} ?>
+		
+		<div id="main">
+		
+			<div class="wrap">
