@@ -1,0 +1,23 @@
+#branding {
+	text-align: center;
+}
+
+#site-title {
+	font-size: 3em;
+	padding-top: 45px;
+	margin: 45px auto 0;
+	text-transform: uppercase;
+}
+
+#site-title a {
+	text-decoration: none;
+}
+#site-title a:hover {
+	text-decoration: underline;
+}
+
+#site-description {
+	color: #999;
+	font-size: 16px;
+	font-size: 1rem;
+}
