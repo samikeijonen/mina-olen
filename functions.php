@@ -131,6 +131,9 @@ function mina_olen_theme_setup() {
 	/* Enqueue styles and scripts. */
 	add_action( 'wp_enqueue_scripts', 'mina_olen_enqueue_scripts' );
 	
+	/* Enqueue admin styles. */
+	add_action( 'admin_enqueue_scripts', 'mina_olen_admin_register_styles' );
+	
 	/* Disable primary sidebar widgets when layout is one column. */
 	add_filter( 'sidebars_widgets', 'mina_olen_disable_sidebars' );
 	add_action( 'template_redirect', 'mina_olen_one_column' );
@@ -146,6 +149,9 @@ function mina_olen_theme_setup() {
 	
 	/* Adds custom attributes to the primary menu. */
 	add_filter( 'hybrid_attr_menu', 'mina_olen_primary_menu_class', 10, 2 );
+	
+	/* Disable bbPress breadcrumb. */
+	add_filter( 'bbp_no_breadcrumb', '__return_true' );
 
 }
 
@@ -203,18 +209,18 @@ function mina_olen_register_sidebars() {
 	/* Register sidebars. */
 	$sidebar_header_args = array(
 		'id'            => 'header',
-		'name'          => __( 'Header  Widget', 'mina-olen' ),
-		'description'   => __( 'Header Widget Area', 'mina-olen' )
+		'name'          => _x( 'Header', 'sidebar', 'mina-olen' ),
+		'description'   => __( 'A sidebar located in the top of the site.', 'mina-olen' )
 	);
 	$sidebar_primary_args = array(
 		'id'            => 'primary',
-		'name'          => __( 'Primary  Widget', 'mina-olen' ),
-		'description'   => __( 'Primary Widget Area', 'mina-olen' )
+		'name'          => _x( 'Primary', 'sidebar', 'mina-olen' ),
+		'description'   => __( 'The main sidebar. It is displayed on either the left or right side of the page based on the chosen layout.', 'mina-olen' )
 	);
 	$sidebar_subsidiary_args = array(
 		'id'            => 'subsidiary',
-		'name'          => __( 'Subsidiary  Widget', 'mina-olen' ),
-		'description'   => __( 'Subsidiary Widget Area', 'mina-olen' )
+		'name'          => _x( 'Subsidiary', 'sidebar', 'mina-olen' ),
+		'description'   => __( 'A sidebar located in the footer of the site.', 'mina-olen' )
 	);
 	
 	hybrid_register_sidebar( $sidebar_header_args );
@@ -229,10 +235,6 @@ function mina_olen_register_sidebars() {
  * @since 1.0
  */
 function mina_olen_enqueue_scripts() {
-
-	/* Enqueue responsive nav. */
-	//wp_enqueue_script( 'mina-olen-responsive-nav', trailingslashit( get_template_directory_uri() ) . 'js/responsive-nav/responsive-nav.min.js', array(), '20131122', false );
-	
 	
 	/* Enqueue Fitvids. */
 	wp_enqueue_script( 'mina-olen-fitvids', trailingslashit( get_template_directory_uri() ) . 'js/fitvids/fitvids.js', array( 'jquery' ), '20140116', false );
@@ -243,9 +245,21 @@ function mina_olen_enqueue_scripts() {
 	/* Enqueue responsive multi toggle nav. */
 	wp_enqueue_script( 'mina-olen-settings', trailingslashit( get_template_directory_uri() ) . 'js/settings/setting.js', array( 'jquery', 'mina-olen-fitvids', 'mina-olen-headroom' ), '20131129', true );
 	
-	/* Enqueue Fitvids settings. */
-	//wp_enqueue_script( 'mina-olen-fitvids-settings', trailingslashit( get_template_directory_uri() ) . 'js/fitvids/settings.js', array( 'jquery', 'mina-olen-fitvids' ), '20131122', true );
-		
+}
+
+/**
+ * Enqueue stylesheet for use in the admin Header section.
+ *
+ * @since  1.0.0
+ * @access public
+ * @return void
+ */
+function mina_olen_admin_register_styles( $hook_suffix ) {
+
+	if ( 'appearance_page_custom-header' === $hook_suffix ) {
+		wp_enqueue_style( 'mina-olen-admin-custom-header', trailingslashit( get_template_directory_uri() ) . 'css/admin-custom-header.css' );
+	}
+	
 }
 
 /**
