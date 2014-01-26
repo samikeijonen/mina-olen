@@ -1,14 +1,15 @@
 <?php
  
-/* Add textarea in customizer. */
-add_action( 'customize_register', 'mina_olen_customize_register_textarea' );
+/* Add settings in customizer. */
+add_action( 'customize_register', 'mina_olen_customize_register_settings' );
 
 /**
- * Add logo upload, portfolio layout and social links in theme customizer screen
+ * Sets up the theme customizer sections, controls, and settings.
  *
- * @since 0.1.0
+ * @since  1.0.0
+ * @return void
  */
-function mina_olen_customize_register_textarea( $wp_customize ) {
+function mina_olen_customize_register_settings( $wp_customize ) {
 
 	/* Add the front page section. */
 	$wp_customize->add_section(
@@ -25,15 +26,14 @@ function mina_olen_customize_register_textarea( $wp_customize ) {
 	
 	while( $k < apply_filters( 'mina_olen_how_many_pages', 7 ) ) {
 	
-	/* Add the 'front_page' setting. */
+	/* Add the 'front_page_*' setting. */
 	$wp_customize->add_setting(
 		'front_page_' . $k,
 		array(
 			'default'           => 0,
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'absint',
-			//'transport'         => 'postMessage'
+			'sanitize_callback' => 'absint'
 		)
 	);
 	
@@ -61,8 +61,7 @@ function mina_olen_customize_register_textarea( $wp_customize ) {
 			'default'           => '',
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'sanitize_text_field',
-			//'transport'         => 'postMessage'
+			'sanitize_callback' => 'sanitize_text_field'
 		)
 	);
 	
@@ -85,8 +84,7 @@ function mina_olen_customize_register_textarea( $wp_customize ) {
 			'default'           => '',
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'esc_url',
-			//'transport'         => 'postMessage'
+			'sanitize_callback' => 'esc_url'
 		)
 	);
 	
@@ -109,8 +107,7 @@ function mina_olen_customize_register_textarea( $wp_customize ) {
 			'default'           => '',
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'sanitize_text_field',
-			//'transport'         => 'postMessage'
+			'sanitize_callback' => 'sanitize_text_field'
 		)
 	);
 	
@@ -133,8 +130,7 @@ function mina_olen_customize_register_textarea( $wp_customize ) {
 			'default'           => '',
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'sanitize_text_field',
-			//'transport'         => 'postMessage'
+			'sanitize_callback' => 'sanitize_text_field'
 		)
 	);
 	
@@ -160,8 +156,7 @@ function mina_olen_customize_register_textarea( $wp_customize ) {
 				'default'           => '',
 				'type'              => 'theme_mod',
 				'capability'        => 'edit_theme_options',
-				'sanitize_callback' => 'sanitize_text_field',
-				//'transport'         => 'postMessage'
+				'sanitize_callback' => 'sanitize_text_field'
 			)
 		);
 	
@@ -188,8 +183,7 @@ function mina_olen_customize_register_textarea( $wp_customize ) {
 				'default'           => '',
 				'type'              => 'theme_mod',
 				'capability'        => 'edit_theme_options',
-				'sanitize_callback' => 'sanitize_text_field',
-				//'transport'         => 'postMessage'
+				'sanitize_callback' => 'sanitize_text_field'
 			)
 		);
 	
@@ -216,8 +210,7 @@ function mina_olen_customize_register_textarea( $wp_customize ) {
 				'default'           => '',
 				'type'              => 'theme_mod',
 				'capability'        => 'edit_theme_options',
-				'sanitize_callback' => 'sanitize_text_field',
-				//'transport'         => 'postMessage'
+				'sanitize_callback' => 'sanitize_text_field'
 			)
 		);
 	
@@ -241,8 +234,7 @@ function mina_olen_customize_register_textarea( $wp_customize ) {
 			'default'           => '',
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'sanitize_text_field',
-			//'transport'         => 'postMessage'
+			'sanitize_callback' => 'sanitize_text_field'
 		)
 	);
 	
@@ -275,8 +267,7 @@ function mina_olen_customize_register_textarea( $wp_customize ) {
 				'default'              => '',
 				'type'                 => 'theme_mod',
 				'capability'           => 'edit_theme_options',
-				'sanitize_callback'    => 'mina_olen_customize_sanitize',
-				//'transport'            => 'postMessage',
+				'sanitize_callback'    => 'mina_olen_customize_sanitize'
 			)
 		);
 
@@ -286,7 +277,7 @@ function mina_olen_customize_register_textarea( $wp_customize ) {
 			$wp_customize,
 			'mina-olen-footer',
 				array(
-					'label'    => esc_html__( 'Footer text', 'mina-olen' ),
+					'label'    => esc_html__( 'Enter footer text', 'mina-olen' ),
 					'section'  => 'mina-olen-footer',
 					'settings' => 'mina_olen_footer',
 				)
@@ -297,15 +288,16 @@ function mina_olen_customize_register_textarea( $wp_customize ) {
 
 /**
  * Sanitizes the footer content on the customize screen.  Users with the 'unfiltered_html' cap can post 
- * anything.  For other users, wp_filter_post_kses() is ran over the setting.
+ * anything. For other users, wp_filter_post_kses() is ran over the setting.
  *
  * @since 1.0.0
  */
 function mina_olen_customize_sanitize( $setting, $object ) {
 
 	/* Make sure we kill evil scripts from users without the 'unfiltered_html' cap. */
-	if ( 'mina_olen_footer' == $object->id && !current_user_can( 'unfiltered_html' )  )
+	if ( 'mina_olen_footer' == $object->id && !current_user_can( 'unfiltered_html' ) ) {
 		$setting = stripslashes( wp_filter_post_kses( addslashes( $setting ) ) );
+	}
 
 	/* Return the sanitized setting. */
 	return $setting;
@@ -313,9 +305,10 @@ function mina_olen_customize_sanitize( $setting, $object ) {
 }
 
 /**
-* Return Pages for front page choices.
+* Return  Pages for front page choices.
 *
-* @since 1.0.0
+* @since  1.0.0
+* @return array
 */
 function mina_olen_front_page_choices() {
 	
