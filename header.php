@@ -34,20 +34,18 @@
 					<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
 				</div><!-- #branding -->
 				
-			<?php } ?>
+			<?php }
 				
-				<?php if ( is_page_template( 'pages/front-page.php' ) && ( get_theme_mod( 'callout_url' ) && get_theme_mod( 'callout_url_text' ) || get_theme_mod( 'callout_text' ) ) ) {
-							/* Callout link in Front Page template. */
-							echo '<div id="mina-olen-callout-url"><div id="mina-olen-callout-text">' . esc_attr( get_theme_mod( 'callout_text' ) ) . '</div><a class="mina-olen-callout-button" href="' . esc_url( get_theme_mod( 'callout_url' ) ) . '">' . esc_attr( get_theme_mod( 'callout_url_text' ) ) . '</a></div>';
-				} ?>
-				
-				<?php get_template_part( 'menu', 'secondary' ); // Loads the menu-secondary.php template. ?>
+				if ( is_page_template( 'pages/front-page.php' ) && ( get_theme_mod( 'callout_url' ) && get_theme_mod( 'callout_url_text' ) || get_theme_mod( 'callout_text' ) ) ) {
+					/* Callout link in Front Page template. */
+					echo '<div id="mina-olen-callout-url"><div id="mina-olen-callout-text">' . esc_attr( get_theme_mod( 'callout_text' ) ) . '</div><a class="mina-olen-callout-button" href="' . esc_url( get_theme_mod( 'callout_url' ) ) . '">' . esc_attr( get_theme_mod( 'callout_url_text' ) ) . '</a></div>';
+				} else if ( is_singular( 'page' ) && has_excerpt( get_the_ID() ) ) { ?>
+					<div id="mina-olen-callout-url"><div id="mina-olen-callout-text"><?php the_excerpt(); ?></div></div>
+				<?php } ?>
 				
 			</div><!-- .wrap -->
 
 		</header><!-- #header -->
-
-		<?php // if ( get_header_image() ) echo '<img class="header-image" src="' . esc_url( get_header_image() ) . '" alt="" />'; ?>
 
 		<?php if ( current_theme_supports( 'breadcrumb-trail' ) ) {
 			 
