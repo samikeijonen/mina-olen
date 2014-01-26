@@ -1,7 +1,7 @@
 /**
  * Theme Name: Mina olen
  * Theme URI: https://foxnet-themes.fi/downloads/mina-olen
- * Description: Mina olen WordPress Theme.
+ * Description: Mina olen WordPress Theme is made for cool business type of sites. And in the same time blogging features looks great also.
  * Tags: white
  * Version: 0.1.0
  * Author: Sami Keijonen
@@ -931,6 +931,8 @@ blockquote.alignright {
  * 4.0 Repeatable Patterns
  * --------------------------------------------------------------------------- */
 
+a[href^="mailto:"]::before,
+a[href^="tel:"]::before,
 .genericon,
 .nav-toggle:before,
 .featured-post:before,
@@ -1074,6 +1076,14 @@ img {
 		float: right;
 		margin: 0 0 16px 18px;
 		margin: 0 0 1rem 1.125rem;
+	}
+	.page-template-front-page .thumbnail,
+	.archive-portfolio_item .thumbnail,
+	.taxonomy-portfolio .thumbnail,
+	.archive-download .thumbnail,
+	.taxonomy-download_category .thumbnail,
+	.taxonomy-download_tag .thumbnail {
+		float: none;
 	}
 
 }
@@ -1479,10 +1489,13 @@ img {
  * --------------------------------------------------------------------------- */
  
 #sidebar-primary .widget,
-#sidebar-subsidiary .widget,
-#sidebar-header .widget {
+#sidebar-subsidiary .widget {
 	margin: 0 0 64px 0;
 	margin: 0 0 4rem 0;
+}
+#sidebar-header .widget {
+	margin: 0 0 32px 0;
+	margin: 0 0 2rem 0;
 }
 #sidebar-subsidiary,
 #sidebar-header {
@@ -1607,12 +1620,6 @@ img {
 
 #site-title {
 	text-transform: uppercase;
-}
-
-#site-description {
-	color: #9f9f9f;
-	font-size: 16px;
-	font-size: 1rem;
 }
 
 /* Minimum width of 608 pixels. */
@@ -1862,13 +1869,12 @@ img {
 @media screen and (max-width: 899px) {
 
 	#menu-primary.fixed #menu-primary-search.opened {
-		margin-top: 0;
+		margin-top: -1px;
 	}
 	#menu-primary {
 		border-bottom: 1px solid #eee;
 	}
 	#menu-primary {
-		min-height: 49px;
 		position: relative;
 		z-index: 120;
 	} 
@@ -1989,9 +1995,10 @@ img {
 		text-decoration: none;
 	}
 
-}
+} /* Media query ends */
 
-/* Minimum width of 926 pixels. */
+
+/* Minimum width of 900 pixels. */
 @media screen and (min-width: 900px) {
 
 	#menu-primary.fixed {
@@ -2003,7 +2010,7 @@ img {
 		width: 100%;
 	}
 	.mina-olen-boxed #menu-primary.fixed {
-		max-width: 1176px; /* 2 pixels less that .mina-olen-boxed layout. */
+		max-width: 1176px; /* 2 pixels less than .mina-olen-boxed layout. */
 	}
 	.admin-bar #menu-primary.fixed {
 		top: 32px;
@@ -2015,105 +2022,9 @@ img {
 	.active-sidebar-header #header {
 		margin-top: 0;
 	}
-
-	.animated { 
-		-webkit-animation-duration:.5s;
-		-moz-animation-duration: .5s;
-		-o-animation-duration: .5s;
-		animation-duration: .5s;
-		-webkit-animation-fill-mode: both;
-		-moz-animation-fill-mode: both;
-		-o-animation-fill-mode: both;
-		animation-fill-mode: both
-	}
-	@-webkit-keyframes slideDown {
-		0% 
-		{
-			-webkit-transform:translateY(-4em)
-		}
-		100%
-		{
-			-webkit-transform:translateY(0)
-		}
-	}
-	@-moz-keyframes slideDown {
-		0%
-		{
-			-moz-transform:translateY(-4em)
-		}
-		100%
-		{
-			-moz-transform:translateY(0)
-		}
-	}
-	@-o-keyframes slideDown {
-		0% 
-		{
-			-o-transform:translateY(-4em)
-		}
-		100%
-		{
-			-o-transform:translateY(0)
-		}
-	}
-	@keyframes slideDown {
-		0% 
-		{
-			transform:translateY(-4em)
-		}
-		100%
-		{
-			transform:translateY(0)
-		}
-	}
-	.animated.slideDown {
-		-webkit-animation-name: slideDown;
-		-moz-animation-name: slideDown;
-		-o-animation-name: slideDown;
-		animation-name: slideDown
-	} 
-	@-webkit-keyframes slideUp {
-		0%{
-			-webkit-transform:translateY(0)
-		}
-		100%
-		{
-			-webkit-transform:translateY(-4em)
-		}
-	}
-	@-moz-keyframes slideUp {
-		0% {
-			-moz-transform:translateY(0)
-		} 
-		100% 
-		{
-			-moz-transform:translateY(-4em)
-		}
-	}
-	@-o-keyframes slideUp {
-		0% {
-			-o-transform:translateY(0)
-		}
-		100%
-		{
-			-o-transform:translateY(-4em)
-		}
-	}
-	@keyframes slideUp {
-		0% {
-			transform:translateY(0)
-		}
-		100%
-		{
-			transform:translateY(-4em)
-		}
-	}
-	.animated.slideUp {
-		-webkit-animation-name: slideUp;
-		-moz-animation-name: slideUp;
-		-o-animation-name: slideUp;
-		animation-name: slideUp
-	}
+	
+	/* Animate primary menu roll. */
+	.animated{-webkit-animation-duration:.5s;-moz-animation-duration:.5s;-o-animation-duration:.5s;animation-duration:.5s;-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both}@-webkit-keyframes slideDown{0%{-webkit-transform:translateY(-4em)}100%{-webkit-transform:translateY(0)}}@-moz-keyframes slideDown{0%{-moz-transform:translateY(-4em)}100%{-moz-transform:translateY(0)}}@-o-keyframes slideDown{0%{-o-transform:translateY(-4em)}100%{-o-transform:translateY(0)}}@keyframes slideDown{0%{transform:translateY(-4em)}100%{transform:translateY(0)}}.animated.slideDown{-webkit-animation-name:slideDown;-moz-animation-name:slideDown;-o-animation-name:slideDown;animation-name:slideDown}@-webkit-keyframes slideUp{0%{-webkit-transform:translateY(0)}100%{-webkit-transform:translateY(-4em)}}@-moz-keyframes slideUp{0%{-moz-transform:translateY(0)}100%{-moz-transform:translateY(-4em)}}@-o-keyframes slideUp{0%{-o-transform:translateY(0)}100%{-o-transform:translateY(-4em)}}@keyframes slideUp{0%{transform:translateY(0)}100%{transform:translateY(-4em)}}.animated.slideUp{-webkit-animation-name:slideUp;-moz-animation-name:slideUp;-o-animation-name:slideUp;animation-name:slideUp}
 
 	#menu-primary.animated.fixed.slideDown {
 		-webkit-animation-name: slideUp;
@@ -2127,6 +2038,7 @@ img {
 		-o-animation-name: slideDown;
 		animation-name: slideDown;
 	}
+	
 	.bottom-line {
 		height: 0;
 		-webkit-transition: height 0.5s;
@@ -2167,9 +2079,11 @@ img {
 
 	/* Navigation. */
 	#menu-primary {
-		margin: 0 auto;
+		border-bottom: 1px solid #eee;
 		clear: both;
 		display: block;
+		margin: 0 auto;
+		width: 100%;
 	}
 	#menu-primary .menu {   
 		display: table;
@@ -2182,12 +2096,6 @@ img {
 	http://qrayg.com/experiment/cssmenus/
 	*/
 
-	#menu-primary {
-		border-bottom: 1px solid #eee;
-		clear: both;
-		display: block;
-		width: 100%;
-	}
 	#menu-primary .wrap {
 		height: auto;
 		position: relative;
@@ -2215,7 +2123,7 @@ img {
 		border-right: none;
 	}
 
-	#menu-primary li li  a {
+	#menu-primary li li a {
 		color: #656565;
 	}
 
@@ -2230,7 +2138,8 @@ img {
 	#menu-primary ul ul {
 		/* Sub Menu Width */
 		width: 100%;
-		padding: 30px 0;
+		padding: 32px 0;
+		padding: 2rem 0;
 		margin: 0;
 		list-style: none;
 		display: none;
@@ -2254,7 +2163,7 @@ img {
 	}
 
 	#menu-primary ul li {
-		float: left;/* Take this of if there is need for centering menu. */
+		float: left; /* Take this of if there is need for centering menu. */
 		display: inline-block;
 		position: static;
 	}
@@ -2267,7 +2176,7 @@ img {
 	/* Root Menu. */
 	#menu-primary ul a {
 		/*float: left;*/
-		display: block;
+		display: inline-block;
 		text-decoration: none;
 		padding: 12px;	
 		margin: 0;
@@ -2354,6 +2263,8 @@ img {
 	width: 58px;
 }
 #menu-primary .toggle-search-form.add-width {
+	background-color: #fff;
+	padding: 14px 0 13px;
 	width: 240px;
 }
 
@@ -2401,9 +2312,9 @@ img {
 	cursor: text;
 	width: 184px;
 	-webkit-transition: all 0.25s ease-in;
-	-moz-transition:    all 0.25s ease-in;
-	-o-transition:      all 0.25s ease-in;
-	transition:  all 0.25s ease-in;
+	-moz-transition: all 0.25s ease-in;
+	-o-transition: all 0.25s ease-in;
+	transition: all 0.25s ease-in;
 }
 
 @media screen and (min-width: 900px) {
@@ -2477,7 +2388,8 @@ img {
 	background: #f6f6f6;
 }
 
-.sticky {
+.sticky,
+.super-sticky {
 	background: #f6f6f6;
 	padding-top: 32px;
 	padding-top: 2rem;
@@ -2494,6 +2406,9 @@ img {
 	font-size: 1.5rem;
 	padding: 3%;
 	text-align: center;
+}
+.page-template-default #mina-olen-callout-url p {
+	margin-bottom: 0;
 }
 
 
@@ -2536,6 +2451,14 @@ img {
 	}
 	.chat-author cite::before {
 		padding-bottom: 1px;
+	}
+	
+	/* Links */
+	a[href^="mailto:"]::before {
+		content: '\f410';
+	}
+	a[href^="tel:"]::before {
+		content: '\f437';
 	}
 	
 	.entry-author a::before,
@@ -2717,7 +2640,6 @@ a.more-link::after {
 
 .page-links a {
 	background: #f6f6f6;
-	border-radius: 50%;
 	padding: 0.5em 0.75em;
 }
 
@@ -2749,10 +2671,10 @@ a.more-link::after {
 .loop-nav a[rel="prev"]::before,
 .loop-nav a[rel="next"]::after,
 .loop-pagination a.prev::before,
-.loop-pagination a.next::after {
+.loop-pagination a.next::after,
+.bbp-pagination-links .page-numbers {
 	background: #f6f6f6;
-	border-radius: 50%;
-	padding: 1em;
+	padding: 1em 1.25em;
 }
 .loop-pagination a.prev.page-numbers::before,
 .loop-pagination a.next.page-numbers::after {
@@ -2768,6 +2690,7 @@ a.more-link::after {
 .loop-pagination {
 	margin-bottom: 48px;
 	margin-bottom: 3rem;
+	text-align: center;
 }
 .archive-portfolio_item .loop-pagination,
 .taxonomy-portfolio .loop-pagination,
@@ -2782,7 +2705,6 @@ a.more-link::after {
 
 .loop-pagination a.page-numbers {
 	background: #f6f6f6;
-	border-radius: 50%;
 	padding: 1em 1.25em;
 }
 	.loop-pagination a.page-numbers:hover {}
@@ -2802,6 +2724,7 @@ a.more-link::after {
  * Front page styles
  * --------------------------------------------------------------------------- */
 
+.page-template-front-page .wrapper-inner .entry-header,
 #mina-olen-latest-title,
 #mina-olen-latest-portfolio_items-title,
 .page-template-front-page #mina-olen-latest-posts .entry-header,
@@ -2812,7 +2735,12 @@ a.more-link::after {
 .page-template-front-page #mina-olen-latest-downloads .entry-summary .entry-title,
 .page-template-front-page #mina-olen-latest-testimonials .entry-header,
 .page-template-front-page #mina-olen-latest-testimonials.entry .entry .entry-summary,
-.page-template-front-page #mina-olen-latest-testimonials.entry .entry .entry-footer {
+.page-template-front-page #mina-olen-latest-testimonials.entry .entry .entry-footer,
+.archive-portfolio_item .entry-header,
+.taxonomy-portfolio .entry-header,
+.archive-download .entry-header,
+.taxonomy-download_category .entry-header,
+.taxonomy-download_tag .entry-header {
 	text-align: center;
 }
 /*
@@ -2857,6 +2785,24 @@ a.more-link::after {
 }
 
 @media screen and (min-width: 56em) {
+
+	.page-template-front-page .thumbnail,
+	.archive-portfolio_item .thumbnail,
+	.taxonomy-portfolio .thumbnail,
+	.archive-download .thumbnail,
+	.taxonomy-download_category .thumbnail,
+	.taxonomy-download_tag .thumbnail {
+		float: right;
+	}
+	
+	.page-template-front-page .wrapper-inner .entry-header,
+	.archive-portfolio_item .entry-header,
+	.taxonomy-portfolio .entry-header,
+	.archive-download .entry-header,
+	.taxonomy-download_category .entry-header,
+	.taxonomy-download_tag .entry-header {
+		text-align: left;
+	}
 
 	.page-template-front-page .mina-olen-boxed .mina-olen-latest-all {
 		width: 100%;
@@ -2922,10 +2868,25 @@ a.more-link::after {
 
 #sidebar-primary {}
 
-#sidebar-subsidiary,
-#sidebar-header {
+#sidebar-subsidiary {
 	padding-top: 64px;
 	padding-top: 4rem;
+}
+
+#sidebar-header {
+	padding-top: 32px;
+	padding-top: 2rem;
+	text-align: center;
+}
+
+/* Same pixels as in primary menu. */
+@media screen and (min-width: 900px) {
+	
+	#sidebar-header {
+		padding-top: 80px;
+		padding-top: 5rem;
+	}
+
 }
 
 #sidebar-header {}
