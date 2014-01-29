@@ -31,32 +31,6 @@ function mina_olen_custom_header_setup() {
 		)
 	);
 
-	/* Load the stylesheet for the custom header screen. */
-	//add_action( 'admin_enqueue_scripts', 'mina_olen_enqueue_admin_custom_header_styles', 5 );
-}
-
-/**
- * Enqueues the styles for the "Appearance > Custom Header" screen in the admin.
- *
- * @since  1.0.0
- * @access public
- * @return void
- */
-function mina_olen_enqueue_admin_custom_header_styles( $hook_suffix ) {
-
-	if ( 'appearance_page_custom-header' === $hook_suffix ) {
-		wp_enqueue_style( 'stargazer-fonts' );
-		wp_enqueue_style( 'stargazer-admin-custom-header' );
-
-		if ( is_child_theme() ) {
-			$dir = trailingslashit( get_stylesheet_directory() );
-			$uri = trailingslashit( get_stylesheet_directory_uri() );
-
-			if ( file_exists( $dir . 'css/admin-custom-header.css' ) )
-				wp_enqueue_style( get_stylesheet() . '-admin-custom-header', "{$uri}css/admin-custom-header.css" );
-		}
-	}
-	
 }
 
 /**
