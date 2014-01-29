@@ -249,6 +249,39 @@ function mina_olen_customize_register_settings( $wp_customize ) {
 			'type'     => 'checkbox'
 		)
 	);
+	
+	/* Add the logo upload section. */
+	$wp_customize->add_section(
+		'logo-upload',
+		array(
+			'title'      => esc_html__( 'Logo Upload', 'mina-olen' ),
+			'priority'   => 60,
+			'capability' => 'edit_theme_options'
+		)
+	);
+	
+	/* Add the 'logo' setting. */
+	$wp_customize->add_setting(
+		'logo_upload',
+		array(
+			'default'           => '',
+			'type'              => 'theme_mod',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'esc_url'
+		)
+	);
+	
+	/* Add custom logo control. */
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize, 'logo_image',
+				array(
+					'label'    => esc_html__( 'Upload custom logo.', 'mina-olen' ),
+					'section'  => 'logo-upload',
+					'settings' => 'logo_upload',
+			) 
+		) 
+	);
 
 	/* Add the footer section. */
 	$wp_customize->add_section(
