@@ -3,7 +3,7 @@
  * Theme URI: https://foxnet-themes.fi/downloads/mina-olen
  * Description: Mina olen WordPress Theme is made for cool business type of sites. And in the same time blogging features looks great also.
  * Tags: white
- * Version: 0.1.0
+ * Version: 1.0.0
  * Author: Sami Keijonen
  * Author URI: http://foxnet-themes.fi
  * Text Domain: mina-olen
@@ -1009,17 +1009,16 @@ a.more-link::after {
 /* == Assistive text. == */
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
+	position: absolute;
 }
 
 .screen-reader-text:focus {
 	background-color: #f1f1f1;
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
+	clip: auto;
 	color: #21759b;
 	display: block;
-	font-size: 14px;
 	font-weight: bold;
 	height: auto;
 	line-height: normal;
@@ -2868,6 +2867,11 @@ a.more-link::after {
 
 #sidebar-primary {}
 
+/* Hide sidebar in theme customizer. */
+.layout-1c #sidebar-primary {
+	display: none;
+}
+
 #sidebar-subsidiary {
 	padding-top: 64px;
 	padding-top: 4rem;
@@ -2901,6 +2905,11 @@ a.more-link::after {
 /**
  * Comments Template
  * --------------------------------------------------------------------------- */
+ 
+#commentform {
+	margin-bottom: 48px;
+	margin-bottom: 3rem;
+}
 
 #comments-template {}
 
@@ -3310,3 +3319,14 @@ body #edd_checkout_cart .edd_cart_header_row th {
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 	}
+	
+
+/**
+ * Jetpack styles
+ * --------------------------------------------------------------------------- */
+ 
+body div.sharedaddy div.sd-block {
+	border-top-color: #eee;
+	padding: 32px 0;
+	padding: 2rem 0;
+}
