@@ -26,20 +26,28 @@
 			<?php if ( display_header_text() ) { // If user chooses to display header text. ?>
 
 				<div id="branding">
-					<h1 id="site-title">
-						<a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home">
-							<?php bloginfo( 'name' ); ?>
-						</a>
-					</h1>
+					<?php if ( get_theme_mod( 'logo_upload') ) { // Use logo if is set. Else use bloginfo name. ?>	
+						<h1 id="site-title">
+							<a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+								<img class="mina-olen-logo" src="<?php echo esc_url( get_theme_mod( 'logo_upload' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
+							</a>
+						</h1>
+					<?php } else { ?>
+						<h1 id="site-title">
+							<a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home">
+								<?php bloginfo( 'name' ); ?>
+							</a>
+						</h1>
+					<?php } ?>
 					<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
 				</div><!-- #branding -->
 				
 			<?php }
-				
-				if ( is_page_template( 'pages/front-page.php' ) && ( get_theme_mod( 'callout_url' ) && get_theme_mod( 'callout_url_text' ) || get_theme_mod( 'callout_text' ) ) ) {
-					/* Callout link in Front Page template. */
+			
+				/* Callout link in Front Page template and singular pages. */
+				if ( is_page_template( 'pages/front-page.php' ) && ( get_theme_mod( 'callout_url' ) && get_theme_mod( 'callout_url_text' ) && get_theme_mod( 'callout_text' ) ) ) {
 					echo '<div id="mina-olen-callout-url"><div id="mina-olen-callout-text">' . esc_attr( get_theme_mod( 'callout_text' ) ) . '</div><a class="mina-olen-callout-button" href="' . esc_url( get_theme_mod( 'callout_url' ) ) . '">' . esc_attr( get_theme_mod( 'callout_url_text' ) ) . '</a></div>';
-				} else if ( is_singular( 'page' ) && has_excerpt( get_the_ID() ) ) { ?>
+				} else if ( is_singular( apply_filters( 'mina_olen_show_excerpt', array( 'page' ) ) ) && has_excerpt( get_the_ID() ) ) { ?>
 					<div id="mina-olen-callout-url"><div id="mina-olen-callout-text"><?php the_excerpt(); ?></div></div>
 				<?php } ?>
 				
