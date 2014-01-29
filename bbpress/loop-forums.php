@@ -23,14 +23,6 @@
 
 	</li><!-- .bbp-body -->
 
-	<li class="bbp-footer">
-
-		<div class="tr">
-			<p class="td colspan4">&nbsp;</p>
-		</div><!-- .tr -->
-
-	</li><!-- .bbp-footer -->
-
 </ul><!-- .forums-directory -->
 
 <?php do_action( 'bbp_template_after_forums_loop' ); ?>
