@@ -31,6 +31,11 @@ new Hybrid();
 require_once( trailingslashit( get_template_directory() ) . 'includes/custom-header.php' );
 require_once( trailingslashit( get_template_directory() ) . 'includes/custom-background.php' );
 
+/* Add theme settings for license. */
+if ( is_admin() ) {
+	require_once( trailingslashit ( get_template_directory() ) . 'admin/functions-admin.php' );
+}
+
 
 /* Do theme setup on the 'after_setup_theme' hook. */
 add_action( 'after_setup_theme', 'mina_olen_theme_setup' );
@@ -76,9 +81,9 @@ function mina_olen_theme_setup() {
 	add_theme_support( 
 		'theme-layouts', 
 		array( 
-			'1c'   => __( 'One Column', 'mina-olen' ),
-			'2c-l' => __( 'Two Columns: Content - Sidebar', 'mina-olen' ),
-			'2c-r' => __( 'Two Columns: Sidebar - Content', 'mina-olen' )
+			'1c'   => __( '1 Column', 'mina-olen' ),
+			'2c-l' => __( '2 Columns: Content / Sidebar', 'mina-olen' ),
+			'2c-r' => __( '2 Columns: Sidebar / Content', 'mina-olen' )
 		), 
 		array( 'default' => '2c-l', 'customizer' => true ) 
 	);
@@ -92,8 +97,10 @@ function mina_olen_theme_setup() {
 	/* Use breadcrumbs. */
 	add_theme_support( 'breadcrumb-trail' );
 
-	/* Nicer [gallery] shortcode implementation. */
-	add_theme_support( 'cleaner-gallery' );
+	/* Nicer [gallery] shortcode implementation. But use Jetpack tiled gallery if user enables it. */
+	if( !class_exists( 'Jetpack' ) || !Jetpack::is_module_active( 'tiled-gallery' ) ) {
+		add_theme_support( 'cleaner-gallery' );
+	}
 
 	/* Better captions for themes to style. */
 	add_theme_support( 'cleaner-caption' );
@@ -114,7 +121,7 @@ function mina_olen_theme_setup() {
 	add_theme_support( 'whistles', array( 'styles' => true ) );
 
 	/* Handle content width for embeds and images. */
-	hybrid_set_content_width( 2560 );
+	hybrid_set_content_width( 1080 );
 	
 	/* Add respond.js and  html5shiv.js for unsupported browsers. */
 	add_action( 'wp_head', 'mina_olen_respond_html5shiv' );
@@ -272,11 +279,8 @@ function mina_olen_disable_sidebars( $sidebars_widgets ) {
 
 	$customize = ( is_object( $wp_customize ) && $wp_customize->is_preview() ) ? true : false;
 
-	if ( !is_admin() && !$customize && '1c' == get_theme_mod( 'theme_layout', '1c' ) ) {
-	
-		$sidebars_widgets['primary'] = false;
-		$sidebars_widgets['secondary'] = false;
-		
+	if ( !is_admin() && !$customize && '1c' == get_theme_mod( 'theme_layout', '2c-l' ) ) {
+		$sidebars_widgets['primary'] = false;	
 	}
 	
 	return $sidebars_widgets;
