@@ -1,4 +1,4 @@
-<?php if ( is_active_sidebar( 'primary' ) ) { ?>
+<?php if ( is_active_sidebar( 'primary' ) ) : // If the sidebar has widgets. ?>
 
 	<aside id="sidebar-primary" <?php hybrid_attr( 'sidebar', 'primary' ); ?>>
 
@@ -6,4 +6,4 @@
 
 	</aside><!-- #sidebar-primary .aside -->
 
-<?php } ?>
+<?php endif; // End widgets check. ?>
