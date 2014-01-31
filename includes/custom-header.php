@@ -50,19 +50,19 @@ function mina_olen_custom_header_wp_head() {
 	if ( empty( $hex ) )
 		return;
 	
-	// Header image
+	/* Header image. */
 	$header_image = esc_url( get_header_image() );
 	
-	// Header image height
+	/* Header image height. */
 	$header_height = get_custom_header()->height;
 	
-	// Header image width
+	/* Header image width. */
 	$header_width = get_custom_header()->width;
 	
-	// When to show header image
+	/* When to show header image. */
 	$min_width = absint( apply_filters( 'mina_olen_header_bg_show', 1 ) );
 	
-	// Background arguments
+	/* Background arguments. */
 	$background_arguments = esc_attr( apply_filters( 'mina_olen_header_bg_arguments', 'no-repeat scroll top' ) );
 
 	$style = "body.custom-header #site-title a { color: #{$hex}; }";
@@ -122,19 +122,19 @@ function mina_olen_custom_header_admin_head() {
 	if ( empty( $hex ) )
 		return;
 		
-	// Header image
+	/* Header image. */
 	$header_image = esc_url( get_header_image() );
 	
-	// Header image height
+	/* Header image height. */
 	$header_height = get_custom_header()->height;
 	
-	// Header image width
+	/* Header image width. */
 	$header_width = get_custom_header()->width;
 	
-	// When to show header image
+	/* When to show header image. */
 	$min_width = apply_filters( 'mina_olen_header_bg_show', 1 );
 	
-	// Background arguments
+	/* Background arguments. */
 	$background_arguments = apply_filters( 'mina_olen_header_bg_arguments', 'no-repeat scroll top' );
 
 	$style = "#site-title a { color: #{$hex}; }";
