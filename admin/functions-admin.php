@@ -195,7 +195,6 @@ function mina_olen_theme_activate_license() {
  *
  * @since 1.0.0
  */
-
 function mina_olen_theme_deactivate_license() {
 
 	// listen for our activate button to be clicked
@@ -235,11 +234,11 @@ function mina_olen_theme_deactivate_license() {
 	}
 }
 
-
-/***********************************************
-* Illustrates how to check if a license is valid
-***********************************************/
-
+/**
+ * Check if license is valid and get expire date.
+ *
+ * @since 1.0.0
+ */
 function mina_olen_theme_check_license() {
 
 	global $wp_version;
@@ -259,7 +258,13 @@ function mina_olen_theme_check_license() {
 	}
 
 	$license_data = json_decode( wp_remote_retrieve_body( $response ) );
-
+	
+	/* Get expires date. */
+	$expires = date_i18n( get_option( 'date_format' ), strtotime( $license_data->expires ) );
+	
+	/* translators: There is a space after %s: */
+	echo sprintf( __( 'Expires %s: ', 'mina-olen' ), $expires );
+	
 	if( $license_data->license == 'valid' ) { ?>
 		<span style="color:green;"><?php _e( 'Active', 'mina-olen' ); ?></span><?php // License is still valid
 	} else if( $license_data->license == 'expired' ) { ?>
