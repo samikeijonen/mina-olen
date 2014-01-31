@@ -56,6 +56,9 @@ function mina_olen_theme_setup() {
 	/* Include theme customize. */
 	require_once( trailingslashit( get_template_directory() ) . 'includes/theme-customize.php' );
 	
+	/* Include metabox functions. */
+	require_once( trailingslashit( get_template_directory() ) . 'includes/meta-boxes.php' );
+	
 	/* Include EDD functions. */
 	require_once( trailingslashit( get_template_directory() ) . 'includes/edd-functions.php' );
 
