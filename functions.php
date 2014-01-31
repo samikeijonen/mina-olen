@@ -416,4 +416,29 @@ function mina_olen_get_portfolio_item_link() {
 	
 }
 
+/**
+* Callout text and link in singular pages.
+*
+* @since  1.0.0
+*/
+function mina_olen_callout_output() {
+
+	/* Get post meta. */
+	$mina_olen_callout_text = get_post_meta( get_the_ID(), '_mina_olen_callout_text', true );
+	$mina_olen_callout_url = get_post_meta( get_the_ID(), '_mina_olen_callout_url', true );
+	$mina_olen_callout_url_text = get_post_meta( get_the_ID(), '_mina_olen_callout_url_text', true );
+	
+	/* Check if post meta exists and echo on singular pages. This can be filtered. */
+	if ( is_singular( apply_filters( 'mina_olen_show_metabox', array( 'page' ) ) ) && !empty( $mina_olen_callout_text ) ) { ?>
+
+		<div id="mina-olen-callout-url"><div id="mina-olen-callout-text"><?php echo esc_attr( $mina_olen_callout_text ); ?></div>
+
+		<?php if ( !empty( $mina_olen_callout_url ) && !empty( $mina_olen_callout_url_text ) ) { ?>
+			<a class="mina-olen-callout-button" href="<?php echo esc_url( $mina_olen_callout_url ); ?>" title="<?php echo esc_attr( $mina_olen_callout_url_text ); ?>"><?php echo esc_attr( $mina_olen_callout_url_text ); ?></a></div>
+		<?php }
+		
+	}
+	
+}
+
 ?>
