@@ -44,12 +44,8 @@
 				
 			<?php }
 			
-				/* Callout link in Front Page template and singular pages. */
-				if ( is_page_template( 'pages/front-page.php' ) && ( get_theme_mod( 'callout_url' ) && get_theme_mod( 'callout_url_text' ) && get_theme_mod( 'callout_text' ) ) ) {
-					echo '<div id="mina-olen-callout-url"><div id="mina-olen-callout-text">' . esc_attr( get_theme_mod( 'callout_text' ) ) . '</div><a class="mina-olen-callout-button" href="' . esc_url( get_theme_mod( 'callout_url' ) ) . '">' . esc_attr( get_theme_mod( 'callout_url_text' ) ) . '</a></div>';
-				} else if ( is_singular( apply_filters( 'mina_olen_show_excerpt', array( 'page' ) ) ) && has_excerpt( get_the_ID() ) ) { ?>
-					<div id="mina-olen-callout-url"><div id="mina-olen-callout-text"><?php the_excerpt(); ?></div></div>
-				<?php } ?>
+				/* Callout text and link in singular pages. */
+				mina_olen_callout_output(); ?>
 				
 			</div><!-- .wrap -->
 
