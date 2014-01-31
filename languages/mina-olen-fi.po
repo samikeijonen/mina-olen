@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mina olen 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/mina-olen\n"
-"POT-Creation-Date: 2014-01-31 12:01:38+00:00\n"
-"PO-Revision-Date: 2014-01-31 14:02+0200\n"
+"POT-Creation-Date: 2014-01-31 13:55:12+00:00\n"
+"PO-Revision-Date: 2014-01-31 15:55+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Foxnet <sami.keijonen@foxnet.fi>\n"
 "Language: fi\n"
@@ -201,45 +201,45 @@ msgid_plural "This gallery contains %s items."
 msgstr[0] "Tässä galleriassa on %s kuva."
 msgstr[1] "Tässä galleriassa on %s kuvaa."
 
-#: functions.php:84
+#: functions.php:87
 msgid "1 Column"
 msgstr "1 sarake"
 
-#: functions.php:85
+#: functions.php:88
 msgid "2 Columns: Content / Sidebar"
 msgstr "2 saraketta: sisältö / sivupalkki"
 
-#: functions.php:86
+#: functions.php:89
 msgid "2 Columns: Sidebar / Content"
 msgstr "2 saraketta: sivupalkki / sisältö"
 
-#: functions.php:201
+#: functions.php:204
 msgid "Primary menu"
 msgstr "Päävalikko"
 
-#: functions.php:203
+#: functions.php:206
 msgid "Subsidiary menu"
 msgstr "Alapalkin valikko"
 
-#: functions.php:205
+#: functions.php:208
 msgid "Social menu"
 msgstr "Somevalikko"
 
-#: functions.php:219
+#: functions.php:222
 msgctxt "sidebar"
 msgid "Header"
 msgstr "Yläsivupalkki"
 
-#: functions.php:220
+#: functions.php:223
 msgid "A sidebar located in the top of the site."
 msgstr "Tähän liitetyt vimpaimet näkyvät sivun yläreunassa."
 
-#: functions.php:224
+#: functions.php:227
 msgctxt "sidebar"
 msgid "Primary"
 msgstr "Pääsivupalkki"
 
-#: functions.php:225
+#: functions.php:228
 msgid ""
 "The main sidebar. It is displayed on either the left or right side of the "
 "page based on the chosen layout."
@@ -247,24 +247,24 @@ msgstr ""
 "Tähän liitetyt vimpaimet näkyvät sisällön vasemmalla tai oikealla puolella "
 "riippuen valitusta ulkoasusta."
 
-#: functions.php:229
+#: functions.php:232
 msgctxt "sidebar"
 msgid "Subsidiary"
 msgstr "Alapalkin vimpainalue"
 
-#: functions.php:230
+#: functions.php:233
 msgid "A sidebar located in the footer of the site."
 msgstr "Tähän liitetyt vimpaimet näkyvät sivun alareunassa."
 
-#: functions.php:379 pages/front-page.php:45 pages/front-page.php:48
+#: functions.php:382 pages/front-page.php:45 pages/front-page.php:48
 msgid "Read more"
 msgstr "Lue lisää"
 
-#: functions.php:411
+#: functions.php:414
 msgid "Visit site"
 msgstr "Vieraile sivulla"
 
-#: header.php:60
+#: header.php:56
 msgid "&#47;"
 msgstr "&#47;"
 
@@ -276,63 +276,67 @@ msgstr "Minä olen teeman väri"
 msgid "From:"
 msgstr "Alkaen:"
 
+#: includes/meta-boxes.php:16
+msgid "Header extra info"
+msgstr "Yläpalkin lisäinfo"
+
+#: includes/meta-boxes.php:34
+msgid "Callout text"
+msgstr "Callout-teksti"
+
+#: includes/meta-boxes.php:40
+msgid "Callout URL"
+msgstr "Callout URL-linkki"
+
+#: includes/meta-boxes.php:46
+msgid "Callout URL text"
+msgstr "Callout URL-linkin teksti"
+
 #: includes/theme-customize.php:18
 msgid "Front page settings"
 msgstr "Etusivun asetukset"
 
-#: includes/theme-customize.php:44 includes/theme-customize.php:373
+#: includes/theme-customize.php:44 includes/theme-customize.php:304
 msgid "Select page"
 msgstr "Valitse sivu"
 
 #: includes/theme-customize.php:72
-msgid "Callout text"
-msgstr "Callout-teksti"
-
-#: includes/theme-customize.php:95
-msgid "Callout URL"
-msgstr "Callout URL-linkki"
-
-#: includes/theme-customize.php:118
-msgid "Callout URL text"
-msgstr "Callout URL-linkin teksti"
-
-#: includes/theme-customize.php:141
 msgid "Show latest posts on front page"
 msgstr "Näytä viimeisimmät artikkelit etusivulla"
 
-#: includes/theme-customize.php:167
+#: includes/theme-customize.php:98
 msgid "Show latest portfolios on front page"
 msgstr "Näytä viimeisimmät portfoliot etusivulla"
 
-#: includes/theme-customize.php:194
+#: includes/theme-customize.php:125
 msgid "Show latest downloads on front page"
 msgstr "Näytä viimeisimmät lataukset etusivulla"
 
-#: includes/theme-customize.php:221
+#: includes/theme-customize.php:152
 msgid "Show latest testimonials on front page"
 msgstr "Näytä viimeisimmät suositukset etusivulla"
 
-#: includes/theme-customize.php:245
+#: includes/theme-customize.php:176
 msgid "Use boxed layout in all pages."
 msgstr "Käytä \"laatikko\"-ulkoasua kaikilla sivuilla."
 
-#: includes/theme-customize.php:268
+#: includes/theme-customize.php:199
 msgid "Show full content of pages in front page. Default is excerpt."
 msgstr "Näytä sivun koko sisältö etusivulla. Oletuksena näytetään ote."
 
-#: includes/theme-customize.php:280
+#: includes/theme-customize.php:211
 msgid "Logo Upload"
 msgstr "Logon lataus"
 
-#: includes/theme-customize.php:302
+#: includes/theme-customize.php:233
 msgid "Upload custom logo."
 msgstr "Lataa logo."
 
-#: includes/theme-customize.php:313
+#: includes/theme-customize.php:244
 msgid "Footer text"
 msgstr "Alapalkin teksti"
 
-#: includes/theme-customize.php:336
+#: includes/theme-customize.php:267
 msgid "Enter footer text"
 msgstr "Kirjoita alapalkin teksti"
 

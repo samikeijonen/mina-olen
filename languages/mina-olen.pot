@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mina olen 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/mina-olen\n"
-"POT-Creation-Date: 2014-01-31 12:01:38+00:00\n"
+"POT-Creation-Date: 2014-01-31 13:55:12+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -189,66 +189,66 @@ msgid_plural "This gallery contains %s items."
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:84
+#: functions.php:87
 msgid "1 Column"
 msgstr ""
 
-#: functions.php:85
+#: functions.php:88
 msgid "2 Columns: Content / Sidebar"
 msgstr ""
 
-#: functions.php:86
+#: functions.php:89
 msgid "2 Columns: Sidebar / Content"
 msgstr ""
 
-#: functions.php:201
+#: functions.php:204
 msgid "Primary menu"
 msgstr ""
 
-#: functions.php:203
+#: functions.php:206
 msgid "Subsidiary menu"
 msgstr ""
 
-#: functions.php:205
+#: functions.php:208
 msgid "Social menu"
 msgstr ""
 
-#: functions.php:219
+#: functions.php:222
 msgctxt "sidebar"
 msgid "Header"
 msgstr ""
 
-#: functions.php:220
+#: functions.php:223
 msgid "A sidebar located in the top of the site."
 msgstr ""
 
-#: functions.php:224
+#: functions.php:227
 msgctxt "sidebar"
 msgid "Primary"
 msgstr ""
 
-#: functions.php:225
+#: functions.php:228
 msgid "The main sidebar. It is displayed on either the left or right side of the page based on the chosen layout."
 msgstr ""
 
-#: functions.php:229
+#: functions.php:232
 msgctxt "sidebar"
 msgid "Subsidiary"
 msgstr ""
 
-#: functions.php:230
+#: functions.php:233
 msgid "A sidebar located in the footer of the site."
 msgstr ""
 
-#: functions.php:379 pages/front-page.php:45 pages/front-page.php:48
+#: functions.php:382 pages/front-page.php:45 pages/front-page.php:48
 msgid "Read more"
 msgstr ""
 
-#: functions.php:411
+#: functions.php:414
 msgid "Visit site"
 msgstr ""
 
-#: header.php:60
+#: header.php:56
 msgid "&#47;"
 msgstr ""
 
@@ -260,63 +260,67 @@ msgstr ""
 msgid "From:"
 msgstr ""
 
+#: includes/meta-boxes.php:16
+msgid "Header extra info"
+msgstr ""
+
+#: includes/meta-boxes.php:34
+msgid "Callout text"
+msgstr ""
+
+#: includes/meta-boxes.php:40
+msgid "Callout URL"
+msgstr ""
+
+#: includes/meta-boxes.php:46
+msgid "Callout URL text"
+msgstr ""
+
 #: includes/theme-customize.php:18
 msgid "Front page settings"
 msgstr ""
 
-#: includes/theme-customize.php:44 includes/theme-customize.php:373
+#: includes/theme-customize.php:44 includes/theme-customize.php:304
 msgid "Select page"
 msgstr ""
 
 #: includes/theme-customize.php:72
-msgid "Callout text"
-msgstr ""
-
-#: includes/theme-customize.php:95
-msgid "Callout URL"
-msgstr ""
-
-#: includes/theme-customize.php:118
-msgid "Callout URL text"
-msgstr ""
-
-#: includes/theme-customize.php:141
 msgid "Show latest posts on front page"
 msgstr ""
 
-#: includes/theme-customize.php:167
+#: includes/theme-customize.php:98
 msgid "Show latest portfolios on front page"
 msgstr ""
 
-#: includes/theme-customize.php:194
+#: includes/theme-customize.php:125
 msgid "Show latest downloads on front page"
 msgstr ""
 
-#: includes/theme-customize.php:221
+#: includes/theme-customize.php:152
 msgid "Show latest testimonials on front page"
 msgstr ""
 
-#: includes/theme-customize.php:245
+#: includes/theme-customize.php:176
 msgid "Use boxed layout in all pages."
 msgstr ""
 
-#: includes/theme-customize.php:268
+#: includes/theme-customize.php:199
 msgid "Show full content of pages in front page. Default is excerpt."
 msgstr ""
 
-#: includes/theme-customize.php:280
+#: includes/theme-customize.php:211
 msgid "Logo Upload"
 msgstr ""
 
-#: includes/theme-customize.php:302
+#: includes/theme-customize.php:233
 msgid "Upload custom logo."
 msgstr ""
 
-#: includes/theme-customize.php:313
+#: includes/theme-customize.php:244
 msgid "Footer text"
 msgstr ""
 
-#: includes/theme-customize.php:336
+#: includes/theme-customize.php:267
 msgid "Enter footer text"
 msgstr ""
 
