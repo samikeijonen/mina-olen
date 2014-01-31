@@ -1011,6 +1011,10 @@ a.more-link::after {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute;
 }
+.menu .screen-reader-text {
+	top: -9999em;
+	left: -9999em;
+}
 
 .screen-reader-text:focus {
 	background-color: #f1f1f1;
