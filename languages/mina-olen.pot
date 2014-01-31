@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mina olen 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/mina-olen\n"
-"POT-Creation-Date: 2014-01-29 19:35:06+00:00\n"
+"POT-Creation-Date: 2014-01-31 12:01:38+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -48,31 +48,37 @@ msgstr ""
 msgid "License status"
 msgstr ""
 
-#: admin/functions-admin.php:264
+#. translators: There is a space after %s:
+
+#: admin/functions-admin.php:266
+msgid "Expires %s: "
+msgstr ""
+
+#: admin/functions-admin.php:269
 msgid "Active"
 msgstr ""
 
-#: admin/functions-admin.php:266
+#: admin/functions-admin.php:271
 msgid "Expired"
 msgstr ""
 
-#: admin/functions-admin.php:268
+#: admin/functions-admin.php:273
 msgid "License keys do not match"
 msgstr ""
 
-#: admin/functions-admin.php:270
+#: admin/functions-admin.php:275
 msgid "Inactive"
 msgstr ""
 
-#: admin/functions-admin.php:272
+#: admin/functions-admin.php:277
 msgid "Disabled"
 msgstr ""
 
-#: admin/functions-admin.php:274
+#: admin/functions-admin.php:279
 msgid "Site is inactive"
 msgstr ""
 
-#: admin/functions-admin.php:276
+#: admin/functions-admin.php:281
 msgid "Unknown"
 msgstr ""
 
@@ -84,7 +90,7 @@ msgstr ""
 #: content-portfolio_item.php:39 content-quote.php:15 content-quote.php:35
 #: content-status.php:15 content-testimonial.php:17 content-testimonial.php:38
 #: content-video.php:17 content-video.php:37 content.php:15 content.php:36
-#: pages/front-page.php:127
+#: pages/front-page.php:131
 msgid "Pages:"
 msgstr ""
 
@@ -234,7 +240,7 @@ msgstr ""
 msgid "A sidebar located in the footer of the site."
 msgstr ""
 
-#: functions.php:379 pages/front-page.php:45
+#: functions.php:379 pages/front-page.php:45 pages/front-page.php:48
 msgid "Read more"
 msgstr ""
 
@@ -258,7 +264,7 @@ msgstr ""
 msgid "Front page settings"
 msgstr ""
 
-#: includes/theme-customize.php:44 includes/theme-customize.php:350
+#: includes/theme-customize.php:44 includes/theme-customize.php:373
 msgid "Select page"
 msgstr ""
 
@@ -294,19 +300,23 @@ msgstr ""
 msgid "Use boxed layout in all pages."
 msgstr ""
 
-#: includes/theme-customize.php:257
+#: includes/theme-customize.php:268
+msgid "Show full content of pages in front page. Default is excerpt."
+msgstr ""
+
+#: includes/theme-customize.php:280
 msgid "Logo Upload"
 msgstr ""
 
-#: includes/theme-customize.php:279
+#: includes/theme-customize.php:302
 msgid "Upload custom logo."
 msgstr ""
 
-#: includes/theme-customize.php:290
+#: includes/theme-customize.php:313
 msgid "Footer text"
 msgstr ""
 
-#: includes/theme-customize.php:313
+#: includes/theme-customize.php:336
 msgid "Enter footer text"
 msgstr ""
 
@@ -1089,23 +1099,23 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: pages/front-page.php:74
+#: pages/front-page.php:78
 msgid "Posts"
 msgstr ""
 
-#: pages/front-page.php:77
+#: pages/front-page.php:81
 msgid "Portfolios"
 msgstr ""
 
-#: pages/front-page.php:80
+#: pages/front-page.php:84
 msgid "Downloads"
 msgstr ""
 
-#: pages/front-page.php:83
+#: pages/front-page.php:87
 msgid "Testimonials"
 msgstr ""
 
-#: pages/front-page.php:106
+#: pages/front-page.php:110
 msgid "Latest %1$s"
 msgstr ""
 #. Theme Name of the plugin/theme
