@@ -75,9 +75,9 @@ function mina_olen_save_meta_boxes( $post_id, $post ) {
 	}
 
 	$meta = array(
-		'_mina_olen_callout_text' => sanitize_text_field( $_POST['mina-olen-callout-text'] ),
+		'_mina_olen_callout_text' => stripslashes( wp_filter_post_kses( addslashes( ( $_POST['mina-olen-callout-text'] ) ) ) ),
 		'_mina_olen_callout_url' => esc_url( $_POST['mina-olen-callout-url'] ),
-		'_mina_olen_callout_url_text' => sanitize_text_field ( $_POST['mina-olen-callout-url-text'] )
+		'_mina_olen_callout_url_text' => sanitize_text_field( $_POST['mina-olen-callout-url-text'] )
 	);
 
 	foreach ( $meta as $meta_key => $new_meta_value ) {
