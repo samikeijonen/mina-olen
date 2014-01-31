@@ -250,6 +250,29 @@ function mina_olen_customize_register_settings( $wp_customize ) {
 		)
 	);
 	
+	/* Add content setting. */
+	$wp_customize->add_setting(
+		'content_front',
+		array(
+			'default'           => '',
+			'type'              => 'theme_mod',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'sanitize_text_field'
+		)
+	);
+	
+	/* Add content control. */
+	$wp_customize->add_control(
+		'content-front',
+		array(
+			'label'    => esc_html__( 'Show full content of pages in front page. Default is excerpt.', 'mina-olen' ),
+			'section'  => 'front-page',
+			'settings' => 'content_front',
+			'priority' => 70,
+			'type'     => 'checkbox'
+		)
+	);
+	
 	/* Add the logo upload section. */
 	$wp_customize->add_section(
 		'logo-upload',
