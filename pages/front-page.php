@@ -36,13 +36,17 @@ get_header(); // Loads the header.php template. ?>
 
 					<div class="entry-summary">
 						
-						<?php if( has_excerpt( $mina_olen_page_content ) ) { 
-							echo wpautop( get_post_field( 'post_excerpt', $mina_olen_page_content ) ); 
-						} else {
-							echo apply_filters( 'the_content', ( wp_trim_words( get_post_field( 'post_content', $mina_olen_page_content ) ) ) );
-						} ?>
+						<?php /* If user wants to show full content, use it. Else use excerpt or generated one. */
 						
-						<p><span class="mina-olen-read-more"><a class="more-link" href="<?php echo get_permalink( $mina_olen_page_content ); ?>"><?php _e( 'Read more', 'mina-olen' ); ?></a></span></p>
+						if( get_theme_mod( 'content_front' ) ) {
+							echo apply_filters( 'the_content', ( get_post_field( 'post_content', $mina_olen_page_content ) ) );
+						} else if ( has_excerpt( $mina_olen_page_content ) ) {
+							echo wpautop( get_post_field( 'post_excerpt', $mina_olen_page_content ) ); ?>
+							<p><span class="mina-olen-read-more"><a class="more-link" href="<?php echo get_permalink( $mina_olen_page_content ); ?>"><?php _e( 'Read more', 'mina-olen' ); ?></a></span></p>	
+						<?php } else {
+							echo apply_filters( 'the_content', ( wp_trim_words( get_post_field( 'post_content', $mina_olen_page_content ) ) ) ); ?>
+							<p><span class="mina-olen-read-more"><a class="more-link" href="<?php echo get_permalink( $mina_olen_page_content ); ?>"><?php _e( 'Read more', 'mina-olen' ); ?></a></span></p>
+						<?php } ?>
 						
 					</div><!-- .entry-summary -->
 				
