@@ -19,7 +19,7 @@ function mina_olen_custom_header_setup() {
 			'default-image'          => '',
 			'random-default'         => false,
 			'width'                  => 1920,
-			'height'                 => 350,
+			'height'                 => 379,
 			'flex-width'             => true,
 			'flex-height'            => true,
 			'default-text-color'     => 'c84d29',
