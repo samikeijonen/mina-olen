@@ -13,7 +13,18 @@
  * http://foxnet.fi/en
  */
  
- /**
+/*******************************************************************************************
+ * Do not make edits directly to this file.  You will lose all modifications when the theme is 
+ * next updated if you do so. Please use a child theme.  This theme's styles will automatically be 
+ * loaded for you. You can then overwrite specific style rules in your child theme's `style.css` file.
+ *
+ * There is example styles (backgrounds, colors, borders) in file css/example-styles.css. 
+ * You can use those styles as a starting point in your child theme styles.
+ *
+ * This file is only loaded if `SCRIPT_DEBUG` is set to `TRUE` in your `wp-config.php` file. Otherwise, 
+ * the `style.min.css` file is loaded.
+ *
+ *
  * Table of Contents:
  *
  * 1.0  -  Fonts
@@ -55,7 +66,8 @@
  *         12.1 -  Gravity forms CSS
  *         12.2 -  Easy Digital Downloads CSS
  *         12.3 -  Whistles CSS
- *         12.4 -  Jetpack CSS 
+ *         12.4 -  Jetpack CSS
+ *         12.5 -  Testimonials CSS
  * ----------------------------------------------------------------------------
  */
 
@@ -90,7 +102,9 @@
  
 /* Use border-box everywhere. */
 
-* {
+*,
+*:before,
+*:after {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -537,7 +551,7 @@ a:hover,
 a:focus,
 a:active
  {
-	color: #c84d29;
+	color: #bf421d;
 	text-decoration: underline;
 }
 
@@ -771,7 +785,7 @@ input[type="week"],
 textarea,
 select {
 	display: block;
-	padding: 0.5em;
+	padding: 0.75em;
 	-webkit-transition: all 0.25s ease-in-out;
 	-moz-transition: all 0.25s ease-in-out;
 	-o-transition:  all 0.25s ease-in-out;
@@ -804,7 +818,7 @@ textarea {
 input,
 textarea {
 	border: 1px solid #ccc;
-	color: #999;
+	color: #555;
 }
 
 input:focus,
@@ -829,8 +843,8 @@ body .mina-olen-theme-color#edd-purchase-button {
 	border: none;
 	color: #fff;
 	display: inline-block;
-	padding: 12px 24px;
-	padding: 0.75rem 1.5rem;
+	padding: 16px 28px;
+	padding: 1rem 1.75rem;
 	margin-top: 16px;
 	margin-top: 1rem;
 	text-decoration: none;
@@ -2070,13 +2084,13 @@ img {
 		height: 0;
 		visibility: hidden;
 	}
-	#menu-primary li  {
+	#menu-primary li {
 		border-left: 1px solid #eee;
 	}
 	#menu-primary li:last-child {
 		border-right: 1px solid #eee;
 	}
-	#menu-primary li li  {
+	#menu-primary li li {
 		border-left: none;
 	}
 	#menu-primary li li:last-child {
@@ -2253,9 +2267,9 @@ img {
 	background: #fff;
 	width: 240px;
 	-webkit-transition: all 0.25s ease-in;
-	-moz-transition:    all 0.25s ease-in;
-	-o-transition:      all 0.25s ease-in;
-	transition:  all 0.25s ease-in;
+	-moz-transition: all 0.25s ease-in;
+	-o-transition: all 0.25s ease-in;
+	transition: all 0.25s ease-in;
 	z-index: 140;
 }
 #menu-primary .search-form.add-width input[type="search"] {
@@ -2324,7 +2338,6 @@ img {
 	}
 	#menu-subsidiary ul li {
 		border-left: 1px solid #eee;
-		
 		display: inline-block;
 	}
 	#menu-subsidiary ul li:last-child {
@@ -2497,11 +2510,11 @@ img {
 /* === 9.2 Post entry === */
 
 .entry  {
+	border-bottom: solid 1px #eee;
 	padding: 0 0 32px 0;
 	padding: 0 0 2rem 0;
 	margin: 0 0 64px 0;
 	margin: 0 0 4rem 0;
-	border-bottom: solid 1px #eee;
 }
 .archive-portfolio_item .entry,
 .taxonomy-portfolio .entry,
@@ -2705,7 +2718,8 @@ img {
 }
 .singular-post h1.entry-title,
 .singular-portfolio_item h1.entry-title,
-.singular-download h1.entry-title {
+.singular-download h1.entry-title,
+.singular-testimonial h1.entry-title {
 	margin-bottom: 0.25em;
 }
 
@@ -3100,7 +3114,7 @@ body .gform_wrapper input[type=tel],
 body .gform_wrapper input[type=number],
 body .gform_wrapper input[type=password],
 body .gform_wrapper textarea {
-	padding: 0.5em;
+	padding: 0.75em;
 	font-size: 100%;
 }
 body #gforms_confirmation_message {
@@ -3115,7 +3129,7 @@ body #edd_checkout_form_wrap textarea,
 body #edd_checkout_form_wrap input[type="text"],
 body #edd_checkout_form_wrap input[type="email"],
 body #edd_checkout_form_wrap input[type="password"] {
-	padding: 0.5em;
+	padding: 0.75em;
 	width: 100%;
 }
 body #edd_checkout_cart,
@@ -3188,13 +3202,13 @@ body #edd_checkout_cart .edd_cart_header_row th {
 }
 
 .whistles-tabs .whistles-tabs-nav li a:hover {
-	color:  #555;
 	background: #f9f9f9;
+	color:  #555;
 }
 .whistles-tabs .whistles-tabs-nav li[aria-selected="true"] a {
-	color: #555;
 	background: #fff;
 	border-bottom-color: #fff;
+	color: #555;
 }
 
 /* Wraps all of the tab content panels. */
@@ -3228,8 +3242,8 @@ body #edd_checkout_cart .edd_cart_header_row th {
 .whistles-toggle .whistle-title[aria-selected="true"],
 .whistles-accordion .whistle-title:hover, 
 .whistles-accordion .whistle-title[aria-selected="true"] {
-	color: #555;
 	background: #ededed;
+	color: #555;
 }
 
 /* Individual toggle section content. */
@@ -3250,4 +3264,29 @@ body div.sharedaddy div.sd-block {
 	border-top-color: #eee;
 	padding: 32px 0;
 	padding: 2rem 0;
+}
+
+
+/* === 12.4 Testimonials CSS === */
+
+.archive-testimonial #content,
+.taxonomy-testimonial-category #content,
+.singular-testimonial #content {
+	text-align: center;
+}
+
+.archive-testimonial .avatar,
+.taxonomy-testimonial-category .avatar,
+.singular-testimonial .avatar {
+	width: 150px;
+	height: 150px;
+	margin-bottom: 32px;
+	margin-bottom: 2rem;
+}
+
+.archive-testimonial blockquote,
+.taxonomy-testimonial-category blockquote,
+.singular-testimonial blockquote {
+	margin-top: 32px;
+	margin-top: 2rem;
 }
