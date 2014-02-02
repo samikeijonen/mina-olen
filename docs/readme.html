@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>A guide to the Mina olen theme</title>
+
+<style type="text/css">body{max-width:750px;margin:36px auto 60px auto;font:16px/25px Georgia,Times,'Times New Roman',serif;padding: 0 4%;}a:link,a:visited{color:#2f6eb9;text-decoration:none}a:hover,a:active{text-decoration:underline}h1,h2,h3,h4,h5,h6{margin:40px 0 30px 0;color:#000;font-weight:bold;font-family:Arial,sans-serif}h1{margin-top:80px;font-size:2.2em}code{padding:0 3px;background:#eee}pre code{padding:0}pre{padding:9px;background:#eee;border:1px solid #ccc}ul{list-style:square}p.first{font-size:21px}p.second{font-size:15px}ul.space li{margin-bottom:10px}.section{overflow:hidden}.columns-2{float:left;width:350px;margin:0 0 21px 25px}.columns-3{float:left;width:230px;margin:0 0 21px 20px}</style>
+
+</head>
+<body>
+
+<h1>Mina olen WordPress theme</h1>
+
+<p class="first"><em>Mina olen</em> is a business type of theme. It includes support for Easy Digital Downloads, Custom Content Portfolio, Testimonials by WooThemes and Whistles support.</p>
+
+<p class="second">This theme is a parent theme. <strong>All modification</strong> should be made via a child theme.</p>
+
+<h2>Features</h2>
+
+<p><em>Mina olen</em> is built on <a href="http://themehybrid.com/hybrid-core" title="Hybrid Core theme framework">Hybrid Core</a> framework. There is a brilliant minded man called <a href="http://justintadlock.com" title="Justin Tadlock">Justin Tadlock</a> who has created it. Remember also to check out all the <a href="https://foxnet-themes.fi/" title="Foxnet Themes">Foxnet Themes</a>.</p>
+
+<ul>
+	<li>Per-post layouts which means that you can choose one or two column layout. Content on the left or right. Default is 2 column layout, content on the left.</li>
+	<li>Post setting that allows you to add a custom stylesheet for individual posts.</li>
+	<li>A smart breadcrumb system.</li>
+	<li>Built-in pagination.</li>
+	<li>Post thumbnails that work with WordPress featured image functionality and provide extra features.</li>
+	<li>Multiple and flexible sidebars areas: Header, Primary and Subsidiary template widgets.</li>
+	<li>Dynamic body, post, and comment CSS classes.</li>
+	<li>Fully internationalized, so you can translate the theme in any language. You should place your translations files to child theme <code>languages</code> folder.</li>
+	<li>Built-in WordPress menu system. There are three menus in the theme: Primary, Subsidiary and Social. Note! Primary menu only support for one level sub menu items, subsidiary only top level menu items.</li>
+	<li>Global layout can be changed under Appearance &raquo;&raquo; Customize &raquo;&raquo; Layout.</li>
+	<li>Set logo under Appearance &raquo;&raquo; Customize &raquo;&raquo; Logo Upload.</li>
+	<li>Set Callout text and link in Header extra info metabox when you edit your page.</li>
+	<li>Set background under Appearance &raquo;&raquo; Background.</li>
+	<li>Set header image under Appearance &raquo;&raquo; Header.</li>
+	<li>Ability to create custom templates for any post type in multiple ways.</li>
+	<li>Highly-configurable widgets that give you full control over their display.</li>
+	<li>Widget areas are content-aware, meaning that they only appear if they contain active widgets.</li>
+	<li>Support for all Post Formats.</li>
+	<li>Theme was designed with <a href="http://www.lukew.com/ff/entry.asp?933" title="Mobile First">Mobile First</a> attitude.</li>
+</ul>
+
+<h2>Child themes</h2>
+
+<p><em>Mina olen</em> is a parent theme, so use a child theme for any customizations. You can also download blank child theme in theme page. If you want do it yourself, here is how to get started.</p>
+
+<ul>
+	<li>Create a theme folder in your <code>/wp-content/themes</code> directory called <code>mina-olen-child</code>.</li>
+	<li>After that create a <code>style.css</code> file in <code>/wp-content/themes/mina-olen-child</code> folder.</li>
+	<li>At the top of your <code>style.css</code> file, add the below information.</li>
+</ul>
+
+<pre><code>/**
+ * Theme Name: Mina olen Child
+ * Theme URI: http://link-to-your-site.com
+ * Description: Describe your child theme.
+ * Version: 0.1
+ * Author: Your Name
+ * Author URI: http://link-to-your-site.com
+ * Tags: Some, Tags
+ * Template: mina-olen
+ */</code></pre>
+
+<p>There is no reason to import parent theme styles, because they are loaded automatically. Note! If you compress your <code>style.css</code> and copy your styles to a file called <code>style.min.css</code>, it will be used automatically.</p>
+
+<p>Using <a href="http://codex.wordpress.org/Child_Themes" title="Child Themes">child theme</a> is officially-supported way of modifying themes in WordPress.</p>
+
+<h2>Supported plugins</h2>
+
+<p><strong>Custom Content Portfolio</strong></p>
+
+<p>If you need to show off your portfolios, install <a href="http://wordpress.org/extend/plugins/custom-content-portfolio/" title="Custom Content Portfolio">Custom Content Portfolio</a> Plugin and you're good to go.</p>
+<p>Your portfolios will appear in URL <em>domain.com/portfolio</em>. Remember to flush rewrite rules first by going Settings &raquo;&raquo; Permalinks.</p>
+
+<p><strong>Easy Digital Download</strong></p>
+
+<p>If you need to sell your digital downloads <a href="http://wordpress.org/extend/plugins/easy-digital-downloads/" title="Easy Digital Download">Easy Digital Download</a> is the best plugin for that.</p>
+<p>Your downloads will appear in URL <em>domain.com/downloads</em>.</p>
+
+<p><strong>Testimonials by Woothemes</strong></p>
+
+<p>If you need to show testimonials on yor site, install and activate <a href="http://wordpress.org/plugins/testimonials-by-woothemes/" title="Testimonial by Woothemes">Testimonial by Woothemes</a>.
+Your testimonials will appear in URL domain.com/testimonials.
+</p>
+
+<p><strong>Gravity Forms</strong></p>
+
+<p>Mina olen includes base CSS for <a href="http://www.gravityforms.com/" title="Gravity Forms">Gravity Forms</a> plugin.</p>
+
+<h2>Theme Settings (Appearance &raquo;&raquo; Customize)</h2>
+
+<p>All of the theme setting is under Appearance &raquo;&raquo; Customize.</p>
+
+<p><strong>Set logo</strong></p>
+
+<p>Set logo under Appearance &raquo;&raquo; Customize &raquo;&raquo; Logo Upload.</p>
+
+<p><strong>Change default layout</strong></p>
+
+<p>
+Mina olen theme has two column layout by default. You can change this default layout under Appearance &raquo;&raquo; Customize &raquo;&raquo; Layout. You can overwrite this in post
+editor by choosing layout for that certain post:
+</p>
+<ul>
+	<li>1 Column </li>
+	<li>2 Columns: content / sidebar (theme default)</li>
+	<li>2 Columns: sidebar / content</li>
+</ul>
+
+<p><strong>Footer text</strong></p>
+
+<p>You can change Footer text in Footer text section.</p>
+
+<h2>Header Image</h2>
+
+<p>By default there is a static image in the header. You can overwrite default header image in singular page by setting right size featured image. Feature header size is 1920 x 379 pixels.</p>
+
+<h2>Page Templates</h2>
+
+<p>There is one page templates in this theme called Front Page. It's located in <code>pages</code> folder. If you need to overwrite page template in a child theme, create subfolder <code>pages</code> in child theme and copy page template in that folder and start modifying.</p>
+
+<p>You can select which pages you want to show in Front page and do you show posts, downloads or testimonials.</p>
+
+<p>
+You can select a page template from the "Template" section of the "Attributes" meta box when writing or editing a page.
+</p>
+
+<p>
+If you want to use Front Page template as a front page for your site instead of the standard blog post view, follow these instructions.
+</p>
+
+<h3>Creating the front page</h3>
+
+<ul>
+	<li>First create a new page. You can name it anything. For example "Home" or "Portfolio".</li>
+	<li>When creating this page, select "Front Page" from the "Template" drop-down inside of the "Attributes" meta box.</li>
+	<li>Click the "Publish" button.</li>
+</ul>
+
+<h3>Change site front page</h3>
+
+<ul>
+	<li>Go to the "Settings &raquo;&raquo; Reading" screen in the admin to adjust the page shown on the front of the site.</li>
+	<li>Locate the section labeled "Front page displays".</li>
+	<li>Select "A static page".</li>
+	<li>In the "Front Page" drop-down, select the page you created earlier that has the "Front Page" template.</li>
+	<li>Click the "Save Changes" button.</li>
+</ul>
+
+<h2>Flexible subsidiary and front page widgets</h2>
+
+<p>You can use 1, 2, 3, 4 or 5 widgets in subsidiary and header widgets areas and the layout is still gonna look nice. The original idea having flexible and responsive widget areas is from <a href="http://themehybrid.com/themes/sukelius-magazine" title="Sukelius">Sukelius Theme</a>.</p>
+
+<h2>Theme support</h2>
+
+<p>Support for the <em>Mina olen</em> theme is not offered on the WordPress support forums.  There is a site called <a href="https://foxnet-themes.fi" title="Foxnet Themes">Foxnet Themes</a> where support is offered for this theme.</p>
+
+<h2>Credits</h2>
+
+<p>Mina olen is build on <a href="http://themehybrid.com/hybrid-core" title="Hybrid Core">Hybrid Core</a> framework by <a href="http://justintadlock.com/" title="Justin Tadlock">Justin Tadlock</a>.</p>
+
+<p>Theme uses</p>
+
+<ul>
+	<li><a href="http://fitvidsjs.com" title="FitVids">FitVids</a>, (<a href="http://sam.zoy.org/wtfpl/" title="WTFPL">WTFPL</a>)</li>
+	<li><a href="https://github.com/WickyNilliams/headroom.js" title="Headroom.js">Headroom</a>, (<a href="http://www.opensource.org/licenses/mit-license.php" title="MIT">MIT</a>)</li>
+</ul>
+
+
+<h2>Copyright &amp; license</h2>
+
+<p><em>Mina olen</em> is licensed under the <a href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html" title="GNU GPL">GNU General Public License</a>, version 2 or later (<abbr title="GNU General Public License">GPL</abbr>).</p>
+
+<p>This theme is copyrighted to <a href="https://foxnet-themes.fi" title="Sami Keijonen">Sami Keijonen</a>.</p>
+
+<p>2014 &copy; Sami Keijonen.  All rights reserved.</p>
+
+</body>
+</html>
