@@ -126,9 +126,6 @@ function mina_olen_theme_setup() {
 	/* Handle content width for embeds and images. */
 	hybrid_set_content_width( 1080 );
 	
-	/* Add respond.js and  html5shiv.js for unsupported browsers. */
-	add_action( 'wp_head', 'mina_olen_respond_html5shiv' );
-	
 	/* Add custom image sizes. */
 	add_action( 'init', 'mina_olen_add_image_sizes' );
 	
@@ -160,27 +157,12 @@ function mina_olen_theme_setup() {
 	/* Adds custom attributes to the primary menu. */
 	add_filter( 'hybrid_attr_menu', 'mina_olen_primary_menu_class', 10, 2 );
 	
+	/* AddseEditor styles. */
+	add_editor_style( mina_olen_get_editor_styles() );
+	
 	/* Disable bbPress breadcrumb. */
 	add_filter( 'bbp_no_breadcrumb', '__return_true' );
 
-}
-
-/**
- * Function for help to unsupported browsers understand mediaqueries and html5.
- * @link: https://github.com/scottjehl/Respond
- * @link: http://code.google.com/p/html5shiv/
- * @since 1.0.0
- */
-function mina_olen_respond_html5shiv() {
-	?>
-	
-	<!-- Enables media queries and html5 in some unsupported browsers. -->
-	<!--[if (lt IE 9) & (!IEMobile)]>
-	<script type="text/javascript" src="<?php echo trailingslashit( get_template_directory_uri() ); ?>js/respond/respond.min.js"></script>
-	<script type="text/javascript" src="<?php echo trailingslashit( get_template_directory_uri() ); ?>js/html5shiv/html5shiv.js"></script>
-	<![endif]-->
-	
-	<?php
 }
 
 /**
@@ -439,6 +421,38 @@ function mina_olen_callout_output() {
 		
 	}
 	
+}
+
+/**
+ * Callback function for adding editor styles.  Use along with the add_editor_style() function.
+ *
+ * @author  Justin Tadlock, justintadlock.com
+ * @link    http://themehybrid.com/themes/stargazer
+ * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * @since   1.0.0
+ * @return  array
+ */
+function mina_olen_get_editor_styles() {
+
+	/* Set up an array for the styles. */
+	$editor_styles = array();
+
+	/* Add the theme's editor styles. */
+	$editor_styles[] = trailingslashit( get_template_directory_uri() ) . 'css/editor-style.css';
+
+	/* If a child theme, add its editor styles. Note: WP checks whether the file exists before using it. */
+	if ( is_child_theme() && file_exists( trailingslashit( get_stylesheet_directory() ) . 'css/editor-style.css' ) ) {
+		$editor_styles[] = trailingslashit( get_stylesheet_directory_uri() ) . 'css/editor-style.css';
+	}
+
+	/* Add the locale stylesheet. */
+	$editor_styles[] = get_locale_stylesheet_uri();
+
+	/* Uses Ajax to display custom theme styles added via the Theme Mods API. */
+	$editor_styles[] = add_query_arg( 'action', 'stargazer_editor_styles', admin_url( 'admin-ajax.php' ) );
+
+	/* Return the styles. */
+	return $editor_styles;
 }
 
 ?>
