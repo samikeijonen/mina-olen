@@ -1,0 +1,550 @@
+/**
+ * You can use these styles as a starting point in your child theme styles.
+ * I have collected all the backgrounds and colors used in Mina olen theme in this file.
+ *
+ */
+
+
+/* === Backgrounds and colors === */
+
+/* Blockquote. */
+blockquote {
+	background: #f6f6f6;
+}
+
+/* Pre. */
+pre {
+	background: #f4f2f2;
+}
+
+/* Buttons. */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.mina-olen-project-url a.kalervo-portfolio-item-link,
+a.mina-olen-callout-button,
+body .edd-submit.button.mina-olen-theme-color,
+body .edd-submit.mina-olen-theme-color,
+body input[type="submit"].edd-submit.mina-olen-theme-color,
+body .mina-olen-theme-color#edd-purchase-button {
+	background: #c84d29;
+	color: #fff;
+}
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+.mina-olen-project-url:hover,
+a.mina-olen-callout-button:hover,
+button:focus,
+input[type="submit"]:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+.mina-olen-project-url:focus,
+a.mina-olen-callout-button:focus,
+button:active,
+input[type="submit"]:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+.mina-olen-project-url:active,
+a.mina-olen-callout-button:active,
+body .edd-submit.button.mina-olen-theme-color:hover,
+body .edd-submit.mina-olen-theme-color:hover,
+body input[type="submit"].edd-submit.mina-olen-theme-color:hover,
+body .mina-olen-theme-color#edd-purchase-button:hover,
+body .edd-submit.button.mina-olen-theme-color:focus,
+body .edd-submit.mina-olen-theme-color:focus,
+body .mina-olen-theme-color#edd-purchase-button:focus,
+body input[type="submit"].edd-submit.mina-olen-theme-color:focus,
+body .edd-submit.button.mina-olen-theme-color:active,
+body .edd-submit.mina-olen-theme-color:active,
+body input[type="submit"].edd-submit.mina-olen-theme-color:active,
+body .mina-olen-theme-color#edd-purchase-button:active {
+	background: #bf421d;
+}
+
+/* Screen reader. */
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	color: #21759b;
+}
+
+/* Container. */
+#container.mina-olen-boxed {
+	background: #fff;
+}
+
+/* Sidebars. */
+#sidebar-subsidiary,
+#sidebar-header {
+	background: #f6f6f6;
+	color: #9f9f9f;
+}
+
+/* Callout. */
+#mina-olen-callout-url {
+	background: #111;
+	background: rgba(0,0,0,0.4);
+	color: #fff;
+}
+
+/* Back to top. */
+#back-to-top a {
+	background: #c84d29;
+	color: #fff;
+}
+#back-to-top a:hover,
+#back-to-top a:active,
+#back-to-top a:focus {
+	background: #bf421d;
+}
+
+/* Menu primary. */
+@media screen and (max-width: 899px) {
+
+	#menu-primary #menu-primary-search.opened,
+	#menu-primary #menu-primary-search li.menu-item-has-children > ul.sub-menu.opened {
+		background: #fff;
+	}
+	
+	#menu-primary #menu-primary-search li.menu-item-has-children > a:after {
+		background: #f6f6f6;
+		color: #c84d29;
+	}
+	
+	#menu-primary #menu-primary-search li.current-menu-item a,
+	#menu-primary #menu-primary-search li.current-menu-item ul.sub-menu a,
+	#menu-primary #menu-primary-search li a:hover,
+	#menu-primary #menu-primary-search li a:active,
+	#menu-primary #menu-primary-search li a:focus {
+		color: #c84d29;
+	}
+
+}
+
+@media screen and (min-width: 900px) {
+
+	#menu-primary.fixed {
+		background: #fff;
+		background: rgba(255,255,255,0.97);
+	}
+	
+	.bottom-line.hover {
+		background: #fff;
+		background: rgba(255, 255, 255, 0.97);
+	}
+	
+	#menu-primary li li a {
+		color: #656565;
+	}
+	
+	/* Root Menu Hover Persistence. */
+	#menu-primary ul a:hover,
+	#menu-primary ul li:hover a,
+	#menu-primary li.current-menu-item a,
+	#menu-primary ul li.iehover a {
+		background: #f6f6f6;
+		color: #c84d29;
+	}
+	
+	/* 2nd Menu */
+	#menu-primary ul li:hover li a {
+		background: none;
+		color: #656565;
+	}
+	
+	/* Current menu item in sub menu. */
+	#menu-primary ul.sub-menu li.current-menu-item a,
+	#menu-primary ul li.iehover li.current-menu-item a {
+		background: none;
+		color: #c84d29;
+	}
+
+	/* 2nd Menu Hover Persistence */
+	#menu-primary ul li:hover li a:hover,
+	#menu-primary ul li:hover li:hover a,
+	#menu-primary ul li.iehover li a:hover,
+	#menu-primary ul li.iehover li.iehover a {
+		background: none;
+		color: #c84d29;
+	}
+	
+}
+
+#menu-primary .toggle-search-form {
+	background-color: transparent;
+}
+#menu-primary .toggle-search-form.add-width {
+	background-color: #fff;
+}
+#menu-primary .search-form input[type="search"] {
+	background-color: transparent;
+}
+#menu-primary .search-form.add-width {
+	background: #fff;
+}
+
+/* Archives. */
+.archive-portfolio_item .entry:nth-child(2n+2),
+.taxonomy-portfolio .entry:nth-child(2n+2),
+.archive-download .entry:nth-child(2n+2),
+.taxonomy-download_category .entry:nth-child(2n+2),
+.taxonomy-download_tag .entry:nth-child(2n+2),
+.page-template-front-page .entry:nth-child(2n+2) {
+	background: #f6f6f6;
+}
+
+/* Sticky. */
+.sticky,
+.super-sticky {
+	background: #f6f6f6;
+}
+
+
+/* Page links. */
+.page-links a {
+	background: #f6f6f6;
+}
+
+/* Loop nav. */
+.loop-nav a[rel="prev"]::before,
+.loop-nav a[rel="next"]::after,
+.loop-pagination a.prev::before,
+.loop-pagination a.next::after,
+.bbp-pagination-links .page-numbers {
+	background: #f6f6f6;
+}
+
+.loop-pagination a.page-numbers {
+	background: #f6f6f6;
+}
+
+/* Page templates. */
+.page-template-front-page #mina-olen-latest-posts.entry .entry,
+.page-template-front-page #mina-olen-latest-portfolio_items.entry .entry,
+.page-template-front-page #mina-olen-latest-downloads.entry .entry,
+.page-template-front-page #mina-olen-latest-testimonials.entry .entry {
+	background: none;
+}
+
+/* Gravity forms. */
+body #gforms_confirmation_message {
+	background: #f1f1f1;
+}
+
+/* Whistles. */
+.whistles-tabs .whistles-tabs-nav li a {
+	background: #f6f6f6;
+}
+.whistles-tabs .whistles-tabs-nav li a:hover {
+	background: #f9f9f9;
+	color:  #555;
+}
+.whistles-tabs .whistles-tabs-nav li[aria-selected="true"] a {
+	background: #fff;
+	border-bottom-color: #fff;
+	color: #555;
+}
+.whistles-toggle .whistle-title,
+.whistles-accordion .whistle-title {
+	background: #f6f6f6;
+	border-top-width: 0;
+}
+.whistles-toggle .whistle-title:hover,
+.whistles-toggle .whistle-title[aria-selected="true"],
+.whistles-accordion .whistle-title:hover, 
+.whistles-accordion .whistle-title[aria-selected="true"] {
+	background: #ededed;
+	color: #555;
+}
+
+
+/* === Colors === */
+
+/* Body. */
+body {
+	color: #656565;
+}
+
+/* Links. */
+a,
+a:visited {
+	color: #c84d29;
+}
+a:hover,
+a:focus,
+a:active {
+	color: #bf421d;
+}
+
+/* Headers. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #353232;
+}
+
+/* Input, textarea. */
+input,
+textarea {
+	color: #555;
+}
+
+/* Captions. */
+.wp-caption-text {
+	color: #999;
+}
+
+/* Widget title. */
+.widget-title {
+	color: #353232;
+}
+
+/* Site description. */
+#site-description {
+	color: #999;	
+}
+
+/* Footer content. */
+#footer .footer-content {
+	color: #9f9f9f;
+}
+
+/* Menu primary link. */
+#menu-primary a {
+	color: #656565;
+}
+
+/* Menu subsidiary link. */
+#menu-subsidiary ul li a {
+	color: #656565;
+}
+#menu-subsidiary ul li a:hover {
+	color: #c84d29;
+}
+#menu-subsidiary li.current-menu-item a {
+	color: #c84d29;
+}
+
+/* Breadcrumb trail. */
+.breadcrumb-trail {
+	color: #999;
+}
+.breadcrumb-trail a {
+	color: #656565;
+}
+
+/* Entry title. */
+.entry-title {
+	color: #353232;
+}
+.entry-title a {
+	color: #353232;
+}
+
+/* Entry byline. */
+.entry-byline {
+	color: #999;
+}
+
+/* Entry meta. */
+.entry-meta {
+	color: #999;
+}
+
+/* Loop description. */
+.loop-description {
+	color: #999;
+}
+
+
+/* === Borders === */
+/* Tables */
+
+table {
+	border-right: 1px solid #eee;
+}
+th,
+td {
+	border-top: 1px solid #eee;
+	border-left: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+
+/* Forms. */
+fieldset {
+	border: 1px solid #eee;
+}
+input,
+textarea {
+	border: 1px solid #ccc;
+}
+input:focus,
+textarea:focus {
+	border: 1px solid #bf421d;
+}
+
+/* Boxed layout border. */
+@media screen and (min-width: 1184px) {
+
+	#container.mina-olen-boxed {
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+	}
+
+}
+
+/* Main, header. */
+#main,
+.home #header {
+	border-bottom: 1px solid #eee;
+}
+
+/* Layout borders. */
+@media screen and (min-width: 896px) {
+
+	.layout-2c-l #content,
+	.layout-default #content {
+		border-right: 1px solid #eee;
+	}
+	
+	.layout-2c-r #content {
+		border-left: 1px solid #eee;
+	}
+	
+	.layout-2c-l #sidebar-primary {
+		border-left: 1px solid #eee;
+	}
+	.layout-2c-r #sidebar-primary {
+		border-right: 1px solid #eee;
+	}
+	
+}
+
+/* Sidebars borders. */
+#sidebar-subsidiary,
+#sidebar-header {
+	border-bottom: 1px solid #eee;
+}
+
+/* Primary menu borders. */
+@media screen and (max-width: 899px) {
+
+	#menu-primary {
+		border-bottom: 1px solid #eee;
+	}
+	
+	#menu-primary #menu-primary-search li.menu-item-has-children > a:after {
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+	}
+	
+	#menu-primary #menu-primary-search li a {
+		border-top: 1px solid #eee;
+	}
+	
+	.nav-toggle:before {
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+	}
+	
+}
+
+/* Minimum width of 900 pixels. */
+@media screen and (min-width: 900px) {
+
+	.bottom-line.hover {
+		border-bottom: 1px solid #eee;
+	}
+	
+	#menu-primary {
+		border-bottom: 1px solid #eee;
+	}
+	#menu-primary li  {
+		border-left: 1px solid #eee;
+	}
+	#menu-primary li:last-child {
+		border-right: 1px solid #eee;
+	}
+	#menu-primary li li {
+		border-left: none;
+	}
+	#menu-primary li li:last-child {
+		border-right: none;
+	}
+	
+}
+
+#menu-primary .toggle-search-form {
+	border-left: 1px solid #eee;
+	border-right: 1px solid #eee;
+}
+
+/* Subsidiary menu. */
+#menu-subsidiary {
+	border-bottom: 1px solid #eee;
+}
+
+@media screen and (max-width: 899px) {
+
+	#menu-subsidiary ul li a {
+		border-bottom: 1px solid #eee;
+	}
+	#menu-subsidiary ul li:last-child a {
+		border-bottom: none;
+	}
+}
+
+@media screen and (min-width: 900px) {
+
+	#menu-subsidiary ul li {
+		border-left: 1px solid #eee;
+	}
+	#menu-subsidiary ul li:last-child {
+		border-right: 1px solid #eee;
+	}
+
+}
+
+/* Breadcrumbs. */
+.breadcrumb-trail {
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+
+/* Post entry. */
+.entry  {
+	border-bottom: solid 1px #eee;
+}
+
+/* Loop meta. */
+.loop-meta {
+	border-bottom: 1px solid #eee;
+}
+
+/* Whistles. */
+.whistles-tabs .whistles-tabs-nav li a {
+	border: 1px solid #eee;
+	border-right-width: 0;
+}
+.whistles-tabs .whistles-tabs-nav li[aria-selected="true"] a {
+	border-bottom-color: #fff;
+}
+.whistles-toggle .whistle-title,
+.whistles-accordion .whistle-title {
+	border: 1px solid #eee;
+	border-top-width: 0;
+}
+.whistles-toggle .whistle-content,
+.whistles-accordion .whistle-content {
+	border: 1px solid #eee;
+}
+
+/* Jetpack. */
+body div.sharedaddy div.sd-block {
+	border-top-color: #eee;
+}
