@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mina olen 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/mina-olen\n"
-"POT-Creation-Date: 2014-01-31 13:55:12+00:00\n"
-"PO-Revision-Date: 2014-01-31 15:55+0200\n"
+"POT-Creation-Date: 2014-02-03 09:03:10+00:00\n"
+"PO-Revision-Date: 2014-02-03 11:03+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Foxnet <sami.keijonen@foxnet.fi>\n"
 "Language: fi\n"
@@ -100,7 +100,7 @@ msgstr "Ei tiedossa"
 #: content-image.php:37 content-link.php:15 content-link.php:37
 #: content-page.php:11 content-page.php:23 content-portfolio_item.php:17
 #: content-portfolio_item.php:39 content-quote.php:15 content-quote.php:35
-#: content-status.php:15 content-testimonial.php:17 content-testimonial.php:38
+#: content-status.php:15 content-testimonial.php:17 content-testimonial.php:36
 #: content-video.php:17 content-video.php:37 content.php:15 content.php:36
 #: pages/front-page.php:131
 msgid "Pages:"
@@ -213,33 +213,33 @@ msgstr "2 saraketta: sisältö / sivupalkki"
 msgid "2 Columns: Sidebar / Content"
 msgstr "2 saraketta: sivupalkki / sisältö"
 
-#: functions.php:204
+#: functions.php:186
 msgid "Primary menu"
 msgstr "Päävalikko"
 
-#: functions.php:206
+#: functions.php:188
 msgid "Subsidiary menu"
 msgstr "Alapalkin valikko"
 
-#: functions.php:208
+#: functions.php:190
 msgid "Social menu"
 msgstr "Somevalikko"
 
-#: functions.php:222
+#: functions.php:204
 msgctxt "sidebar"
 msgid "Header"
 msgstr "Yläsivupalkki"
 
-#: functions.php:223
+#: functions.php:205
 msgid "A sidebar located in the top of the site."
 msgstr "Tähän liitetyt vimpaimet näkyvät sivun yläreunassa."
 
-#: functions.php:227
+#: functions.php:209
 msgctxt "sidebar"
 msgid "Primary"
 msgstr "Pääsivupalkki"
 
-#: functions.php:228
+#: functions.php:210
 msgid ""
 "The main sidebar. It is displayed on either the left or right side of the "
 "page based on the chosen layout."
@@ -247,20 +247,20 @@ msgstr ""
 "Tähän liitetyt vimpaimet näkyvät sisällön vasemmalla tai oikealla puolella "
 "riippuen valitusta ulkoasusta."
 
-#: functions.php:232
+#: functions.php:214
 msgctxt "sidebar"
 msgid "Subsidiary"
 msgstr "Alapalkin vimpainalue"
 
-#: functions.php:233
+#: functions.php:215
 msgid "A sidebar located in the footer of the site."
 msgstr "Tähän liitetyt vimpaimet näkyvät sivun alareunassa."
 
-#: functions.php:382 pages/front-page.php:45 pages/front-page.php:48
+#: functions.php:364 pages/front-page.php:45 pages/front-page.php:48
 msgid "Read more"
 msgstr "Lue lisää"
 
-#: functions.php:414
+#: functions.php:396
 msgid "Visit site"
 msgstr "Vieraile sivulla"
 
