@@ -637,7 +637,6 @@ kbd,
 pre,
 samp {
 	font-family: monospace, serif;
-	font-size: 93.5%;
 }
 code {
 	padding: 0 0.1875em;
@@ -647,6 +646,9 @@ pre {
 	padding: 3%;
 	margin: 20px 0;
 	margin: 1.25rem 0;
+	overflow: auto;
+	white-space: pre;
+	word-wrap: normal;
 }
 pre code {
 	padding: 0;
@@ -1751,7 +1753,8 @@ img {
 	color: #fff;
 	font-size: 24px;
 	font-size: 1.5rem;
-	padding: 3%;
+	padding: 24px 3%;
+	padding: 1.5rem 3%;
 	text-align: center;
 }
 .page-template-default #mina-olen-callout-url p {
@@ -1822,7 +1825,7 @@ img {
 
 #back-to-top a:after {
 	content: '\f432';
-	padding-left: 4px;
+	padding: 0 2px;
 	-webkit-font-smoothing: antialiased;
 	display: inline-block;
 	font: normal 32px/0.6 Genericons;
@@ -1958,8 +1961,6 @@ img {
 		content: '\f419';
 		font-family: 'Genericons';
 		font-size: 32px;
-		width: 32px;
-		height: 32px;
 		padding: 8px 12px;
 		border-left: 1px solid #eee;
 		border-right: 1px solid #eee;
@@ -2255,9 +2256,7 @@ img {
 	font-size: 32px;
 	display: inline-block;
 	vertical-align: baseline;
-	width: 32px;
-	height: 32px;
-	padding: 2px 12px 14px;
+	padding: 0 12px;
 	position: absolute;
 	top: 0;
 	left: 0;
