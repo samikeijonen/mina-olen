@@ -444,7 +444,16 @@ textarea:focus {
 	}
 	
 	#menu-primary #menu-primary-search li a {
+		background: #fff;
 		border-top: 1px solid #eee;
+	}
+	
+	#menu-primary #menu-primary-search li.current-menu-item a,
+	#menu-primary #menu-primary-search li.current-menu-item ul.sub-menu a,
+	#menu-primary #menu-primary-search li a:hover,
+	#menu-primary #menu-primary-search li a:active,
+	#menu-primary #menu-primary-search li a:focus {
+		color: #c84d29;
 	}
 	
 	.nav-toggle:before {
