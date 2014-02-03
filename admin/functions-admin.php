@@ -3,7 +3,7 @@
 /* Set up Licence key for this theme. URL: https://easydigitaldownloads.com/docs/activating-license-keys-in-wp-plugins-and-themes */
  
 /* This is the URL our updater / license checker pings. This should be the URL of the site with EDD installed. */
-define( 'MINA_OLEN_SL_STORE_URL', 'http://localhost/foxnet-themes-shop' ); // use your own unique prefix to prevent conflicts
+define( 'MINA_OLEN_SL_STORE_URL', 'http://foxnet-themes.fi' ); // use your own unique prefix to prevent conflicts
 
 /* The name of your product. This should match the download name in EDD exactly. */
 define( 'MINA_OLEN_SL_THEME_NAME', 'Mina olen' ); // use your own unique prefix to prevent conflicts
