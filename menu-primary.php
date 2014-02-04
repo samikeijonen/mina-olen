@@ -23,10 +23,16 @@
 			
 			?>
 			
-			<div class="toggle-search-form">
-				<a class="toggle-search"></a>
-				<?php get_search_form(); ?>
-			</div><!-- .toggle-search -->
+			<?php /* Whether to show search or not. Defaults to yes. */
+			
+			$mina_olen_show_search = apply_filters( 'mina_olen_show_search', true );
+			
+			if( $mina_olen_show_search ) : // Check do we show search. ?>
+				<div class="toggle-search-form">
+					<a class="toggle-search"></a>
+					<?php get_search_form(); ?>
+				</div><!-- .toggle-search -->
+			<?php endif; // End check do we show search. ?>
 			
 		</div><!-- .wrap -->
 		
