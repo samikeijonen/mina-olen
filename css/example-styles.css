@@ -88,6 +88,9 @@ body .mina-olen-theme-color#edd-purchase-button:active {
 	background: rgba(0,0,0,0.4);
 	color: #fff;
 }
+#mina-olen-callout-url a {
+	color: #fff;
+}
 
 /* Back to top. */
 #back-to-top a {
