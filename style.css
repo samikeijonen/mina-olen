@@ -2000,7 +2000,8 @@ img {
 	#header {
 		margin-top: 49px;
 	}
-	.active-sidebar-header #header {
+	.active-sidebar-header #header,
+	.ie9 #header	{
 		margin-top: 0;
 	}
 	
