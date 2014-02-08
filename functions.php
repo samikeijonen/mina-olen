@@ -405,6 +405,11 @@ function mina_olen_get_portfolio_item_link() {
 */
 function mina_olen_callout_output() {
 
+	/* Get out if on search or 404 page. */
+	if( is_search() || is_404() ) {
+		return;
+	}
+
 	/* Get post meta. */
 	$mina_olen_callout_text = get_post_meta( get_the_ID(), '_mina_olen_callout_text', true );
 	$mina_olen_callout_url = get_post_meta( get_the_ID(), '_mina_olen_callout_url', true );
