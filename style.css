@@ -1990,6 +1990,11 @@ img {
 		z-index: 9999;
 		width: 100%;
 	}
+	.ie9 #menu-primary {
+		position: fixed; /* For some reason IE9 needs this. */
+		top: 0;
+		z-index: 9999;
+	}
 	.mina-olen-boxed #menu-primary.fixed {
 		max-width: 1176px; /* 2 pixels less than .mina-olen-boxed layout. */
 	}
@@ -2000,8 +2005,7 @@ img {
 	#header {
 		margin-top: 49px;
 	}
-	.active-sidebar-header #header,
-	.ie9 #header	{
+	.active-sidebar-header #header {
 		margin-top: 0;
 	}
 	
@@ -2809,6 +2813,8 @@ a.more-link::after {
 
 .page-links a {
 	background: #f6f6f6;
+	display: inline-block;
+	margin-bottom: 4px;
 	padding: 0.5em 0.75em;
 }
 
