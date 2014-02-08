@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mina olen 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/mina-olen\n"
-"POT-Creation-Date: 2014-02-03 09:03:10+00:00\n"
-"PO-Revision-Date: 2014-02-03 11:03+0200\n"
+"POT-Creation-Date: 2014-02-08 13:49:36+00:00\n"
+"PO-Revision-Date: 2014-02-08 15:50+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Foxnet <sami.keijonen@foxnet.fi>\n"
 "Language: fi\n"
@@ -264,7 +264,7 @@ msgstr "Lue lisää"
 msgid "Visit site"
 msgstr "Vieraile sivulla"
 
-#: header.php:56
+#: header.php:57
 msgid "&#47;"
 msgstr "&#47;"
 
@@ -1102,7 +1102,14 @@ msgstr "(Ei otsikkoa)"
 msgid "Nothing found"
 msgstr "Mitään ei löytynyt"
 
-#: loop-error.php:8
+#: loop-error.php:12
+msgid ""
+"You tried going to %s, which doesn't exist. You can try navigate or search."
+msgstr ""
+"Yritit mennä sivulle %s mutta sitä ei enää ole. Koita navigoida tai etsiä "
+"haluamasi sivu."
+
+#: loop-error.php:18
 msgid "Apologies, but no entries were found."
 msgstr "Pahoittelut, mutta yhtään artikkelia ei löytynyt."
 
