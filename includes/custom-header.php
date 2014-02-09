@@ -41,14 +41,13 @@ function mina_olen_custom_header_setup() {
  * @return void
  */
 function mina_olen_custom_header_wp_head() {
-
-	if ( !get_header_image() )
-		return;
-
+	
+	/* Get header text color. And get out if it's not set. */
 	$hex = get_header_textcolor();
 
-	if ( empty( $hex ) )
+	if ( empty( $hex ) ) {
 		return;
+	}
 	
 	/* Header image. */
 	$header_image = esc_url( get_header_image() );
@@ -66,8 +65,11 @@ function mina_olen_custom_header_wp_head() {
 	$background_arguments = esc_attr( apply_filters( 'mina_olen_header_bg_arguments', 'no-repeat scroll top' ) );
 
 	$style = "body.custom-header #site-title a { color: #{$hex}; }";
-	$style .= "@media screen and (min-width: {$min_width}px) { body.custom-header #header { background: url({$header_image}) {$background_arguments}; background-size: {$header_width}px auto; min-height: {$header_height}px; } }";
-
+	
+	if ( get_header_image() ) {
+		$style .= "@media screen and (min-width: {$min_width}px) { body.custom-header #header { background: url({$header_image}) {$background_arguments}; background-size: {$header_width}px auto; min-height: {$header_height}px; } }";
+	}
+	
 	echo "\n" . '<style type="text/css" id="custom-header-css">' . trim( $style ) . '</style>' . "\n";
 }
 
