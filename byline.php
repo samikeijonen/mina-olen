@@ -8,7 +8,7 @@
 	<time <?php hybrid_attr( 'entry-published' ); ?>><?php echo get_the_date(); ?></time>
 	
 	<?php if( has_post_format( 'link' ) ) : // If current post have link post format. ?>
-		<a class="entry-permalink" href="<?php the_permalink(); ?>" rel="bookmark" itemprop="url"><?php _e( 'Permalink', 'stargazer' ); ?></a>
+		<a class="entry-permalink" href="<?php the_permalink(); ?>" rel="bookmark" itemprop="url"><?php _e( 'Permalink', 'mina-olen' ); ?></a>
 	<?php endif; // End link post format check. ?>
 	
 	<?php comments_popup_link( number_format_i18n( 0 ), number_format_i18n( 1 ), '%', 'comments-link', '' ); ?>
