@@ -4,11 +4,11 @@
 	
 		/* Menu primary sub menu toggle. */
 		
-		//$('.menu-item-has-children').children('a').after('<span class="sub-menu-indicator"></span>');
+		$('#menu-primary .menu-item-has-children').children('a').after('<span class="sub-menu-indicator"></span>');
 	  
 		var $menu = $('#menu-primary-search'),
 			$menulink = $('.nav-toggle'),
-			$menuTrigger = $('.menu-item-has-children > a');
+			$menuTrigger = $('.menu-item-has-children .sub-menu-indicator');
 		
 		$menulink.click(function(e) {
 			e.preventDefault();
