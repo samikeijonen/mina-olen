@@ -1,10 +1,10 @@
 <?php if ( has_nav_menu( 'primary' ) ) { ?>
 
-	<nav id="menu-primary" <?php hybrid_attr( 'menu', 'primary' ); ?>>
+	<nav <?php hybrid_attr( 'menu', 'primary' ); ?>>
 	
 		<div class="wrap">
 		
-			<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'webdento' ); ?>"><?php _e( 'Skip to content', 'webdento' ); ?></a></div>
+			<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'mina-olen' ); ?>"><?php _e( 'Skip to content', 'mina-olen' ); ?></a></div>
 	
 			<a href="#menu-primary-search" class="nav-toggle"></a>
 			
