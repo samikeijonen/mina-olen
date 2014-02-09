@@ -453,9 +453,6 @@ function mina_olen_get_editor_styles() {
 	/* Add the locale stylesheet. */
 	$editor_styles[] = get_locale_stylesheet_uri();
 
-	/* Uses Ajax to display custom theme styles added via the Theme Mods API. */
-	$editor_styles[] = add_query_arg( 'action', 'stargazer_editor_styles', admin_url( 'admin-ajax.php' ) );
-
 	/* Return the styles. */
 	return $editor_styles;
 }
