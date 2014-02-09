@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mina olen 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/mina-olen\n"
-"POT-Creation-Date: 2014-02-08 13:49:36+00:00\n"
+"POT-Creation-Date: 2014-02-09 09:17:54+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -82,15 +82,7 @@ msgstr ""
 msgid "Unknown"
 msgstr ""
 
-#: attachment-image.php:28 content-aside.php:15 content-audio.php:17
-#: content-audio.php:37 content-download.php:17 content-download.php:38
-#: content-gallery.php:15 content-gallery.php:41 content-image.php:17
-#: content-image.php:37 content-link.php:15 content-link.php:37
-#: content-page.php:11 content-page.php:23 content-portfolio_item.php:17
-#: content-portfolio_item.php:39 content-quote.php:15 content-quote.php:35
-#: content-status.php:15 content-testimonial.php:17 content-testimonial.php:36
-#: content-video.php:17 content-video.php:37 content.php:15 content.php:36
-#: pages/front-page.php:131
+#: attachment-image.php:28 pages/front-page.php:131
 msgid "Pages:"
 msgstr ""
 
@@ -280,47 +272,47 @@ msgstr ""
 msgid "Front page settings"
 msgstr ""
 
-#: includes/theme-customize.php:44 includes/theme-customize.php:304
+#: includes/theme-customize.php:47 includes/theme-customize.php:307
 msgid "Select page"
 msgstr ""
 
-#: includes/theme-customize.php:72
+#: includes/theme-customize.php:75
 msgid "Show latest posts on front page"
 msgstr ""
 
-#: includes/theme-customize.php:98
+#: includes/theme-customize.php:101
 msgid "Show latest portfolios on front page"
 msgstr ""
 
-#: includes/theme-customize.php:125
+#: includes/theme-customize.php:128
 msgid "Show latest downloads on front page"
 msgstr ""
 
-#: includes/theme-customize.php:152
+#: includes/theme-customize.php:155
 msgid "Show latest testimonials on front page"
 msgstr ""
 
-#: includes/theme-customize.php:176
+#: includes/theme-customize.php:179
 msgid "Use boxed layout in all pages."
 msgstr ""
 
-#: includes/theme-customize.php:199
+#: includes/theme-customize.php:202
 msgid "Show full content of pages in front page. Default is excerpt."
 msgstr ""
 
-#: includes/theme-customize.php:211
+#: includes/theme-customize.php:214
 msgid "Logo Upload"
 msgstr ""
 
-#: includes/theme-customize.php:233
+#: includes/theme-customize.php:236
 msgid "Upload custom logo."
 msgstr ""
 
-#: includes/theme-customize.php:244
+#: includes/theme-customize.php:247
 msgid "Footer text"
 msgstr ""
 
-#: includes/theme-customize.php:267
+#: includes/theme-customize.php:270
 msgid "Enter footer text"
 msgstr ""
 
