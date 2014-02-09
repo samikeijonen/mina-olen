@@ -1098,6 +1098,14 @@ img {
 	width: 100%;
 }
 
+/* Fix for last item dropping below the controls in [audio] shortcode. */
+.mejs-container .mejs-controls > div:last-of-type {
+	position: relative;
+	clear: both;
+	float: right;
+	top: -26px;
+}
+
 /* Thumbnails. */
 .thumbnail {
 	border-radius: 50%;
