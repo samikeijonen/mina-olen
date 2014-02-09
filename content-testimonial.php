@@ -6,7 +6,7 @@
 		
 			<?php echo get_avatar( get_post_meta( get_the_ID(), '_gravatar_email', true ), 150 ); ?>
 		
-			<h1 class="entry-title"><?php single_post_title(); ?></h1>
+			<h1 <?php hybrid_attr( 'entry-title' ); ?>><?php single_post_title(); ?></h1>
 			
 			<?php hybrid_post_terms( array( 'taxonomy' => 'testimonial-category', 'before' => '<div class="entry-byline">', 'after' => '</div>' ) ); ?>
 	
@@ -14,7 +14,7 @@
 
 		<div class="entry-content">
 			<?php the_content(); ?>
-			<?php wp_link_pages( array( 'before' => '<p class="page-links">' . '<span class="before">' . __( 'Pages:', 'mina-olen' ) . '</span>', 'after' => '</p>' ) ); ?>
+			<?php wp_link_pages(); ?>
 		</div><!-- .entry-content -->
 	
 	<?php else : // If not viewing a single post. ?>
@@ -25,7 +25,7 @@
 				
 				<?php echo get_avatar( get_post_meta( get_the_ID(), '_gravatar_email', true ), 150 ); ?>
 				
-				<?php the_title( '<h2 class="entry-title"><a href="' . get_permalink() . '">', '</a></h2>' ); ?>
+				<?php the_title( '<h2 ' . hybrid_get_attr( 'entry-title' ) . '><a href="' . get_permalink() . '" rel="bookmark" itemprop="url">', '</a></h2>' ); ?>
 				
 				<?php hybrid_post_terms( array( 'taxonomy' => 'testimonial-category', 'before' => '<div class="entry-byline">', 'after' => '</div>' ) ); ?>
 			
@@ -33,7 +33,7 @@
 
 			<div class="entry-content">
 				<?php the_content(); ?>
-				<?php wp_link_pages( array( 'before' => '<p class="page-links">' . '<span class="before">' . __( 'Pages:', 'mina-olen' ) . '</span>', 'after' => '</p>' ) ); ?>
+				<?php wp_link_pages(); ?>
 			</div><!-- .entry-content -->
 			
 		</div><!-- .wrapper-inner -->

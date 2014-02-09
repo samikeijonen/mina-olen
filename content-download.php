@@ -4,7 +4,7 @@
 
 		<header class="entry-header">
 		
-			<h1 class="entry-title"><?php single_post_title(); ?></h1>
+			<h1 <?php hybrid_attr( 'entry-title' ); ?>><?php single_post_title(); ?></h1>
 			
 			<div class="entry-byline">
 					<?php hybrid_post_terms( array( 'taxonomy' => 'download_category' ) ); ?>
@@ -14,7 +14,7 @@
 
 		<div class="entry-content">
 			<?php the_content(); ?>
-			<?php wp_link_pages( array( 'before' => '<p class="page-links">' . '<span class="before">' . __( 'Pages:', 'mina-olen' ) . '</span>', 'after' => '</p>' ) ); ?>
+			<?php wp_link_pages(); ?>
 		</div><!-- .entry-content -->
 		
 	<?php } else { ?>
@@ -25,7 +25,7 @@
 				
 				<?php if ( current_theme_supports( 'get-the-image' ) ) get_the_image( array( 'size' => 'mina-olen-thumbnail' ) ); ?>
 				
-				<?php the_title( '<h2 class="entry-title"><a href="' . get_permalink() . '">', '</a></h2>' ); ?>
+				<?php the_title( '<h2 ' . hybrid_get_attr( 'entry-title' ) . '><a href="' . get_permalink() . '" rel="bookmark" itemprop="url">', '</a></h2>' ); ?>
 				
 				<div class="entry-byline">
 					<?php hybrid_post_terms( array( 'taxonomy' => 'download_category' ) ); ?>
@@ -35,7 +35,7 @@
 
 			<div class="entry-summary">
 				<?php the_excerpt(); ?>
-				<?php wp_link_pages( array( 'before' => '<p class="page-links">' . '<span class="before">' . __( 'Pages:', 'mina-olen' ) . '</span>', 'after' => '</p>' ) ); ?>
+				<?php wp_link_pages(); ?>
 				<?php if ( function_exists( 'mina_olen_download_price' ) ) {
 					echo mina_olen_download_price();
 				} ?>

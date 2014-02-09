@@ -14,7 +14,7 @@
 
 		<div <?php hybrid_attr( 'entry-content' ); ?>>
 			<?php the_content(); ?>
-			<?php wp_link_pages( array( 'before' => '<p class="page-links">' . '<span class="before">' . __( 'Pages:', 'mina-olen' ) . '</span>', 'after' => '</p>' ) ); ?>
+			<?php wp_link_pages(); ?>
 		</div><!-- .entry-content -->
 		
 		<footer class="entry-footer">
@@ -34,7 +34,7 @@
 
 		<div <?php hybrid_attr( 'entry-summary' ); ?>>
 			<?php the_excerpt(); ?>
-			<?php wp_link_pages( array( 'before' => '<p class="page-links">' . '<span class="before">' . __( 'Pages:', 'mina-olen' ) . '</span>', 'after' => '</p>' ) ); ?>
+			<?php wp_link_pages(); ?>
 		</div><!-- .entry-summary -->
 
 	<?php endif; // End single post check. ?>
