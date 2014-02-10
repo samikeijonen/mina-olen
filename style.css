@@ -3,7 +3,7 @@
  * Theme URI: https://foxnet-themes.fi/downloads/mina-olen
  * Description: Mina olen WordPress Theme is made for cool business type of sites. And in the same time blogging features looks great also.
  * Tags: white, one-column, two-columns, left-sidebar, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, featured-images, flexible-header, full-width-template, microformats, post-formats, sticky-post, threaded-comments, translation-ready
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Sami Keijonen
  * Author URI: http://foxnet-themes.fi
  * Text Domain: mina-olen
@@ -1914,7 +1914,6 @@ img {
 		border-right: 1px solid #eee;
 		color: #c84d29;
 		content: '\f431';
-		cursor: pointer;
 		padding-left: 4px;
 		-webkit-font-smoothing: antialiased;
 		display: inline-block;
@@ -2008,6 +2007,7 @@ img {
 		width: 100%;
 	}
 	.ie9 #menu-primary {
+		background: #fff;
 		position: fixed; /* For some reason IE9 needs this. */
 		top: 0;
 		z-index: 9999;

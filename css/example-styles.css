@@ -111,7 +111,7 @@ body .mina-olen-theme-color#edd-purchase-button:active {
 		background: #fff;
 	}
 	
-	#menu-primary #menu-primary-search li.menu-item-has-children > a:after {
+	#menu-primary #menu-primary-search li.menu-item-has-children > .sub-menu-indicator:after {
 		background: #f6f6f6;
 		color: #c84d29;
 	}
@@ -131,6 +131,9 @@ body .mina-olen-theme-color#edd-purchase-button:active {
 	#menu-primary.fixed {
 		background: #fff;
 		background: rgba(255,255,255,0.97);
+	}
+	.ie9 #menu-primary {
+		background: #fff;
 	}
 	
 	.bottom-line.hover {
@@ -441,7 +444,7 @@ textarea:focus {
 		border-bottom: 1px solid #eee;
 	}
 	
-	#menu-primary #menu-primary-search li.menu-item-has-children > a:after {
+	#menu-primary #menu-primary-search li.menu-item-has-children > .sub-menu-indicator:after {
 		border-left: 1px solid #eee;
 		border-right: 1px solid #eee;
 	}
