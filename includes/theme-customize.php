@@ -27,7 +27,7 @@ function mina_olen_customize_register_settings( $wp_customize ) {
 	/* Get pages and use them as choices. */
 	$mina_olen_page_choices = mina_olen_front_page_choices();
 	
-	while( $k < apply_filters( 'mina_olen_how_many_pages', 7 ) ) {
+	while( $k < absint( apply_filters( 'mina_olen_how_many_pages', 7 ) ) ) {
 	
 	/* Add the 'front_page_*' setting. */
 	$wp_customize->add_setting(
