@@ -80,33 +80,6 @@ function mina_olen_customize_register_settings( $wp_customize ) {
 		)
 	);
 	
-	/* Show option for latest portfolio if post type exist. */
-	if ( post_type_exists( 'portfolio_item' ) ) {
-		
-		/* Add the show latest portfolios setting. */
-		$wp_customize->add_setting(
-			'show_latest_portfolios',
-			array(
-				'default'           => '',
-				'type'              => 'theme_mod',
-				'capability'        => 'edit_theme_options',
-				'sanitize_callback' => 'sanitize_text_field'
-			)
-		);
-	
-		/* Add the show latest portfolios control. */
-		$wp_customize->add_control(
-			'show-latest-portfolios',
-			array(
-				'label'    => esc_html__( 'Show latest portfolios on front page', 'mina-olen' ),
-				'section'  => 'front-page',
-				'settings' => 'show_latest_portfolios',
-				'priority' => 50,
-				'type'     => 'checkbox'
-			)
-		);
-	}
-	
 	/* Show option for latest download if post type exist. */
 	if ( post_type_exists( 'download' ) ) {
 		
@@ -128,6 +101,33 @@ function mina_olen_customize_register_settings( $wp_customize ) {
 				'label'    => esc_html__( 'Show latest downloads on front page', 'mina-olen' ),
 				'section'  => 'front-page',
 				'settings' => 'show_latest_downloads',
+				'priority' => 50,
+				'type'     => 'checkbox'
+			)
+		);
+	}
+	
+	/* Show option for latest portfolio if post type exist. */
+	if ( post_type_exists( 'portfolio_item' ) ) {
+		
+		/* Add the show latest portfolios setting. */
+		$wp_customize->add_setting(
+			'show_latest_portfolios',
+			array(
+				'default'           => '',
+				'type'              => 'theme_mod',
+				'capability'        => 'edit_theme_options',
+				'sanitize_callback' => 'sanitize_text_field'
+			)
+		);
+	
+		/* Add the show latest portfolios control. */
+		$wp_customize->add_control(
+			'show-latest-portfolios',
+			array(
+				'label'    => esc_html__( 'Show random portfolios on front page', 'mina-olen' ),
+				'section'  => 'front-page',
+				'settings' => 'show_latest_portfolios',
 				'priority' => 60,
 				'type'     => 'checkbox'
 			)
@@ -152,7 +152,7 @@ function mina_olen_customize_register_settings( $wp_customize ) {
 		$wp_customize->add_control(
 			'show-latest-testimonials',
 			array(
-				'label'    => esc_html__( 'Show latest testimonials on front page', 'mina-olen' ),
+				'label'    => esc_html__( 'Show random testimonials on front page', 'mina-olen' ),
 				'section'  => 'front-page',
 				'settings' => 'show_latest_testimonials',
 				'priority' => 70,
