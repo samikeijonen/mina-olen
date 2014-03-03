@@ -8,6 +8,9 @@
 	margin: 45px auto 0;
 	text-transform: uppercase;
 }
+.custom-header-image #site-title {
+	padding-top: 105px;
+}
 
 #site-title a {
 	text-decoration: none;
