@@ -1,6 +1,6 @@
 <?php get_header(); // Loads the header.php template. ?>
 
-	<div <?php hybrid_attr( 'content' ); ?>>
+	<main <?php hybrid_attr( 'content' ); ?>>
 
 		<?php if ( have_posts() ) { ?>
 
@@ -34,6 +34,6 @@
 
 		<?php } // End if check. ?>
 
-	</div><!-- #content -->
+	</main><!-- #content -->
 
 <?php get_footer(); // Loads the footer.php template. ?>
