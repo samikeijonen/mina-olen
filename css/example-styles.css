@@ -84,6 +84,10 @@ body .mina-olen-theme-color#edd-purchase-button:active {
 
 /* Callout. */
 #mina-olen-callout-url {
+	background: #f6f6f6;
+	color: #999;
+}
+.custom-header-image #mina-olen-callout-url {
 	background: #111;
 	background: rgba(0,0,0,0.4);
 	color: #fff;
@@ -116,8 +120,8 @@ body .mina-olen-theme-color#edd-purchase-button:active {
 		color: #c84d29;
 	}
 	
-	#menu-primary #menu-primary-search li.current-menu-item a,
-	#menu-primary #menu-primary-search li.current-menu-item ul.sub-menu a,
+	#menu-primary #menu-primary-search li.current-menu-item > a,
+	#menu-primary #menu-primary-search li.current-menu-item ul.sub-menu > a,
 	#menu-primary #menu-primary-search li a:hover,
 	#menu-primary #menu-primary-search li a:active,
 	#menu-primary #menu-primary-search li a:focus {
@@ -452,14 +456,6 @@ textarea:focus {
 	#menu-primary #menu-primary-search li a {
 		background: #fff;
 		border-top: 1px solid #eee;
-	}
-	
-	#menu-primary #menu-primary-search li.current-menu-item a,
-	#menu-primary #menu-primary-search li.current-menu-item ul.sub-menu a,
-	#menu-primary #menu-primary-search li a:hover,
-	#menu-primary #menu-primary-search li a:active,
-	#menu-primary #menu-primary-search li a:focus {
-		color: #c84d29;
 	}
 	
 	.nav-toggle:before {
