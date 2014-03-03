@@ -1,6 +1,6 @@
 <article <?php hybrid_attr( 'post' ); ?>>
 
-	<?php if ( is_singular( get_post_type() ) ) { ?>
+	<?php if ( is_singular( get_post_type() ) ) : // If viewing a single post. ?>
 
 		<header class="entry-header">
 		
@@ -18,7 +18,7 @@
 			<?php echo mina_olen_get_portfolio_item_link(); // echo portfolio link ?>
 		</div><!-- .entry-content -->
 		
-	<?php } else { ?>
+	<?php else : // If not viewing a single post. ?>
 	
 		<div class="wrapper-inner">
 
@@ -42,6 +42,6 @@
 			
 		</div><!-- .wrapper-inner -->
 
-	<?php } ?>
+	<?php endif; // End single post check. ?>
 
 </article><!-- .entry -->
