@@ -3,7 +3,7 @@
  * Theme URI: https://foxnet-themes.fi/downloads/mina-olen
  * Description: Mina olen WordPress Theme is made for cool business type of sites. And in the same time blogging features looks great also.
  * Tags: white, one-column, two-columns, left-sidebar, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, featured-images, flexible-header, full-width-template, microformats, post-formats, sticky-post, threaded-comments, translation-ready
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: Sami Keijonen
  * Author URI: http://foxnet-themes.fi
  * Text Domain: mina-olen
@@ -1754,16 +1754,26 @@ img {
 #site-title {
 	text-transform: uppercase;
 }
+.custom-header-image #site-title {
+	margin-top: 105px;
+}
+.custom-header-image.custom-callout #site-title {
+	margin-top: 45px;
+}
 
 #mina-olen-callout-url {
-	background: #111;
-	background: rgba(0,0,0,0.4);
-	color: #fff;
+	background: #f6f6f6;
+	color: #999;
 	font-size: 24px;
 	font-size: 1.5rem;
 	padding: 24px 3%;
 	padding: 1.5rem 3%;
 	text-align: center;
+}
+.custom-header-image #mina-olen-callout-url {
+	background: #111;
+	background: rgba(0,0,0,0.4);
+	color: #fff;
 }
 .page-template-default #mina-olen-callout-url p {
 	margin-bottom: 0;
@@ -2247,6 +2257,7 @@ img {
 	top: 0;
 	padding: 14px 0;
 	margin: 0;
+	overflow: hidden;
 	width: 58px;
 }
 #menu-primary .toggle-search-form.add-width {
@@ -2901,7 +2912,7 @@ a.more-link::after {
  * --------------------------------------------------------------------------- */
 
 .page-template-front-page .wrapper-inner .entry-header,
-#mina-olen-latest-title,
+.mina-olen-latest-title,
 #mina-olen-latest-portfolio_items-title,
 .page-template-front-page #mina-olen-latest-posts .entry-header,
 .page-template-front-page #mina-olen-latest-posts .entry-summary .entry-title,
@@ -2966,7 +2977,15 @@ a.more-link::after {
 	.page-template-front-page .mina-olen-boxed .mina-olen-latest-all {
 		width: 100%;
 	}
-	
+	.page-template-front-page .mina-olen-latest-all .wrap-margin {
+		width: 103%;
+	}
+	.page-template-front-page .mina-olen-latest-title {
+		width: 97%;
+	}
+	.page-template-front-page .mina-olen-boxed .mina-olen-latest-title {
+		width: 103%;
+	}
 	.page-template-front-page .mina-olen-boxed .entry.mina-olen-latest-all .wrap-margin {
 		margin-left: -3%;
 	}
