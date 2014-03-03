@@ -151,6 +151,9 @@ function mina_olen_theme_setup() {
 	/* Add number of subsidiary and front page widgets to body_class. */
 	add_filter( 'body_class', 'mina_olen_subsidiary_classes' );
 	
+	/* Add proper classes in body class. */
+	add_filter( 'body_class', 'mina_olen_body_classes' );
+	
 	/* Change [...] to ... Read more. */
 	add_filter( 'excerpt_more', 'mina_olen_excerpt_more' );
 	
@@ -229,7 +232,7 @@ function mina_olen_register_sidebars() {
 function mina_olen_enqueue_scripts() {
 	
 	/* Enqueue Fitvids. */
-	wp_enqueue_script( 'mina-olen-fitvids', trailingslashit( get_template_directory_uri() ) . 'js/fitvids/fitvids.js', array( 'jquery' ), '20140116', false );
+	wp_enqueue_script( 'mina-olen-fitvids', trailingslashit( get_template_directory_uri() ) . 'js/fitvids/fitvids.js', array( 'jquery' ), '20140228', false );
 
 	/* Enqueue Headroom. */
 	wp_enqueue_script( 'mina-olen-headroom', trailingslashit( get_template_directory_uri() ) . 'js/headroom/headroom.js', array( 'jquery' ), '20131222', false );
@@ -356,6 +359,27 @@ function mina_olen_subsidiary_classes( $classes ) {
 }
 
 /**
+ * Add proper classes to body class.
+ * @since     1.0.2
+ * @return  array
+ */
+function mina_olen_body_classes( $classes ) {
+	
+	/* Add the '.custom-header-image' class if the user is using a custom header image. */
+	if ( get_header_image() ) {
+		$classes[] = 'custom-header-image';
+	}
+	
+	/* Add the '.custom-callout' class if the user is using a callout text and link. Do not output in admin. */
+	if ( !is_admin() && mina_olen_check_callout_output() ) {
+		$classes[] = 'custom-callout';
+	}
+    
+    return $classes;
+	
+}
+
+/**
  * Change [...] to ... Read more.
  * @since 1.0.0
  */
@@ -409,14 +433,14 @@ function mina_olen_callout_output() {
 	if( is_search() || is_404() ) {
 		return;
 	}
-
+	
 	/* Get post meta. */
 	$mina_olen_callout_text = get_post_meta( get_the_ID(), '_mina_olen_callout_text', true );
 	$mina_olen_callout_url = get_post_meta( get_the_ID(), '_mina_olen_callout_url', true );
 	$mina_olen_callout_url_text = get_post_meta( get_the_ID(), '_mina_olen_callout_url_text', true );
 	
 	/* Check if post meta exists and echo on singular pages. This can be filtered. */
-	if ( is_singular( apply_filters( 'mina_olen_show_metabox', array( 'page' ) ) ) && !empty( $mina_olen_callout_text ) ) { ?>
+	if ( mina_olen_check_callout_output() ) { ?>
 
 		<div id="mina-olen-callout-url"><div id="mina-olen-callout-text"><?php echo esc_attr( $mina_olen_callout_text ); ?></div>
 
@@ -426,6 +450,27 @@ function mina_olen_callout_output() {
 		
 	}
 	
+}
+
+/**
+* Check if Callout text and link are set on singular pages.
+*
+* @since  1.0.2
+* @return boolean
+*/
+function mina_olen_check_callout_output() {
+
+	/* Get post meta. */
+	$mina_olen_callout_text = get_post_meta( get_the_ID(), '_mina_olen_callout_text', true );
+	$mina_olen_callout_url = get_post_meta( get_the_ID(), '_mina_olen_callout_url', true );
+	$mina_olen_callout_url_text = get_post_meta( get_the_ID(), '_mina_olen_callout_url_text', true );
+	
+	if( is_singular( apply_filters( 'mina_olen_show_metabox', array( 'page' ) ) ) && !empty( $mina_olen_callout_text ) ) {
+		return true;
+	} else {
+		return false;
+	}
+
 }
 
 /**
