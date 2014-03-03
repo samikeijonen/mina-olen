@@ -75,13 +75,13 @@ get_header(); // Loads the header.php template. ?>
 	$mina_olen_loop_post_types = array();
 	
 	if( get_theme_mod( 'show_latest_posts' ) ) {
-		$mina_olen_loop_post_types['post'] = esc_html__( 'Posts', 'mina-olen' );
-	}
-	if( get_theme_mod( 'show_latest_portfolios' ) ) {
-		$mina_olen_loop_post_types['portfolio_item'] = esc_html__( 'Portfolios', 'mina-olen' );
+		$mina_olen_loop_post_types['post'] = esc_html__( 'Articles', 'mina-olen' );
 	}
 	if( get_theme_mod( 'show_latest_downloads' ) ) {
 		$mina_olen_loop_post_types['download'] = esc_html__( 'Downloads', 'mina-olen' );
+	}
+	if( get_theme_mod( 'show_latest_portfolios' ) ) {
+		$mina_olen_loop_post_types['portfolio_item'] = esc_html__( 'Portfolios', 'mina-olen' );
 	}
 	if( get_theme_mod( 'show_latest_testimonials' ) ) {
 		$mina_olen_loop_post_types['testimonial'] = esc_html__( 'Testimonials', 'mina-olen' );
@@ -95,11 +95,20 @@ get_header(); // Loads the header.php template. ?>
 	foreach ( $mina_olen_loop_post_types as $key => $value ) :
 	
 		/* Set custom query to show latest posts. */
-		$mina_olen_post_args = apply_filters( 'mina_olen_front_page_latest_' . $key . '_arguments', array(
-			'post_type'           => $key,
-			'posts_per_page'      => 3,
-			'ignore_sticky_posts' => 1
-		) );
+		
+		if ( 'testimonial' == $key || 'portfolio_item' == $key ) :
+			$mina_olen_post_args = apply_filters( 'mina_olen_front_page_latest_' . $key . '_arguments', array(
+				'post_type'           => $key,
+				'posts_per_page'      => 3,
+				'orderby'             => 'rand'
+			) );
+		else :
+			$mina_olen_post_args = apply_filters( 'mina_olen_front_page_latest_' . $key . '_arguments', array(
+				'post_type'           => $key,
+				'posts_per_page'      => 3,
+				'ignore_sticky_posts' => 1
+			) );	
+		endif; // End check for custom query.
 			
 		$mina_olen_posts = new WP_Query( $mina_olen_post_args ); ?>
 			
@@ -107,8 +116,11 @@ get_header(); // Loads the header.php template. ?>
 		
 			<div class="wrap-margin">
 		
-				<h1 id="mina-olen-latest-title" class="mina-olen-latest-<?php echo $key; ?>"><?php printf( __( 'Latest %1$s', 'mina-olen' ), $value ); ?></h1>
-	
+				<h1 id="mina-olen-latest-title-<?php echo $key; ?>" class="mina-olen-latest-title mina-olen-latest-<?php echo $key; ?>">
+					<?php /* Translators: %1$s is for Articles, Portfolios, Downloads and Testimonial. Leave it like this. */
+					printf( __( '%1$s', 'mina-olen' ), esc_attr( $value ) ); ?>
+				</h1>
+				
 				<?php if ( $mina_olen_posts->have_posts() ) : ?>
 
 					<?php while ( $mina_olen_posts->have_posts() ) : $mina_olen_posts->the_post(); ?>
