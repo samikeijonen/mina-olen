@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mina olen 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/mina-olen\n"
-"POT-Creation-Date: 2014-02-09 09:17:54+00:00\n"
-"PO-Revision-Date: 2014-02-09 11:18+0200\n"
+"POT-Creation-Date: 2014-03-03 19:25:22+00:00\n"
+"PO-Revision-Date: 2014-03-03 21:26+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Foxnet <sami.keijonen@foxnet.fi>\n"
 "Language: fi\n"
@@ -94,7 +94,7 @@ msgstr "Sivusto ei ole aktiivinen"
 msgid "Unknown"
 msgstr "Ei tiedossa"
 
-#: attachment-image.php:28 pages/front-page.php:131
+#: attachment-image.php:28 pages/front-page.php:143
 msgid "Pages:"
 msgstr "Sivut:"
 
@@ -205,33 +205,33 @@ msgstr "2 saraketta: sisältö / sivupalkki"
 msgid "2 Columns: Sidebar / Content"
 msgstr "2 saraketta: sivupalkki / sisältö"
 
-#: functions.php:186
+#: functions.php:189
 msgid "Primary menu"
 msgstr "Päävalikko"
 
-#: functions.php:188
+#: functions.php:191
 msgid "Subsidiary menu"
 msgstr "Alapalkin valikko"
 
-#: functions.php:190
+#: functions.php:193
 msgid "Social menu"
 msgstr "Somevalikko"
 
-#: functions.php:204
+#: functions.php:207
 msgctxt "sidebar"
 msgid "Header"
 msgstr "Yläsivupalkki"
 
-#: functions.php:205
+#: functions.php:208
 msgid "A sidebar located in the top of the site."
 msgstr "Tähän liitetyt vimpaimet näkyvät sivun yläreunassa."
 
-#: functions.php:209
+#: functions.php:212
 msgctxt "sidebar"
 msgid "Primary"
 msgstr "Pääsivupalkki"
 
-#: functions.php:210
+#: functions.php:213
 msgid ""
 "The main sidebar. It is displayed on either the left or right side of the "
 "page based on the chosen layout."
@@ -239,20 +239,20 @@ msgstr ""
 "Tähän liitetyt vimpaimet näkyvät sisällön vasemmalla tai oikealla puolella "
 "riippuen valitusta ulkoasusta."
 
-#: functions.php:214
+#: functions.php:217
 msgctxt "sidebar"
 msgid "Subsidiary"
 msgstr "Alapalkin vimpainalue"
 
-#: functions.php:215
+#: functions.php:218
 msgid "A sidebar located in the footer of the site."
 msgstr "Tähän liitetyt vimpaimet näkyvät sivun alareunassa."
 
-#: functions.php:364 pages/front-page.php:45 pages/front-page.php:48
+#: functions.php:388 pages/front-page.php:45 pages/front-page.php:48
 msgid "Read more"
 msgstr "Lue lisää"
 
-#: functions.php:396
+#: functions.php:420
 msgid "Visit site"
 msgstr "Vieraile sivulla"
 
@@ -297,16 +297,16 @@ msgid "Show latest posts on front page"
 msgstr "Näytä viimeisimmät artikkelit etusivulla"
 
 #: includes/theme-customize.php:101
-msgid "Show latest portfolios on front page"
-msgstr "Näytä viimeisimmät portfoliot etusivulla"
-
-#: includes/theme-customize.php:128
 msgid "Show latest downloads on front page"
 msgstr "Näytä viimeisimmät lataukset etusivulla"
 
+#: includes/theme-customize.php:128
+msgid "Show random portfolios on front page"
+msgstr "Näytä satunnaiset portfoliot etusivulla"
+
 #: includes/theme-customize.php:155
-msgid "Show latest testimonials on front page"
-msgstr "Näytä viimeisimmät suositukset etusivulla"
+msgid "Show random testimonials on front page"
+msgstr "Näytä satunnaiset suositukset etusivulla"
 
 #: includes/theme-customize.php:179
 msgid "Use boxed layout in all pages."
@@ -1128,24 +1128,26 @@ msgid "Skip to content"
 msgstr "Siirry sisältöön"
 
 #: pages/front-page.php:78
-msgid "Posts"
+msgid "Articles"
 msgstr "Artikkelit"
 
 #: pages/front-page.php:81
-msgid "Portfolios"
-msgstr "Portfoliot"
-
-#: pages/front-page.php:84
 msgid "Downloads"
 msgstr "Lataukset"
+
+#: pages/front-page.php:84
+msgid "Portfolios"
+msgstr "Portfoliot"
 
 #: pages/front-page.php:87
 msgid "Testimonials"
 msgstr "Suositukset"
 
-#: pages/front-page.php:110
-msgid "Latest %1$s"
-msgstr "Viimeisimmät %1$s"
+#. Translators: %1$s is for Articles, Portfolios, Downloads and Testimonial.
+#. Leave it like this.
+#: pages/front-page.php:121
+msgid "%1$s"
+msgstr "%1$s"
 
 #. Theme Name of the plugin/theme
 msgid "Mina olen"
