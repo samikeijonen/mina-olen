@@ -92,7 +92,7 @@ function mina_olen_custom_header_admin_preview() { ?>
 
 				<div id="branding">
 					<h1 id="site-title">
-						<a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home">
+						<a href="<?php echo esc_url( home_url() ); ?>" rel="home">
 							<?php bloginfo( 'name' ); ?>
 						</a>
 					</h1>
