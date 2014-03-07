@@ -3,7 +3,7 @@
  * Theme URI: https://foxnet-themes.fi/downloads/mina-olen
  * Description: Mina olen WordPress Theme is made for cool business type of sites. And in the same time blogging features looks great also.
  * Tags: white, one-column, two-columns, left-sidebar, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, featured-images, flexible-header, full-width-template, microformats, post-formats, sticky-post, threaded-comments, translation-ready
- * Version: 1.0.2
+ * Version: 1.0.3
  * Author: Sami Keijonen
  * Author URI: http://foxnet-themes.fi
  * Text Domain: mina-olen
@@ -68,6 +68,7 @@
  *         12.3 -  Whistles CSS
  *         12.4 -  Jetpack CSS
  *         12.5 -  Testimonials CSS
+ *         12.6 -  Webshare CSS
  * ----------------------------------------------------------------------------
  */
 
@@ -1375,6 +1376,7 @@ img {
 .entry-footer,
 .loop-pagination,
 .loop-nav,
+#webshare-wrapper,
 #comments,
 #sidebar-header,
 #sidebar-primary,
@@ -1452,6 +1454,7 @@ img {
 	.layout-2c-l .entry-footer,
 	.layout-2c-l .loop-pagination,
 	.layout-2c-l .loop-nav,
+	.layout-2c-l #webshare-wrapper,
 	.layout-2c-l #comments {
 		padding-left: 0;
 		padding-right: 48px;
@@ -1465,6 +1468,7 @@ img {
 	.layout-2c-r .entry-footer,
 	.layout-2c-r .loop-pagination,
 	.layout-2c-r .loop-nav,
+	.layout-2c-r #webshare-wrapper,
 	.layout-2c-r #comments {
 		padding-right: 0;
 		padding-left: 48px;
@@ -1496,6 +1500,7 @@ img {
 	.mina-olen-boxed .entry-footer,
 	.mina-olen-boxed .loop-pagination,
 	.mina-olen-boxed .loop-nav,
+	.mina-olen-boxed #webshare-wrapper,
 	.mina-olen-boxed #comments,
 	.mina-olen-boxed #sidebar-header,
 	.mina-olen-boxed #sidebar-primary,
@@ -3331,4 +3336,47 @@ body div.sharedaddy div.sd-block {
 .singular-testimonial blockquote {
 	margin-top: 32px;
 	margin-top: 2rem;
+}
+
+
+/* === 12.5 Webshare CSS === */
+
+/* Webshare icons CSS. */
+#webshare-wrapper {
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	margin-bottom: 48px;
+	margin-bottom: 3rem;
+}
+#webshare-wrapper ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#webshare-wrapper ul li {
+	display: inline-block;
+	margin-right: 8px;
+}
+#webshare-wrapper ul li  a::before {
+	display: inline-block;
+	color: #9f9f9f;
+	content: '\f409';
+	padding: 0 5px 0 0;
+	-webkit-font-smoothing: antialiased;
+	font: normal 24px/0.9 'Genericons';
+	vertical-align: middle;
+}
+#webshare-wrapper ul li  a:hover::before {
+	color: #c84d29;
+}
+#webshare-wrapper ul li  a.webshare-facebook::before {
+	content: '\f204';
+}
+#webshare-wrapper ul li  a.webshare-twitter::before {
+	content: '\f202';
+}
+#webshare-wrapper ul li  a.webshare-google::before {
+	content: '\f206';
 }
