@@ -15,6 +15,14 @@
 			<?php the_post(); // Loads the post data. ?>
 
 			<?php hybrid_get_content_template(); // Loads the content-* template. ?>
+			
+			<?php 
+			if( is_singular( apply_filters( 'mina_olen_singular_webshare', array( 'post' ) ) ) ) :
+				if ( function_exists( 'webshare' ) ) :
+					webshare(); // Sharing icons.
+				endif; // End webshare check.
+			endif; // End singular page check.
+			?>
 
 			<?php if ( is_singular() ) : // If viewing a single post/page/CPT. ?>
 

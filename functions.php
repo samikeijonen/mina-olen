@@ -122,6 +122,9 @@ function mina_olen_theme_setup() {
 	
 	/* Whistles plugin support. */
 	add_theme_support( 'whistles', array( 'styles' => true ) );
+	
+	/* Webshare plugin support. This means that theme handles the CSS already. */
+	add_theme_support( 'webshare', array( 'styles' => true ) );
 
 	/* Handle content width for embeds and images. */
 	hybrid_set_content_width( 1080 );
@@ -385,7 +388,7 @@ function mina_olen_body_classes( $classes ) {
  */
 function mina_olen_excerpt_more() {
 
-	return '...<p><span class="mina-olen-read-more"><a class="more-link" href="' . get_permalink() . '" title="' . the_title_attribute('echo=0') . '">' . __( 'Read more', 'mina-olen' ) . '</a></span></p>';
+	return '...<p><span class="mina-olen-read-more"><a class="more-link" href="' . esc_url( get_permalink() ) . '" title="' . the_title_attribute('echo=0') . '">' . __( 'Read more', 'mina-olen' ) . '</a></span></p>';
 
 }
 
