@@ -112,7 +112,7 @@ get_header(); // Loads the header.php template. ?>
 			
 		$mina_olen_posts = new WP_Query( $mina_olen_post_args ); ?>
 			
-		<section id="mina-olen-latest-<?php echo $key; ?>s" class="entry mina-olen-latest-all <?php echo $mina_olen_class_even_or_odd; ?>">
+		<section id="<?php echo esc_attr( 'mina-olen-latest-' . $key . 's' ); ?>" class="entry mina-olen-latest-all <?php echo $mina_olen_class_even_or_odd; ?>">
 		
 			<div class="wrap-margin">
 		
@@ -138,7 +138,7 @@ get_header(); // Loads the header.php template. ?>
 								</header><!-- .entry-header -->
 
 								<div class="entry-summary">
-									<?php the_title( '<h2 class="entry-title"><a href="' . get_permalink() . '">', '</a></h2>' ); ?>
+									<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '">', '</a></h2>' ); ?>
 									<?php the_excerpt(); ?>
 									<?php wp_link_pages( array( 'before' => '<p class="page-links">' . '<span class="before">' . __( 'Pages:', 'mina-olen' ) . '</span>', 'after' => '</p>' ) ); ?>
 								</div><!-- .entry-summary -->
