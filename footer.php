@@ -14,7 +14,7 @@
 				
 				<?php if ( get_theme_mod( 'mina_olen_footer' ) ) { ?>
 					<div class="footer-content">
-						<?php echo get_theme_mod( 'mina_olen_footer' ); ?>
+						<?php echo esc_textarea( get_theme_mod( 'mina_olen_footer' ) ); ?>
 					</div><!-- .footer-content -->
 				<?php } ?>
 				
