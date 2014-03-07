@@ -1,6 +1,6 @@
 <div <?php hybrid_attr( 'loop-meta' ); ?>>
 
-	<h1 <?php hybrid_attr( 'loop-title' ); ?>><?php hybrid_loop_title(); ?></h1>
+	<h1 <?php hybrid_attr( 'loop-title' ); ?>><?php esc_html( hybrid_loop_title() ); ?></h1>
 
 	<?php if ( !is_paged() && $desc = hybrid_get_loop_description() ) : // Check if we're on page/1. ?>
 
