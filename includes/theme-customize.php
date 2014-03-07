@@ -11,6 +11,8 @@ add_action( 'customize_register', 'mina_olen_customize_register_settings' );
  */
 function mina_olen_customize_register_settings( $wp_customize ) {
 
+	/* === Front Page section. === */
+
 	/* Add the front page section. */
 	$wp_customize->add_section(
 		'front-page',
@@ -23,9 +25,6 @@ function mina_olen_customize_register_settings( $wp_customize ) {
 	
 	/* Loop same setting couple of times. */
 	$k = 1;
-	
-	/* Get pages and use them as choices. */
-	$mina_olen_page_choices = mina_olen_front_page_choices();
 	
 	while( $k < absint( apply_filters( 'mina_olen_how_many_pages', 7 ) ) ) {
 	
@@ -47,9 +46,8 @@ function mina_olen_customize_register_settings( $wp_customize ) {
 				'label'    => esc_html__( 'Select page', 'mina-olen' ) . ' ' . $k ,
 				'section'  => 'front-page',
 				'settings' => 'front_page_' . $k,
-				'type'     => 'select',
-				'priority' => $k+100,
-				'choices'  => $mina_olen_page_choices
+				'type'     => 'dropdown-pages',
+				'priority' => $k+100
 			) 
 		);
 		
@@ -64,7 +62,7 @@ function mina_olen_customize_register_settings( $wp_customize ) {
 			'default'           => '',
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'sanitize_text_field'
+			'sanitize_callback' => 'mina_olen_sanitize_checkbox'
 		)
 	);
 	
@@ -90,7 +88,7 @@ function mina_olen_customize_register_settings( $wp_customize ) {
 				'default'           => '',
 				'type'              => 'theme_mod',
 				'capability'        => 'edit_theme_options',
-				'sanitize_callback' => 'sanitize_text_field'
+				'sanitize_callback' => 'mina_olen_sanitize_checkbox'
 			)
 		);
 	
@@ -117,7 +115,7 @@ function mina_olen_customize_register_settings( $wp_customize ) {
 				'default'           => '',
 				'type'              => 'theme_mod',
 				'capability'        => 'edit_theme_options',
-				'sanitize_callback' => 'sanitize_text_field'
+				'sanitize_callback' => 'mina_olen_sanitize_checkbox'
 			)
 		);
 	
@@ -144,7 +142,7 @@ function mina_olen_customize_register_settings( $wp_customize ) {
 				'default'           => '',
 				'type'              => 'theme_mod',
 				'capability'        => 'edit_theme_options',
-				'sanitize_callback' => 'sanitize_text_field'
+				'sanitize_callback' => 'mina_olen_sanitize_checkbox'
 			)
 		);
 	
@@ -168,7 +166,7 @@ function mina_olen_customize_register_settings( $wp_customize ) {
 			'default'           => '',
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'sanitize_text_field'
+			'sanitize_callback' => 'mina_olen_sanitize_checkbox'
 		)
 	);
 	
@@ -191,7 +189,7 @@ function mina_olen_customize_register_settings( $wp_customize ) {
 			'default'           => '',
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'sanitize_text_field'
+			'sanitize_callback' => 'mina_olen_sanitize_checkbox'
 		)
 	);
 	
@@ -206,6 +204,8 @@ function mina_olen_customize_register_settings( $wp_customize ) {
 			'type'     => 'checkbox'
 		)
 	);
+	
+	/* === Logo upload section. === */
 	
 	/* Add the logo upload section. */
 	$wp_customize->add_section(
@@ -239,6 +239,8 @@ function mina_olen_customize_register_settings( $wp_customize ) {
 			) 
 		) 
 	);
+	
+	/* === Footer section. === */
 
 	/* Add the footer section. */
 	$wp_customize->add_section(
@@ -277,6 +279,24 @@ function mina_olen_customize_register_settings( $wp_customize ) {
 }
 
 /**
+ * Sanitize the checkbox value.
+ *
+ * @since 1.0.3
+ *
+ * @param string $input checkbox.
+ * @return string (1 or null).
+ */
+function mina_olen_sanitize_checkbox( $input ) {
+
+	if ( 1 == $input ) {
+		return 1;
+	} else {
+		return '';
+	}
+
+}
+
+/**
  * Sanitizes the footer content on the customize screen.  Users with the 'unfiltered_html' cap can post 
  * anything. For other users, wp_filter_post_kses() is ran over the setting.
  *
@@ -291,32 +311,6 @@ function mina_olen_customize_sanitize( $setting, $object ) {
 
 	/* Return the sanitized setting. */
 	return $setting;
-	
-}
-
-/**
-* Return  Pages for front page choices.
-*
-* @since  1.0.0
-* @return array
-*/
-function mina_olen_front_page_choices() {
-	
-	/* Set an array. */
-	$mina_olen_return_pages = array(
-		0 => __( 'Select page', 'mina-olen' )
-	);
-	
-	/* Get pages. */
-	$mina_olen_pages = get_pages();
-	
-	/* Loop pages data. */
-	foreach ( $mina_olen_pages as $mina_olen_page ) {
-		$mina_olen_return_pages[$mina_olen_page->ID] = $mina_olen_page->post_title;
-	}
-	
-	/* Return array. */
-	return $mina_olen_return_pages;
 	
 }
 
