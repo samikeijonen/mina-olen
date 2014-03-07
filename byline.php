@@ -5,7 +5,7 @@
 	<?php endif; // End post format check. ?>
 
 	<span <?php hybrid_attr( 'entry-author' ); ?>><?php the_author_posts_link(); ?></span>
-	<time <?php hybrid_attr( 'entry-published' ); ?>><?php echo get_the_date(); ?></time>
+	<time <?php hybrid_attr( 'entry-published' ); ?>><?php echo esc_html( get_the_date() ); ?></time>
 	
 	<?php if( has_post_format( 'link' ) ) : // If current post have link post format. ?>
 		<a class="entry-permalink" href="<?php the_permalink(); ?>" rel="bookmark" itemprop="url"><?php _e( 'Permalink', 'mina-olen' ); ?></a>
