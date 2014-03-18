@@ -30,7 +30,7 @@ get_header(); // Loads the header.php template. ?>
 						
 						<?php if ( current_theme_supports( 'get-the-image' ) ) get_the_image( array( 'post_id' => $mina_olen_page_content, 'size' => 'mina-olen-thumbnail' ) ); ?>
 						
-						<h2 class="entry-title"><a href="<?php echo get_permalink( $mina_olen_page_content ); ?>"><?php echo get_the_title( $mina_olen_page_content ); ?></a></h2>
+						<h2 class="entry-title"><a href="<?php echo esc_url( get_permalink( $mina_olen_page_content ) ); ?>"><?php echo get_the_title( $mina_olen_page_content ); ?></a></h2>
 					
 					</header><!-- .entry-header -->
 
@@ -42,10 +42,10 @@ get_header(); // Loads the header.php template. ?>
 							echo apply_filters( 'the_content', ( get_post_field( 'post_content', $mina_olen_page_content ) ) );
 						} else if ( has_excerpt( $mina_olen_page_content ) ) {
 							echo wpautop( get_post_field( 'post_excerpt', $mina_olen_page_content ) ); ?>
-							<p><span class="mina-olen-read-more"><a class="more-link" href="<?php echo get_permalink( $mina_olen_page_content ); ?>"><?php _e( 'Read more', 'mina-olen' ); ?></a></span></p>	
+							<p><span class="mina-olen-read-more"><a class="more-link" href="<?php echo esc_url( get_permalink( $mina_olen_page_content ) ); ?>"><?php _e( 'Read more', 'mina-olen' ); ?></a></span></p>	
 						<?php } else {
 							echo apply_filters( 'the_content', ( wp_trim_words( get_post_field( 'post_content', $mina_olen_page_content ) ) ) ); ?>
-							<p><span class="mina-olen-read-more"><a class="more-link" href="<?php echo get_permalink( $mina_olen_page_content ); ?>"><?php _e( 'Read more', 'mina-olen' ); ?></a></span></p>
+							<p><span class="mina-olen-read-more"><a class="more-link" href="<?php echo esc_url( get_permalink( $mina_olen_page_content ) ); ?>"><?php _e( 'Read more', 'mina-olen' ); ?></a></span></p>
 						<?php } ?>
 						
 					</div><!-- .entry-summary -->
@@ -98,13 +98,13 @@ get_header(); // Loads the header.php template. ?>
 		
 		if ( 'testimonial' == $key || 'portfolio_item' == $key ) :
 			$mina_olen_post_args = apply_filters( 'mina_olen_front_page_latest_' . $key . '_arguments', array(
-				'post_type'           => $key,
+				'post_type'           => esc_attr( $key ),
 				'posts_per_page'      => 3,
 				'orderby'             => 'rand'
 			) );
 		else :
 			$mina_olen_post_args = apply_filters( 'mina_olen_front_page_latest_' . $key . '_arguments', array(
-				'post_type'           => $key,
+				'post_type'           => esc_attr( $key ),
 				'posts_per_page'      => 3,
 				'ignore_sticky_posts' => 1
 			) );	
@@ -116,7 +116,7 @@ get_header(); // Loads the header.php template. ?>
 		
 			<div class="wrap-margin">
 		
-				<h1 id="mina-olen-latest-title-<?php echo $key; ?>" class="mina-olen-latest-title mina-olen-latest-<?php echo $key; ?>">
+				<h1 id="mina-olen-latest-title-<?php echo esc_attr( $key ); ?>" class="mina-olen-latest-title mina-olen-latest-<?php echo esc_attr( $key ); ?>">
 					<?php /* Translators: %1$s is for Articles, Portfolios, Downloads and Testimonial. Leave it like this. */
 					printf( __( '%1$s', 'mina-olen' ), esc_attr( $value ) ); ?>
 				</h1>
