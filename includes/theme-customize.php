@@ -43,7 +43,8 @@ function mina_olen_customize_register_settings( $wp_customize ) {
 	$wp_customize->add_control(
 		'front-page-control-' . $k,
 			array(
-				'label'    => esc_html__( 'Select page', 'mina-olen' ) . ' ' . $k ,
+				/* Translators: %s stands for number. For example Select page 1. */
+				'label'    => sprintf( esc_html__( 'Select page %s', 'mina-olen' ), $k ),
 				'section'  => 'front-page',
 				'settings' => 'front_page_' . $k,
 				'type'     => 'dropdown-pages',
@@ -224,7 +225,7 @@ function mina_olen_customize_register_settings( $wp_customize ) {
 			'default'           => '',
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'esc_url'
+			'sanitize_callback' => 'esc_url_raw'
 		)
 	);
 	
