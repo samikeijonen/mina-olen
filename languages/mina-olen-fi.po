@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mina olen 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/mina-olen\n"
-"POT-Creation-Date: 2014-03-03 19:25:22+00:00\n"
-"PO-Revision-Date: 2014-03-03 21:26+0200\n"
+"POT-Creation-Date: 2014-03-18 18:24:45+00:00\n"
+"PO-Revision-Date: 2014-03-18 20:26+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Foxnet <sami.keijonen@foxnet.fi>\n"
 "Language: fi\n"
@@ -148,15 +148,16 @@ msgstr "Pikalinkki"
 msgid "%s ago"
 msgstr "%s sitten"
 
-#. Translators: The two %s are placeholders for HTML. The order can't be
-#. changed.
+#. Translators: The %s is for trackback link.
 #: comments-loop-error.php:6
-msgid "Comments are closed, but %strackbacks%s and pingbacks are open."
+msgid ""
+"Comments are closed, but <a href=\"%s\">trackbacks</a> and pingbacks are "
+"open."
 msgstr ""
-"Kommentointi on suljettu, mutta %spaluuviitteet%s ja päivitysilmoitukset "
-"ovat avoinna."
+"Kommentointi on suljettu, mutta <a href=\"%s\">paluuviitteet</a> ja "
+"päivitysilmoitukset ovat avoinna."
 
-#: comments-loop-error.php:13
+#: comments-loop-error.php:15
 msgid "Comments are closed."
 msgstr "Kommentointi on suljettu."
 
@@ -205,33 +206,33 @@ msgstr "2 saraketta: sisältö / sivupalkki"
 msgid "2 Columns: Sidebar / Content"
 msgstr "2 saraketta: sivupalkki / sisältö"
 
-#: functions.php:189
+#: functions.php:192
 msgid "Primary menu"
 msgstr "Päävalikko"
 
-#: functions.php:191
+#: functions.php:194
 msgid "Subsidiary menu"
 msgstr "Alapalkin valikko"
 
-#: functions.php:193
+#: functions.php:196
 msgid "Social menu"
 msgstr "Somevalikko"
 
-#: functions.php:207
+#: functions.php:210
 msgctxt "sidebar"
 msgid "Header"
 msgstr "Yläsivupalkki"
 
-#: functions.php:208
+#: functions.php:211
 msgid "A sidebar located in the top of the site."
 msgstr "Tähän liitetyt vimpaimet näkyvät sivun yläreunassa."
 
-#: functions.php:212
+#: functions.php:215
 msgctxt "sidebar"
 msgid "Primary"
 msgstr "Pääsivupalkki"
 
-#: functions.php:213
+#: functions.php:216
 msgid ""
 "The main sidebar. It is displayed on either the left or right side of the "
 "page based on the chosen layout."
@@ -239,20 +240,20 @@ msgstr ""
 "Tähän liitetyt vimpaimet näkyvät sisällön vasemmalla tai oikealla puolella "
 "riippuen valitusta ulkoasusta."
 
-#: functions.php:217
+#: functions.php:220
 msgctxt "sidebar"
 msgid "Subsidiary"
 msgstr "Alapalkin vimpainalue"
 
-#: functions.php:218
+#: functions.php:221
 msgid "A sidebar located in the footer of the site."
 msgstr "Tähän liitetyt vimpaimet näkyvät sivun alareunassa."
 
-#: functions.php:388 pages/front-page.php:45 pages/front-page.php:48
+#: functions.php:391 pages/front-page.php:45 pages/front-page.php:48
 msgid "Read more"
 msgstr "Lue lisää"
 
-#: functions.php:420
+#: functions.php:423
 msgid "Visit site"
 msgstr "Vieraile sivulla"
 
@@ -284,51 +285,52 @@ msgstr "Callout URL-linkki"
 msgid "Callout URL text"
 msgstr "Callout URL-linkin teksti"
 
-#: includes/theme-customize.php:18
+#: includes/theme-customize.php:20
 msgid "Front page settings"
 msgstr "Etusivun asetukset"
 
-#: includes/theme-customize.php:47 includes/theme-customize.php:307
-msgid "Select page"
-msgstr "Valitse sivu"
+#. Translators: %s stands for number. For example Select page 1.
+#: includes/theme-customize.php:47
+msgid "Select page %s"
+msgstr "Valitse sivu %s"
 
-#: includes/theme-customize.php:75
+#: includes/theme-customize.php:74
 msgid "Show latest posts on front page"
 msgstr "Näytä viimeisimmät artikkelit etusivulla"
 
-#: includes/theme-customize.php:101
+#: includes/theme-customize.php:100
 msgid "Show latest downloads on front page"
 msgstr "Näytä viimeisimmät lataukset etusivulla"
 
-#: includes/theme-customize.php:128
+#: includes/theme-customize.php:127
 msgid "Show random portfolios on front page"
 msgstr "Näytä satunnaiset portfoliot etusivulla"
 
-#: includes/theme-customize.php:155
+#: includes/theme-customize.php:154
 msgid "Show random testimonials on front page"
 msgstr "Näytä satunnaiset suositukset etusivulla"
 
-#: includes/theme-customize.php:179
+#: includes/theme-customize.php:178
 msgid "Use boxed layout in all pages."
 msgstr "Käytä \"laatikko\"-ulkoasua kaikilla sivuilla."
 
-#: includes/theme-customize.php:202
+#: includes/theme-customize.php:201
 msgid "Show full content of pages in front page. Default is excerpt."
 msgstr "Näytä sivun koko sisältö etusivulla. Oletuksena näytetään ote."
 
-#: includes/theme-customize.php:214
+#: includes/theme-customize.php:215
 msgid "Logo Upload"
 msgstr "Logon lataus"
 
-#: includes/theme-customize.php:236
+#: includes/theme-customize.php:237
 msgid "Upload custom logo."
 msgstr "Lataa logo."
 
-#: includes/theme-customize.php:247
+#: includes/theme-customize.php:250
 msgid "Footer text"
 msgstr "Alapalkin teksti"
 
-#: includes/theme-customize.php:270
+#: includes/theme-customize.php:273
 msgid "Enter footer text"
 msgstr "Kirjoita alapalkin teksti"
 
