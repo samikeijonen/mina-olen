@@ -3167,6 +3167,8 @@ body .gform_wrapper textarea {
 body #gforms_confirmation_message {
 	background: #f1f1f1;
 	padding: 3%;
+	margin-bottom: 24px;
+	margin-bottom: 1.5rem;
 }
 
 
@@ -3368,9 +3370,6 @@ body div.sharedaddy div.sd-block {
 	font: normal 24px/0.9 'Genericons';
 	vertical-align: middle;
 }
-#webshare-wrapper ul li  a:hover::before {
-	color: #c84d29;
-}
 #webshare-wrapper ul li  a.webshare-facebook::before {
 	content: '\f204';
 }
@@ -3379,4 +3378,13 @@ body div.sharedaddy div.sd-block {
 }
 #webshare-wrapper ul li  a.webshare-google::before {
 	content: '\f206';
+}
+#webshare-wrapper ul li  a.webshare-facebook:hover::before {
+	color: #3b5998;
+}
+#webshare-wrapper ul li  a.webshare-twitter:hover::before {
+	color: #33ccff;
+}
+#webshare-wrapper ul li  a.webshare-google:hover::before {
+	color: #dd4b39;
 }
