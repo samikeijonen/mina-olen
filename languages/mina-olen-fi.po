@@ -4,15 +4,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mina olen 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/mina-olen\n"
-"POT-Creation-Date: 2014-03-18 18:24:45+00:00\n"
-"PO-Revision-Date: 2014-03-18 20:26+0200\n"
+"POT-Creation-Date: 2014-05-02 07:09:49+00:00\n"
+"PO-Revision-Date: 2014-05-02 10:11+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Foxnet <sami.keijonen@foxnet.fi>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.4\n"
+"X-Generator: Poedit 1.6.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: admin/EDD_SL_Theme_Updater.php:54
@@ -99,7 +99,7 @@ msgid "Pages:"
 msgstr "Sivut:"
 
 #: bbpress/loop-replies.php:18 bbpress/loop-replies.php:52
-#: library/classes/widget-pages.php:157
+#: library/classes/widget-pages.php:166
 msgid "Author"
 msgstr "Kirjoittaja"
 
@@ -334,38 +334,38 @@ msgstr "Alapalkin teksti"
 msgid "Enter footer text"
 msgstr "Kirjoita alapalkin teksti"
 
-#: library/admin/meta-box-post-template.php:45
+#: library/admin/meta-box-post-template.php:48
 msgid "Template"
 msgstr "Sivupohja"
 
 #. Translators: %s is the theme name.
-#: library/admin/theme-settings.php:132 library/admin/theme-settings.php:198
+#: library/admin/theme-settings.php:134 library/admin/theme-settings.php:199
 msgid "%s Theme Settings"
 msgstr "%s Teeman asetukset"
 
-#: library/admin/theme-settings.php:133
+#: library/admin/theme-settings.php:135
 msgid "Theme Settings"
 msgstr "Teeman asetukset"
 
-#: library/classes/customize-control-background-image.php:43
+#: library/classes/customize-control-background-image.php:49
 msgctxt "theme customizer tab"
 msgid "Default"
 msgstr "Oletus"
 
 #. Translators: Media dimensions - 1 is width and 2 is height.
 #: library/classes/hybrid-media-meta.php:154
-#: library/classes/hybrid-media-meta.php:277
+#: library/classes/hybrid-media-meta.php:282
 #: library/functions/template-media.php:102
 msgid "%1$s &#215; %2$s"
 msgstr "%1$s &#215; %2$s"
 
 #: library/classes/hybrid-media-meta.php:155
-#: library/classes/hybrid-media-meta.php:277
+#: library/classes/hybrid-media-meta.php:282
 msgid "Dimensions"
 msgstr "Mitat"
 
 #: library/classes/hybrid-media-meta.php:161
-#: library/classes/widget-pages.php:158
+#: library/classes/widget-pages.php:167
 msgid "Date"
 msgstr "Päivä"
 
@@ -403,337 +403,297 @@ msgstr "%s sek"
 msgid "Shutter Speed"
 msgstr "Suljinnopeus"
 
-#: library/classes/hybrid-media-meta.php:218
-#: library/classes/hybrid-media-meta.php:272
-msgid "Run Time"
-msgstr "Käytön aika"
-
-#: library/classes/hybrid-media-meta.php:222
-msgid "Artist"
-msgstr "Artisti"
-
-#: library/classes/hybrid-media-meta.php:226
-msgid "Composer"
-msgstr "Säveltäjä"
-
-#: library/classes/hybrid-media-meta.php:230
-msgid "Album"
-msgstr "Albumi"
-
-#: library/classes/hybrid-media-meta.php:234
-msgid "Track"
-msgstr "Kappale"
-
-#: library/classes/hybrid-media-meta.php:238
-msgid "Year"
-msgstr "Vuosi"
-
-#: library/classes/hybrid-media-meta.php:242
-msgid "Genre"
-msgstr "Tyylilaji"
-
-#: library/classes/hybrid-media-meta.php:245
-#: library/classes/hybrid-media-meta.php:280
+#: library/classes/hybrid-media-meta.php:248
+#: library/classes/hybrid-media-meta.php:285
 msgid "File Name"
 msgstr "Tiedoston nimi"
 
-#: library/classes/hybrid-media-meta.php:249
-#: library/classes/hybrid-media-meta.php:284
-msgid "File Size"
-msgstr "Tiedoston koko"
-
-#: library/classes/hybrid-media-meta.php:253
-#: library/classes/hybrid-media-meta.php:288
+#: library/classes/hybrid-media-meta.php:256
+#: library/classes/hybrid-media-meta.php:293
 msgid "File Type"
 msgstr "Tiedoston tyyppi"
 
-#: library/classes/hybrid-media-meta.php:257
-#: library/classes/hybrid-media-meta.php:292
-msgid "Mime Type"
-msgstr "Mime-tyyppi"
-
-#: library/classes/widget-archives.php:32
+#: library/classes/widget-archives.php:41
 msgid ""
 "An advanced widget that gives you total control over the output of your "
 "archives."
 msgstr "Vimpain, jolla hallitaan arkistoja."
 
-#: library/classes/widget-archives.php:44
-#: library/classes/widget-archives.php:146
+#: library/classes/widget-archives.php:53
+#: library/classes/widget-archives.php:60
 #: library/extensions/breadcrumb-trail.php:181
 #: library/functions/template-general.php:318
 msgid "Archives"
 msgstr "Arkistot"
 
-#: library/classes/widget-archives.php:83
+#: library/classes/widget-archives.php:100
 msgid "Select Year"
 msgstr "Valitse vuosi"
 
-#: library/classes/widget-archives.php:86
+#: library/classes/widget-archives.php:103
 msgid "Select Month"
 msgstr "Valitse kuukausi"
 
-#: library/classes/widget-archives.php:89
+#: library/classes/widget-archives.php:106
 msgid "Select Week"
 msgstr "Valitse viikko"
 
-#: library/classes/widget-archives.php:92
+#: library/classes/widget-archives.php:109
 msgid "Select Day"
 msgstr "Valitse päivä"
 
-#: library/classes/widget-archives.php:95
+#: library/classes/widget-archives.php:112
 msgid "Select Post"
 msgstr "Valitse artikkeli"
 
-#: library/classes/widget-archives.php:161
+#: library/classes/widget-archives.php:166
 msgid "Alphabetical"
 msgstr "Aakkosellinen"
 
-#: library/classes/widget-archives.php:162
+#: library/classes/widget-archives.php:167
 msgid "Daily"
 msgstr "Päivittäiset"
 
-#: library/classes/widget-archives.php:163
+#: library/classes/widget-archives.php:168
 msgid "Monthly"
 msgstr "Kuukausittainen"
 
-#: library/classes/widget-archives.php:164
+#: library/classes/widget-archives.php:169
 msgid "Post By Post"
 msgstr "Artikkeli artikkelilta"
 
-#: library/classes/widget-archives.php:165
+#: library/classes/widget-archives.php:170
 msgid "Weekly"
 msgstr "Viikottainen"
 
-#: library/classes/widget-archives.php:166
+#: library/classes/widget-archives.php:171
 msgid "Yearly"
 msgstr "Vuosittainen"
 
-#: library/classes/widget-archives.php:171
-#: library/classes/widget-authors.php:141
-#: library/classes/widget-bookmarks.php:182
-#: library/classes/widget-bookmarks.php:194
-#: library/classes/widget-categories.php:171
-#: library/classes/widget-pages.php:152 library/classes/widget-tags.php:186
+#: library/classes/widget-archives.php:176
+#: library/classes/widget-authors.php:154
+#: library/classes/widget-bookmarks.php:191
+#: library/classes/widget-bookmarks.php:203
+#: library/classes/widget-categories.php:180
+#: library/classes/widget-pages.php:161 library/classes/widget-tags.php:195
 msgid "Ascending"
 msgstr "Nouseva"
 
-#: library/classes/widget-archives.php:172
-#: library/classes/widget-authors.php:142
-#: library/classes/widget-bookmarks.php:183
-#: library/classes/widget-bookmarks.php:195
-#: library/classes/widget-categories.php:172
-#: library/classes/widget-pages.php:153 library/classes/widget-tags.php:187
+#: library/classes/widget-archives.php:177
+#: library/classes/widget-authors.php:155
+#: library/classes/widget-bookmarks.php:192
+#: library/classes/widget-bookmarks.php:204
+#: library/classes/widget-categories.php:181
+#: library/classes/widget-pages.php:162 library/classes/widget-tags.php:196
 msgid "Descending"
 msgstr "Laskeva"
 
-#: library/classes/widget-archives.php:177
+#: library/classes/widget-archives.php:182
 msgid "Custom"
 msgstr "Kustomoitu"
 
-#: library/classes/widget-archives.php:178
+#: library/classes/widget-archives.php:183
 msgid "HTML"
 msgstr "HTML"
 
-#: library/classes/widget-archives.php:179
+#: library/classes/widget-archives.php:184
 msgid "Option"
 msgstr "Valinta"
 
-#: library/classes/widget-archives.php:185
-#: library/classes/widget-authors.php:160
-#: library/classes/widget-bookmarks.php:217
+#: library/classes/widget-archives.php:190
+#: library/classes/widget-authors.php:173
+#: library/classes/widget-bookmarks.php:226
 #: library/classes/widget-calendar.php:108
-#: library/classes/widget-categories.php:195
-#: library/classes/widget-nav-menu.php:131
-#: library/classes/widget-pages.php:178 library/classes/widget-search.php:144
-#: library/classes/widget-tags.php:207
+#: library/classes/widget-categories.php:204
+#: library/classes/widget-nav-menu.php:143
+#: library/classes/widget-pages.php:187 library/classes/widget-search.php:155
+#: library/classes/widget-tags.php:216
 msgid "Title:"
 msgstr "Otsikko:"
 
-#: library/classes/widget-archives.php:229
-#: library/classes/widget-authors.php:208
+#: library/classes/widget-archives.php:234
+#: library/classes/widget-authors.php:229
 msgid "Show post count?"
 msgstr "Näytä artikkeleiden lukumäärä?"
 
-#: library/classes/widget-authors.php:32
+#: library/classes/widget-authors.php:41
 msgid ""
 "An advanced widget that gives you total control over the output of your "
 "author lists."
 msgstr "Vimpain, jolla hallitaan käyttäjälistaa."
 
-#: library/classes/widget-authors.php:44
-#: library/classes/widget-authors.php:123
+#: library/classes/widget-authors.php:53 library/classes/widget-authors.php:60
 msgid "Authors"
 msgstr "Kirjoittajat"
 
-#: library/classes/widget-authors.php:146
+#: library/classes/widget-authors.php:159
 msgid "Display Name"
 msgstr "Näytä nimi"
 
-#: library/classes/widget-authors.php:147
+#: library/classes/widget-authors.php:160
 msgid "Email"
 msgstr "Sähköposti"
 
-#: library/classes/widget-authors.php:148
-#: library/classes/widget-bookmarks.php:188
-#: library/classes/widget-bookmarks.php:199
-#: library/classes/widget-categories.php:177
-#: library/classes/widget-pages.php:159
+#: library/classes/widget-authors.php:161
+#: library/classes/widget-bookmarks.php:197
+#: library/classes/widget-bookmarks.php:208
+#: library/classes/widget-categories.php:186
+#: library/classes/widget-pages.php:168
 msgid "ID"
 msgstr "ID"
 
-#: library/classes/widget-authors.php:149
+#: library/classes/widget-authors.php:162
 msgid "Nice Name"
 msgstr "Kutsumanimi"
 
-#: library/classes/widget-authors.php:150
+#: library/classes/widget-authors.php:163
 msgid "Post Count"
 msgstr "Artikkeleiden lukumäärä"
 
-#: library/classes/widget-authors.php:151
+#: library/classes/widget-authors.php:164
 msgid "Registered"
 msgstr "Rekisteröitynyt"
 
-#: library/classes/widget-authors.php:152
-#: library/classes/widget-bookmarks.php:211
+#: library/classes/widget-authors.php:165
+#: library/classes/widget-bookmarks.php:220
 msgid "URL"
 msgstr "URL"
 
-#: library/classes/widget-authors.php:153
+#: library/classes/widget-authors.php:166
 msgid "Login"
 msgstr "Kirjaudu sisään"
 
-#: library/classes/widget-authors.php:186
-#: library/classes/widget-categories.php:166
-#: library/classes/widget-tags.php:182
+#: library/classes/widget-authors.php:199
+#: library/classes/widget-categories.php:175
+#: library/classes/widget-tags.php:191
 msgid "List"
 msgstr "Lista"
 
-#: library/classes/widget-authors.php:186
-#: library/classes/widget-categories.php:167
+#: library/classes/widget-authors.php:199
+#: library/classes/widget-categories.php:176
 msgid "None"
 msgstr "Ei yhtään"
 
-#: library/classes/widget-authors.php:204
+#: library/classes/widget-authors.php:225
 msgid "<acronym title=\"Hypertext Markup Language\">HTML</acronym>?"
 msgstr "<acronym title=\"Hypertext Markup Language\">HTML</acronym>?"
 
-#: library/classes/widget-authors.php:212
+#: library/classes/widget-authors.php:233
 msgid "Exclude admin?"
 msgstr "Poislukien Pääkäyttäjä?"
 
-#: library/classes/widget-authors.php:216
+#: library/classes/widget-authors.php:237
 msgid "Show full name?"
 msgstr "Näytä koko nimi?"
 
-#: library/classes/widget-authors.php:220
-#: library/classes/widget-categories.php:298
-#: library/classes/widget-tags.php:318
+#: library/classes/widget-authors.php:241
+#: library/classes/widget-categories.php:307
+#: library/classes/widget-tags.php:327
 msgid "Hide empty?"
 msgstr "Piilota tyhjät?"
 
-#: library/classes/widget-bookmarks.php:32
+#: library/classes/widget-bookmarks.php:41
 msgid ""
 "An advanced widget that gives you total control over the output of your "
 "bookmarks (links)."
 msgstr "Vimpain, jolla hallitaan linkkejä."
 
-#: library/classes/widget-bookmarks.php:44
-#: library/classes/widget-bookmarks.php:86
-#: library/classes/widget-bookmarks.php:150
+#: library/classes/widget-bookmarks.php:53
+#: library/classes/widget-bookmarks.php:60
+#: library/classes/widget-bookmarks.php:122
 msgid "Bookmarks"
 msgstr "Linkit"
 
-#: library/classes/widget-bookmarks.php:187
-#: library/classes/widget-categories.php:176
-#: library/classes/widget-tags.php:192
+#: library/classes/widget-bookmarks.php:196
+#: library/classes/widget-categories.php:185
+#: library/classes/widget-tags.php:201
 msgid "Count"
 msgstr "Lukumäärä"
 
-#: library/classes/widget-bookmarks.php:189
-#: library/classes/widget-bookmarks.php:202
-#: library/classes/widget-categories.php:178
-#: library/classes/widget-tags.php:193
+#: library/classes/widget-bookmarks.php:198
+#: library/classes/widget-bookmarks.php:211
+#: library/classes/widget-categories.php:187
+#: library/classes/widget-tags.php:202
 msgid "Name"
 msgstr "Nimi"
 
-#: library/classes/widget-bookmarks.php:190
-#: library/classes/widget-categories.php:179
-#: library/classes/widget-pages.php:162
+#: library/classes/widget-bookmarks.php:199
+#: library/classes/widget-categories.php:188
+#: library/classes/widget-pages.php:171
 msgid "Slug"
 msgstr "Polkutunnus"
 
-#: library/classes/widget-bookmarks.php:200
+#: library/classes/widget-bookmarks.php:209
 msgid "Description"
 msgstr "Kuvaus:"
 
-#: library/classes/widget-bookmarks.php:201
+#: library/classes/widget-bookmarks.php:210
 msgid "Length"
 msgstr "Pituus"
 
-#: library/classes/widget-bookmarks.php:203
+#: library/classes/widget-bookmarks.php:212
 msgid "Notes"
 msgstr "Muistiinpanot"
 
-#: library/classes/widget-bookmarks.php:204
+#: library/classes/widget-bookmarks.php:213
 msgid "Owner"
 msgstr "Omistaja"
 
-#: library/classes/widget-bookmarks.php:205
-#: library/classes/widget-tags.php:188
+#: library/classes/widget-bookmarks.php:214
+#: library/classes/widget-tags.php:197
 msgid "Random"
 msgstr "Satunnainen"
 
-#: library/classes/widget-bookmarks.php:206
+#: library/classes/widget-bookmarks.php:215
 msgid "Rating"
 msgstr "Arvostelu"
 
-#: library/classes/widget-bookmarks.php:207
+#: library/classes/widget-bookmarks.php:216
 msgid "Rel"
 msgstr "Rel"
 
-#: library/classes/widget-bookmarks.php:208
-#: library/classes/widget-categories.php:187
+#: library/classes/widget-bookmarks.php:217
+#: library/classes/widget-categories.php:196
 msgid "RSS"
 msgstr "RSS"
 
-#: library/classes/widget-bookmarks.php:209
+#: library/classes/widget-bookmarks.php:218
 msgid "Target"
 msgstr "Kohde"
 
-#: library/classes/widget-bookmarks.php:210
+#: library/classes/widget-bookmarks.php:219
 msgid "Updated"
 msgstr "Päivitetty"
 
-#: library/classes/widget-bookmarks.php:319
+#: library/classes/widget-bookmarks.php:328
 msgid "Categorize?"
 msgstr "Kategorisoi?"
 
-#: library/classes/widget-bookmarks.php:323
+#: library/classes/widget-bookmarks.php:332
 msgid "Show description?"
 msgstr "Näytä kuvaus?"
 
-#: library/classes/widget-bookmarks.php:327
+#: library/classes/widget-bookmarks.php:336
 msgid "Hide invisible?"
 msgstr "Piilota näkymätön?"
 
-#: library/classes/widget-bookmarks.php:331
+#: library/classes/widget-bookmarks.php:340
 msgid "Show rating?"
 msgstr "Näytä luokitus?"
 
-#: library/classes/widget-bookmarks.php:335
+#: library/classes/widget-bookmarks.php:344
 msgid "Show updated?"
 msgstr "Näytä päivitys?"
 
-#: library/classes/widget-bookmarks.php:339
+#: library/classes/widget-bookmarks.php:348
 msgid "Show images?"
 msgstr "Näytä kuvat?"
 
-#: library/classes/widget-bookmarks.php:343
+#: library/classes/widget-bookmarks.php:352
 msgid "Show name?"
 msgstr "Näytä nimi?"
 
-#: library/classes/widget-bookmarks.php:347
+#: library/classes/widget-bookmarks.php:356
 msgid "Show private?"
 msgstr "Näytä yksityiset?"
 
@@ -752,126 +712,126 @@ msgstr "Kalenteri"
 msgid "One-letter abbreviation?"
 msgstr "Yksikirjaiminen lyhenne?"
 
-#: library/classes/widget-categories.php:32
+#: library/classes/widget-categories.php:41
 msgid ""
 "An advanced widget that gives you total control over the output of your "
 "category links."
 msgstr "Vimpain, jolla hallitaan kategorialinkkejä."
 
-#: library/classes/widget-categories.php:44
-#: library/classes/widget-categories.php:136
+#: library/classes/widget-categories.php:53
+#: library/classes/widget-categories.php:60
 msgid "Categories"
 msgstr "Kategoriat"
 
-#: library/classes/widget-categories.php:180
+#: library/classes/widget-categories.php:189
 msgid "Term Group"
 msgstr "Termien ryhmä"
 
-#: library/classes/widget-categories.php:185
+#: library/classes/widget-categories.php:194
 msgid "Atom"
 msgstr "Atom"
 
-#: library/classes/widget-categories.php:186
+#: library/classes/widget-categories.php:195
 msgid "RDF"
 msgstr "RDF"
 
-#: library/classes/widget-categories.php:188
+#: library/classes/widget-categories.php:197
 msgid "RSS 2.0"
 msgstr "RSS 2.0"
 
-#: library/classes/widget-categories.php:286
-#: library/classes/widget-pages.php:277
+#: library/classes/widget-categories.php:295
+#: library/classes/widget-pages.php:286
 msgid "Hierarchical?"
 msgstr "Hierarkinen?"
 
-#: library/classes/widget-categories.php:290
+#: library/classes/widget-categories.php:299
 msgid "Use description?"
 msgstr "Käytä kuvausta?"
 
-#: library/classes/widget-categories.php:294
+#: library/classes/widget-categories.php:303
 msgid "Show count?"
 msgstr "Näytä lukumäärä?"
 
-#: library/classes/widget-nav-menu.php:32
+#: library/classes/widget-nav-menu.php:41
 msgid ""
 "An advanced widget that gives you total control over the output of your "
 "menus."
 msgstr "Vimpain, jolla hallitaan menuvalikkoja."
 
-#: library/classes/widget-nav-menu.php:44
+#: library/classes/widget-nav-menu.php:53
 msgid "Navigation Menu"
 msgstr "Valikko (navigaatio)"
 
-#: library/classes/widget-nav-menu.php:108
+#: library/classes/widget-nav-menu.php:60
 msgid "Navigation"
 msgstr "Valikko"
 
-#: library/classes/widget-pages.php:32
+#: library/classes/widget-pages.php:41
 msgid ""
 "An advanced widget that gives you total control over the output of your page "
 "links."
 msgstr "Vimpain, jolla hallitaan sivujen linkkejä."
 
-#: library/classes/widget-pages.php:44 library/classes/widget-pages.php:125
+#: library/classes/widget-pages.php:53 library/classes/widget-pages.php:60
 msgid "Pages"
 msgstr "Sivut"
 
-#: library/classes/widget-pages.php:160
+#: library/classes/widget-pages.php:169
 msgid "Menu Order"
 msgstr "Valikon järjestys"
 
-#: library/classes/widget-pages.php:161 library/classes/widget-pages.php:169
+#: library/classes/widget-pages.php:170 library/classes/widget-pages.php:178
 msgid "Modified"
 msgstr "Muokattu"
 
-#: library/classes/widget-pages.php:163
+#: library/classes/widget-pages.php:172
 msgid "Title"
 msgstr "Otsikko"
 
-#: library/classes/widget-pages.php:168
+#: library/classes/widget-pages.php:177
 msgid "Created"
 msgstr "Luotu"
 
-#: library/classes/widget-search.php:33
+#: library/classes/widget-search.php:42
 msgid ""
 "An advanced widget that gives you total control over the output of your "
 "search form."
 msgstr "Vimpain, jolla hallitaan hakulomaketta."
 
-#: library/classes/widget-search.php:45 library/classes/widget-search.php:132
+#: library/classes/widget-search.php:54 library/classes/widget-search.php:61
 msgid "Search"
 msgstr "Haku"
 
-#: library/classes/widget-search.php:148
+#: library/classes/widget-search.php:159
 msgid "Search Label:"
 msgstr "Etsi nimike:"
 
-#: library/classes/widget-search.php:152
+#: library/classes/widget-search.php:163
 msgid "Search Text:"
 msgstr "Etsi teksti:"
 
-#: library/classes/widget-search.php:159
+#: library/classes/widget-search.php:170
 msgid "Search Submit:"
 msgstr "Etsi lähetä:"
 
-#: library/classes/widget-search.php:164
+#: library/classes/widget-search.php:175
 msgid "Use theme's <code>searchform.php</code>?"
 msgstr "Käytä teeman <code>searchform.php</code> tiedostoa?"
 
-#: library/classes/widget-tags.php:32
+#: library/classes/widget-tags.php:41
 msgid ""
 "An advanced widget that gives you total control over the output of your tags."
 msgstr "Vimpain, jolla hallitaan avainsanoja."
 
-#: library/classes/widget-tags.php:44 library/classes/widget-tags.php:146
+#: library/classes/widget-tags.php:53 library/classes/widget-tags.php:60
 msgid "Tags"
 msgstr "Avainsanat"
 
-#: library/classes/widget-tags.php:176
+#: library/classes/widget-tags.php:185
 msgid "View"
 msgstr "Näkymä"
 
-#: library/classes/widget-tags.php:177
+#: library/classes/widget-tags.php:186
 #: library/extensions/breadcrumb-trail.php:1135
 #: library/extensions/breadcrumb-trail.php:1171
 #: library/extensions/breadcrumb-trail.php:1188
@@ -879,11 +839,11 @@ msgstr "Näkymä"
 msgid "Edit"
 msgstr "Muokkaa"
 
-#: library/classes/widget-tags.php:181
+#: library/classes/widget-tags.php:190
 msgid "Flat"
 msgstr "Tyhjä"
 
-#: library/classes/widget-tags.php:314
+#: library/classes/widget-tags.php:323
 msgid "Pad counts?"
 msgstr "Pad lukumäärä?"
 
@@ -1036,9 +996,41 @@ msgstr ""
 msgid "%1$s Page %2$s"
 msgstr "%1$s Sivu %2$s"
 
-#: library/functions/media.php:30
+#: library/functions/media.php:32
 msgid "Post Thumbnail"
 msgstr "Artikkelin pikkukuva"
+
+#: library/functions/media.php:53
+msgid "File Size"
+msgstr "Tiedoston koko"
+
+#: library/functions/media.php:54
+msgid "Mime Type"
+msgstr "Mime-tyyppi"
+
+#: library/functions/media.php:55
+msgid "Run Time"
+msgstr "Käytön aika"
+
+#: library/functions/media.php:60
+msgid "Genre"
+msgstr "Tyylilaji"
+
+#: library/functions/media.php:61
+msgid "Year"
+msgstr "Vuosi"
+
+#: library/functions/media.php:62
+msgid "Composer"
+msgstr "Säveltäjä"
+
+#: library/functions/media.php:63
+msgid "Track"
+msgstr "Kappale"
+
+#: library/functions/media.php:66
+msgid "Lyrics"
+msgstr "Sanat"
 
 #: library/functions/template-general.php:55
 msgid "State-of-the-art semantic personal publishing platform"
