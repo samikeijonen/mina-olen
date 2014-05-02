@@ -16,7 +16,7 @@
  * @package    HybridCore
  * @subpackage Admin
  * @author     Justin Tadlock <justin@justintadlock.com>
- * @copyright  Copyright (c) 2008 - 2013, Justin Tadlock
+ * @copyright  Copyright (c) 2008 - 2014, Justin Tadlock
  * @link       http://themehybrid.com/hybrid-core
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
@@ -26,6 +26,7 @@
  * with the WordPress settings API.
  *
  * @since  1.0.0
+ * @access public
  * @param  string  $setting
  * @return string
  */
@@ -38,6 +39,7 @@ function hybrid_settings_field_id( $setting ) {
  * use with the WordPress settings API.
  *
  * @since  1.0.0
+ * @access public
  * @param  string  $setting
  * @return string
  */
@@ -191,7 +193,6 @@ final class Hybrid_Theme_Settings{
 	public function settings_page() { ?>
 
 		<div class="wrap">
-			<?php screen_icon(); ?>
 
 			<h2><?php
 				/* Translators: %s is the theme name. */

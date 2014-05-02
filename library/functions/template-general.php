@@ -6,7 +6,7 @@
  * @package    HybridCore
  * @subpackage Functions
  * @author     Justin Tadlock <justin@justintadlock.com>
- * @copyright  Copyright (c) 2008 - 2013, Justin Tadlock
+ * @copyright  Copyright (c) 2008 - 2014, Justin Tadlock
  * @link       http://themehybrid.com/hybrid-core
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
@@ -470,7 +470,7 @@ function hybrid_search_title( $prefix = '', $display = true ) {
  */
 function hybrid_404_title( $prefix = '', $display = true ) {
 
-	$title = __( '404 Not Found', 'hybrid-core' );
+	$title = $prefix . __( '404 Not Found', 'hybrid-core' );
 
 	if ( false === $display )
 		return $title;
