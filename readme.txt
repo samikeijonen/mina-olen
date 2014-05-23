@@ -28,6 +28,12 @@ I needed this theme and someone else might need it too.
 
 == Changelog ==
 
+= Version 1.0.5 =
+
+* Make theme WPML compatible by adding wpml-config.xml file.
+* It's now possible to add WPML flags to menu under Customizer >> Navigation.
+* Update Hybrid Core to latest version.
+
 = Version 1.0.4 =
 
 * Update Hybrid Core to latest version.
