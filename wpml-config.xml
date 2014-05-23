@@ -1,0 +1,20 @@
+<wpml-config>
+
+	<admin-texts>
+
+	<key name="theme_mods_mina-olen">
+
+			<key name="logo_upload" />
+			<key name="front_page_1" />
+			<key name="front_page_2" />
+			<key name="front_page_3" />
+			<key name="front_page_4" />
+			<key name="front_page_5" />
+			<key name="front_page_6" />
+			<key name="mina_olen_footer" />
+
+	</key>
+
+	</admin-texts>
+
+</wpml-config>
