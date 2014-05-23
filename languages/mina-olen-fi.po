@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mina olen 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/mina-olen\n"
-"POT-Creation-Date: 2014-05-23 19:35:31+00:00\n"
-"PO-Revision-Date: 2014-05-23 22:37+0200\n"
+"POT-Creation-Date: 2014-05-23 19:42:35+00:00\n"
+"PO-Revision-Date: 2014-05-23 22:43+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Foxnet <sami.keijonen@foxnet.fi>\n"
 "Language: fi\n"
@@ -1168,7 +1168,7 @@ msgid "Sami Keijonen"
 msgstr "Sami Keijonen"
 
 #. Author URI of the plugin/theme
-msgid "http://foxnet-themes.fi"
+msgid "https://foxnet-themes.fi"
 msgstr "https://foxnet-themes.fi"
 
 #. Template Name of the plugin/theme
