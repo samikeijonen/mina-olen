@@ -24,7 +24,7 @@
  * to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  *
  * @package   HybridCore
- * @version   2.0.0-beta-1
+ * @version   2.0.0-beta-2
  * @author    Justin Tadlock <justin@justintadlock.com>
  * @copyright Copyright (c) 2008 - 2014, Justin Tadlock
  * @link      http://themehybrid.com/hybrid-core
@@ -251,15 +251,15 @@ if ( !class_exists( 'Hybrid' ) ) {
 			add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list' ) );
 
 			/* Remove support for the the Breadcrumb Trail extension if the plugin is installed. */
-			if ( function_exists( 'breadcrumb_trail' ) )
+			if ( function_exists( 'breadcrumb_trail' ) || class_exists( 'Breadcrumb_Trail' ) )
 				remove_theme_support( 'breadcrumb-trail' );
 
 			/* Remove support for the the Cleaner Gallery extension if the plugin is installed. */
-			if ( function_exists( 'cleaner_gallery' ) )
+			if ( function_exists( 'cleaner_gallery' ) || class_exists( 'Cleaner_Gallery' ) )
 				remove_theme_support( 'cleaner-gallery' );
 
 			/* Remove support for the the Get the Image extension if the plugin is installed. */
-			if ( function_exists( 'get_the_image' ) )
+			if ( function_exists( 'get_the_image' ) || class_exists( 'Get_The_Image' ) )
 				remove_theme_support( 'get-the-image' );
 
 			/* Remove support for the Featured Header extension if the class exists. */
