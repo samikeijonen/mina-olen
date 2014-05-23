@@ -168,6 +168,9 @@ function mina_olen_theme_setup() {
 	
 	/* Disable bbPress breadcrumb. */
 	add_filter( 'bbp_no_breadcrumb', '__return_true' );
+	
+	/* Add WPML flags. */
+	add_filter( 'wp_nav_menu_items', 'mina_olen_add_wpml_flags', 10, 2 );
 
 }
 
@@ -503,6 +506,53 @@ function mina_olen_get_editor_styles() {
 
 	/* Return the styles. */
 	return $editor_styles;
+}
+
+/**
+ * Add WPML flags to menus WMPL flags.
+ *
+ * @since   1.0.5
+ * @return  array
+ */
+function mina_olen_add_wpml_flags( $items, $args ) {
+    
+	if ( function_exists( 'icl_get_languages' ) && 'primary' == $args->theme_location && get_theme_mod( 'wpml_flags_primary' ) && has_nav_menu( 'primary' ) ) {
+        $items .= mina_olen_language_selector_flags();
+    }
+	
+	if ( function_exists( 'icl_get_languages' ) && 'subsidiary' == $args->theme_location && get_theme_mod( 'wpml_flags_subsidiary' ) && has_nav_menu( 'subsidiary' ) ) {
+        $items .= mina_olen_language_selector_flags();
+    }
+	
+    return $items;
+}
+
+/**
+ * Output WMPL flags.
+ *
+ * @since   1.0.5
+ * @return  string
+ */
+function mina_olen_language_selector_flags(){
+	
+	/* Get out if icl_get_languages do not exists. */
+	if( !function_exists( 'icl_get_languages' ) ) {
+		return;
+	}
+	
+	$languages = icl_get_languages( apply_filters( 'mina_olen_wpml_flag_args', 'skip_missing=0&orderby=code' ) );
+	
+	$mina_olen_flags_output = '';
+	if( !empty( $languages ) ) {
+		foreach( $languages as $l ){
+			$mina_olen_flags_output .= '<li class="menu-item mina-olen-flag-' . $l['language_code'] . '">';
+			$mina_olen_flags_output .= '<a href="' . $l['url'] . '">';
+			$mina_olen_flags_output .= '<img src="' . $l['country_flag_url'] . '" height="' . get_theme_mod( 'wpml_flags_height', 15 ) . '" alt="' . $l['language_code'] . '" width="' . get_theme_mod( 'wpml_flags_width', 20 ) . '" />';
+			$mina_olen_flags_output .= '</a>';
+			$mina_olen_flags_output .= '</li>';
+		}
+	}
+	return $mina_olen_flags_output;
 }
 
 ?>

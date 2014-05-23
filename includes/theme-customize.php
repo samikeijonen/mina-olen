@@ -183,6 +183,94 @@ function mina_olen_customize_register_settings( $wp_customize ) {
 		)
 	);
 	
+	/* Add WPML flags setting if WPML is available. */
+	if( function_exists( 'icl_get_languages' ) ) {
+		$wp_customize->add_setting(
+			'wpml_flags_primary',
+			array(
+				'default'           => '',
+				'type'              => 'theme_mod',
+				'capability'        => 'edit_theme_options',
+				'sanitize_callback' => 'mina_olen_sanitize_checkbox'
+			)
+		);
+	
+		/* Add WPML flags control. */
+		$wp_customize->add_control(
+			'wpml-flags-primary',
+			array(
+				'label'    => esc_html__( 'Show WPML flags in Primary menu.', 'mina-olen' ),
+				'section'  => 'nav',
+				'settings' => 'wpml_flags_primary',
+				'priority' => 70,
+				'type'     => 'checkbox'
+			)
+		);
+		
+		$wp_customize->add_setting(
+			'wpml_flags_subsidiary',
+			array(
+				'default'           => '',
+				'type'              => 'theme_mod',
+				'capability'        => 'edit_theme_options',
+				'sanitize_callback' => 'mina_olen_sanitize_checkbox'
+			)
+		);
+
+		$wp_customize->add_control(
+			'wpml-flags-subsidiary',
+			array(
+				'label'    => esc_html__( 'Show WPML flags in Subsidiary menu.', 'mina-olen' ),
+				'section'  => 'nav',
+				'settings' => 'wpml_flags_subsidiary',
+				'priority' => 80,
+				'type'     => 'checkbox'
+			)
+		);
+		
+		/* Flag height and width. */
+		$wp_customize->add_setting(
+			'wpml_flags_width',
+			array(
+				'default'           => 20,
+				'type'              => 'theme_mod',
+				'capability'        => 'edit_theme_options',
+				'sanitize_callback' => 'absint'
+			)
+		);
+
+		$wp_customize->add_control(
+			'wpml-flag-width',
+			array(
+				'label'    => esc_html__( 'Flag width (px).', 'mina-olen' ),
+				'section'  => 'nav',
+				'settings' => 'wpml_flags_width',
+				'priority' => 90,
+				'type'     => 'text'
+			)
+		);
+		$wp_customize->add_setting(
+			'wpml_flags_height',
+			array(
+				'default'           => 15,
+				'type'              => 'theme_mod',
+				'capability'        => 'edit_theme_options',
+				'sanitize_callback' => 'absint'
+			)
+		);
+
+		$wp_customize->add_control(
+			'wpml-flag-height',
+			array(
+				'label'    => esc_html__( 'Flag height (px).', 'mina-olen' ),
+				'section'  => 'nav',
+				'settings' => 'wpml_flags_height',
+				'priority' => 100,
+				'type'     => 'text'
+			)
+		);
+	}
+	
 	/* Add content setting. */
 	$wp_customize->add_setting(
 		'content_front',
