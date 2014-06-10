@@ -3,21 +3,38 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mina olen 1.0.5\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tags/mina-olen\n"
-"POT-Creation-Date: 2014-05-23 19:42:35+00:00\n"
+"Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
+"POT-Creation-Date: 2014-06-10 14:40:04+00:00\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: WP-Translations (http://wp-translations.org/)\n"
+"Language-Team: WP-Translations "
+"(http://www.transifex.com/projects/p/wp-translations/)\n"
+"X-Generator: grunt-wp-i18n 0.4.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-KeywordsList: "
+"__;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c;_nc:4c,1,2;_"
+"x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Textdomain-Support: yes\n"
 
 #: admin/EDD_SL_Theme_Updater.php:54
-msgid "Updating this theme will lose any customizations you have made. 'Cancel' to stop, 'OK' to update."
+msgid ""
+"Updating this theme will lose any customizations you have made. 'Cancel' to "
+"stop, 'OK' to update."
 msgstr ""
 
 #: admin/EDD_SL_Theme_Updater.php:59
-msgid "<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox\" title=\"%4s\">Check out what's new</a> or <a href=\"%5$s\"%6$s>update now</a>."
+msgid ""
+"<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" "
+"class=\"thickbox\" title=\"%4s\">Check out what's new</a> or <a "
+"href=\"%5$s\"%6$s>update now</a>."
 msgstr ""
 
 #: admin/functions-admin.php:70
@@ -48,9 +65,8 @@ msgstr ""
 msgid "License status"
 msgstr ""
 
-#. translators: There is a space after %s:
-
 #: admin/functions-admin.php:266
+#. translators: There is a space after %s:
 msgid "Expires %s: "
 msgstr ""
 
@@ -136,30 +152,20 @@ msgstr ""
 msgid "%s ago"
 msgstr ""
 
-#. Translators: The %s is for trackback link.
-
 #: comments-loop-error.php:6
-msgid "Comments are closed, but <a href=\"%s\">trackbacks</a> and pingbacks are open."
+#. Translators: The %s is for trackback link.
+msgid ""
+"Comments are closed, but <a href=\"%s\">trackbacks</a> and pingbacks are "
+"open."
 msgstr ""
 
 #: comments-loop-error.php:15
 msgid "Comments are closed."
 msgstr ""
 
-#: comments-loop-nav.php:4
-msgctxt "comments navigation"
-msgid "Previous"
-msgstr ""
-
-#. Translators: Comments page numbers. 1 is current page and 2 is total pages.
-
 #: comments-loop-nav.php:6
+#. Translators: Comments page numbers. 1 is current page and 2 is total pages.
 msgid "Page %1$s of %2$s"
-msgstr ""
-
-#: comments-loop-nav.php:7
-msgctxt "comments navigation"
-msgid "Next"
 msgstr ""
 
 #: content-aside.php:19 content-audio.php:21 content-gallery.php:19
@@ -204,27 +210,14 @@ msgstr ""
 msgid "Social menu"
 msgstr ""
 
-#: functions.php:213
-msgctxt "sidebar"
-msgid "Header"
-msgstr ""
-
 #: functions.php:214
 msgid "A sidebar located in the top of the site."
 msgstr ""
 
-#: functions.php:218
-msgctxt "sidebar"
-msgid "Primary"
-msgstr ""
-
 #: functions.php:219
-msgid "The main sidebar. It is displayed on either the left or right side of the page based on the chosen layout."
-msgstr ""
-
-#: functions.php:223
-msgctxt "sidebar"
-msgid "Subsidiary"
+msgid ""
+"The main sidebar. It is displayed on either the left or right side of the "
+"page based on the chosen layout."
 msgstr ""
 
 #: functions.php:224
@@ -271,9 +264,8 @@ msgstr ""
 msgid "Front page settings"
 msgstr ""
 
-#. Translators: %s stands for number. For example Select page 1.
-
 #: includes/theme-customize.php:47
+#. Translators: %s stands for number. For example Select page 1.
 msgid "Select page %s"
 msgstr ""
 
@@ -337,9 +329,8 @@ msgstr ""
 msgid "Template"
 msgstr ""
 
-#. Translators: %s is the theme name.
-
 #: library/admin/theme-settings.php:134 library/admin/theme-settings.php:199
+#. Translators: %s is the theme name.
 msgid "%s Theme Settings"
 msgstr ""
 
@@ -347,16 +338,10 @@ msgstr ""
 msgid "Theme Settings"
 msgstr ""
 
-#: library/classes/customize-control-background-image.php:49
-msgctxt "theme customizer tab"
-msgid "Default"
-msgstr ""
-
-#. Translators: Media dimensions - 1 is width and 2 is height.
-
 #: library/classes/hybrid-media-meta.php:154
 #: library/classes/hybrid-media-meta.php:282
 #: library/functions/template-media.php:102
+#. Translators: Media dimensions - 1 is width and 2 is height.
 msgid "%1$s &#215; %2$s"
 msgstr ""
 
@@ -378,9 +363,8 @@ msgstr ""
 msgid "Aperture"
 msgstr ""
 
-#. Translators: Camera focal length.
-
 #: library/classes/hybrid-media-meta.php:174
+#. Translators: Camera focal length.
 msgid "%s mm"
 msgstr ""
 
@@ -396,9 +380,8 @@ msgstr ""
 msgid "ISO"
 msgstr ""
 
-#. Translators: Camera shutter speed. "sec" is an abbreviation for "seconds".
-
 #: library/classes/hybrid-media-meta.php:199
+#. Translators: Camera shutter speed. "sec" is an abbreviation for "seconds".
 msgid "%s sec"
 msgstr ""
 
@@ -417,7 +400,9 @@ msgid "File Type"
 msgstr ""
 
 #: library/classes/widget-archives.php:43
-msgid "An advanced widget that gives you total control over the output of your archives."
+msgid ""
+"An advanced widget that gives you total control over the output of your "
+"archives."
 msgstr ""
 
 #: library/classes/widget-archives.php:55
@@ -515,7 +500,9 @@ msgid "Show post count?"
 msgstr ""
 
 #: library/classes/widget-authors.php:43
-msgid "An advanced widget that gives you total control over the output of your author lists."
+msgid ""
+"An advanced widget that gives you total control over the output of your "
+"author lists."
 msgstr ""
 
 #: library/classes/widget-authors.php:55 library/classes/widget-authors.php:62
@@ -589,7 +576,9 @@ msgid "Hide empty?"
 msgstr ""
 
 #: library/classes/widget-bookmarks.php:43
-msgid "An advanced widget that gives you total control over the output of your bookmarks (links)."
+msgid ""
+"An advanced widget that gives you total control over the output of your "
+"bookmarks (links)."
 msgstr ""
 
 #: library/classes/widget-bookmarks.php:55
@@ -691,7 +680,9 @@ msgid "Show private?"
 msgstr ""
 
 #: library/classes/widget-calendar.php:43
-msgid "An advanced widget that gives you total control over the output of your calendar."
+msgid ""
+"An advanced widget that gives you total control over the output of your "
+"calendar."
 msgstr ""
 
 #: library/classes/widget-calendar.php:55
@@ -704,7 +695,9 @@ msgid "One-letter abbreviation?"
 msgstr ""
 
 #: library/classes/widget-categories.php:43
-msgid "An advanced widget that gives you total control over the output of your category links."
+msgid ""
+"An advanced widget that gives you total control over the output of your "
+"category links."
 msgstr ""
 
 #: library/classes/widget-categories.php:55
@@ -742,7 +735,9 @@ msgid "Show count?"
 msgstr ""
 
 #: library/classes/widget-nav-menu.php:43
-msgid "An advanced widget that gives you total control over the output of your menus."
+msgid ""
+"An advanced widget that gives you total control over the output of your "
+"menus."
 msgstr ""
 
 #: library/classes/widget-nav-menu.php:55
@@ -754,7 +749,9 @@ msgid "Navigation"
 msgstr ""
 
 #: library/classes/widget-pages.php:43
-msgid "An advanced widget that gives you total control over the output of your page links."
+msgid ""
+"An advanced widget that gives you total control over the output of your "
+"page links."
 msgstr ""
 
 #: library/classes/widget-pages.php:55 library/classes/widget-pages.php:62
@@ -778,7 +775,9 @@ msgid "Created"
 msgstr ""
 
 #: library/classes/widget-search.php:44
-msgid "An advanced widget that gives you total control over the output of your search form."
+msgid ""
+"An advanced widget that gives you total control over the output of your "
+"search form."
 msgstr ""
 
 #: library/classes/widget-search.php:56 library/classes/widget-search.php:63
@@ -786,7 +785,9 @@ msgid "Search"
 msgstr ""
 
 #: library/classes/widget-tags.php:43
-msgid "An advanced widget that gives you total control over the output of your tags."
+msgid ""
+"An advanced widget that gives you total control over the output of your "
+"tags."
 msgstr ""
 
 #: library/classes/widget-tags.php:55 library/classes/widget-tags.php:64
@@ -832,79 +833,27 @@ msgstr ""
 msgid "404 Not Found"
 msgstr ""
 
-#. Translators: %s is the search query. The HTML entities are opening and
-#. closing curly quotes.
-
 #: library/extensions/breadcrumb-trail.php:183
 #: library/functions/template-general.php:475
+#. Translators: %s is the search query. The HTML entities are opening and
+#. closing curly quotes.
 msgid "Search results for &#8220;%s&#8221;"
 msgstr ""
 
-#. Translators: %s is the page number.
-
 #: library/extensions/breadcrumb-trail.php:185
+#. Translators: %s is the page number.
 msgid "Page %s"
 msgstr ""
 
-#. Translators: Minute archive title. %s is the minute time format.
-
 #: library/extensions/breadcrumb-trail.php:187
 #: library/functions/template-general.php:436
+#. Translators: Minute archive title. %s is the minute time format.
 msgid "Minute %s"
 msgstr ""
 
-#. Translators: Weekly archive title. %s is the week date format.
-
 #: library/extensions/breadcrumb-trail.php:189
+#. Translators: Weekly archive title. %s is the week date format.
 msgid "Week %s"
-msgstr ""
-
-#: library/extensions/breadcrumb-trail.php:716
-#: library/functions/template-general.php:455
-msgctxt "minute and hour archives time format"
-msgid "g:i a"
-msgstr ""
-
-#: library/extensions/breadcrumb-trail.php:733
-#: library/functions/template-general.php:436
-msgctxt "minute archives time format"
-msgid "i"
-msgstr ""
-
-#: library/extensions/breadcrumb-trail.php:750
-#: library/functions/template-general.php:416
-msgctxt "hour archives time format"
-msgid "g a"
-msgstr ""
-
-#: library/extensions/breadcrumb-trail.php:766
-#: library/extensions/breadcrumb-trail.php:795
-#: library/extensions/breadcrumb-trail.php:822
-#: library/extensions/breadcrumb-trail.php:849
-#: library/extensions/breadcrumb-trail.php:1036
-#: library/functions/template-general.php:358
-#: library/functions/template-general.php:378
-msgctxt "yearly archives date format"
-msgid "Y"
-msgstr ""
-
-#: library/extensions/breadcrumb-trail.php:767
-#: library/extensions/breadcrumb-trail.php:823
-#: library/extensions/breadcrumb-trail.php:1040
-msgctxt "monthly archives date format"
-msgid "F"
-msgstr ""
-
-#: library/extensions/breadcrumb-trail.php:768
-#: library/extensions/breadcrumb-trail.php:1044
-msgctxt "daily archives date format"
-msgid "j"
-msgstr ""
-
-#: library/extensions/breadcrumb-trail.php:796
-#: library/functions/template-general.php:378
-msgctxt "weekly archives date format"
-msgid "W"
 msgstr ""
 
 #: library/extensions/breadcrumb-trail.php:1163
@@ -927,13 +876,6 @@ msgstr ""
 msgid "Fonts"
 msgstr ""
 
-#. Translators: Default theme layout option.
-
-#: library/extensions/theme-layouts.php:363
-msgctxt "theme layout"
-msgid "Default"
-msgstr ""
-
 #: library/extensions/theme-layouts.php:458
 #: library/extensions/theme-layouts.php:567
 #: library/extensions/theme-layouts.php:652
@@ -948,27 +890,14 @@ msgstr ""
 msgid "Global Layout"
 msgstr ""
 
-#. Translators: Post date/time "title" attribute.
-
-#: library/functions/attr.php:414
-msgctxt "post time format"
-msgid "l, F j, Y, g:i a"
-msgstr ""
-
-#. Translators: Comment date/time "title" attribute.
-
-#: library/functions/attr.php:535
-msgctxt "comment time format"
-msgid "l, F j, Y, g:i a"
-msgstr ""
-
 #: library/functions/deprecated.php:861
-msgid "<code>%1$s</code> &mdash; This function has been removed or replaced by another function."
+msgid ""
+"<code>%1$s</code> &mdash; This function has been removed or replaced by "
+"another function."
 msgstr ""
-
-#. Translators: 1 is the page title. 2 is the page number.
 
 #: library/functions/head.php:149
+#. Translators: 1 is the page title. 2 is the page number.
 msgid "%1$s Page %2$s"
 msgstr ""
 
@@ -1016,10 +945,9 @@ msgstr ""
 msgid "WordPress"
 msgstr ""
 
-#. Translators: Theme name.
-
 #: library/functions/template-general.php:82
 #: library/functions/template-general.php:115
+#. Translators: Theme name.
 msgid "%s WordPress Theme"
 msgstr ""
 
@@ -1041,22 +969,9 @@ msgstr ""
 msgid "You are browsing the site archives."
 msgstr ""
 
-#. Translators: 1 is the week number and 2 is the year.
-
 #: library/functions/template-general.php:378
+#. Translators: 1 is the week number and 2 is the year.
 msgid "Week %1$s of %2$s"
-msgstr ""
-
-#: library/functions/template-general.php:397
-msgctxt "daily archives date format"
-msgid "F j, Y"
-msgstr ""
-
-#. Translators: Separates tags, categories, etc. when displaying a post.
-
-#: library/functions/template-post.php:144
-msgctxt "taxonomy terms separator"
-msgid ", "
 msgstr ""
 
 #: library/functions/utility.php:86
@@ -1083,16 +998,6 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
-#: loop-nav.php:12
-msgctxt "posts navigation"
-msgid "<span class=\"previous screen-reader-text\">Previous</span>"
-msgstr ""
-
-#: loop-nav.php:13
-msgctxt "posts navigation"
-msgid "<span class=\"next screen-reader-text\">Next</span>"
-msgstr ""
-
 #: menu-primary.php:7 menu-subsidiary.php:7
 msgid "Skip to content"
 msgstr ""
@@ -1113,12 +1018,12 @@ msgstr ""
 msgid "Testimonials"
 msgstr ""
 
+#: pages/front-page.php:121
 #. Translators: %1$s is for Articles, Portfolios, Downloads and Testimonial.
 #. Leave it like this.
-
-#: pages/front-page.php:121
 msgid "%1$s"
 msgstr ""
+
 #. Theme Name of the plugin/theme
 msgid "Mina olen"
 msgstr ""
@@ -1128,7 +1033,9 @@ msgid "https://foxnet-themes.fi/downloads/mina-olen"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Mina olen WordPress Theme is made for cool business type of sites. And in the same time blogging features looks great also."
+msgid ""
+"Mina olen WordPress Theme is made for cool business type of sites. And in "
+"the same time blogging features looks great also."
 msgstr ""
 
 #. Author of the plugin/theme
@@ -1141,4 +1048,121 @@ msgstr ""
 
 #. Template Name of the plugin/theme
 msgid "Front Page"
+msgstr ""
+
+#: comments-loop-nav.php:4
+msgctxt "comments navigation"
+msgid "Previous"
+msgstr ""
+
+#: comments-loop-nav.php:7
+msgctxt "comments navigation"
+msgid "Next"
+msgstr ""
+
+#: functions.php:213
+msgctxt "sidebar"
+msgid "Header"
+msgstr ""
+
+#: functions.php:218
+msgctxt "sidebar"
+msgid "Primary"
+msgstr ""
+
+#: functions.php:223
+msgctxt "sidebar"
+msgid "Subsidiary"
+msgstr ""
+
+#: library/classes/customize-control-background-image.php:49
+msgctxt "theme customizer tab"
+msgid "Default"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:716
+#: library/functions/template-general.php:455
+msgctxt "minute and hour archives time format"
+msgid "g:i a"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:733
+#: library/functions/template-general.php:436
+msgctxt "minute archives time format"
+msgid "i"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:750
+#: library/functions/template-general.php:416
+msgctxt "hour archives time format"
+msgid "g a"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:766
+#: library/extensions/breadcrumb-trail.php:795
+#: library/extensions/breadcrumb-trail.php:822
+#: library/extensions/breadcrumb-trail.php:849
+#: library/extensions/breadcrumb-trail.php:1036
+#: library/functions/template-general.php:358
+#: library/functions/template-general.php:378
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:767
+#: library/extensions/breadcrumb-trail.php:823
+#: library/extensions/breadcrumb-trail.php:1040
+msgctxt "monthly archives date format"
+msgid "F"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:768
+#: library/extensions/breadcrumb-trail.php:1044
+msgctxt "daily archives date format"
+msgid "j"
+msgstr ""
+
+#: library/functions/template-general.php:397
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:796
+#: library/functions/template-general.php:378
+msgctxt "weekly archives date format"
+msgid "W"
+msgstr ""
+
+#: library/extensions/theme-layouts.php:363
+#. Translators: Default theme layout option.
+msgctxt "theme layout"
+msgid "Default"
+msgstr ""
+
+#: library/functions/attr.php:414
+#. Translators: Post date/time "title" attribute.
+msgctxt "post time format"
+msgid "l, F j, Y, g:i a"
+msgstr ""
+
+#: library/functions/attr.php:535
+#. Translators: Comment date/time "title" attribute.
+msgctxt "comment time format"
+msgid "l, F j, Y, g:i a"
+msgstr ""
+
+#: library/functions/template-post.php:144
+#. Translators: Separates tags, categories, etc. when displaying a post.
+msgctxt "taxonomy terms separator"
+msgid ", "
+msgstr ""
+
+#: loop-nav.php:12
+msgctxt "posts navigation"
+msgid "<span class=\"previous screen-reader-text\">Previous</span>"
+msgstr ""
+
+#: loop-nav.php:13
+msgctxt "posts navigation"
+msgid "<span class=\"next screen-reader-text\">Next</span>"
 msgstr ""
