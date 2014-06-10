@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.com
+
+[mina-olen.mina-olen]
+file_filter = languages/mina-olen-<lang>.po
+source_file = languages/mina-olen.pot
+source_lang = en_US
+type = PO
