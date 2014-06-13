@@ -12,9 +12,9 @@ grunt.initConfig({
         options: {
           domainPath: '/languages/',    // Where to save the POT file.
           exclude: ['build/.*'],
-          potFilename: 'mina-olen.pot',    // Name of the POT file.
-          type: 'wp-theme',    // Type of project (wp-plugin or wp-theme).
-          updateTimestamp: true,    // Whether the POT-Creation-Date should be updated without other changes.
+          potFilename: 'mina-olen.pot', // Name of the POT file.
+          type: 'wp-theme',             // Type of project (wp-plugin or wp-theme).
+          updateTimestamp: true,        // Whether the POT-Creation-Date should be updated without other changes.
           processPot: function( pot, options ) {
             pot.headers['report-msgid-bugs-to'] = 'https://foxnet-themes.fi/contact/';
             pot.headers['plural-forms'] = 'nplurals=2; plural=n != 1;';
@@ -59,9 +59,17 @@ grunt.initConfig({
           dest: '<%= dirs.lang %>',
          ext: '.mo',
           nonull: true
-      }]
-    }
-  },
+		}]
+		}
+	},
+	
+	// Minify css
+	cssmin : {
+		css:{
+			src: 'style.css',
+			dest: 'style.min.css'
+		}
+	},
 
     // Clean up build directory
     clean: {
@@ -89,12 +97,12 @@ grunt.initConfig({
       }
     },
 
-    //Compress build directory into <name>.zip and <name>-<version>.zip
+    // Compress build directory into <name>.zip and <name>-<version>.zip
     compress: {
       main: {
         options: {
           mode: 'zip',
-          archive: './build/<%= pkg.name %>.zip'
+          archive: './build/<%= pkg.name %>_v<%= pkg.version %>.zip'
         },
         expand: true,
         cwd: 'build/<%= pkg.name %>/',
@@ -106,7 +114,7 @@ grunt.initConfig({
 });
 
 // Default task.
-grunt.registerTask( 'default', 'makepot' );
+grunt.registerTask( 'default', [ 'cssmin', 'makepot' ] );
 
 // Makepot and push it on Transifex task(s).
 grunt.registerTask( 'makandpush', [ 'makepot', 'exec:txpush_s' ] );
@@ -115,6 +123,6 @@ grunt.registerTask( 'makandpush', [ 'makepot', 'exec:txpush_s' ] );
 grunt.registerTask( 'tx', [ 'exec:txpull', 'potomo' ] );
 
 // Build task(s).
-  grunt.registerTask( 'build', [ 'clean', 'copy', 'compress' ] );
+grunt.registerTask( 'build', [ 'clean', 'copy', 'compress' ] );
 
 };
