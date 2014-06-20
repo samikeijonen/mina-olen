@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2.0.
 msgid ""
 msgstr ""
-"Project-Id-Version: Mina olen 1.0.5\n"
+"Project-Id-Version: Mina olen 1.0.6\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-06-13 10:45:22+00:00\n"
+"POT-Creation-Date: 2014-06-20 13:05:02+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,86 +24,11 @@ msgstr ""
 "x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
 "X-Textdomain-Support: yes\n"
 
-#: admin/EDD_SL_Theme_Updater.php:54
-msgid ""
-"Updating this theme will lose any customizations you have made. 'Cancel' to "
-"stop, 'OK' to update."
-msgstr ""
-
-#: admin/EDD_SL_Theme_Updater.php:59
-msgid ""
-"<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" "
-"class=\"thickbox\" title=\"%4s\">Check out what's new</a> or <a "
-"href=\"%5$s\"%6$s>update now</a>."
-msgstr ""
-
-#: admin/functions-admin.php:70
-msgid "Theme License"
-msgstr ""
-
-#: admin/functions-admin.php:84
-msgid "Theme License Options"
-msgstr ""
-
-#: admin/functions-admin.php:93
-msgid "License Key"
-msgstr ""
-
-#: admin/functions-admin.php:97
-msgid "Enter your license key for receiving automatic upgrades"
-msgstr ""
-
-#: admin/functions-admin.php:103 admin/functions-admin.php:111
-msgid "Activate License"
-msgstr ""
-
-#: admin/functions-admin.php:108
-msgid "Deactivate License"
-msgstr ""
-
-#: admin/functions-admin.php:118
-msgid "License status"
-msgstr ""
-
-#: admin/functions-admin.php:266
-#. translators: There is a space after %s:
-msgid "Expires %s: "
-msgstr ""
-
-#: admin/functions-admin.php:269
-msgid "Active"
-msgstr ""
-
-#: admin/functions-admin.php:271
-msgid "Expired"
-msgstr ""
-
-#: admin/functions-admin.php:273
-msgid "License keys do not match"
-msgstr ""
-
-#: admin/functions-admin.php:275
-msgid "Inactive"
-msgstr ""
-
-#: admin/functions-admin.php:277
-msgid "Disabled"
-msgstr ""
-
-#: admin/functions-admin.php:279
-msgid "Site is inactive"
-msgstr ""
-
-#: admin/functions-admin.php:281
-msgid "Unknown"
-msgstr ""
-
 #: attachment-image.php:28 pages/front-page.php:143
 msgid "Pages:"
 msgstr ""
 
 #: bbpress/loop-replies.php:18 bbpress/loop-replies.php:52
-#: library/classes/widget-pages.php:190
 msgid "Author"
 msgstr ""
 
@@ -143,8 +68,8 @@ msgstr ""
 msgid "Voices: "
 msgstr ""
 
-#: byline.php:11 comment.php:11 library/functions/deprecated.php:432
-#: library/functions/deprecated.php:520
+#: byline.php:11 comment.php:11 library/functions/deprecated.php:435
+#: library/functions/deprecated.php:523
 msgid "Permalink"
 msgstr ""
 
@@ -163,7 +88,11 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: comments-loop-nav.php:6
+#: comments-loop-nav.php:5
+msgid "Comments Navigation"
+msgstr ""
+
+#: comments-loop-nav.php:10
 #. Translators: Comments page numbers. 1 is current page and 2 is total pages.
 msgid "Page %1$s of %2$s"
 msgstr ""
@@ -186,53 +115,63 @@ msgid_plural "This gallery contains %s items."
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:87
+#: footer.php:24
+msgid "Back to top"
+msgstr ""
+
+#: functions.php:101
 msgid "1 Column"
 msgstr ""
 
-#: functions.php:88
+#: functions.php:102
 msgid "2 Columns: Content / Sidebar"
 msgstr ""
 
-#: functions.php:89
+#: functions.php:103
 msgid "2 Columns: Sidebar / Content"
 msgstr ""
 
-#: functions.php:195
+#: functions.php:209
 msgid "Primary menu"
 msgstr ""
 
-#: functions.php:197
+#: functions.php:211
 msgid "Subsidiary menu"
 msgstr ""
 
-#: functions.php:199
+#: functions.php:213
 msgid "Social menu"
 msgstr ""
 
-#: functions.php:214
+#: functions.php:228
 msgid "A sidebar located in the top of the site."
 msgstr ""
 
-#: functions.php:219
+#: functions.php:233
 msgid ""
 "The main sidebar. It is displayed on either the left or right side of the "
 "page based on the chosen layout."
 msgstr ""
 
-#: functions.php:224
+#: functions.php:238
 msgid "A sidebar located in the footer of the site."
 msgstr ""
 
-#: functions.php:394 pages/front-page.php:45 pages/front-page.php:48
-msgid "Read more"
+#: functions.php:412
+#. Translators: The %s is the post title shown to screen readers.
+msgid "Read more %s"
 msgstr ""
 
-#: functions.php:426
-msgid "Visit site"
+#: functions.php:448
+#. Translators: The %s is the post title shown to screen readers.
+msgid "Visit site %s"
 msgstr ""
 
-#: header.php:57
+#: header.php:19 menu-subsidiary.php:7
+msgid "Skip to content"
+msgstr ""
+
+#: header.php:59
 msgid "&#47;"
 msgstr ""
 
@@ -351,7 +290,6 @@ msgid "Dimensions"
 msgstr ""
 
 #: library/classes/hybrid-media-meta.php:161
-#: library/classes/widget-pages.php:191
 msgid "Date"
 msgstr ""
 
@@ -399,427 +337,6 @@ msgstr ""
 msgid "File Type"
 msgstr ""
 
-#: library/classes/widget-archives.php:43
-msgid ""
-"An advanced widget that gives you total control over the output of your "
-"archives."
-msgstr ""
-
-#: library/classes/widget-archives.php:55
-#: library/classes/widget-archives.php:62
-#: library/extensions/breadcrumb-trail.php:181
-#: library/functions/template-general.php:339
-msgid "Archives"
-msgstr ""
-
-#: library/classes/widget-archives.php:105
-msgid "Select Year"
-msgstr ""
-
-#: library/classes/widget-archives.php:108
-msgid "Select Month"
-msgstr ""
-
-#: library/classes/widget-archives.php:111
-msgid "Select Week"
-msgstr ""
-
-#: library/classes/widget-archives.php:114
-msgid "Select Day"
-msgstr ""
-
-#: library/classes/widget-archives.php:117
-msgid "Select Post"
-msgstr ""
-
-#: library/classes/widget-archives.php:194
-msgid "Alphabetical"
-msgstr ""
-
-#: library/classes/widget-archives.php:195
-msgid "Daily"
-msgstr ""
-
-#: library/classes/widget-archives.php:196
-msgid "Monthly"
-msgstr ""
-
-#: library/classes/widget-archives.php:197
-msgid "Post By Post"
-msgstr ""
-
-#: library/classes/widget-archives.php:198
-msgid "Weekly"
-msgstr ""
-
-#: library/classes/widget-archives.php:199
-msgid "Yearly"
-msgstr ""
-
-#: library/classes/widget-archives.php:204
-#: library/classes/widget-authors.php:181
-#: library/classes/widget-bookmarks.php:220
-#: library/classes/widget-categories.php:210
-#: library/classes/widget-pages.php:185 library/classes/widget-tags.php:227
-msgid "Ascending"
-msgstr ""
-
-#: library/classes/widget-archives.php:205
-#: library/classes/widget-authors.php:182
-#: library/classes/widget-bookmarks.php:221
-#: library/classes/widget-categories.php:211
-#: library/classes/widget-pages.php:186 library/classes/widget-tags.php:228
-msgid "Descending"
-msgstr ""
-
-#: library/classes/widget-archives.php:210
-msgid "Custom"
-msgstr ""
-
-#: library/classes/widget-archives.php:211
-msgid "HTML"
-msgstr ""
-
-#: library/classes/widget-archives.php:212
-msgid "Option"
-msgstr ""
-
-#: library/classes/widget-archives.php:218
-#: library/classes/widget-authors.php:205
-#: library/classes/widget-bookmarks.php:250
-#: library/classes/widget-calendar.php:137
-#: library/classes/widget-categories.php:234
-#: library/classes/widget-nav-menu.php:173 library/classes/widget-pages.php:211
-#: library/classes/widget-search.php:128 library/classes/widget-tags.php:248
-msgid "Title:"
-msgstr ""
-
-#: library/classes/widget-archives.php:262
-#: library/classes/widget-authors.php:261
-msgid "Show post count?"
-msgstr ""
-
-#: library/classes/widget-authors.php:43
-msgid ""
-"An advanced widget that gives you total control over the output of your "
-"author lists."
-msgstr ""
-
-#: library/classes/widget-authors.php:55 library/classes/widget-authors.php:62
-msgid "Authors"
-msgstr ""
-
-#: library/classes/widget-authors.php:186
-msgid "Display Name"
-msgstr ""
-
-#: library/classes/widget-authors.php:187
-msgid "Email"
-msgstr ""
-
-#: library/classes/widget-authors.php:188
-#: library/classes/widget-bookmarks.php:226
-#: library/classes/widget-bookmarks.php:232
-#: library/classes/widget-categories.php:216
-#: library/classes/widget-pages.php:192
-msgid "ID"
-msgstr ""
-
-#: library/classes/widget-authors.php:189
-msgid "Nice Name"
-msgstr ""
-
-#: library/classes/widget-authors.php:190
-msgid "Post Count"
-msgstr ""
-
-#: library/classes/widget-authors.php:191
-msgid "Registered"
-msgstr ""
-
-#: library/classes/widget-authors.php:192
-#: library/classes/widget-bookmarks.php:244
-msgid "URL"
-msgstr ""
-
-#: library/classes/widget-authors.php:193
-msgid "Login"
-msgstr ""
-
-#: library/classes/widget-authors.php:197
-#: library/classes/widget-categories.php:205
-#: library/classes/widget-tags.php:223
-msgid "List"
-msgstr ""
-
-#: library/classes/widget-authors.php:198
-#: library/classes/widget-categories.php:206
-msgid "None"
-msgstr ""
-
-#: library/classes/widget-authors.php:257
-msgid "<acronym title=\"Hypertext Markup Language\">HTML</acronym>?"
-msgstr ""
-
-#: library/classes/widget-authors.php:265
-msgid "Exclude admin?"
-msgstr ""
-
-#: library/classes/widget-authors.php:269
-msgid "Show full name?"
-msgstr ""
-
-#: library/classes/widget-authors.php:273
-#: library/classes/widget-categories.php:337
-#: library/classes/widget-tags.php:367
-msgid "Hide empty?"
-msgstr ""
-
-#: library/classes/widget-bookmarks.php:43
-msgid ""
-"An advanced widget that gives you total control over the output of your "
-"bookmarks (links)."
-msgstr ""
-
-#: library/classes/widget-bookmarks.php:55
-#: library/classes/widget-bookmarks.php:62
-#: library/classes/widget-bookmarks.php:127
-msgid "Bookmarks"
-msgstr ""
-
-#: library/classes/widget-bookmarks.php:225
-#: library/classes/widget-categories.php:215
-#: library/classes/widget-tags.php:233
-msgid "Count"
-msgstr ""
-
-#: library/classes/widget-bookmarks.php:227
-#: library/classes/widget-bookmarks.php:235
-#: library/classes/widget-categories.php:217
-#: library/classes/widget-tags.php:234
-msgid "Name"
-msgstr ""
-
-#: library/classes/widget-bookmarks.php:228
-#: library/classes/widget-categories.php:218
-#: library/classes/widget-pages.php:195
-msgid "Slug"
-msgstr ""
-
-#: library/classes/widget-bookmarks.php:233
-msgid "Description"
-msgstr ""
-
-#: library/classes/widget-bookmarks.php:234
-msgid "Length"
-msgstr ""
-
-#: library/classes/widget-bookmarks.php:236
-msgid "Notes"
-msgstr ""
-
-#: library/classes/widget-bookmarks.php:237
-msgid "Owner"
-msgstr ""
-
-#: library/classes/widget-bookmarks.php:238 library/classes/widget-tags.php:229
-msgid "Random"
-msgstr ""
-
-#: library/classes/widget-bookmarks.php:239
-msgid "Rating"
-msgstr ""
-
-#: library/classes/widget-bookmarks.php:240
-msgid "Rel"
-msgstr ""
-
-#: library/classes/widget-bookmarks.php:241
-#: library/classes/widget-categories.php:226
-msgid "RSS"
-msgstr ""
-
-#: library/classes/widget-bookmarks.php:242
-msgid "Target"
-msgstr ""
-
-#: library/classes/widget-bookmarks.php:243
-msgid "Updated"
-msgstr ""
-
-#: library/classes/widget-bookmarks.php:352
-msgid "Categorize?"
-msgstr ""
-
-#: library/classes/widget-bookmarks.php:356
-msgid "Show description?"
-msgstr ""
-
-#: library/classes/widget-bookmarks.php:360
-msgid "Hide invisible?"
-msgstr ""
-
-#: library/classes/widget-bookmarks.php:364
-msgid "Show rating?"
-msgstr ""
-
-#: library/classes/widget-bookmarks.php:368
-msgid "Show updated?"
-msgstr ""
-
-#: library/classes/widget-bookmarks.php:372
-msgid "Show images?"
-msgstr ""
-
-#: library/classes/widget-bookmarks.php:376
-msgid "Show name?"
-msgstr ""
-
-#: library/classes/widget-bookmarks.php:380
-msgid "Show private?"
-msgstr ""
-
-#: library/classes/widget-calendar.php:43
-msgid ""
-"An advanced widget that gives you total control over the output of your "
-"calendar."
-msgstr ""
-
-#: library/classes/widget-calendar.php:55
-#: library/classes/widget-calendar.php:62
-msgid "Calendar"
-msgstr ""
-
-#: library/classes/widget-calendar.php:142
-msgid "One-letter abbreviation?"
-msgstr ""
-
-#: library/classes/widget-categories.php:43
-msgid ""
-"An advanced widget that gives you total control over the output of your "
-"category links."
-msgstr ""
-
-#: library/classes/widget-categories.php:55
-#: library/classes/widget-categories.php:62
-msgid "Categories"
-msgstr ""
-
-#: library/classes/widget-categories.php:219
-msgid "Term Group"
-msgstr ""
-
-#: library/classes/widget-categories.php:224
-msgid "Atom"
-msgstr ""
-
-#: library/classes/widget-categories.php:225
-msgid "RDF"
-msgstr ""
-
-#: library/classes/widget-categories.php:227
-msgid "RSS 2.0"
-msgstr ""
-
-#: library/classes/widget-categories.php:325
-#: library/classes/widget-pages.php:310
-msgid "Hierarchical?"
-msgstr ""
-
-#: library/classes/widget-categories.php:329
-msgid "Use description?"
-msgstr ""
-
-#: library/classes/widget-categories.php:333
-msgid "Show count?"
-msgstr ""
-
-#: library/classes/widget-nav-menu.php:43
-msgid ""
-"An advanced widget that gives you total control over the output of your "
-"menus."
-msgstr ""
-
-#: library/classes/widget-nav-menu.php:55
-msgid "Navigation Menu"
-msgstr ""
-
-#: library/classes/widget-nav-menu.php:62
-msgid "Navigation"
-msgstr ""
-
-#: library/classes/widget-pages.php:43
-msgid ""
-"An advanced widget that gives you total control over the output of your "
-"page links."
-msgstr ""
-
-#: library/classes/widget-pages.php:55 library/classes/widget-pages.php:62
-msgid "Pages"
-msgstr ""
-
-#: library/classes/widget-pages.php:193
-msgid "Menu Order"
-msgstr ""
-
-#: library/classes/widget-pages.php:194 library/classes/widget-pages.php:202
-msgid "Modified"
-msgstr ""
-
-#: library/classes/widget-pages.php:196
-msgid "Title"
-msgstr ""
-
-#: library/classes/widget-pages.php:201
-msgid "Created"
-msgstr ""
-
-#: library/classes/widget-search.php:44
-msgid ""
-"An advanced widget that gives you total control over the output of your "
-"search form."
-msgstr ""
-
-#: library/classes/widget-search.php:56 library/classes/widget-search.php:63
-msgid "Search"
-msgstr ""
-
-#: library/classes/widget-tags.php:43
-msgid ""
-"An advanced widget that gives you total control over the output of your "
-"tags."
-msgstr ""
-
-#: library/classes/widget-tags.php:55 library/classes/widget-tags.php:64
-msgid "Tags"
-msgstr ""
-
-#: library/classes/widget-tags.php:61
-msgid "%s topic"
-msgid_plural "%s topics"
-msgstr[0] ""
-msgstr[1] ""
-
-#: library/classes/widget-tags.php:217
-msgid "View"
-msgstr ""
-
-#: library/classes/widget-tags.php:218
-#: library/extensions/breadcrumb-trail.php:1135
-#: library/extensions/breadcrumb-trail.php:1171
-#: library/extensions/breadcrumb-trail.php:1188
-#: library/extensions/breadcrumb-trail.php:1219
-msgid "Edit"
-msgstr ""
-
-#: library/classes/widget-tags.php:222
-msgid "Flat"
-msgstr ""
-
-#: library/classes/widget-tags.php:363
-msgid "Pad counts?"
-msgstr ""
-
 #: library/extensions/breadcrumb-trail.php:178
 msgid "Browse:"
 msgstr ""
@@ -831,6 +348,11 @@ msgstr ""
 #: library/extensions/breadcrumb-trail.php:180
 #: library/functions/template-general.php:494
 msgid "404 Not Found"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:181
+#: library/functions/template-general.php:339
+msgid "Archives"
 msgstr ""
 
 #: library/extensions/breadcrumb-trail.php:183
@@ -854,6 +376,13 @@ msgstr ""
 #: library/extensions/breadcrumb-trail.php:189
 #. Translators: Weekly archive title. %s is the week date format.
 msgid "Week %s"
+msgstr ""
+
+#: library/extensions/breadcrumb-trail.php:1135
+#: library/extensions/breadcrumb-trail.php:1171
+#: library/extensions/breadcrumb-trail.php:1188
+#: library/extensions/breadcrumb-trail.php:1219
+msgid "Edit"
 msgstr ""
 
 #: library/extensions/breadcrumb-trail.php:1163
@@ -890,7 +419,7 @@ msgstr ""
 msgid "Global Layout"
 msgstr ""
 
-#: library/functions/deprecated.php:861
+#: library/functions/deprecated.php:964
 msgid ""
 "<code>%1$s</code> &mdash; This function has been removed or replaced by "
 "another function."
@@ -974,7 +503,7 @@ msgstr ""
 msgid "Week %1$s of %2$s"
 msgstr ""
 
-#: library/functions/utility.php:86
+#: library/functions/utility.php:89
 msgid "(Untitled)"
 msgstr ""
 
@@ -998,8 +527,12 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
-#: menu-primary.php:7 menu-subsidiary.php:7
-msgid "Skip to content"
+#: menu-primary.php:37
+msgid "Search"
+msgstr ""
+
+#: pages/front-page.php:45 pages/front-page.php:48
+msgid "Read more"
 msgstr ""
 
 #: pages/front-page.php:78
@@ -1022,6 +555,94 @@ msgstr ""
 #. Translators: %1$s is for Articles, Portfolios, Downloads and Testimonial.
 #. Leave it like this.
 msgid "%1$s"
+msgstr ""
+
+#: theme-updater/theme-updater-admin.php:94
+#: theme-updater/theme-updater-admin.php:95
+#: theme-updater/theme-updater-admin.php:124
+msgid "Theme License"
+msgstr ""
+
+#: theme-updater/theme-updater-admin.php:114
+msgid "Enter your theme license key."
+msgstr ""
+
+#: theme-updater/theme-updater-admin.php:134
+msgid "License Key"
+msgstr ""
+
+#: theme-updater/theme-updater-admin.php:147
+msgid "License Action"
+msgstr ""
+
+#: theme-updater/theme-updater-admin.php:153
+msgid "Deactivate License"
+msgstr ""
+
+#: theme-updater/theme-updater-admin.php:155
+msgid "Activate License"
+msgstr ""
+
+#: theme-updater/theme-updater-admin.php:323
+#: theme-updater/theme-updater-admin.php:370
+msgid "License status is unknown."
+msgstr ""
+
+#: theme-updater/theme-updater-admin.php:331
+msgid "Renew?"
+msgstr ""
+
+#: theme-updater/theme-updater-admin.php:340
+msgid "unlimited"
+msgstr ""
+
+#: theme-updater/theme-updater-admin.php:344
+msgid "License key is active."
+msgstr ""
+
+#: theme-updater/theme-updater-admin.php:346
+msgid "Expires %s."
+msgstr ""
+
+#: theme-updater/theme-updater-admin.php:349
+msgid "You have %1$s / %2$s sites activated."
+msgstr ""
+
+#: theme-updater/theme-updater-admin.php:353
+msgid "License key expired %s."
+msgstr ""
+
+#: theme-updater/theme-updater-admin.php:355
+msgid "License key has expired."
+msgstr ""
+
+#: theme-updater/theme-updater-admin.php:361
+msgid "License keys do not match."
+msgstr ""
+
+#: theme-updater/theme-updater-admin.php:363
+msgid "License is inactive."
+msgstr ""
+
+#: theme-updater/theme-updater-admin.php:365
+msgid "License key is disabled."
+msgstr ""
+
+#: theme-updater/theme-updater-admin.php:368
+msgid "Site is inactive."
+msgstr ""
+
+#: theme-updater/theme-updater-class.php:61
+msgid ""
+"Updating this theme will lose any customizations you have made. 'Cancel' to "
+"stop, 'OK' to update."
+msgstr ""
+
+#: theme-updater/theme-updater-class.php:66
+msgid ""
+"<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" "
+"class=\"thickbox\" title=\"%4s\">Check out what's new</a> or <a "
+"href=\"%5$s\"%6$s>update now</a>."
 msgstr ""
 
 #. Theme Name of the plugin/theme
@@ -1050,27 +671,27 @@ msgstr ""
 msgid "Front Page"
 msgstr ""
 
-#: comments-loop-nav.php:4
+#: comments-loop-nav.php:7
 msgctxt "comments navigation"
 msgid "Previous"
 msgstr ""
 
-#: comments-loop-nav.php:7
+#: comments-loop-nav.php:12
 msgctxt "comments navigation"
 msgid "Next"
 msgstr ""
 
-#: functions.php:213
+#: functions.php:227
 msgctxt "sidebar"
 msgid "Header"
 msgstr ""
 
-#: functions.php:218
+#: functions.php:232
 msgctxt "sidebar"
 msgid "Primary"
 msgstr ""
 
-#: functions.php:223
+#: functions.php:237
 msgctxt "sidebar"
 msgid "Subsidiary"
 msgstr ""
@@ -1139,13 +760,27 @@ msgctxt "theme layout"
 msgid "Default"
 msgstr ""
 
-#: library/functions/attr.php:414
+#: library/functions/attr.php:197
+#. Translators: The %s is the sidebar name. This is used for the 'aria-label'
+#. attribute.
+msgctxt "sidebar aria label"
+msgid "%s Sidebar"
+msgstr ""
+
+#: library/functions/attr.php:225
+#. Translators: The %s is the menu name. This is used for the 'aria-label'
+#. attribute.
+msgctxt "nav menu aria label"
+msgid "%s Menu"
+msgstr ""
+
+#: library/functions/attr.php:442
 #. Translators: Post date/time "title" attribute.
 msgctxt "post time format"
 msgid "l, F j, Y, g:i a"
 msgstr ""
 
-#: library/functions/attr.php:535
+#: library/functions/attr.php:563
 #. Translators: Comment date/time "title" attribute.
 msgctxt "comment time format"
 msgid "l, F j, Y, g:i a"
@@ -1165,4 +800,11 @@ msgstr ""
 #: loop-nav.php:13
 msgctxt "posts navigation"
 msgid "<span class=\"next screen-reader-text\">Next</span>"
+msgstr ""
+
+#: menu-primary.php:11
+#. Translators: %s is the nav menu name. This is the nav menu title shown to
+#. screen readers.
+msgctxt "nav menu title"
+msgid "%s Menu"
 msgstr ""
