@@ -21,7 +21,7 @@
 				<?php get_template_part( 'menu', 'social' ); // Loads the menu-social.php template. ?>
 				
 				<div id="back-to-top">
-					<a href="#container" title="" class="back-to-top"></a>
+					<a href="#container" class="back-to-top"><span class="screen-reader-text"><?php _e( 'Back to top', 'mina-olen' ); ?></span></a>
 				</div>
 
 			</div><!-- .wrap -->
