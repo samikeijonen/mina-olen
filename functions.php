@@ -22,6 +22,20 @@
  * @link       http://foxnet.fi
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
+ 
+/**
+ * The current version of the theme.
+ */
+define( 'MINA_OLEN_VERSION', '1.0.6' );
+
+/**
+ * The suffix to use for scripts.
+ */
+if ( ( defined( 'SCRIPT_DEBUG' ) && true === SCRIPT_DEBUG ) ) {
+	define( 'MINA_OLEN_SUFFIX', '' );
+} else {
+	define( 'MINA_OLEN_SUFFIX', '.min' );
+}
 
 /* Load the core theme framework. */
 require_once( trailingslashit( get_template_directory() ) . 'library/hybrid.php' );
@@ -33,7 +47,7 @@ require_once( trailingslashit( get_template_directory() ) . 'includes/custom-bac
 
 /* Add theme settings for license. */
 if ( is_admin() ) {
-	require_once( trailingslashit ( get_template_directory() ) . 'admin/functions-admin.php' );
+	require_once( trailingslashit ( get_template_directory() ) . 'theme-updater/theme-updater.php' );
 }
 
 
@@ -238,13 +252,16 @@ function mina_olen_register_sidebars() {
 function mina_olen_enqueue_scripts() {
 	
 	/* Enqueue Fitvids. */
-	wp_enqueue_script( 'mina-olen-fitvids', trailingslashit( get_template_directory_uri() ) . 'js/fitvids/fitvids.js', array( 'jquery' ), '20140228', false );
+	wp_enqueue_script( 'mina-olen-fitvids', trailingslashit( get_template_directory_uri() ) . 'js/fitvids/fitvids' . MINA_OLEN_SUFFIX . '.js', array( 'jquery' ), MINA_OLEN_VERSION, false );
 
 	/* Enqueue Headroom. */
-	wp_enqueue_script( 'mina-olen-headroom', trailingslashit( get_template_directory_uri() ) . 'js/headroom/headroom.js', array( 'jquery' ), '20131222', false );
+	wp_enqueue_script( 'mina-olen-headroom', trailingslashit( get_template_directory_uri() ) . 'js/headroom/headroom' . MINA_OLEN_SUFFIX . '.js', array( 'jquery' ), MINA_OLEN_VERSION, false );
 	
 	/* Enqueue responsive multi toggle nav. */
-	wp_enqueue_script( 'mina-olen-settings', trailingslashit( get_template_directory_uri() ) . 'js/settings/setting.js', array( 'jquery', 'mina-olen-fitvids', 'mina-olen-headroom' ), '20131129', true );
+	wp_enqueue_script( 'mina-olen-settings', trailingslashit( get_template_directory_uri() ) . 'js/settings/setting' . MINA_OLEN_SUFFIX . '.js', array( 'jquery', 'mina-olen-fitvids', 'mina-olen-headroom' ), MINA_OLEN_VERSION, true );
+	
+	/* Enqueue skip link fix. */
+	wp_enqueue_script( 'mina-olen-skip-link-focus-fix', trailingslashit( get_template_directory_uri() ) . 'js/skip-link-focus-fix' . MINA_OLEN_SUFFIX . '.js', array(), MINA_OLEN_VERSION, true );
 	
 }
 
@@ -389,10 +406,13 @@ function mina_olen_body_classes( $classes ) {
  * Change [...] to ... Read more.
  * @since 1.0.0
  */
-function mina_olen_excerpt_more() {
+function mina_olen_excerpt_more( $more ) {
 
-	return '...<p><span class="mina-olen-read-more"><a class="more-link" href="' . esc_url( get_permalink() ) . '" title="' . the_title_attribute('echo=0') . '">' . __( 'Read more', 'mina-olen' ) . '</a></span></p>';
+	/* Translators: The %s is the post title shown to screen readers. */
+	$text = sprintf( __( 'Read more %s', 'mina-olen' ), '<span class="screen-reader-text">' . get_the_title() . '</span>' );
+	$more = sprintf( '...<p><span class="mina-olen-read-more"><a href="%s" class="more-link">%s</a></span></p>', esc_url( get_permalink() ), $text );
 
+	return $more;
 }
 
 /**
@@ -423,7 +443,12 @@ function mina_olen_get_portfolio_item_link() {
 	$mina_olen_portfolio_url = get_post_meta( get_the_ID(), 'portfolio_item_url', true );
 
 	if ( !empty( $mina_olen_portfolio_url ) ) {
-		return '<span class="mina-olen-project-url"><a class="kalervo-portfolio-item-link" href="' . esc_url( $mina_olen_portfolio_url ) . '" title="' . the_title( '','', false ) . '">' . __( 'Visit site', 'mina-olen' ) . '</a></span>';
+		
+		/* Translators: The %s is the post title shown to screen readers. */
+		$text = sprintf( __( 'Visit site %s', 'mina-olen' ), '<span class="screen-reader-text">' . get_the_title() . '</span>' );
+		$link = sprintf( '<span class="mina-olen-project-url"><a href="%s" class="mina-olen-portfolio-item-link">%s</a></span>', esc_url( $mina_olen_portfolio_url  ), $text );
+
+		return $link;
 	}
 	
 }
