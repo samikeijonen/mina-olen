@@ -22,8 +22,14 @@
 			$this.toggleClass('opened').next('ul').toggleClass('opened');
 		});
 		
-		/* Toggle search. */
+		/* Menu focus. */
+		$( '.menu li a' ).on( 'focus blur', 
+			function() {
+				$( this ).parents().toggleClass( 'focus' );
+			}
+		);
 		
+		/* Toggle search. */
 		$('#menu-primary .toggle-search').click(
 			function() {
 				$('#menu-primary .toggle-search-form').toggleClass('add-width'); // Add class to add width
