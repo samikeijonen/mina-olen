@@ -16,6 +16,8 @@
 
 	<div id="container" <?php if( get_theme_mod( 'layout_boxed' ) ) echo 'class="mina-olen-boxed"'; ?>>
 	
+		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'mina-olen' ); ?></a>
+	
 		<?php get_sidebar( 'header' ); // Loads the sidebar-header.php template. ?>
 	
 		<?php get_template_part( 'menu', 'primary' ); // Loads the menu-primary.php template. ?>
