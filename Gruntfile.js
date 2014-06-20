@@ -11,7 +11,7 @@ grunt.initConfig({
       target: {
         options: {
           domainPath: '/languages/',    // Where to save the POT file.
-          exclude: ['build/.*'],
+          exclude: ['build/.*'],        // Exlude build folder.
           potFilename: 'mina-olen.pot', // Name of the POT file.
           type: 'wp-theme',             // Type of project (wp-plugin or wp-theme).
           updateTimestamp: true,        // Whether the POT-Creation-Date should be updated without other changes.
@@ -63,6 +63,31 @@ grunt.initConfig({
 		}
 	},
 	
+	// Minify files
+	uglify: {
+		headroom: {
+			files: {
+				'js/headroom/headroom.min.js': ['js/headroom/headroom.js']
+			}
+		},
+		fitvids: {
+			files: {
+				'js/fitvids/fitvids.min.js': ['js/fitvids/fitvids.js'],
+				'js/fitvids/settings.min.js': ['js/fitvids/settings.js']
+			}
+		},
+		settigns: {
+			files: {
+				'js/settings/setting.min.js': ['js/settings/setting.js']
+			}
+		},
+		skiplink: {
+			files: {
+				'js/skip-link-focus-fix.min.js': ['js/skip-link-focus-fix.js']
+			}
+		}
+	},
+	
 	// Minify css
 	cssmin : {
 		css:{
@@ -96,6 +121,30 @@ grunt.initConfig({
         dest: 'build/<%= pkg.name %>/'
       }
     },
+	
+	// Replace text
+	replace: {
+		styleVersion: {
+			src: [
+				'style.css',
+			],
+			overwrite: true,
+			replacements: [ {
+				from: /^.*Version:.*$/m,
+				to: 'Version: <%= pkg.version %>'
+			} ]
+		},
+		functionsVersion: {
+			src: [
+				'functions.php'
+			],
+			overwrite: true,
+			replacements: [ {
+				from: /^define\( 'MINA_OLEN_VERSION'.*$/m,
+				to: 'define( \'MINA_OLEN_VERSION\', \'<%= pkg.version %>\' );'
+			} ]
+		}
+	},
 
     // Compress build directory into <name>.zip and <name>-<version>.zip
     compress: {
@@ -114,7 +163,7 @@ grunt.initConfig({
 });
 
 // Default task.
-grunt.registerTask( 'default', [ 'cssmin', 'makepot' ] );
+grunt.registerTask( 'default', [ 'uglify', 'cssmin', 'makepot' ] );
 
 // Makepot and push it on Transifex task(s).
 grunt.registerTask( 'makandpush', [ 'makepot', 'exec:txpush_s' ] );
@@ -123,6 +172,6 @@ grunt.registerTask( 'makandpush', [ 'makepot', 'exec:txpush_s' ] );
 grunt.registerTask( 'tx', [ 'exec:txpull', 'potomo' ] );
 
 // Build task(s).
-grunt.registerTask( 'build', [ 'clean', 'copy', 'compress' ] );
+grunt.registerTask( 'build', [ 'clean', 'replace:styleVersion', 'replace:functionsVersion', 'copy', 'compress' ] );
 
 };
