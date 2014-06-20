@@ -83,7 +83,8 @@ function get_atomic_template( $template ) {
  */
 function do_atomic( $tag = '', $arg = '' ) {
 	_deprecated_function( __FUNCTION__, '2.0.0', 'hybrid_do_atomic' );
-	hybrid_do_atomic( $tag, $arg );
+	$pre = hybrid_get_prefix();
+	hybrid_do_atomic( "{$pre}_{$tag}", $arg );
 }
 
 /**
@@ -92,7 +93,8 @@ function do_atomic( $tag = '', $arg = '' ) {
  */
 function apply_atomic( $tag = '', $value = '' ) {
 	_deprecated_function( __FUNCTION__, '2.0.0', 'hybrid_apply_atomic' );
-	return hybrid_apply_atomic( $tag, $value );
+	$pre = hybrid_get_prefix();
+	return hybrid_apply_atomic( "{$pre}_{$tag}", $value );
 }
 
 /**
@@ -101,7 +103,8 @@ function apply_atomic( $tag = '', $value = '' ) {
  */
 function apply_atomic_shortcode( $tag = '', $value = '' ) {
 	_deprecated_function( __FUNCTION__, '2.0.0', 'hybrid_apply_atomic_shortcode' );
-	return hybrid_apply_atomic_shortcode( $tag, $value );
+	$pre = hybrid_get_prefix();
+	return hybrid_apply_atomic_shortcode( "{$pre}_{$tag}", $value );
 }
 
 /**
@@ -551,6 +554,106 @@ function hybrid_comment_reply_link_shortcode( $attr ) {
 function hybrid_get_transient_expiration() {
 	_deprecated_function( __FUNCTION__, '2.0.0', '' );
 	return 43200;
+}
+
+/**
+ * @since      1.6.0
+ * @deprecated 2.0.0
+ */
+function hybrid_translate( $domain, $text, $context = null ) {
+
+	$translations = get_translations_for_domain( $domain );
+
+	return $translations->translate( $text, $context );
+}
+
+/**
+ * @since      1.6.0
+ * @deprecated 2.0.0
+ */
+function hybrid_translate_plural( $domain, $single, $plural, $number, $context = null ) {
+
+	$translations = get_translations_for_domain( $domain );
+
+	return $translations->translate_plural( $single, $plural, $number, $context );
+}
+
+/**
+ * @since      1.6.0
+ * @deprecated 2.0.0
+ */
+function hybrid_gettext( $translated, $text, $domain ) {
+	return $translated;
+}
+
+/**
+ * @since      1.6.0
+ * @deprecated 2.0.0
+ */
+function hybrid_gettext_with_context( $translated, $text, $context, $domain ) {
+	return $translated;
+}
+
+/**
+ * @since      1.6.0
+ * @deprecated 2.0.0
+ */
+function hybrid_ngettext( $translated, $single, $plural, $number, $domain ) {
+	return $translated;
+}
+
+/**
+ * @since      1.6.0
+ * @deprecated 2.0.0
+ */
+function hybrid_ngettext_with_context( $translated, $single, $plural, $number, $context, $domain ) {
+	return $translated;
+}
+
+/**
+ * @since      1.6.0
+ * @deprecated 2.0.0
+ */
+function hybrid_extensions_gettext( $translated, $text, $domain ) {
+	return $translated;
+}
+
+/**
+ * @since      1.6.0
+ * @deprecated 2.0.0
+ */
+function hybrid_extensions_gettext_with_context( $translated, $text, $context, $domain ) {
+	return $translated;
+}
+
+/**
+ * @since      1.6.0
+ * @deprecated 2.0.0
+ */
+function hybrid_extensions_ngettext( $translated, $single, $plural, $number, $domain ) {
+	return $translated;
+}
+
+/**
+ * @since      1.6.0
+ * @deprecated 2.0.0
+ */
+function hybrid_extensions_ngettext_with_context( $translated, $single, $plural, $number, $context, $domain ) {
+	return $translated;
+}
+
+/**
+ * @since      0.6.0
+ * @deprecated 2.0.0
+ */
+function hybrid_register_widgets() {
+}
+
+/**
+ * @since      0.3.2
+ * @deprecated 2.0.0
+ */
+function hybrid_unregister_widgets() {
 }
 
 /* === Removed Functions (note that functions removed prior to the 1.5 branch are gone). === */

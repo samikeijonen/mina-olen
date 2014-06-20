@@ -17,6 +17,9 @@ add_action( 'init', 'hybrid_add_post_type_support' );
 /* Filters the title for untitled posts. */
 add_filter( 'the_title', 'hybrid_untitled_post' );
 
+/* Filters for single post titles. */
+add_filter( 'single_post_title', 'hybrid_single_post_title', 10, 2 );
+
 /**
  * This function is for adding extra support for features not default to the core post types.
  * Excerpts are added to the 'page' post type.  Comments and trackbacks are added for the
@@ -89,6 +92,19 @@ function hybrid_untitled_post( $title ) {
 }
 
 /**
+ * Makes sure single post titles display HTML markup.
+ *
+ * @since  2.0.0
+ * @access public
+ * @param  string  $title
+ * @param  object  $post
+ * @return string
+ */
+function hybrid_single_post_title( $title, $post ) {
+	return wptexturize( $post->post_title );
+}
+
+/**
  * Retrieves the file with the highest priority that exists.  The function searches both the stylesheet 
  * and template directories.  This function is similar to the locate_template() function in WordPress 
  * but returns the file name with the URI path instead of the directory path.
@@ -146,4 +162,34 @@ function hybrid_hex_to_rgb( $hex ) {
 
 	/* Return the RGB colors as an array. */
 	return array( 'r' => $red, 'g' => $green, 'b' => $blue );
+}
+
+/**
+ * Function for grabbing a WP nav menu theme location name.
+ *
+ * @since  2.0.0
+ * @access public
+ * @param  string  $location
+ * @return string
+ */
+function hybrid_get_menu_location_name( $location ) {
+
+	$locations = get_registered_nav_menus();
+
+	return $locations[ $location ];
+}
+
+/**
+ * Function for grabbing a WP nav menu theme location name.
+ *
+ * @since  2.0.0
+ * @access public
+ * @param  string  $sidebar_id
+ * @return string
+ */
+function hybrid_get_sidebar_name( $sidebar_id ) {
+	global $wp_registered_sidebars;
+
+	if ( isset( $wp_registered_sidebars[ $sidebar_id ] ) )
+		return $wp_registered_sidebars[ $sidebar_id ]['name'];
 }
