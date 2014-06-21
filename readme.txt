@@ -28,6 +28,14 @@ I needed this theme and someone else might need it too.
 
 == Changelog ==
 
+= Version 1.0.6 =
+
+* Fixes a lot's of accebility issues. Now theme works a lot better using screen readers or just keyboard.
+* Minify also JS files for better performance.
+* Update .pot file.
+* Add French translations.
+* Update Hybrid Core to latest version.
+
 = Version 1.0.5 =
 
 * Make theme WPML compatible by adding wpml-config.xml file.
