@@ -29,8 +29,15 @@
 			}
 		);
 		
-		/* Toggle search. */
+		/* Toggle search and on focus. */
 		$('#menu-primary .toggle-search').click(
+			function() {
+				$('#menu-primary .toggle-search-form').toggleClass('add-width'); // Add class to add width
+				$('#menu-primary .search-form').toggleClass('add-width'); // Add class to open width
+			}
+		);
+		
+		$( '.toggle-search-form .search-field' ).on( 'focus blur', 
 			function() {
 				$('#menu-primary .toggle-search-form').toggleClass('add-width'); // Add class to add width
 				$('#menu-primary .search-form').toggleClass('add-width'); // Add class to open width
@@ -50,6 +57,14 @@
 				$( '.bottom-line' ).addClass( 'hover' ); // Add hover class when hovering
 			}, function() {
 				$( '.bottom-line' ).removeClass( 'hover' ); // Remove hover class when hovering stops
+			}
+		);
+		
+		/* Menu focus. */
+		$( '#menu-primary li.menu-item-has-children a' ).on( 'focus blur', 
+			function() {
+				$( '.bottom-line' ).toggleClass( 'focus' );
+				//$( '.bottom-line.focus' ).css( 'height', $('ul.sub-menu', '#menu-primary li.menu-item-has-children' ).outerHeight() ); // Calculate height of on sub UL element
 			}
 		);
 		
