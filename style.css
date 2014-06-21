@@ -1962,7 +1962,8 @@ img {
 	#menu-primary #menu-primary-search li.current-menu-item ul.sub-menu > a,
 	#menu-primary #menu-primary-search li a:hover,
 	#menu-primary #menu-primary-search li a:active,
-	#menu-primary #menu-primary-search li a:focus {
+	#menu-primary #menu-primary-search li a:focus,
+#menu-primary #menu-primary-search li a.focus	{
 		color: #c84d29;
 	}
 
@@ -2063,7 +2064,8 @@ img {
 		-webkit-transition: height 0.5s;
 		transition: height 0.5s;
 	}
-	.bottom-line.hover {
+	.bottom-line.hover,
+	.bottom-line.focus { 
 		background: #fff;
 		background: rgba(255, 255, 255, 0.97);
 		border-bottom: 1px solid #eee;
@@ -2073,6 +2075,9 @@ img {
 		top: 49px;
 		left: 0;
 		z-index: 99;
+	}
+	.bottom-line.focus { 
+		height: 400px; /* This is for backup before I find out the solution. */
 	}
 
 	#menu-primary {
@@ -2237,6 +2242,7 @@ img {
 	}
 
 	#menu-primary ul li:hover ul,
+	#menu-primary ul li.focus ul,
 	#menu-primary ul ul li:hover ul,
 	#menu-primary ul ul ul li:hover ul {
 		display: block;
