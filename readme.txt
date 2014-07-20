@@ -28,6 +28,12 @@ I needed this theme and someone else might need it too.
 
 == Changelog ==
 
+= Version 1.0.7 =
+
+* Update Hybrid Core to version 2.0.0.
+* Update Genericons to version 3.1 and load them via functions.php.
+* Fix top search form on focus issue.
+
 = Version 1.0.6 =
 
 * Fixes a lot's of accebility issues. Now theme works a lot better using screen readers or just keyboard.
