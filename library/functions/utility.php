@@ -17,9 +17,6 @@ add_action( 'init', 'hybrid_add_post_type_support' );
 /* Filters the title for untitled posts. */
 add_filter( 'the_title', 'hybrid_untitled_post' );
 
-/* Filters for single post titles. */
-add_filter( 'single_post_title', 'hybrid_single_post_title', 10, 2 );
-
 /**
  * This function is for adding extra support for features not default to the core post types.
  * Excerpts are added to the 'page' post type.  Comments and trackbacks are added for the
@@ -44,10 +41,10 @@ function hybrid_add_post_type_support() {
  * Checks if a post of any post type has a custom template.  This is the equivalent of WordPress' 
  * is_page_template() function with the exception that it works for all post types.
  *
- * @since 1.2.0
+ * @since  1.2.0
  * @access public
- * @param string $template The name of the template to check for.
- * @return bool Whether the post has a template.
+ * @param  string  $template  The name of the template to check for.
+ * @return bool               Whether the post has a template.
  */
 function hybrid_has_post_template( $template = '' ) {
 
@@ -85,23 +82,13 @@ function hybrid_has_post_template( $template = '' ) {
  */
 function hybrid_untitled_post( $title ) {
 
-	if ( empty( $title ) && !is_singular() && in_the_loop() && !is_admin() )
+	if ( empty( $title ) && !is_singular() && in_the_loop() && !is_admin() ) {
+
+		/* Translators: Used as a placeholder for untitled posts on non-singular views. */
 		$title = __( '(Untitled)', 'hybrid-core' );
+	}
 
 	return $title;
-}
-
-/**
- * Makes sure single post titles display HTML markup.
- *
- * @since  2.0.0
- * @access public
- * @param  string  $title
- * @param  object  $post
- * @return string
- */
-function hybrid_single_post_title( $title, $post ) {
-	return wptexturize( $post->post_title );
 }
 
 /**
@@ -180,7 +167,7 @@ function hybrid_get_menu_location_name( $location ) {
 }
 
 /**
- * Function for grabbing a WP nav menu theme location name.
+ * Function for grabbing a dynamic sidebar name.
  *
  * @since  2.0.0
  * @access public
@@ -192,4 +179,15 @@ function hybrid_get_sidebar_name( $sidebar_id ) {
 
 	if ( isset( $wp_registered_sidebars[ $sidebar_id ] ) )
 		return $wp_registered_sidebars[ $sidebar_id ]['name'];
+}
+
+/**
+ * Helper function for getting the script/style `.min` suffix for minified files.
+ *
+ * @since  2.0.0
+ * @access public
+ * @return string
+ */
+function hybrid_get_min_suffix() {
+	return defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 }
