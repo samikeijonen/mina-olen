@@ -26,7 +26,7 @@
 /**
  * The current version of the theme.
  */
-define( 'MINA_OLEN_VERSION', '1.0.6' );
+define( 'MINA_OLEN_VERSION', '1.0.7' );
 
 /**
  * The suffix to use for scripts.
@@ -259,6 +259,9 @@ function mina_olen_enqueue_scripts() {
 	
 	/* Enqueue responsive multi toggle nav. */
 	wp_enqueue_script( 'mina-olen-settings', trailingslashit( get_template_directory_uri() ) . 'js/settings/setting' . MINA_OLEN_SUFFIX . '.js', array( 'jquery', 'mina-olen-fitvids', 'mina-olen-headroom' ), MINA_OLEN_VERSION, true );
+	
+	/* Add Genericons font, used in the main stylesheet. */
+	wp_enqueue_style( 'genericons', trailingslashit( get_template_directory_uri() ) . 'fonts/genericons/genericons.css', array(), '3.1' );
 	
 	/* Enqueue skip link fix. */
 	wp_enqueue_script( 'mina-olen-skip-link-focus-fix', trailingslashit( get_template_directory_uri() ) . 'js/skip-link-focus-fix' . MINA_OLEN_SUFFIX . '.js', array(), MINA_OLEN_VERSION, true );
