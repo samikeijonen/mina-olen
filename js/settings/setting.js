@@ -37,10 +37,17 @@
 			}
 		);
 		
-		$( '.toggle-search-form .search-field' ).on( 'focus blur', 
+		$( '.toggle-search-form .search-field' ).on( 'focus', 
 			function() {
-				$('#menu-primary .toggle-search-form').toggleClass('add-width'); // Add class to add width
-				$('#menu-primary .search-form').toggleClass('add-width'); // Add class to open width
+				$('#menu-primary .toggle-search-form').addClass('add-width'); // Add class to add width
+				$('#menu-primary .search-form').addClass('add-width'); // Add class to open width
+			}
+		);
+		
+		$( '.toggle-search-form .search-field' ).on( 'blur', 
+			function() {
+				$('#menu-primary .toggle-search-form').removeClass('add-width'); // Remove class to add width
+				$('#menu-primary .search-form').removeClass('add-width'); // Remove class to open width
 			}
 		);
 		
