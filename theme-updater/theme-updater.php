@@ -14,7 +14,7 @@ if ( !class_exists( 'EDD_Theme_Updater_Admin' ) ) {
 $updater = new EDD_Theme_Updater_Admin(
 
 	array(
-		'remote_api_url' => 'http://foxnet-themes.fi', // Site where EDD is hosted
+		'remote_api_url' => 'http://foxland.fi',       // Site where EDD is hosted
 		'item_name'      => 'Mina olen',               // Name of theme
 		'theme_slug'     => 'mina_olen_theme',         // Theme slug
 		'version'        => MINA_OLEN_VERSION,         // The current version of this theme
