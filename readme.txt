@@ -28,6 +28,11 @@ I needed this theme and someone else might need it too.
 
 == Changelog ==
 
+= Version 1.0.8 =
+
+* Change updater url to foxland.fi.
+* Update Hybrid Core to version 2.0.2.
+
 = Version 1.0.7 =
 
 * Update Hybrid Core to version 2.0.0.

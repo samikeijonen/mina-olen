@@ -26,7 +26,7 @@
 /**
  * The current version of the theme.
  */
-define( 'MINA_OLEN_VERSION', '1.0.7' );
+define( 'MINA_OLEN_VERSION', '1.0.8' );
 
 /**
  * The suffix to use for scripts.
