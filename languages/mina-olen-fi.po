@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mina olen\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-07-20 08:10:57+00:00\n"
-"PO-Revision-Date: 2014-07-20 11:12+0200\n"
+"POT-Creation-Date: 2014-09-28 08:20:26+00:00\n"
+"PO-Revision-Date: 2014-09-28 11:21+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Finnish (http://www.transifex.com/projects/p/mina-olen/"
 "language/fi/)\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.6\n"
+"X-Generator: Poedit 1.6.9\n"
 
 #: attachment-image.php:28 pages/front-page.php:143
 msgid "Pages:"
@@ -275,13 +275,13 @@ msgstr "Teeman asetukset"
 
 #. Translators: Media dimensions - 1 is width and 2 is height.
 #: library/classes/hybrid-media-meta.php:154
-#: library/classes/hybrid-media-meta.php:282
+#: library/classes/hybrid-media-meta.php:284
 #: library/functions/template-media.php:102
 msgid "%1$s &#215; %2$s"
 msgstr "%1$s &#215; %2$s"
 
 #: library/classes/hybrid-media-meta.php:155
-#: library/classes/hybrid-media-meta.php:282
+#: library/classes/hybrid-media-meta.php:284
 msgid "Dimensions"
 msgstr "Mitat"
 
@@ -315,21 +315,21 @@ msgid "ISO"
 msgstr "ISO"
 
 #. Translators: Camera shutter speed. "sec" is an abbreviation for "seconds".
-#: library/classes/hybrid-media-meta.php:199
+#: library/classes/hybrid-media-meta.php:201
 msgid "%s sec"
 msgstr "%s sek"
 
-#: library/classes/hybrid-media-meta.php:199
+#: library/classes/hybrid-media-meta.php:201
 msgid "Shutter Speed"
 msgstr "Suljinnopeus"
 
-#: library/classes/hybrid-media-meta.php:248
-#: library/classes/hybrid-media-meta.php:285
+#: library/classes/hybrid-media-meta.php:250
+#: library/classes/hybrid-media-meta.php:287
 msgid "File Name"
 msgstr "Tiedoston nimi"
 
-#: library/classes/hybrid-media-meta.php:256
-#: library/classes/hybrid-media-meta.php:293
+#: library/classes/hybrid-media-meta.php:258
+#: library/classes/hybrid-media-meta.php:295
 msgid "File Type"
 msgstr "Tiedoston tyyppi"
 
@@ -637,8 +637,8 @@ msgid "Mina olen"
 msgstr "Minä olen"
 
 #. Theme URI of the plugin/theme
-msgid "https://foxnet-themes.fi/downloads/mina-olen"
-msgstr "https://foxnet-themes.fi/downloads/mina-olen"
+msgid "https://foxland.fi/downloads/mina-olen"
+msgstr "https://foxland.fi/downloads/mina-olen"
 
 #. Description of the plugin/theme
 msgid ""
@@ -653,8 +653,8 @@ msgid "Sami Keijonen"
 msgstr "Sami Keijonen"
 
 #. Author URI of the plugin/theme
-msgid "https://foxnet-themes.fi"
-msgstr "https://foxnet-themes.fi"
+msgid "https://foxland.fi"
+msgstr "https://foxland.fi"
 
 #. Template Name of the plugin/theme
 msgid "Front Page"
@@ -770,7 +770,7 @@ msgid "l, F j, Y, g:i a"
 msgstr "l j.m.Y, G:i"
 
 #. Translators: Comment date/time "title" attribute.
-#: library/functions/attr.php:561
+#: library/functions/attr.php:565
 msgctxt "comment time format"
 msgid "l, F j, Y, g:i a"
 msgstr "l j.m.Y, G:i"

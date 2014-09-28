@@ -1,13 +1,13 @@
 # Copyright (C) 2014 Sami Keijonen
 # This file is distributed under the GNU General Public License v2.0.
 # Translators:
-# mikei <mmich@live.ca>, 2014
+# Mikhail <mmich@live.ca>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Mina olen\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
 "POT-Creation-Date: 2014-07-20 08:10:57+00:00\n"
-"PO-Revision-Date: 2014-09-09 16:55+0200\n"
+"PO-Revision-Date: 2014-09-28 11:19+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Russian (Russia) (http://www.transifex.com/projects/p/mina-"
 "olen/language/ru_RU/)\n"
@@ -177,7 +177,7 @@ msgstr "Перейти к содержимому"
 
 #: header.php:59
 msgid "&#47;"
-msgstr ""
+msgstr "&#47;"
 
 #: includes/edd-functions.php:15
 msgid "Mina olen Theme Color"
@@ -189,7 +189,7 @@ msgstr "От:"
 
 #: includes/meta-boxes.php:16
 msgid "Header extra info"
-msgstr "Дополнительная инфо в верхнем колонтитуле"
+msgstr "Дополнительная информация над контентом страницы"
 
 #: includes/meta-boxes.php:34
 msgid "Callout text"
@@ -218,7 +218,7 @@ msgstr "Показать последние записи на главной с�
 
 #: includes/theme-customize.php:100
 msgid "Show latest downloads on front page"
-msgstr "Показать последние загрузки на главной странице"
+msgstr "Показать последние файлы для скачивания на главной странице"
 
 #: includes/theme-customize.php:127
 msgid "Show random portfolios on front page"
@@ -287,7 +287,7 @@ msgstr "Настройки темы"
 #: library/classes/hybrid-media-meta.php:282
 #: library/functions/template-media.php:102
 msgid "%1$s &#215; %2$s"
-msgstr ""
+msgstr "%1$s &#215; %2$s"
 
 #: library/classes/hybrid-media-meta.php:155
 #: library/classes/hybrid-media-meta.php:282
@@ -321,7 +321,7 @@ msgstr "Международная организация по стандарт�
 
 #: library/classes/hybrid-media-meta.php:180
 msgid "ISO"
-msgstr ""
+msgstr "ISO"
 
 #. Translators: Camera shutter speed. "sec" is an abbreviation for "seconds".
 #: library/classes/hybrid-media-meta.php:199
@@ -427,11 +427,11 @@ msgstr "Размер файла"
 
 #: library/functions/media.php:54
 msgid "Mime Type"
-msgstr ""
+msgstr "Mime Type"
 
 #: library/functions/media.php:55
 msgid "Run Time"
-msgstr ""
+msgstr "Run Time"
 
 #: library/functions/media.php:60
 msgid "Genre"
@@ -455,7 +455,7 @@ msgstr "Слова"
 
 #: library/functions/template-general.php:55
 msgid "State-of-the-art semantic personal publishing platform"
-msgstr ""
+msgstr "Самая продвинутая семантическая публикационнная веб платформа"
 
 #: library/functions/template-general.php:55
 msgid "WordPress"
@@ -465,7 +465,7 @@ msgstr "WordPress"
 #: library/functions/template-general.php:82
 #: library/functions/template-general.php:115
 msgid "%s WordPress Theme"
-msgstr "%s WordPress шаблон"
+msgstr "%s WordPress Тема"
 
 #: library/functions/template-general.php:305
 msgid "You are browsing the search results for &#8220;%s&#8221;"
@@ -494,7 +494,7 @@ msgstr "Неделя %1$s из %2$s"
 #. views.
 #: library/functions/utility.php:88
 msgid "(Untitled)"
-msgstr "(Безымянный)"
+msgstr "(Заголовка нет)"
 
 #: loop-error.php:4
 msgid "Nothing found"
@@ -503,7 +503,8 @@ msgstr "Ничего не найдено"
 #: loop-error.php:12
 msgid ""
 "You tried going to %s, which doesn't exist. You can try navigate or search."
-msgstr "Вы пытались попасть на %s, которой нет. Попробуйте найти ее поиском."
+msgstr ""
+"Вы пытались попасть на %s, которой нет. Попробуйте воспользоваться поиском."
 
 #: loop-error.php:18
 msgid "Apologies, but no entries were found."
@@ -511,7 +512,7 @@ msgstr "Извините, но ничего не найдено."
 
 #: loop-nav.php:4
 msgid "Previous"
-msgstr "Предыдущая"
+msgstr "Назад"
 
 #: loop-nav.php:5
 msgid "Next"
@@ -551,11 +552,11 @@ msgstr "%1$s"
 #: theme-updater/theme-updater-admin.php:95
 #: theme-updater/theme-updater-admin.php:124
 msgid "Theme License"
-msgstr "Лицензия шаблона"
+msgstr "Лицензия темы"
 
 #: theme-updater/theme-updater-admin.php:114
 msgid "Enter your theme license key."
-msgstr "Введите ключ лицензии шаблона."
+msgstr "Введите ключ лицензии темы."
 
 #: theme-updater/theme-updater-admin.php:134
 msgid "License Key"
@@ -641,27 +642,27 @@ msgstr ""
 
 #. Theme Name of the plugin/theme
 msgid "Mina olen"
-msgstr ""
+msgstr "Mina olen"
 
 #. Theme URI of the plugin/theme
 msgid "https://foxnet-themes.fi/downloads/mina-olen"
-msgstr ""
+msgstr "https://foxnet-themes.fi/downloads/mina-olen"
 
 #. Description of the plugin/theme
 msgid ""
 "Mina olen WordPress Theme is made for cool business type of sites. And in "
 "the same time blogging features looks great also."
 msgstr ""
-"Mina olen WordPress шаблон был создан для бизнес сайтов. В то же время, он "
-"отлично подойдет для блога."
+"WordPress тема Mina olen была создана для сайтов бизнес типа. В то же время, "
+"она отлично подойдет для блога."
 
 #. Author of the plugin/theme
 msgid "Sami Keijonen"
-msgstr ""
+msgstr "Sami Keijonen"
 
 #. Author URI of the plugin/theme
 msgid "https://foxnet-themes.fi"
-msgstr ""
+msgstr "https://foxnet-themes.fi"
 
 #. Template Name of the plugin/theme
 msgid "Front Page"
@@ -670,7 +671,7 @@ msgstr "Главная страница"
 #: comments-loop-nav.php:7
 msgctxt "comments navigation"
 msgid "Previous"
-msgstr "Предыдущая"
+msgstr "Назад"
 
 #: comments-loop-nav.php:12
 msgctxt "comments navigation"
@@ -737,7 +738,7 @@ msgstr "F"
 #: library/extensions/breadcrumb-trail.php:1044
 msgctxt "daily archives date format"
 msgid "j"
-msgstr ""
+msgstr "j"
 
 #: library/functions/template-general.php:416
 msgctxt "daily archives date format"
@@ -774,13 +775,13 @@ msgstr "%s Меню"
 #: library/functions/attr.php:440
 msgctxt "post time format"
 msgid "l, F j, Y, g:i a"
-msgstr ""
+msgstr "l, F j, Y, g:i a"
 
 #. Translators: Comment date/time "title" attribute.
 #: library/functions/attr.php:561
 msgctxt "comment time format"
 msgid "l, F j, Y, g:i a"
-msgstr ""
+msgstr "l, F j, Y, g:i a"
 
 #. Translators: Separates tags, categories, etc. when displaying a post.
 #: library/functions/template-post.php:144
