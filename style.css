@@ -3,7 +3,7 @@ Theme Name: Mina olen
 Theme URI: https://foxland.fi/downloads/mina-olen
 Description: Mina olen WordPress Theme is made for cool business type of sites. And in the same time blogging features looks great also.
 Tags: white, one-column, two-columns, left-sidebar, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, featured-images, flexible-header, full-width-template, microformats, post-formats, sticky-post, threaded-comments, translation-ready
-Version: 1.0.8
+Version: 1.1.0
 Author: Sami Keijonen
 Author URI: https://foxland.fi
 Text Domain: mina-olen
@@ -1373,7 +1373,8 @@ img {
 #sidebar-header,
 #sidebar-primary,
 #sidebar-subsidiary,
-#footer {
+#footer,
+#sidebar-after-download {
 	padding: 0 4%;
 }
 .archive-portfolio_item .entry-header,
@@ -1447,7 +1448,8 @@ img {
 	.layout-2c-l .loop-pagination,
 	.layout-2c-l .loop-nav,
 	.layout-2c-l #webshare-wrapper,
-	.layout-2c-l #comments {
+	.layout-2c-l #comments,
+	.layout-2c-l #sidebar-after-download {
 		padding-left: 0;
 		padding-right: 48px;
 		padding-right: 3rem;
@@ -1461,7 +1463,8 @@ img {
 	.layout-2c-r .loop-pagination,
 	.layout-2c-r .loop-nav,
 	.layout-2c-r #webshare-wrapper,
-	.layout-2c-r #comments {
+	.layout-2c-r #comments,
+	.layout-2c-r #sidebar-after-download	{
 		padding-right: 0;
 		padding-left: 48px;
 		padding-left: 3rem;
@@ -1501,7 +1504,8 @@ img {
 	.mina-olen-boxed #sidebar-subsidiary,
 	.mina-olen-boxed #menu-subsidiary,
 	.mina-olen-boxed #footer,
-	.page-template-front-page .mina-olen-boxed .entry.mina-olen-latest-all {
+	.page-template-front-page .mina-olen-boxed .entry.mina-olen-latest-all,
+	.mina-olen-boxed #sidebar-after-download {
 		padding-left: 48px;
 		padding-left: 3rem;
 		padding-right: 48px;
