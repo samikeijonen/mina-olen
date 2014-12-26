@@ -14,15 +14,22 @@
 			</a>
 			
 			<?php
+			
+			/* Check when to use EDD menu. */
+			if( has_nav_menu( 'edd' ) && ( ( function_exists( 'edd_is_checkout' ) && edd_is_checkout() ) || ( function_exists( 'edd_is_success_page' ) && edd_is_success_page() ) || ( function_exists( 'edd_is_failed_transaction_page' ) && edd_is_failed_transaction_page() ) ) ) {
+				$theme_location = 'edd';
+			} else {
+				$theme_location = 'primary';
+			}
 
 				wp_nav_menu(
 					array(
-						'theme_location'  => 'primary',
+						'theme_location'  => $theme_location,
 						'menu_id'         => 'menu-primary-items',
 						'depth'           => 2,
 						'menu_class'      => 'menu-items',
 						'fallback_cb'     => '',
-						'items_wrap'     	=> '<div id="menu-primary-search"><ul id="%1$s" class="%2$s">%3$s</ul></div>'
+						'items_wrap'      => '<div id="menu-primary-search"><ul id="%1$s" class="%2$s">%3$s</ul></div>'
 					)
 				);
 			

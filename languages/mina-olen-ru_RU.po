@@ -2,25 +2,23 @@
 # This file is distributed under the GNU General Public License v2.0.
 # Translators:
 # Mikhail <mmich@live.ca>, 2014
+# Sami Keijonen <sami.keijonen@foxnet.fi>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Mina olen\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-07-20 08:10:57+00:00\n"
-"PO-Revision-Date: 2014-09-28 11:19+0200\n"
+"POT-Creation-Date: 2014-12-17 19:39:38+00:00\n"
+"PO-Revision-Date: 2014-12-26 20:04+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
-"Language-Team: Russian (Russia) (http://www.transifex.com/projects/p/mina-"
-"olen/language/ru_RU/)\n"
+"Language-Team: Russian (Russia) (http://www.transifex.com/projects/p/mina-olen/language/ru_RU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ru_RU\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.6.9\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 1.7.1\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
-"_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Textdomain-Support: yes\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -79,11 +77,8 @@ msgstr "%s назад"
 
 #. Translators: The %s is for trackback link.
 #: comments-loop-error.php:6
-msgid ""
-"Comments are closed, but <a href=\"%s\">trackbacks</a> and pingbacks are "
-"open."
-msgstr ""
-"Комментарии отключены, <a href=\"%s\">trackbacks</a> и pingbacks включены."
+msgid "Comments are closed, but <a href=\"%s\">trackbacks</a> and pingbacks are open."
+msgstr "Комментарии отключены, <a href=\"%s\">trackbacks</a> и pingbacks включены."
 
 #: comments-loop-error.php:15
 msgid "Comments are closed."
@@ -98,15 +93,13 @@ msgstr "Навигация по комментариям"
 msgid "Page %1$s of %2$s"
 msgstr "Страница %1$s из %2$s"
 
-#: content-aside.php:19 content-audio.php:21 content-gallery.php:19
-#: content-image.php:21 content-link.php:19 content-quote.php:19
-#: content-status.php:20 content-video.php:21 content.php:19
+#: content-aside.php:19 content-audio.php:21 content-gallery.php:19 content-image.php:21 content-link.php:19 content-quote.php:19 content-status.php:20
+#: content-video.php:21 content.php:19
 msgid "Posted in %s"
 msgstr "В рубрике  %s"
 
-#: content-aside.php:20 content-audio.php:22 content-gallery.php:20
-#: content-image.php:22 content-link.php:20 content-quote.php:20
-#: content-status.php:21 content-video.php:22 content.php:20
+#: content-aside.php:20 content-audio.php:22 content-gallery.php:20 content-image.php:22 content-link.php:20 content-quote.php:20 content-status.php:21
+#: content-video.php:22 content.php:20
 msgid "Tagged %s"
 msgstr "Теги %s"
 
@@ -117,7 +110,7 @@ msgstr[0] "В этой галерее %s изображение."
 msgstr[1] "В этой галерее %s изображений."
 msgstr[2] "В этой галерее %s изображений."
 
-#: footer.php:24
+#: footer.php:30
 msgid "Back to top"
 msgstr "Наверх"
 
@@ -145,29 +138,33 @@ msgstr "Дополнительное меню"
 msgid "Social menu"
 msgstr "Меню социальных сетей"
 
-#: functions.php:228
+#: functions.php:216
+msgid "Easy Digital Download menu"
+msgstr ""
+
+#: functions.php:232
 msgid "A sidebar located in the top of the site."
 msgstr "Панель в верхней части сайта"
 
-#: functions.php:233
-msgid ""
-"The main sidebar. It is displayed on either the left or right side of the "
-"page based on the chosen layout."
-msgstr ""
-"Основная панель. Показывается слева или справа, в соответствии с выбранной "
-"компановкой"
+#: functions.php:237
+msgid "The main sidebar. It is displayed on either the left or right side of the page based on the chosen layout."
+msgstr "Основная панель. Показывается слева или справа, в соответствии с выбранной компановкой"
 
-#: functions.php:238
+#: functions.php:242
 msgid "A sidebar located in the footer of the site."
 msgstr "Панель в нижнем колонтитуле"
 
+#: functions.php:247
+msgid "A sidebar located after singular download."
+msgstr ""
+
 #. Translators: The %s is the post title shown to screen readers.
-#: functions.php:415
+#: functions.php:425
 msgid "Read more %s"
 msgstr "Читать дальше %s"
 
 #. Translators: The %s is the post title shown to screen readers.
-#: functions.php:451
+#: functions.php:461
 msgid "Visit site %s"
 msgstr "Ссылка на сайт %s"
 
@@ -175,7 +172,7 @@ msgstr "Ссылка на сайт %s"
 msgid "Skip to content"
 msgstr "Перейти к содержимому"
 
-#: header.php:59
+#: header.php:72
 msgid "&#47;"
 msgstr "&#47;"
 
@@ -250,8 +247,7 @@ msgstr "Высота флажка (px)"
 
 #: includes/theme-customize.php:289
 msgid "Show full content of pages in front page. Default is excerpt."
-msgstr ""
-"Показывать полный текст страниц на главной страницы.  По умолчанию - отрывок."
+msgstr "Показывать полный текст страниц на главной страницы.  По умолчанию - отрывок."
 
 #: includes/theme-customize.php:303
 msgid "Logo Upload"
@@ -283,14 +279,11 @@ msgid "Theme Settings"
 msgstr "Настройки темы"
 
 #. Translators: Media dimensions - 1 is width and 2 is height.
-#: library/classes/hybrid-media-meta.php:154
-#: library/classes/hybrid-media-meta.php:282
-#: library/functions/template-media.php:102
+#: library/classes/hybrid-media-meta.php:154 library/classes/hybrid-media-meta.php:284 library/functions/template-media.php:102
 msgid "%1$s &#215; %2$s"
 msgstr "%1$s &#215; %2$s"
 
-#: library/classes/hybrid-media-meta.php:155
-#: library/classes/hybrid-media-meta.php:282
+#: library/classes/hybrid-media-meta.php:155 library/classes/hybrid-media-meta.php:284
 msgid "Dimensions"
 msgstr "Размеры"
 
@@ -324,21 +317,19 @@ msgid "ISO"
 msgstr "ISO"
 
 #. Translators: Camera shutter speed. "sec" is an abbreviation for "seconds".
-#: library/classes/hybrid-media-meta.php:199
+#: library/classes/hybrid-media-meta.php:201
 msgid "%s sec"
 msgstr "%s сек"
 
-#: library/classes/hybrid-media-meta.php:199
+#: library/classes/hybrid-media-meta.php:201
 msgid "Shutter Speed"
 msgstr "Выдержка"
 
-#: library/classes/hybrid-media-meta.php:248
-#: library/classes/hybrid-media-meta.php:285
+#: library/classes/hybrid-media-meta.php:250 library/classes/hybrid-media-meta.php:287
 msgid "File Name"
 msgstr "Название файла"
 
-#: library/classes/hybrid-media-meta.php:256
-#: library/classes/hybrid-media-meta.php:293
+#: library/classes/hybrid-media-meta.php:258 library/classes/hybrid-media-meta.php:295
 msgid "File Type"
 msgstr "Тип файла"
 
@@ -350,20 +341,17 @@ msgstr "Просмотр:"
 msgid "Home"
 msgstr "Главная"
 
-#: library/extensions/breadcrumb-trail.php:180
-#: library/functions/template-general.php:513
+#: library/extensions/breadcrumb-trail.php:180 library/functions/template-general.php:513
 msgid "404 Not Found"
 msgstr "404 Не найдено"
 
-#: library/extensions/breadcrumb-trail.php:181
-#: library/functions/template-general.php:339
+#: library/extensions/breadcrumb-trail.php:181 library/functions/template-general.php:339
 msgid "Archives"
 msgstr "Архивы"
 
 #. Translators: %s is the search query. The HTML entities are opening and
 #. closing curly quotes.
-#: library/extensions/breadcrumb-trail.php:183
-#: library/functions/template-general.php:494
+#: library/extensions/breadcrumb-trail.php:183 library/functions/template-general.php:494
 msgid "Search results for &#8220;%s&#8221;"
 msgstr "Результаты поиска &laquo;%s&raquo;"
 
@@ -373,8 +361,7 @@ msgid "Page %s"
 msgstr "Страница %s"
 
 #. Translators: Minute archive title. %s is the minute time format.
-#: library/extensions/breadcrumb-trail.php:187
-#: library/functions/template-general.php:455
+#: library/extensions/breadcrumb-trail.php:187 library/functions/template-general.php:455
 msgid "Minute %s"
 msgstr "Минута %s"
 
@@ -383,9 +370,7 @@ msgstr "Минута %s"
 msgid "Week %s"
 msgstr "Неделя %s"
 
-#: library/extensions/breadcrumb-trail.php:1135
-#: library/extensions/breadcrumb-trail.php:1171
-#: library/extensions/breadcrumb-trail.php:1188
+#: library/extensions/breadcrumb-trail.php:1135 library/extensions/breadcrumb-trail.php:1171 library/extensions/breadcrumb-trail.php:1188
 #: library/extensions/breadcrumb-trail.php:1219
 msgid "Edit"
 msgstr "Редактировать"
@@ -402,9 +387,7 @@ msgstr "Объединить"
 msgid "Stylesheet"
 msgstr "Таблица стилей"
 
-#: library/extensions/theme-layouts.php:458
-#: library/extensions/theme-layouts.php:565
-#: library/extensions/theme-layouts.php:650
+#: library/extensions/theme-layouts.php:458 library/extensions/theme-layouts.php:565 library/extensions/theme-layouts.php:650
 msgid "Layout"
 msgstr "Компоновка"
 
@@ -462,8 +445,7 @@ msgid "WordPress"
 msgstr "WordPress"
 
 #. Translators: Theme name.
-#: library/functions/template-general.php:82
-#: library/functions/template-general.php:115
+#: library/functions/template-general.php:82 library/functions/template-general.php:115
 msgid "%s WordPress Theme"
 msgstr "%s WordPress Тема"
 
@@ -475,9 +457,7 @@ msgstr "Вы просматриваете результаты поиска за
 msgid "You are browsing the site archives by time."
 msgstr "Вы просматриваете архивы сайта по времени"
 
-#: library/functions/template-general.php:314
-#: library/functions/template-general.php:317
-#: library/functions/template-general.php:320
+#: library/functions/template-general.php:314 library/functions/template-general.php:317 library/functions/template-general.php:320
 msgid "You are browsing the site archives for %s."
 msgstr "Вы просматриваете архивы сайта за %s."
 
@@ -501,10 +481,8 @@ msgid "Nothing found"
 msgstr "Ничего не найдено"
 
 #: loop-error.php:12
-msgid ""
-"You tried going to %s, which doesn't exist. You can try navigate or search."
-msgstr ""
-"Вы пытались попасть на %s, которой нет. Попробуйте воспользоваться поиском."
+msgid "You tried going to %s, which doesn't exist. You can try navigate or search."
+msgstr "Вы пытались попасть на %s, которой нет. Попробуйте воспользоваться поиском."
 
 #: loop-error.php:18
 msgid "Apologies, but no entries were found."
@@ -518,9 +496,17 @@ msgstr "Назад"
 msgid "Next"
 msgstr "Далее"
 
-#: menu-primary.php:37
+#: menu-primary.php:44
 msgid "Search"
 msgstr "Поиск"
+
+#: pages/account-page.php:39
+msgid "You must be logged in to view the content of this page."
+msgstr ""
+
+#: pages/account-page.php:45
+msgid "Lost password?"
+msgstr ""
 
 #: pages/front-page.php:45 pages/front-page.php:48
 msgid "Read more"
@@ -548,9 +534,7 @@ msgstr "Отзывы"
 msgid "%1$s"
 msgstr "%1$s"
 
-#: theme-updater/theme-updater-admin.php:94
-#: theme-updater/theme-updater-admin.php:95
-#: theme-updater/theme-updater-admin.php:124
+#: theme-updater/theme-updater-admin.php:94 theme-updater/theme-updater-admin.php:95 theme-updater/theme-updater-admin.php:124
 msgid "Theme License"
 msgstr "Лицензия темы"
 
@@ -574,8 +558,7 @@ msgstr "Деактивировать Лицензию"
 msgid "Activate License"
 msgstr "Активировать лицензию"
 
-#: theme-updater/theme-updater-admin.php:323
-#: theme-updater/theme-updater-admin.php:370
+#: theme-updater/theme-updater-admin.php:323 theme-updater/theme-updater-admin.php:370
 msgid "License status is unknown."
 msgstr "Статус лицензии неизвестен."
 
@@ -624,45 +607,37 @@ msgid "Site is inactive."
 msgstr "Сайт не активирован."
 
 #: theme-updater/theme-updater-class.php:61
-msgid ""
-"Updating this theme will lose any customizations you have made. 'Cancel' to "
-"stop, 'OK' to update."
-msgstr ""
-"Обновление этой темы приведет к потере всех настроек, которые Вы сделали. "
-"Нажмите 'Отмена' для отмены или 'OK' чтобы обновить."
+msgid "Updating this theme will lose any customizations you have made. 'Cancel' to stop, 'OK' to update."
+msgstr "Обновление этой темы приведет к потере всех настроек, которые Вы сделали. Нажмите 'Отмена' для отмены или 'OK' чтобы обновить."
 
 #: theme-updater/theme-updater-class.php:66
 msgid ""
-"<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox\" "
-"title=\"%4s\">Check out what's new</a> or <a href=\"%5$s\"%6$s>update now</"
-"a>."
-msgstr ""
-"<strong>%1$s %2$s</strong> в наличие. <a href=\"%3$s\" class=\"thickbox\" "
-"title=\"%4s\">Проверить обновления</a> or <a href=\"%5$s\"%6$s>обновить</a>."
+"<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox\" title=\"%4s\">Check out what's new</a> or <a href=\"%5$s\"%6$s>update now</a>."
+msgstr "<strong>%1$s %2$s</strong> в наличие. <a href=\"%3$s\" class=\"thickbox\" title=\"%4s\">Проверить обновления</a> or <a href=\"%5$s\"%6$s>обновить</a>."
 
 #. Theme Name of the plugin/theme
 msgid "Mina olen"
 msgstr "Mina olen"
 
 #. Theme URI of the plugin/theme
-msgid "https://foxnet-themes.fi/downloads/mina-olen"
-msgstr "https://foxnet-themes.fi/downloads/mina-olen"
+msgid "https://foxland.fi/downloads/mina-olen"
+msgstr "https://foxland.fi/downloads/mina-olen"
 
 #. Description of the plugin/theme
-msgid ""
-"Mina olen WordPress Theme is made for cool business type of sites. And in "
-"the same time blogging features looks great also."
-msgstr ""
-"WordPress тема Mina olen была создана для сайтов бизнес типа. В то же время, "
-"она отлично подойдет для блога."
+msgid "Mina olen WordPress Theme is made for cool business type of sites. And in the same time blogging features looks great also."
+msgstr "WordPress тема Mina olen была создана для сайтов бизнес типа. В то же время, она отлично подойдет для блога."
 
 #. Author of the plugin/theme
 msgid "Sami Keijonen"
 msgstr "Sami Keijonen"
 
 #. Author URI of the plugin/theme
-msgid "https://foxnet-themes.fi"
-msgstr "https://foxnet-themes.fi"
+msgid "https://foxland.fi"
+msgstr "https://foxland.fi"
+
+#. Template Name of the plugin/theme
+msgid "Account Page"
+msgstr ""
 
 #. Template Name of the plugin/theme
 msgid "Front Page"
@@ -678,64 +653,59 @@ msgctxt "comments navigation"
 msgid "Next"
 msgstr "Далее"
 
-#: functions.php:227
+#: functions.php:231
 msgctxt "sidebar"
 msgid "Header"
 msgstr "Верхний колонтитул"
 
-#: functions.php:232
+#: functions.php:236
 msgctxt "sidebar"
 msgid "Primary"
 msgstr "Основной"
 
-#: functions.php:237
+#: functions.php:241
 msgctxt "sidebar"
 msgid "Subsidiary"
 msgstr "Дополнительный"
+
+#: functions.php:246
+msgctxt "sidebar"
+msgid "After Download"
+msgstr ""
 
 #: library/classes/customize-control-background-image.php:49
 msgctxt "theme customizer tab"
 msgid "Default"
 msgstr "По умолчанию"
 
-#: library/extensions/breadcrumb-trail.php:716
-#: library/functions/template-general.php:474
+#: library/extensions/breadcrumb-trail.php:716 library/functions/template-general.php:474
 msgctxt "minute and hour archives time format"
 msgid "g:i a"
 msgstr "g:i a"
 
-#: library/extensions/breadcrumb-trail.php:733
-#: library/functions/template-general.php:455
+#: library/extensions/breadcrumb-trail.php:733 library/functions/template-general.php:455
 msgctxt "minute archives time format"
 msgid "i"
 msgstr "i"
 
-#: library/extensions/breadcrumb-trail.php:750
-#: library/functions/template-general.php:435
+#: library/extensions/breadcrumb-trail.php:750 library/functions/template-general.php:435
 msgctxt "hour archives time format"
 msgid "g a"
 msgstr "g a"
 
-#: library/extensions/breadcrumb-trail.php:766
-#: library/extensions/breadcrumb-trail.php:795
-#: library/extensions/breadcrumb-trail.php:822
-#: library/extensions/breadcrumb-trail.php:849
-#: library/extensions/breadcrumb-trail.php:1036
-#: library/functions/template-general.php:377
+#: library/extensions/breadcrumb-trail.php:766 library/extensions/breadcrumb-trail.php:795 library/extensions/breadcrumb-trail.php:822
+#: library/extensions/breadcrumb-trail.php:849 library/extensions/breadcrumb-trail.php:1036 library/functions/template-general.php:377
 #: library/functions/template-general.php:397
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr "Y"
 
-#: library/extensions/breadcrumb-trail.php:767
-#: library/extensions/breadcrumb-trail.php:823
-#: library/extensions/breadcrumb-trail.php:1040
+#: library/extensions/breadcrumb-trail.php:767 library/extensions/breadcrumb-trail.php:823 library/extensions/breadcrumb-trail.php:1040
 msgctxt "monthly archives date format"
 msgid "F"
 msgstr "F"
 
-#: library/extensions/breadcrumb-trail.php:768
-#: library/extensions/breadcrumb-trail.php:1044
+#: library/extensions/breadcrumb-trail.php:768 library/extensions/breadcrumb-trail.php:1044
 msgctxt "daily archives date format"
 msgid "j"
 msgstr "j"
@@ -745,8 +715,7 @@ msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr "d.m.Y"
 
-#: library/extensions/breadcrumb-trail.php:796
-#: library/functions/template-general.php:397
+#: library/extensions/breadcrumb-trail.php:796 library/functions/template-general.php:397
 msgctxt "weekly archives date format"
 msgid "W"
 msgstr "W"
@@ -778,7 +747,7 @@ msgid "l, F j, Y, g:i a"
 msgstr "l, F j, Y, g:i a"
 
 #. Translators: Comment date/time "title" attribute.
-#: library/functions/attr.php:561
+#: library/functions/attr.php:565
 msgctxt "comment time format"
 msgid "l, F j, Y, g:i a"
 msgstr "l, F j, Y, g:i a"

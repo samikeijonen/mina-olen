@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2.0.
 msgid ""
 msgstr ""
-"Project-Id-Version: Mina olen 1.0.8\n"
+"Project-Id-Version: Mina olen 1.1.0\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-09-28 08:33:23+00:00\n"
+"POT-Creation-Date: 2014-12-17 19:39:38+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -114,7 +114,7 @@ msgid_plural "This gallery contains %s items."
 msgstr[0] ""
 msgstr[1] ""
 
-#: footer.php:24
+#: footer.php:30
 msgid "Back to top"
 msgstr ""
 
@@ -142,26 +142,34 @@ msgstr ""
 msgid "Social menu"
 msgstr ""
 
-#: functions.php:228
+#: functions.php:216
+msgid "Easy Digital Download menu"
+msgstr ""
+
+#: functions.php:232
 msgid "A sidebar located in the top of the site."
 msgstr ""
 
-#: functions.php:233
+#: functions.php:237
 msgid ""
 "The main sidebar. It is displayed on either the left or right side of the "
 "page based on the chosen layout."
 msgstr ""
 
-#: functions.php:238
+#: functions.php:242
 msgid "A sidebar located in the footer of the site."
 msgstr ""
 
-#: functions.php:415
+#: functions.php:247
+msgid "A sidebar located after singular download."
+msgstr ""
+
+#: functions.php:425
 #. Translators: The %s is the post title shown to screen readers.
 msgid "Read more %s"
 msgstr ""
 
-#: functions.php:451
+#: functions.php:461
 #. Translators: The %s is the post title shown to screen readers.
 msgid "Visit site %s"
 msgstr ""
@@ -170,7 +178,7 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:59
+#: header.php:72
 msgid "&#47;"
 msgstr ""
 
@@ -509,8 +517,16 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
-#: menu-primary.php:37
+#: menu-primary.php:44
 msgid "Search"
+msgstr ""
+
+#: pages/account-page.php:39
+msgid "You must be logged in to view the content of this page."
+msgstr ""
+
+#: pages/account-page.php:45
+msgid "Lost password?"
 msgstr ""
 
 #: pages/front-page.php:45 pages/front-page.php:48
@@ -650,6 +666,10 @@ msgid "https://foxland.fi"
 msgstr ""
 
 #. Template Name of the plugin/theme
+msgid "Account Page"
+msgstr ""
+
+#. Template Name of the plugin/theme
 msgid "Front Page"
 msgstr ""
 
@@ -663,19 +683,24 @@ msgctxt "comments navigation"
 msgid "Next"
 msgstr ""
 
-#: functions.php:227
+#: functions.php:231
 msgctxt "sidebar"
 msgid "Header"
 msgstr ""
 
-#: functions.php:232
+#: functions.php:236
 msgctxt "sidebar"
 msgid "Primary"
 msgstr ""
 
-#: functions.php:237
+#: functions.php:241
 msgctxt "sidebar"
 msgid "Subsidiary"
+msgstr ""
+
+#: functions.php:246
+msgctxt "sidebar"
+msgid "After Download"
 msgstr ""
 
 #: library/classes/customize-control-background-image.php:49
