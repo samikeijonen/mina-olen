@@ -1,6 +1,6 @@
 {
   "name": "mina-olen",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "private": true,
   "devDependencies": {
     "grunt": "~0.4.5",
