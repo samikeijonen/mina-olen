@@ -3,30 +3,38 @@
 			</div><!-- .wrap -->
 
 		</div><!-- #main -->
-
-		<?php get_sidebar( 'subsidiary' ); // Loads the sidebar-subsidiary.php template. ?>
 		
-		<?php get_template_part( 'menu', 'subsidiary' ); // Loads the menu-subsidiary.php template. ?>
+		<?php	
+		/* When to show footer at all. */
+		$mina_olen_show_footer = apply_filters( 'mina_olen_show_footer', true );
+		
+		if( $mina_olen_show_footer ) : // Check do we show footer. ?>
 
-		<footer <?php hybrid_attr( 'footer' ); ?>>
+			<?php get_sidebar( 'subsidiary' ); // Loads the sidebar-subsidiary.php template. ?>
+		
+			<?php get_template_part( 'menu', 'subsidiary' ); // Loads the menu-subsidiary.php template. ?>
 
-			<div class="wrap">
+			<footer <?php hybrid_attr( 'footer' ); ?>>
+
+				<div class="wrap">
 				
-				<?php if ( get_theme_mod( 'mina_olen_footer' ) ) { ?>
-					<div class="footer-content">
-						<?php echo get_theme_mod( 'mina_olen_footer' ); ?>
-					</div><!-- .footer-content -->
-				<?php } ?>
+					<?php if ( get_theme_mod( 'mina_olen_footer' ) ) { ?>
+						<div class="footer-content">
+							<?php echo get_theme_mod( 'mina_olen_footer' ); ?>
+						</div><!-- .footer-content -->
+					<?php } ?>
 				
-				<?php get_template_part( 'menu', 'social' ); // Loads the menu-social.php template. ?>
+					<?php get_template_part( 'menu', 'social' ); // Loads the menu-social.php template. ?>
 				
-				<div id="back-to-top">
-					<a href="#container" class="back-to-top"><span class="screen-reader-text"><?php _e( 'Back to top', 'mina-olen' ); ?></span></a>
-				</div>
+					<div id="back-to-top">
+						<a href="#container" class="back-to-top"><span class="screen-reader-text"><?php _e( 'Back to top', 'mina-olen' ); ?></span></a>
+					</div>
 
-			</div><!-- .wrap -->
+				</div><!-- .wrap -->
 
-		</footer><!-- #footer -->
+			</footer><!-- #footer -->
+		
+		<?php endif; // End check for footer. ?>
 
 	</div><!-- #container -->
 
