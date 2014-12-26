@@ -25,6 +25,9 @@ And in the same time blogging features looks great also.
 
 ### Version 1.1.0
 
+* Add account page template.
+* Add after singular download sidebar.
+* Add new menu for Easy Digital Downloads.
 * Add some new hooks and filters.
 * Update Hybrid Core to version 2.0.4.
 
