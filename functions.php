@@ -26,7 +26,7 @@
 /**
  * The current version of the theme.
  */
-define( 'MINA_OLEN_VERSION', '1.0.8' );
+define( 'MINA_OLEN_VERSION', '1.1.0' );
 
 /**
  * The suffix to use for scripts.
@@ -211,7 +211,11 @@ function mina_olen_register_nav_menus() {
 	register_nav_menu( 'subsidiary', esc_html__( 'Subsidiary menu', 'mina-olen' ) );
 	
 	register_nav_menu( 'social', esc_html__( 'Social menu', 'mina-olen' ) );
-
+	
+	if( function_exists( 'EDD' ) ) {
+		register_nav_menu( 'edd', esc_html__( 'Easy Digital Download menu', 'mina-olen' ) );
+	}
+	
 }
 
 /**
@@ -237,10 +241,19 @@ function mina_olen_register_sidebars() {
 		'name'          => _x( 'Subsidiary', 'sidebar', 'mina-olen' ),
 		'description'   => __( 'A sidebar located in the footer of the site.', 'mina-olen' )
 	);
+	$sidebar_after_download_args = array(
+		'id'            => 'after-download',
+		'name'          => _x( 'After Download', 'sidebar', 'mina-olen' ),
+		'description'   => __( 'A sidebar located after singular download.', 'mina-olen' )
+	);
 	
 	hybrid_register_sidebar( $sidebar_header_args );
 	hybrid_register_sidebar( $sidebar_primary_args );
 	hybrid_register_sidebar( $sidebar_subsidiary_args );
+	
+	if( post_type_exists( 'download' ) ) {
+		hybrid_register_sidebar( $sidebar_after_download_args );
+	}
 
 }
 
@@ -521,13 +534,8 @@ function mina_olen_get_editor_styles() {
 	/* Set up an array for the styles. */
 	$editor_styles = array();
 
-	/* Add the theme's editor styles. */
-	$editor_styles[] = trailingslashit( get_template_directory_uri() ) . 'css/editor-style.css';
-
-	/* If a child theme, add its editor styles. Note: WP checks whether the file exists before using it. */
-	if ( is_child_theme() && file_exists( trailingslashit( get_stylesheet_directory() ) . 'css/editor-style.css' ) ) {
-		$editor_styles[] = trailingslashit( get_stylesheet_directory_uri() ) . 'css/editor-style.css';
-	}
+	/* Add the theme's editor styles. This also checks child theme's css/editor-style.css file. */
+	$editor_styles[] = 'css/editor-style.css';
 
 	/* Add the locale stylesheet. */
 	$editor_styles[] = get_locale_stylesheet_uri();

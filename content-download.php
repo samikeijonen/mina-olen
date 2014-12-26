@@ -46,3 +46,9 @@
 	<?php endif; // End single post check. ?>
 
 </article><!-- .entry -->
+
+<?php
+if ( is_singular( get_post_type() ) ) : // If viewing a single post.
+	get_sidebar( 'after-download' ); // Loads the sidebar-after-download.php template.
+endif;
+?>
