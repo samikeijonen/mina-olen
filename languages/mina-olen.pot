@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mina olen 1.1.0\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-12-17 19:39:38+00:00\n"
+"POT-Creation-Date: 2014-12-27 19:55:39+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -164,12 +164,12 @@ msgstr ""
 msgid "A sidebar located after singular download."
 msgstr ""
 
-#: functions.php:425
+#: functions.php:428
 #. Translators: The %s is the post title shown to screen readers.
 msgid "Read more %s"
 msgstr ""
 
-#: functions.php:461
+#: functions.php:464
 #. Translators: The %s is the post title shown to screen readers.
 msgid "Visit site %s"
 msgstr ""
@@ -767,27 +767,27 @@ msgctxt "theme layout"
 msgid "Default"
 msgstr ""
 
-#: library/functions/attr.php:195
+#: library/functions/attr.php:199
 #. Translators: The %s is the sidebar name. This is used for the 'aria-label'
 #. attribute.
 msgctxt "sidebar aria label"
 msgid "%s Sidebar"
 msgstr ""
 
-#: library/functions/attr.php:223
+#: library/functions/attr.php:232
 #. Translators: The %s is the menu name. This is used for the 'aria-label'
 #. attribute.
 msgctxt "nav menu aria label"
 msgid "%s Menu"
 msgstr ""
 
-#: library/functions/attr.php:440
+#: library/functions/attr.php:450
 #. Translators: Post date/time "title" attribute.
 msgctxt "post time format"
 msgid "l, F j, Y, g:i a"
 msgstr ""
 
-#: library/functions/attr.php:565
+#: library/functions/attr.php:575
 #. Translators: Comment date/time "title" attribute.
 msgctxt "comment time format"
 msgid "l, F j, Y, g:i a"
