@@ -3,7 +3,7 @@ Theme Name: Mina olen
 Theme URI: https://foxland.fi/downloads/mina-olen
 Description: Mina olen WordPress Theme is made for cool business type of sites. And in the same time blogging features looks great also.
 Tags: white, one-column, two-columns, left-sidebar, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, featured-images, flexible-header, full-width-template, microformats, post-formats, sticky-post, threaded-comments, translation-ready
-Version: 1.1.0
+Version: 1.1.1
 Author: Sami Keijonen
 Author URI: https://foxland.fi
 Text Domain: mina-olen
@@ -3587,3 +3587,8 @@ body img.wpml_flags {
 		.ltr .mb-user-page-links li { margin-right: 8px; }
 
 .mb-user-info { float: left; }
+
+body .wp-core-ui .quicktags-toolbar input.button.button-small {
+	height: auto;
+	padding: 8px 14px;
+}

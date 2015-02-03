@@ -23,6 +23,10 @@ And in the same time blogging features looks great also.
 
 ## Changelog
 
+### Version 1.1.1
+
+* You can now set your own labels in the Customizer for front page template titles.
+
 ### Version 1.1.0
 
 * Add account page template.
