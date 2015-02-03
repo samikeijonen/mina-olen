@@ -75,16 +75,16 @@ get_header(); // Loads the header.php template. ?>
 	$mina_olen_loop_post_types = array();
 	
 	if( get_theme_mod( 'show_latest_posts' ) ) {
-		$mina_olen_loop_post_types['post'] = esc_html__( 'Articles', 'mina-olen' );
+		$mina_olen_loop_post_types['post'] = get_theme_mod( 'latest_posts_label' ) ? esc_html( get_theme_mod( 'latest_posts_label' ) ) : esc_html__( 'Articles', 'mina-olen' );
 	}
 	if( get_theme_mod( 'show_latest_downloads' ) ) {
-		$mina_olen_loop_post_types['download'] = esc_html__( 'Downloads', 'mina-olen' );
+		$mina_olen_loop_post_types['download'] = get_theme_mod( 'latest_downloads_label' ) ? esc_html( get_theme_mod( 'latest_downloads_label' ) ) : esc_html__( 'Downloads', 'mina-olen' );
 	}
 	if( get_theme_mod( 'show_latest_portfolios' ) ) {
-		$mina_olen_loop_post_types['portfolio_item'] = esc_html__( 'Portfolios', 'mina-olen' );
+		$mina_olen_loop_post_types['portfolio_item'] = get_theme_mod( 'latest_portfolio_label' ) ? esc_html( get_theme_mod( 'latest_portfolio_label' ) ) : esc_html__( 'Portfolios', 'mina-olen' );
 	}
 	if( get_theme_mod( 'show_latest_testimonials' ) ) {
-		$mina_olen_loop_post_types['testimonial'] = esc_html__( 'Testimonials', 'mina-olen' );
+		$mina_olen_loop_post_types['testimonial'] = get_theme_mod( 'latest_testimonial_label' ) ? esc_html( get_theme_mod( 'latest_testimonial_label' ) ) : esc_html__( 'Testimonials', 'mina-olen' );
 	}
 	
 	/* Filter selected post types. */
