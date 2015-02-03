@@ -79,6 +79,26 @@ function mina_olen_customize_register_settings( $wp_customize ) {
 		)
 	);
 	
+	/* Add the show latest posts label setting. */
+	$wp_customize->add_setting(
+		'latest_posts_label',
+		array(
+			'default'           => '',
+			'sanitize_callback' => 'sanitize_text_field'
+		)
+	);
+	
+	/* Add the show latest posts control. */
+	$wp_customize->add_control(
+		'latest_posts_label',
+		array(
+			'label'    => esc_html__( 'Label for latests posts', 'mina-olen' ),
+			'section'  => 'front-page',
+			'priority' => 45,
+			'type'     => 'text'
+		)
+	);
+	
 	/* Show option for latest download if post type exist. */
 	if ( post_type_exists( 'download' ) ) {
 		
@@ -102,6 +122,26 @@ function mina_olen_customize_register_settings( $wp_customize ) {
 				'settings' => 'show_latest_downloads',
 				'priority' => 50,
 				'type'     => 'checkbox'
+			)
+		);
+		
+		/* Add the show latest downloads label setting. */
+		$wp_customize->add_setting(
+			'latest_downloads_label',
+			array(
+				'default'           => '',
+				'sanitize_callback' => 'sanitize_text_field'
+			)
+		);
+	
+		/* Add the show latest downloads control. */
+		$wp_customize->add_control(
+			'latest_downloads_label',
+			array(
+				'label'    => esc_html__( 'Label for latests downloads', 'mina-olen' ),
+				'section'  => 'front-page',
+				'priority' => 55,
+				'type'     => 'text'
 			)
 		);
 	}
@@ -131,6 +171,26 @@ function mina_olen_customize_register_settings( $wp_customize ) {
 				'type'     => 'checkbox'
 			)
 		);
+		
+		/* Add the show latest portfolio label setting. */
+		$wp_customize->add_setting(
+			'latest_portfolio_label',
+			array(
+				'default'           => '',
+				'sanitize_callback' => 'sanitize_text_field'
+			)
+		);
+	
+		/* Add the show latest downloads control. */
+		$wp_customize->add_control(
+			'latest_portfolio_label',
+			array(
+				'label'    => esc_html__( 'Label for latests portfolios', 'mina-olen' ),
+				'section'  => 'front-page',
+				'priority' => 65,
+				'type'     => 'text'
+			)
+		);
 	}
 	
 	/* Show option for testimonial if post type exist. */
@@ -156,6 +216,26 @@ function mina_olen_customize_register_settings( $wp_customize ) {
 				'settings' => 'show_latest_testimonials',
 				'priority' => 70,
 				'type'     => 'checkbox'
+			)
+		);
+		
+		/* Add the show latest testimonial label setting. */
+		$wp_customize->add_setting(
+			'latest_testimonial_label',
+			array(
+				'default'           => '',
+				'sanitize_callback' => 'sanitize_text_field'
+			)
+		);
+	
+		/* Add the show latest testimonial control. */
+		$wp_customize->add_control(
+			'latest_testimonial_label',
+			array(
+				'label'    => esc_html__( 'Label for latests testimonials', 'mina-olen' ),
+				'section'  => 'front-page',
+				'priority' => 75,
+				'type'     => 'text'
 			)
 		);
 	}
@@ -289,7 +369,7 @@ function mina_olen_customize_register_settings( $wp_customize ) {
 			'label'    => esc_html__( 'Show full content of pages in front page. Default is excerpt.', 'mina-olen' ),
 			'section'  => 'front-page',
 			'settings' => 'content_front',
-			'priority' => 70,
+			'priority' => 80,
 			'type'     => 'checkbox'
 		)
 	);
