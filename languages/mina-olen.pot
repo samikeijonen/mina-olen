@@ -1,14 +1,14 @@
-# Copyright (C) 2014 Sami Keijonen
+# Copyright (C) 2015 Sami Keijonen
 # This file is distributed under the GNU General Public License v2.0.
 msgid ""
 msgstr ""
-"Project-Id-Version: Mina olen 1.1.0\n"
+"Project-Id-Version: Mina olen 1.1.1\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-12-27 19:55:39+00:00\n"
+"POT-Creation-Date: 2015-02-03 20:06:18+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
 "Last-Translator: WP-Translations (http://wp-translations.org/)\n"
 "Language-Team: WP-Translations "
 "(http://www.transifex.com/projects/p/wp-translations/)\n"
@@ -66,6 +66,22 @@ msgstr ""
 
 #: bbpress/loop-single-topic.php:82
 msgid "Voices: "
+msgstr ""
+
+#: board/loop-topic.php:13
+msgid "Started by %s"
+msgstr ""
+
+#: board/loop-topic.php:15
+msgid "Replies: %s"
+msgstr ""
+
+#: board/loop-topic.php:16
+msgid "Voices: %s"
+msgstr ""
+
+#: board/loop-topic.php:17
+msgid "Latest reply:"
 msgstr ""
 
 #: byline.php:11 comment.php:11
@@ -130,37 +146,37 @@ msgstr ""
 msgid "2 Columns: Sidebar / Content"
 msgstr ""
 
-#: functions.php:209
+#: functions.php:212
 msgid "Primary menu"
 msgstr ""
 
-#: functions.php:211
+#: functions.php:214
 msgid "Subsidiary menu"
 msgstr ""
 
-#: functions.php:213
+#: functions.php:216
 msgid "Social menu"
 msgstr ""
 
-#: functions.php:216
+#: functions.php:219
 msgid "Easy Digital Download menu"
 msgstr ""
 
-#: functions.php:232
+#: functions.php:235
 msgid "A sidebar located in the top of the site."
 msgstr ""
 
-#: functions.php:237
+#: functions.php:240
 msgid ""
 "The main sidebar. It is displayed on either the left or right side of the "
 "page based on the chosen layout."
 msgstr ""
 
-#: functions.php:242
+#: functions.php:245
 msgid "A sidebar located in the footer of the site."
 msgstr ""
 
-#: functions.php:247
+#: functions.php:250
 msgid "A sidebar located after singular download."
 msgstr ""
 
@@ -219,55 +235,71 @@ msgstr ""
 msgid "Show latest posts on front page"
 msgstr ""
 
-#: includes/theme-customize.php:100
+#: includes/theme-customize.php:95
+msgid "Label for latests posts"
+msgstr ""
+
+#: includes/theme-customize.php:120
 msgid "Show latest downloads on front page"
 msgstr ""
 
-#: includes/theme-customize.php:127
+#: includes/theme-customize.php:141
+msgid "Label for latests downloads"
+msgstr ""
+
+#: includes/theme-customize.php:167
 msgid "Show random portfolios on front page"
 msgstr ""
 
-#: includes/theme-customize.php:154
+#: includes/theme-customize.php:188
+msgid "Label for latests portfolios"
+msgstr ""
+
+#: includes/theme-customize.php:214
 msgid "Show random testimonials on front page"
 msgstr ""
 
-#: includes/theme-customize.php:178
+#: includes/theme-customize.php:235
+msgid "Label for latests testimonials"
+msgstr ""
+
+#: includes/theme-customize.php:258
 msgid "Use boxed layout in all pages."
 msgstr ""
 
-#: includes/theme-customize.php:202
+#: includes/theme-customize.php:282
 msgid "Show WPML flags in Primary menu."
 msgstr ""
 
-#: includes/theme-customize.php:223
+#: includes/theme-customize.php:303
 msgid "Show WPML flags in Subsidiary menu."
 msgstr ""
 
-#: includes/theme-customize.php:245
+#: includes/theme-customize.php:325
 msgid "Flag width (px)."
 msgstr ""
 
-#: includes/theme-customize.php:265
+#: includes/theme-customize.php:345
 msgid "Flag height (px)."
 msgstr ""
 
-#: includes/theme-customize.php:289
+#: includes/theme-customize.php:369
 msgid "Show full content of pages in front page. Default is excerpt."
 msgstr ""
 
-#: includes/theme-customize.php:303
+#: includes/theme-customize.php:383
 msgid "Logo Upload"
 msgstr ""
 
-#: includes/theme-customize.php:325
+#: includes/theme-customize.php:405
 msgid "Upload custom logo."
 msgstr ""
 
-#: includes/theme-customize.php:338
+#: includes/theme-customize.php:418
 msgid "Footer text"
 msgstr ""
 
-#: includes/theme-customize.php:361
+#: includes/theme-customize.php:441
 msgid "Enter footer text"
 msgstr ""
 
@@ -683,22 +715,22 @@ msgctxt "comments navigation"
 msgid "Next"
 msgstr ""
 
-#: functions.php:231
+#: functions.php:234
 msgctxt "sidebar"
 msgid "Header"
 msgstr ""
 
-#: functions.php:236
+#: functions.php:239
 msgctxt "sidebar"
 msgid "Primary"
 msgstr ""
 
-#: functions.php:241
+#: functions.php:244
 msgctxt "sidebar"
 msgid "Subsidiary"
 msgstr ""
 
-#: functions.php:246
+#: functions.php:249
 msgctxt "sidebar"
 msgid "After Download"
 msgstr ""
