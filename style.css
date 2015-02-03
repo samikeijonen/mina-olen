@@ -70,6 +70,7 @@ http://foxnet.fi/en
  *         12.5 -  Testimonials CSS
  *         12.6 -  Webshare CSS
  *         12.7 -  WPML CSS
+ *         12.8 - Message Board CSS
  * ----------------------------------------------------------------------------
  */
 
@@ -833,7 +834,8 @@ a.mina-olen-callout-button,
 body .edd-submit.button.mina-olen-theme-color,
 body .edd-submit.mina-olen-theme-color,
 body input[type="submit"].edd-submit.mina-olen-theme-color,
-body .mina-olen-theme-color#edd-purchase-button {
+body .mina-olen-theme-color#edd-purchase-button,
+.new-topic {
 	background: #c84d29;
 	border: none;
 	color: #fff;
@@ -881,8 +883,13 @@ body input[type="submit"].edd-submit.mina-olen-theme-color:focus,
 body .edd-submit.button.mina-olen-theme-color:active,
 body .edd-submit.mina-olen-theme-color:active,
 body input[type="submit"].edd-submit.mina-olen-theme-color:active,
-body .mina-olen-theme-color#edd-purchase-button:active {
+body .mina-olen-theme-color#edd-purchase-button:active,
+.new-topic:hover,
+.new-topic:focus,
+.new-topic:active,
+.new-topic:visited {
 	background: #bf421d;
+	color: #fff;
 }
 body .edd-submit.button.mina-olen-theme-color,
 body .edd-submit.mina-olen-theme-color,
@@ -1374,8 +1381,18 @@ img {
 #sidebar-primary,
 #sidebar-subsidiary,
 #footer,
-#sidebar-after-download {
+#sidebar-after-download,
+.mb-thread,
+.mb-form-topic,
+#reply-form,
+#topic-form,
+.mb .alert,
+.archive-topic.mb .entry.topic {
 	padding: 0 4%;
+}
+.mb .new-topic {
+	margin-left: 4%;
+	margin-right: 4%;
 }
 .archive-portfolio_item .entry-header,
 .archive-portfolio_item .entry-summary,
@@ -1449,10 +1466,22 @@ img {
 	.layout-2c-l .loop-nav,
 	.layout-2c-l #webshare-wrapper,
 	.layout-2c-l #comments,
-	.layout-2c-l #sidebar-after-download {
+	.layout-2c-l #sidebar-after-download,
+	.layout-2c-l .mb-thread,
+	.layout-2c-l .mb-form-topic,
+	.layout-2c-l #reply-form,
+	.layout-2c-l #topic-form,
+	.layout-2c-l.mb .alert,
+	.layout-2c-l.mb .alert,
+	.layout-2c-l.archive-topic.mb .entry.topic  {
 		padding-left: 0;
 		padding-right: 48px;
 		padding-right: 3rem;
+	}
+	.layout-2c-l.mb .new-topic {
+		margin-left: 0;
+		margin-right: 48px;
+		margin-right: 3rem;
 	}
 
 	.layout-2c-r .loop-meta,
@@ -1464,10 +1493,22 @@ img {
 	.layout-2c-r .loop-nav,
 	.layout-2c-r #webshare-wrapper,
 	.layout-2c-r #comments,
-	.layout-2c-r #sidebar-after-download	{
+	.layout-2c-r #sidebar-after-download,
+	.layout-2c-r .mb-thread,
+	.layout-2c-r .mb-form-topic,
+	.layout-2c-r #reply-form,
+	.layout-2c-r #topic-form,
+	.layout-2c-r.mb .alert,
+	.layout-2c-r.mb .alert,
+	l.layout-2c-r.archive-topic.mb .entry.topic  {
 		padding-right: 0;
 		padding-left: 48px;
 		padding-left: 3rem;
+	}
+	.layout-2c-r.mb .new-topic {
+		margin-right: 0;
+		margin-left: 48px;
+		margin-left: 3rem;
 	}
 	
 	.layout-2c-l .sticky {
@@ -1505,11 +1546,24 @@ img {
 	.mina-olen-boxed #menu-subsidiary,
 	.mina-olen-boxed #footer,
 	.page-template-front-page .mina-olen-boxed .entry.mina-olen-latest-all,
-	.mina-olen-boxed #sidebar-after-download {
+	.mina-olen-boxed #sidebar-after-download,
+	.mina-olen-boxed .mb-thread,
+	.mina-olen-boxed .mb-form-topic,
+	.mina-olen-boxed #reply-form,
+	.mina-olen-boxed #topic-form,
+	.mina-olen-boxed.mb .alert,
+	.mina-olen-boxed.mb .alert,
+	.mina-olen-boxed.archive-topic.mb .entry.topic  {
 		padding-left: 48px;
 		padding-left: 3rem;
 		padding-right: 48px;
 		padding-right: 3rem;
+	}
+	.mina-olen-boxed.mb .new-topic {
+		margin-left: 48px;
+		margin-left: 3rem;
+		margin-right: 48px;
+		margin-right: 3rem;
 	}
 
 	.page-template-front-page .mina-olen-boxed .mina-olen-latest-all .entry-header,
@@ -1780,8 +1834,8 @@ img {
 	margin-bottom: 0;
 }
 
-/* Minimum width of 768 pixels. */
-@media screen and (min-width: 768px) {
+/* Minimum width of 896 pixels. */
+@media screen and (min-width: 896px) {
 
 	#site-title {
 		font-size: 2em;
@@ -3407,8 +3461,129 @@ body div.sharedaddy div.sd-block {
 	color: #dd4b39;
 }
 
-/* === 12.5 WPML CSS === */
+/* === 12.7 WPML CSS === */
 
 body img.wpml_flags {
 	border: none;
 }
+
+/* === 12.8 Message Board CSS === */
+
+/* === Forum Meta === */
+
+.ltr .forum .mb-topic-count,
+.ltr .forum .mb-reply-count,
+.ltr .forum .toggle-open-link,
+.ltr .forum .toggle-trash-link { margin-right: 8px; }
+
+/* === Title column. === */
+
+.mb-col-title { width: 65%; }
+
+	.ltr .mb-col-title .new-forum-link,
+	.ltr .mb-col-title .new-topic-link { margin-left: 8px; }
+
+	.mb-col-title .forum-link,
+	.mb-col-title .mb-topic-link,
+	.mb-col-title .mb-reply-link,
+	.archive-user .mb-col-title .user-profile-link { font-size: 19px; font-weight: bold; }
+
+	.mb-col-title .mb-forum-content,
+	.mb-col-title .mb-topic-meta,
+	.mb-col-title .mb-reply-meta,
+	.mb-col-title .mb-reply-summary,
+	.mb-col-title .mb-user-description { margin-top: 5px; }
+
+		.mb-col-title .mb-forum-content p:last-of-type,
+		.mb-col-title .mb-reply-summary p:last-of-type { margin-bottom: 0; }
+
+	.mb-col-title .mb-subforum-list {
+		list-style: none;
+		margin:     5px 0 0 0;
+		padding:    0;
+	}
+
+		.mb-col-title .mb-subforum-list li { display: inline-block; }
+
+			.ltr .mb-col-title .mb-subforum-list li { margin-right: 8px; }
+
+			.mb-col-title .mb-subforum-list .forum-link { font-size: 17px; font-weight: normal; }
+
+/* === Count column. === */
+
+.mb-col-count { width: 15%; }
+
+/* === Form: Forum === */
+
+@media only screen and ( min-width: 896px ) {
+
+	.mb-form-forum .mb-form-parent,
+	.mb-form-forum .mb-form-type,
+	.mb-form-forum .mb-form-status,
+	.mb-form-forum .mb-form-order {
+		float:        left;
+		width:        22%;
+		margin-right: 4%;
+	}
+
+	.mb-form-forum .mb-form-status {
+		float:        right;
+		margin-right: 0;
+	}
+
+	.mb-form-forum .mb-form-content { clear: both; }
+}
+
+	textarea[name="mb_forum_content"] { min-height: 150px; }
+
+/* === Form: Topic === */
+
+@media only screen and ( min-width: 896px ) {
+
+	.mb-form-topic .mb-form-parent,
+	.mb-form-topic .mb-form-type,
+	.mb-form-topic .mb-form-status {
+		float:        left;
+		width:        30%;
+		margin-right: 5%;
+	}
+
+	.mb-form-parent + .mb-form-type + .mb-form-status {
+		float:        right;
+		margin-right: 0;
+	}
+
+	.mb-form-topic .mb-form-content { clear: both; }
+}
+
+/* ====== Topic Thread ====== */
+
+.mb-thread { list-style: none; }
+
+	.mb-thread .mb-topic-header,
+	.mb-thread .mb-reply-header,
+	.mb-author-box,
+	.new-topic {
+		margin-bottom: 24px;
+		margin-bottom: 1.5rem;
+	}
+
+		.ltr .mb-thread .mb-topic-permalink,
+		.ltr .mb-thread .mb-reply-permalink { float: right; text-align: right; }
+
+		.mb-author-box .avatar { width: 80px; height: 80px; }
+
+		.mb-author-box .mb-author-info { clear: both; }
+
+
+/* ====== User Profile ====== */
+
+.mb-user-page-links { list-style: none; }
+
+	.ltr .mb-user-page-links { margin-left: 0; padding-left: 0; }
+
+	.mb-user-page-links li { display: inline-block; }
+
+		.ltr .mb-user-page-links li { margin-right: 8px; }
+
+.mb-user-info { float: left; }
