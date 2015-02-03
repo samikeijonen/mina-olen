@@ -137,8 +137,11 @@ function mina_olen_theme_setup() {
 	/* Whistles plugin support. */
 	add_theme_support( 'whistles', array( 'styles' => true ) );
 	
-	/* Webshare plugin support. This means that theme handles the CSS already. */
+	/* Webshare plugin support. This means that theme handles the CSS. */
 	add_theme_support( 'webshare', array( 'styles' => true ) );
+	
+	/* Add support for Message Board Plugin. This means that theme handles the CSS. */
+	add_theme_support( 'message-board' );
 
 	/* Handle content width for embeds and images. */
 	hybrid_set_content_width( 1080 );
@@ -250,10 +253,7 @@ function mina_olen_register_sidebars() {
 	hybrid_register_sidebar( $sidebar_header_args );
 	hybrid_register_sidebar( $sidebar_primary_args );
 	hybrid_register_sidebar( $sidebar_subsidiary_args );
-	
-	if( post_type_exists( 'download' ) ) {
-		hybrid_register_sidebar( $sidebar_after_download_args );
-	}
+	hybrid_register_sidebar( $sidebar_after_download_args );
 
 }
 
@@ -274,7 +274,7 @@ function mina_olen_enqueue_scripts() {
 	wp_enqueue_script( 'mina-olen-settings', trailingslashit( get_template_directory_uri() ) . 'js/settings/setting' . MINA_OLEN_SUFFIX . '.js', array( 'jquery', 'mina-olen-fitvids', 'mina-olen-headroom' ), MINA_OLEN_VERSION, true );
 	
 	/* Add Genericons font, used in the main stylesheet. */
-	wp_enqueue_style( 'genericons', trailingslashit( get_template_directory_uri() ) . 'fonts/genericons/genericons/genericons.css', array(), '3.3' );
+	wp_enqueue_style( 'genericons', trailingslashit( get_template_directory_uri() ) . 'fonts/genericons/genericons.css', array(), '3.1' );
 	
 	/* Enqueue skip link fix. */
 	wp_enqueue_script( 'mina-olen-skip-link-focus-fix', trailingslashit( get_template_directory_uri() ) . 'js/skip-link-focus-fix' . MINA_OLEN_SUFFIX . '.js', array(), MINA_OLEN_VERSION, true );
