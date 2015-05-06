@@ -10,7 +10,7 @@
  * @package    HybridCore
  * @subpackage Functions
  * @author     Justin Tadlock <justin@justintadlock.com>
- * @copyright  Copyright (c) 2008 - 2014, Justin Tadlock
+ * @copyright  Copyright (c) 2008 - 2015, Justin Tadlock
  * @link       http://themehybrid.com/hybrid-core
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
@@ -106,6 +106,15 @@ function hybrid_attr_body( $attr ) {
 	$attr['itemscope'] = 'itemscope';
 	$attr['itemtype']  = 'http://schema.org/WebPage';
 
+	if ( is_singular( 'post' ) || is_home() || is_archive() ) {
+		$attr['itemscope'] = '';
+		$attr['itemtype']  = 'http://schema.org/Blog';
+	}
+
+	if ( is_search() ) {
+		$attr['itemtype']  = 'http://schema.org/SearchResultsPage';
+	}
+
 	return $attr;
 }
 
@@ -120,6 +129,7 @@ function hybrid_attr_body( $attr ) {
 function hybrid_attr_header( $attr ) {
 
 	$attr['id']        = 'header';
+	$attr['class']     = 'site-header';
 	$attr['role']      = 'banner';
 	$attr['itemscope'] = 'itemscope';
 	$attr['itemtype']  = 'http://schema.org/WPHeader';
@@ -138,6 +148,7 @@ function hybrid_attr_header( $attr ) {
 function hybrid_attr_footer( $attr ) {
 
 	$attr['id']        = 'footer';
+	$attr['class']     = 'site-footer';
 	$attr['role']      = 'contentinfo';
 	$attr['itemscope'] = 'itemscope';
 	$attr['itemtype']  = 'http://schema.org/WPFooter';
@@ -158,16 +169,9 @@ function hybrid_attr_content( $attr ) {
 	$attr['id']       = 'content';
 	$attr['class']    = 'content';
 	$attr['role']     = 'main';
-	$attr['itemprop'] = 'mainContentOfPage';
 
-	if ( is_singular( 'post' ) || is_home() || is_archive() ) {
-		$attr['itemscope'] = '';
-		$attr['itemtype']  = 'http://schema.org/Blog';
-	}
-
-	elseif ( is_search() ) {
-		$attr['itemscope'] = 'itemscope';
-		$attr['itemtype']  = 'http://schema.org/SearchResultsPage';
+	if ( ! is_singular( 'post' ) && ! is_home() && ! is_archive() ) {
+		$attr['itemprop'] = 'mainContentOfPage';
 	}
 
 	return $attr;
@@ -251,7 +255,8 @@ function hybrid_attr_menu( $attr, $context ) {
  */
 function hybrid_attr_branding( $attr ) {
 
-	$attr['id'] = 'branding';
+	$attr['id']    = 'branding';
+	$attr['class'] = 'site-branding';
 
 	return $attr;
 }
@@ -268,6 +273,7 @@ function hybrid_attr_branding( $attr ) {
 function hybrid_attr_site_title( $attr ) {
 
 	$attr['id']       = 'site-title';
+	$attr['class']    = 'site-title';
 	$attr['itemprop'] = 'headline';
 
 	return $attr;
@@ -285,6 +291,7 @@ function hybrid_attr_site_title( $attr ) {
 function hybrid_attr_site_description( $attr ) {
 
 	$attr['id']       = 'site-description';
+	$attr['class']    = 'site-description';
 	$attr['itemprop'] = 'description';
 
 	return $attr;
@@ -368,7 +375,11 @@ function hybrid_attr_post( $attr ) {
 		if ( 'post' === get_post_type() ) {
 
 			$attr['itemtype']  = 'http://schema.org/BlogPosting';
-			$attr['itemprop']  = 'blogPost';
+
+			// Add itemprop if within the main query
+			if ( is_main_query() && ! is_search() ) {
+				$attr['itemprop'] = 'blogPost';
+			}
 		}
 
 		elseif ( 'attachment' === get_post_type() && wp_attachment_is_image() ) {
@@ -445,6 +456,7 @@ function hybrid_attr_entry_published( $attr ) {
 
 	$attr['class']    = 'entry-published updated';
 	$attr['datetime'] = get_the_time( 'Y-m-d\TH:i:sP' );
+	$attr['itemprop'] = 'datePublished';
 
 	/* Translators: Post date/time "title" attribute. */
 	$attr['title']    = get_the_time( _x( 'l, F j, Y, g:i a', 'post time format', 'hybrid-core' ) );
