@@ -181,7 +181,7 @@ function mina_olen_customize_register_settings( $wp_customize ) {
 			)
 		);
 	
-		/* Add the show latest downloads control. */
+		/* Add the show portfolio label control. */
 		$wp_customize->add_control(
 			'latest_portfolio_label',
 			array(
