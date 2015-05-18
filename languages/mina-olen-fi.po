@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mina olen\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2015-02-03 18:14:40+00:00\n"
-"PO-Revision-Date: 2015-02-03 20:18+0200\n"
+"POT-Creation-Date: 2015-05-14 14:32:56+00:00\n"
+"PO-Revision-Date: 2015-05-14 17:33+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Finnish (http://www.transifex.com/projects/p/mina-olen/"
 "language/fi/)\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.7.3\n"
+"X-Generator: Poedit 1.7.5\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
@@ -68,19 +68,23 @@ msgstr "Missä: <a href=\"%1$s\">%2$s</a>"
 msgid "Voices: "
 msgstr "Osallistujia:"
 
-#: board/loop-topic.php:13
+#: board/loop-topic.php:3
+msgid "Add new topic"
+msgstr "Lisää uusi aihe"
+
+#: board/loop-topic.php:24
 msgid "Started by %s"
 msgstr "Viestin kirjoittaja: %s"
 
-#: board/loop-topic.php:15
+#: board/loop-topic.php:26
 msgid "Replies: %s"
 msgstr "Vastauksia: %s"
 
-#: board/loop-topic.php:16
+#: board/loop-topic.php:27
 msgid "Voices: %s"
 msgstr "Osallistujia: %s"
 
-#: board/loop-topic.php:17
+#: board/loop-topic.php:28
 msgid "Latest reply:"
 msgstr "Viimeisin vastaus:"
 
@@ -815,26 +819,26 @@ msgstr "Oletus"
 
 #. Translators: The %s is the sidebar name. This is used for the 'aria-label'
 #. attribute.
-#: library/functions/attr.php:199
+#: library/functions/attr.php:203
 msgctxt "sidebar aria label"
 msgid "%s Sidebar"
 msgstr "%s Sivupalkki"
 
 #. Translators: The %s is the menu name. This is used for the 'aria-label'
 #. attribute.
-#: library/functions/attr.php:232
+#: library/functions/attr.php:236
 msgctxt "nav menu aria label"
 msgid "%s Menu"
 msgstr "%s Valikko"
 
 #. Translators: Post date/time "title" attribute.
-#: library/functions/attr.php:450
+#: library/functions/attr.php:462
 msgctxt "post time format"
 msgid "l, F j, Y, g:i a"
 msgstr "l j.m.Y, G:i"
 
 #. Translators: Comment date/time "title" attribute.
-#: library/functions/attr.php:575
+#: library/functions/attr.php:587
 msgctxt "comment time format"
 msgid "l, F j, Y, g:i a"
 msgstr "l j.m.Y, G:i"
