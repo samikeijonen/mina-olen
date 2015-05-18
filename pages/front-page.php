@@ -77,13 +77,13 @@ get_header(); // Loads the header.php template. ?>
 	if( get_theme_mod( 'show_latest_posts' ) ) {
 		$mina_olen_loop_post_types['post'] = get_theme_mod( 'latest_posts_label' ) ? esc_html( get_theme_mod( 'latest_posts_label' ) ) : esc_html__( 'Articles', 'mina-olen' );
 	}
-	if( get_theme_mod( 'show_latest_downloads' ) ) {
+	if( get_theme_mod( 'show_latest_downloads' ) && post_type_exists( 'download' ) ) {
 		$mina_olen_loop_post_types['download'] = get_theme_mod( 'latest_downloads_label' ) ? esc_html( get_theme_mod( 'latest_downloads_label' ) ) : esc_html__( 'Downloads', 'mina-olen' );
 	}
-	if( get_theme_mod( 'show_latest_portfolios' ) ) {
+	if( get_theme_mod( 'show_latest_portfolios' ) && post_type_exists( 'portfolio_item' ) ) {
 		$mina_olen_loop_post_types['portfolio_item'] = get_theme_mod( 'latest_portfolio_label' ) ? esc_html( get_theme_mod( 'latest_portfolio_label' ) ) : esc_html__( 'Portfolios', 'mina-olen' );
 	}
-	if( get_theme_mod( 'show_latest_testimonials' ) ) {
+	if( get_theme_mod( 'show_latest_testimonials' ) && post_type_exists( 'testimonial' ) ) {
 		$mina_olen_loop_post_types['testimonial'] = get_theme_mod( 'latest_testimonial_label' ) ? esc_html( get_theme_mod( 'latest_testimonial_label' ) ) : esc_html__( 'Testimonials', 'mina-olen' );
 	}
 	
@@ -131,10 +131,10 @@ get_header(); // Loads the header.php template. ?>
 				
 								<header class="entry-header">
 									<?php
-										if ( 'testimonial' == $key && !empty( get_post_meta( get_the_ID(), '_gravatar_email', true ) ) ) {
-											echo get_avatar( get_post_meta( get_the_ID(), '_gravatar_email', true ), 150, '', get_the_title() );
-										} elseif( 'testimonial' == $key && has_post_thumbnail() )  {
-											the_post_thumbnail( 'thumbnail', array( 'class' => 'avatar', 'alt' => get_the_title() ) ); 
+										if ( 'testimonial' == $key && get_post_meta( get_the_ID(), '_gravatar_email', true ) ) {
+											echo get_avatar( get_post_meta( get_the_ID(), '_gravatar_email', true ), 150 );
+										} elseif( 'testimonial' == $key && has_post_thumbnail() ) {
+											the_post_thumbnail( 'thumbnail', array( 'class' => 'avatar', 'alt' => get_the_title() ) );
 										} else {
 											if ( current_theme_supports( 'get-the-image' ) ) get_the_image(); 
 										}

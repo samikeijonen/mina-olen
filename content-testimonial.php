@@ -5,7 +5,7 @@
 		<header class="entry-header">
 		
 			<?php
-				if( !empty( get_post_meta( get_the_ID(), '_gravatar_email', true ) ) ) :
+				if( get_post_meta( get_the_ID(), '_gravatar_email', true ) ) :
 					echo get_avatar( get_post_meta( get_the_ID(), '_gravatar_email', true ), 150, '', get_the_title() );
 				elseif ( has_post_thumbnail() ) :
 					the_post_thumbnail( 'thumbnail', array( 'class' => 'avatar', 'alt' => get_the_title() ) );
@@ -30,7 +30,7 @@
 			<header class="entry-header">
 				
 			<?php
-				if( !empty( get_post_meta( get_the_ID(), '_gravatar_email', true ) ) ) :
+				if( get_post_meta( get_the_ID(), '_gravatar_email', true ) ) :
 					echo get_avatar( get_post_meta( get_the_ID(), '_gravatar_email', true ), 150, '', get_the_title() );
 				elseif ( has_post_thumbnail() ) :
 					the_post_thumbnail( 'thumbnail', array( 'class' => 'avatar', 'alt' => get_the_title() ) );
