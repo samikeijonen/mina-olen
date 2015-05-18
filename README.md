@@ -23,6 +23,10 @@ And in the same time blogging features looks great also.
 
 ## Changelog
 
+### Version 1.1.3 - May 18, 2015
+
+* Add support for feature image in testimonial pages.
+
 ### Version 1.1.2 - May 6, 2015
 
 * Remove example.html file from Genericons for security (DOM-based XSS) reasons.
