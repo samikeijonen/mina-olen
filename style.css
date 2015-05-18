@@ -3,7 +3,7 @@ Theme Name: Mina olen
 Theme URI: https://foxland.fi/downloads/mina-olen
 Description: Mina olen WordPress Theme is made for cool business type of sites. And in the same time blogging features looks great also.
 Tags: white, one-column, two-columns, left-sidebar, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, featured-images, flexible-header, full-width-template, microformats, post-formats, sticky-post, threaded-comments, translation-ready
-Version: 1.1.2
+Version: 1.1.3
 Author: Sami Keijonen
 Author URI: https://foxland.fi
 Text Domain: mina-olen
@@ -1384,6 +1384,8 @@ img {
 #sidebar-after-download,
 .mb-thread,
 .mb-form-topic,
+.mb-page-header,
+.mina-olen-add-new-topic,
 #reply-form,
 #topic-form,
 .mb .alert,
@@ -1469,6 +1471,8 @@ img {
 	.layout-2c-l #sidebar-after-download,
 	.layout-2c-l .mb-thread,
 	.layout-2c-l .mb-form-topic,
+	.layout-2c-l .mb-page-header,
+	.layout-2c-l .mina-olen-add-new-topic,
 	.layout-2c-l #reply-form,
 	.layout-2c-l #topic-form,
 	.layout-2c-l.mb .alert,
@@ -1496,6 +1500,8 @@ img {
 	.layout-2c-r #sidebar-after-download,
 	.layout-2c-r .mb-thread,
 	.layout-2c-r .mb-form-topic,
+	.layout-2c-r .mb-page-header,
+	.layout-2c-r .mina-olen-add-new-topic,
 	.layout-2c-r #reply-form,
 	.layout-2c-r #topic-form,
 	.layout-2c-r.mb .alert,
@@ -1549,6 +1555,8 @@ img {
 	.mina-olen-boxed #sidebar-after-download,
 	.mina-olen-boxed .mb-thread,
 	.mina-olen-boxed .mb-form-topic,
+	.mina-olen-boxed .mb-page-header,
+	.mina-olen-boxed .mina-olen-add-new-topic,
 	.mina-olen-boxed #reply-form,
 	.mina-olen-boxed #topic-form,
 	.mina-olen-boxed.mb .alert,
@@ -2872,7 +2880,8 @@ a.more-link::after {
 
 /* === 9.4 Loop meta === */
 
-.loop-meta {
+.loop-meta,
+.mb-page-header {
 	border-bottom: 1px solid #eee;
 	padding-bottom: 32px;
 	padding-bottom: 2rem;
@@ -2880,7 +2889,9 @@ a.more-link::after {
 	margin-bottom: 4rem;
 }
 .layout-2c-l .loop-meta,
-.layout-2c-r .loop-meta {
+.layout-2c-r .loop-meta,
+.layout-2c-l .mb-page-header,
+.layout-2c-r .mb-page-header {
 	padding-bottom: 32px;
 	padding-bottom: 2rem;
 }
