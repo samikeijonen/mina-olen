@@ -130,11 +130,15 @@ get_header(); // Loads the header.php template. ?>
 							<div class="wrapper-inner">
 				
 								<header class="entry-header">
-									<?php if ( 'testimonial' == $key ) {
-										echo get_avatar( get_post_meta( get_the_ID(), '_gravatar_email', true ), 150 );
-									} else {
-										if ( current_theme_supports( 'get-the-image' ) ) get_the_image(); 
-									} ?>
+									<?php
+										if ( 'testimonial' == $key && !empty( get_post_meta( get_the_ID(), '_gravatar_email', true ) ) ) {
+											echo get_avatar( get_post_meta( get_the_ID(), '_gravatar_email', true ), 150, '', get_the_title() );
+										} elseif( 'testimonial' == $key && has_post_thumbnail() )  {
+											the_post_thumbnail( 'thumbnail', array( 'class' => 'avatar', 'alt' => get_the_title() ) ); 
+										} else {
+											if ( current_theme_supports( 'get-the-image' ) ) get_the_image(); 
+										}
+									?>
 								</header><!-- .entry-header -->
 
 								<div class="entry-summary">

@@ -4,7 +4,13 @@
 
 		<header class="entry-header">
 		
-			<?php echo get_avatar( get_post_meta( get_the_ID(), '_gravatar_email', true ), 150 ); ?>
+			<?php
+				if( !empty( get_post_meta( get_the_ID(), '_gravatar_email', true ) ) ) :
+					echo get_avatar( get_post_meta( get_the_ID(), '_gravatar_email', true ), 150, '', get_the_title() );
+				elseif ( has_post_thumbnail() ) :
+					the_post_thumbnail( 'thumbnail', array( 'class' => 'avatar', 'alt' => get_the_title() ) );
+				endif;
+			?>
 		
 			<h1 <?php hybrid_attr( 'entry-title' ); ?>><?php single_post_title(); ?></h1>
 			
@@ -23,7 +29,13 @@
 
 			<header class="entry-header">
 				
-				<?php echo get_avatar( get_post_meta( get_the_ID(), '_gravatar_email', true ), 150 ); ?>
+			<?php
+				if( !empty( get_post_meta( get_the_ID(), '_gravatar_email', true ) ) ) :
+					echo get_avatar( get_post_meta( get_the_ID(), '_gravatar_email', true ), 150, '', get_the_title() );
+				elseif ( has_post_thumbnail() ) :
+					the_post_thumbnail( 'thumbnail', array( 'class' => 'avatar', 'alt' => get_the_title() ) );
+				endif;
+			?>
 				
 				<?php the_title( '<h2 ' . hybrid_get_attr( 'entry-title' ) . '><a href="' . esc_url( get_permalink() ) . '" rel="bookmark" itemprop="url">', '</a></h2>' ); ?>
 				
