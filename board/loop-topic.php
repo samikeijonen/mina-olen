@@ -1,3 +1,16 @@
+<?php
+/* Show Add new topic link. */
+if ( current_user_can( 'access_topic_form' ) ) :
+	$mina_olen_add_new_topic = esc_html( __( 'Add new topic', 'mina-olen' ) ); ?>
+	<div class="mina-olen-add-new-topic">
+		<p>
+			<?php echo '<a href="#mb-topic-form" class="mina-olen-add-new-topic button mina-olen-theme-color edd-submit">' . $mina_olen_add_new_topic . '</a>'; ?>
+		</p>
+	</div>
+<?php endif; ?>
+	
+	<?php do_action( 'mb_loop_topic_before' ); ?>
+
 <?php if ( mb_topic_query() ) : // If there are any topics to show. ?>
 
 	<?php while ( mb_topic_query() ) : // Loop through the topics. ?>
@@ -24,6 +37,8 @@
 			</article><!-- .mb-loop-topic -->
 
 	<?php endwhile; // End topics loop. ?>
+	
+	<?php do_action( 'mb_loop_topic_after' ); ?>
 
 	<?php mb_loop_topic_pagination(); ?>
 
