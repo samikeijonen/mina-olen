@@ -26,7 +26,7 @@
 /**
  * The current version of the theme.
  */
-define( 'MINA_OLEN_VERSION', '1.1.3' );
+define( 'MINA_OLEN_VERSION', '1.1.4' );
 
 /**
  * The suffix to use for scripts.
@@ -329,7 +329,7 @@ function mina_olen_one_column() {
 	elseif ( is_post_type_archive( 'portfolio_item' ) || is_post_type_archive( 'download' ) ) {
 		add_filter( 'theme_mod_theme_layout', 'mina_olen_theme_layout_one_column' );
 	}
-	elseif ( is_tax( 'portfolio' ) || is_tax( 'download_tag' ) || is_tax( 'download_category' ) ) {
+	elseif ( is_tax( 'portfolio' ) || is_tax( 'download_tag' ) || is_tax( 'download_category' ) || is_tax( 'edd_download_info_feature' ) ) {
 		add_filter( 'theme_mod_theme_layout', 'mina_olen_theme_layout_one_column' );
 	}
 	elseif ( is_page_template( 'pages/front-page.php' ) ) {
