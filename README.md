@@ -23,6 +23,11 @@ And in the same time blogging features looks great also.
 
 ## Changelog
 
+### Version 1.1.4 - June 30, 2015
+
+* Update language files.
+* Add support for download info feature taxonomy to be in one column.
+
 ### Version 1.1.3 - May 18, 2015
 
 * Add support for feature image in testimonial pages.
