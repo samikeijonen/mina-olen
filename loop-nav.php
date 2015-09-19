@@ -7,11 +7,12 @@
 
 <?php elseif ( is_home() || is_archive() || is_search() ) : // If viewing the blog, an archive, or search results. ?>
 
-	<?php loop_pagination(
-		array( 
-			'prev_text' => _x( '<span class="previous screen-reader-text">Previous</span>', 'posts navigation', 'mina-olen' ), 
-			'next_text' => _x( '<span class="next screen-reader-text">Next</span>', 'posts navigation', 'mina-olen' )
-		) 
-	); ?>
+	<?php
+		the_posts_pagination( array(
+			'prev_text'          => '<span class="screen-reader-text">' . esc_html__( 'Previous page', 'mina-olen' ) . ' </span>',
+			'next_text'          => '<span class="screen-reader-text">' . esc_html__( 'Next page', 'mina-olen' ) . ' </span>',
+			'before_page_number' => '<span class="meta-nav screen-reader-text">' . esc_html__( 'Page', 'mina-olen' ) . ' </span>',
+		) );
+	?>
 
 <?php endif; ?>
