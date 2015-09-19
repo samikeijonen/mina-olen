@@ -26,7 +26,7 @@
 /**
  * The current version of the theme.
  */
-define( 'MINA_OLEN_VERSION', '1.1.4' );
+define( 'MINA_OLEN_VERSION', '1.2.0' );
 
 /**
  * The suffix to use for scripts.
@@ -63,9 +63,6 @@ add_action( 'after_setup_theme', 'mina_olen_theme_setup' );
  * @return void
  */
 function mina_olen_theme_setup() {
-
-	/* Get action/filter hook prefix. */
-	$prefix = hybrid_get_prefix();
 	
 	/* Include theme customize. */
 	require_once( trailingslashit( get_template_directory() ) . 'includes/theme-customize.php' );
@@ -76,37 +73,14 @@ function mina_olen_theme_setup() {
 	/* Include EDD functions. */
 	require_once( trailingslashit( get_template_directory() ) . 'includes/edd-functions.php' );
 
-	/* Load scripts. */
-	add_theme_support( 
-		'hybrid-core-scripts', 
-		array( 'comment-reply' ) 
-	);
-
-	/* Load styles. */
-	add_theme_support( 
-		'hybrid-core-styles', 
-		array( 'parent', 'style' )
-	);
-
+	/* Theme layouts. */
+	add_theme_support( 'theme-layouts', array( 'default' => is_rtl() ? '2c-r' :'2c-l' ) );
+	
 	/* Load widgets. */
 	add_theme_support( 'hybrid-core-widgets' );
 
 	/* Enable custom template hierarchy. */
 	add_theme_support( 'hybrid-core-template-hierarchy' );
-
-	/* Enable theme layouts (need to add stylesheet support). */
-	add_theme_support( 
-		'theme-layouts', 
-		array( 
-			'1c'   => __( '1 Column', 'mina-olen' ),
-			'2c-l' => __( '2 Columns: Content / Sidebar', 'mina-olen' ),
-			'2c-r' => __( '2 Columns: Sidebar / Content', 'mina-olen' )
-		), 
-		array( 'default' => '2c-l', 'customizer' => true ) 
-	);
-
-	/* Support pagination instead of prev/next links. */
-	add_theme_support( 'loop-pagination' );
 
 	/* The best thumbnail/image script ever. */
 	add_theme_support( 'get-the-image' );
@@ -118,9 +92,6 @@ function mina_olen_theme_setup() {
 	if( !class_exists( 'Jetpack' ) || !Jetpack::is_module_active( 'tiled-gallery' ) ) {
 		add_theme_support( 'cleaner-gallery' );
 	}
-
-	/* Better captions for themes to style. */
-	add_theme_support( 'cleaner-caption' );
 	
 	/* Add post stylesheet support. */
 	add_theme_support( 'post-stylesheets' );
@@ -157,9 +128,6 @@ function mina_olen_theme_setup() {
 	
 	/* Enqueue styles and scripts. */
 	add_action( 'wp_enqueue_scripts', 'mina_olen_enqueue_scripts' );
-	
-	/* Enqueue admin styles. */
-	add_action( 'admin_enqueue_scripts', 'mina_olen_admin_register_styles' );
 	
 	/* Disable primary sidebar widgets when layout is one column. */
 	add_filter( 'sidebars_widgets', 'mina_olen_disable_sidebars' );
@@ -264,6 +232,9 @@ function mina_olen_register_sidebars() {
  */
 function mina_olen_enqueue_scripts() {
 	
+	/* Add Genericons font, used in the main stylesheet. */
+	wp_enqueue_style( 'genericons', trailingslashit( get_template_directory_uri() ) . 'fonts/genericons/genericons/genericons.css', array(), '3.3.1' );
+	
 	/* Enqueue Fitvids. */
 	wp_enqueue_script( 'mina-olen-fitvids', trailingslashit( get_template_directory_uri() ) . 'js/fitvids/fitvids' . MINA_OLEN_SUFFIX . '.js', array( 'jquery' ), MINA_OLEN_VERSION, false );
 
@@ -273,26 +244,16 @@ function mina_olen_enqueue_scripts() {
 	/* Enqueue responsive multi toggle nav. */
 	wp_enqueue_script( 'mina-olen-settings', trailingslashit( get_template_directory_uri() ) . 'js/settings/setting' . MINA_OLEN_SUFFIX . '.js', array( 'jquery', 'mina-olen-fitvids', 'mina-olen-headroom' ), MINA_OLEN_VERSION, true );
 	
-	/* Add Genericons font, used in the main stylesheet. */
-	wp_enqueue_style( 'genericons', trailingslashit( get_template_directory_uri() ) . 'fonts/genericons/genericons/genericons.css', array(), '3.3.1' );
+	/* Enqueue parent theme styles if using child theme. */
+	if ( is_child_theme() ) {
+		wp_enqueue_style( 'mina-olen-parent-style', trailingslashit( get_template_directory_uri() ) . 'style' . MINA_OLEN_SUFFIX . '.css', array(), MINA_OLEN_VERSION );
+	}
+	
+	/* Enqueue active theme styles. */
+	wp_enqueue_style( 'mina-olen-style', get_stylesheet_uri() );
 	
 	/* Enqueue skip link fix. */
 	wp_enqueue_script( 'mina-olen-skip-link-focus-fix', trailingslashit( get_template_directory_uri() ) . 'js/skip-link-focus-fix' . MINA_OLEN_SUFFIX . '.js', array(), MINA_OLEN_VERSION, true );
-	
-}
-
-/**
- * Enqueue stylesheet for use in the admin Header section.
- *
- * @since  1.0.0
- * @access public
- * @return void
- */
-function mina_olen_admin_register_styles( $hook_suffix ) {
-
-	if ( 'appearance_page_custom-header' === $hook_suffix ) {
-		wp_enqueue_style( 'mina-olen-admin-custom-header', trailingslashit( get_template_directory_uri() ) . 'css/admin-custom-header.css' );
-	}
 	
 }
 
@@ -323,7 +284,7 @@ function mina_olen_one_column() {
 	if ( !is_active_sidebar( 'primary' ) && !is_active_sidebar( 'secondary' ) && '1c' == get_theme_mod( 'theme_layout' ) ) {
 		add_filter( 'theme_mod_theme_layout', 'mina_olen_theme_layout_one_column' );
 	}
-	elseif ( is_attachment() && wp_attachment_is_image() && 'default' == get_post_layout( get_queried_object_id() ) ) {
+	elseif ( is_attachment() && wp_attachment_is_image() ) {
 		add_filter( 'theme_mod_theme_layout', 'mina_olen_theme_layout_one_column' );
 	}
 	elseif ( is_post_type_archive( 'portfolio_item' ) || is_post_type_archive( 'download' ) ) {
@@ -590,5 +551,72 @@ function mina_olen_language_selector_flags(){
 	}
 	return $mina_olen_flags_output;
 }
+
+/**
+ * Register layouts. This is the new way to do it in Hybrid Core version 3.0.0.
+ *
+ * @since 1.2.0
+ */
+function mina_olen_register_layouts() {
+	
+	hybrid_register_layout( '1c',   array( 'label' => esc_html__( '1 Column',                     'mina-olen' ), 'image' => '%s/images/layouts/1c.png'   ) );
+	hybrid_register_layout( '2c-l', array( 'label' => esc_html__( '2 Columns: Content / Sidebar', 'mina-olen' ), 'image' => '%s/images/layouts/2c-l.png' ) );
+	hybrid_register_layout( '2c-r', array( 'label' => esc_html__( '2 Columns: Sidebar / Content', 'mina-olen' ), 'image' => '%s/images/layouts/2c-r.png' ) );
+
+}
+add_action( 'hybrid_register_layouts', 'mina_olen_register_layouts' );
+
+/**
+ * For backwards compability add old classes to archive header.
+ *
+ * @since 1.2.0
+ *
+ * @param  array   $attr
+ * @param  string  $context
+ * @return array
+ */
+function mina_olen_archive_header( $attr ) {
+
+	$attr['class'] = 'archive-header loop-meta';
+
+	return $attr;
+
+}
+add_filter( 'hybrid_attr_archive-header', 'mina_olen_archive_header' );
+
+/**
+ * For backwards compability add old classes to archive title.
+ *
+ * @since  1.2.0
+ *
+ * @param  array   $attr
+ * @param  string  $context
+ * @return array
+ */
+function mina_olen_archive_title( $attr ) {
+
+	$attr['class'] = 'archive-title loop-title';
+
+	return $attr;
+	
+}
+add_filter( 'hybrid_attr_archive-title', 'mina_olen_archive_title' );
+
+/**
+ * For backwards compability add old classes to archive description.
+ *
+ * @since  1.2.0
+ *
+ * @param  array   $attr
+ * @param  string  $context
+ * @return array
+ */
+function mina_olen_archive_description( $attr ) {
+
+	$attr['class'] = 'archive-description loop-description';
+
+	return $attr;
+}
+add_filter( 'hybrid_attr_archive-description', 'mina_olen_archive_description' );
 
 ?>
