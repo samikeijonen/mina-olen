@@ -4,6 +4,7 @@
 /* Styles specific to the editor. */
 
 body#tinymce {
-	margin: 20px 3%;
 	border: none;
+	margin: 20px 3%;
+	max-width: 760px;
 }
