@@ -42,7 +42,7 @@ get_header(); // Loads the header.php template. ?>
 								<?php wp_login_form(); ?>
 							</p>
 							<p>
-								<a href="<?php echo wp_lostpassword_url( get_permalink() ); ?>" title="<?php _e( 'Lost password?', 'mina-olen' ); ?>"><?php _e( 'Lost password?', 'mina-olen' ); ?></a>
+								<a href="<?php echo wp_lostpassword_url( get_permalink() ); ?>"><?php esc_html_e( 'Lost password?', 'mina-olen' ); ?></a>
 							</p>
 							
 						<?php endif; // End logged in check. ?>
