@@ -240,9 +240,10 @@ function mina_olen_enqueue_scripts() {
 
 	/* Enqueue Headroom. */
 	wp_enqueue_script( 'mina-olen-headroom', trailingslashit( get_template_directory_uri() ) . 'js/headroom/headroom' . MINA_OLEN_SUFFIX . '.js', array( 'jquery' ), MINA_OLEN_VERSION, false );
+	wp_enqueue_script( 'mina-olen-headroom-jquery', trailingslashit( get_template_directory_uri() ) . 'js/headroom/jQuery.headroom' . MINA_OLEN_SUFFIX . '.js', array( 'jquery' ), MINA_OLEN_VERSION, false );
 	
 	/* Enqueue responsive multi toggle nav. */
-	wp_enqueue_script( 'mina-olen-settings', trailingslashit( get_template_directory_uri() ) . 'js/settings/setting' . MINA_OLEN_SUFFIX . '.js', array( 'jquery', 'mina-olen-fitvids', 'mina-olen-headroom' ), MINA_OLEN_VERSION, true );
+	wp_enqueue_script( 'mina-olen-settings', trailingslashit( get_template_directory_uri() ) . 'js/settings/setting' . MINA_OLEN_SUFFIX . '.js', array( 'jquery', 'mina-olen-fitvids', 'mina-olen-headroom', 'mina-olen-headroom-jquery' ), MINA_OLEN_VERSION, true );
 	
 	/* Enqueue parent theme styles if using child theme. */
 	if ( is_child_theme() ) {

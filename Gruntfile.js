@@ -67,13 +67,13 @@ grunt.initConfig({
 	uglify: {
 		headroom: {
 			files: {
-				'js/headroom/headroom.min.js': ['js/headroom/headroom.js']
+				'js/headroom/headroom.min.js': ['js/headroom/headroom.js'],
+				'js/headroom/jQuery.headroom.min.js': ['js/headroom/jQuery.headroom.js']
 			}
 		},
 		fitvids: {
 			files: {
-				'js/fitvids/fitvids.min.js': ['js/fitvids/fitvids.js'],
-				'js/fitvids/settings.min.js': ['js/fitvids/settings.js']
+				'js/fitvids/fitvids.min.js': ['js/fitvids/fitvids.js']
 			}
 		},
 		settigns: {
