@@ -2,17 +2,17 @@
 # This file is distributed under the GNU General Public License v2.0.
 # Translators:
 # Franck, 2015
-# FxB <fxb@wp-translations.org>, 2014-2015
+# FX Bénard <fxb@wp-translations.org>, 2014-2015
 # Geoffrey Crofte, 2015
 # Sami Keijonen <sami.keijonen@foxnet.fi>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Mina olen\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2015-06-09 07:23:41+00:00\n"
-"PO-Revision-Date: 2015-06-30 16:00+0300\n"
+"POT-Creation-Date: 2015-09-19 10:03:34+00:00\n"
+"PO-Revision-Date: 2015-09-19 13:07+0300\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
-"Language-Team: French (France) (http://www.transifex.com/projects/p/mina-olen/language/fr_FR/)\n"
+"Language-Team: French (France) (http://www.transifex.com/wp-translations/mina-olen/language/fr_FR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -115,15 +115,11 @@ msgstr "Navigation des commentaires"
 msgid "Page %1$s of %2$s"
 msgstr "Page %1$s de %2$s"
 
-#: content-aside.php:19 content-audio.php:21 content-gallery.php:19
-#: content-image.php:21 content-link.php:19 content-quote.php:19
-#: content-status.php:20 content-video.php:21 content.php:19
+#: content-aside.php:19 content-audio.php:21 content-gallery.php:19 content-image.php:21 content-link.php:19 content-quote.php:19 content-status.php:20 content-video.php:21 content.php:19
 msgid "Posted in %s"
 msgstr "Publié dans %s"
 
-#: content-aside.php:20 content-audio.php:22 content-gallery.php:20
-#: content-image.php:22 content-link.php:20 content-quote.php:20
-#: content-status.php:21 content-video.php:22 content.php:20
+#: content-aside.php:20 content-audio.php:22 content-gallery.php:20 content-image.php:22 content-link.php:20 content-quote.php:20 content-status.php:21 content-video.php:22 content.php:20
 msgid "Tagged %s"
 msgstr "Étiqueté %s"
 
@@ -137,59 +133,59 @@ msgstr[1] "Cette galerie contient %s éléments."
 msgid "Back to top"
 msgstr "En haut"
 
-#: functions.php:101
-msgid "1 Column"
-msgstr "1 colonne"
-
-#: functions.php:102
-msgid "2 Columns: Content / Sidebar"
-msgstr "2 colonnes : contenu / barre latérale"
-
-#: functions.php:103
-msgid "2 Columns: Sidebar / Content"
-msgstr "2 colonnes : barre latérale / contenu"
-
-#: functions.php:212
+#: functions.php:183
 msgid "Primary menu"
 msgstr "Menu principal"
 
-#: functions.php:214
+#: functions.php:185
 msgid "Subsidiary menu"
 msgstr "Menu subsidiaire"
 
-#: functions.php:216
+#: functions.php:187
 msgid "Social menu"
 msgstr "Menu social"
 
-#: functions.php:219
+#: functions.php:190
 msgid "Easy Digital Download menu"
 msgstr "Menu Easy Digital Download"
 
-#: functions.php:235
+#: functions.php:206
 msgid "A sidebar located in the top of the site."
 msgstr "Une barre latérale placée en haut de votre site."
 
-#: functions.php:240
+#: functions.php:211
 msgid "The main sidebar. It is displayed on either the left or right side of the page based on the chosen layout."
 msgstr "La barre latérale principale. Elle est affichée sur la gauche ou sur la droite de la page selon la disposition choisie."
 
-#: functions.php:245
+#: functions.php:216
 msgid "A sidebar located in the footer of the site."
 msgstr "Une barre latérale placée dans le pied de page de votre site."
 
-#: functions.php:250
+#: functions.php:221
 msgid "A sidebar located after singular download."
 msgstr "Une barre latérale située après le téléchargement unique."
 
 #. Translators: The %s is the post title shown to screen readers.
-#: functions.php:428
+#: functions.php:407
 msgid "Read more %s"
 msgstr "Lire la suite de %s"
 
 #. Translators: The %s is the post title shown to screen readers.
-#: functions.php:464
+#: functions.php:443
 msgid "Visit site %s"
 msgstr "Aller sur le site de %s"
+
+#: functions.php:580
+msgid "1 Column"
+msgstr "1 colonne"
+
+#: functions.php:581
+msgid "2 Columns: Content / Sidebar"
+msgstr "2 colonnes : contenu / barre latérale"
+
+#: functions.php:582
+msgid "2 Columns: Sidebar / Content"
+msgstr "2 colonnes : barre latérale / contenu"
 
 #: header.php:19 menu-subsidiary.php:7
 msgid "Skip to content"
@@ -300,236 +296,91 @@ msgstr "Mettre en ligne un logo personnalisé."
 msgid "Footer text"
 msgstr "Texte du pied de page"
 
-#: includes/theme-customize.php:441
+#: includes/theme-customize.php:439
 msgid "Enter footer text"
 msgstr "Saisir le texte du pied de page"
 
-#: library/admin/meta-box-post-template.php:48
+#: library/admin/meta-box-post-layout.php:35 library/inc/functions-customize.php:72
+msgid "Layout"
+msgstr "Mise en page"
+
+#: library/admin/meta-box-post-style.php:35
+msgid "Style"
+msgstr "Style"
+
+#: library/admin/meta-box-post-template.php:41
 msgid "Template"
 msgstr "Modèle"
 
-#. Translators: %s is the theme name.
-#: library/admin/theme-settings.php:134 library/admin/theme-settings.php:199
-msgid "%s Theme Settings"
-msgstr "Réglages du thème %s "
-
-#: library/admin/theme-settings.php:135
-msgid "Theme Settings"
-msgstr "Réglages du thème"
-
-#. Translators: Media dimensions - 1 is width and 2 is height.
-#: library/classes/hybrid-media-meta.php:154
-#: library/classes/hybrid-media-meta.php:284
-#: library/functions/template-media.php:102
-msgid "%1$s &#215; %2$s"
-msgstr "%1$s &#215; %2$s"
-
-#: library/classes/hybrid-media-meta.php:155
-#: library/classes/hybrid-media-meta.php:284
-msgid "Dimensions"
-msgstr "Dimensions"
-
-#: library/classes/hybrid-media-meta.php:161
-msgid "Date"
-msgstr "Date"
-
-#: library/classes/hybrid-media-meta.php:165
-msgid "Camera"
-msgstr "Appareil"
-
-#: library/classes/hybrid-media-meta.php:169
-msgid "Aperture"
-msgstr "Ouverture"
-
-#. Translators: Camera focal length.
-#: library/classes/hybrid-media-meta.php:174
-msgid "%s mm"
-msgstr "%s mm"
-
-#: library/classes/hybrid-media-meta.php:174
-msgid "Focal Length"
-msgstr "Longueur focale"
-
-#: library/classes/hybrid-media-meta.php:180
-msgid "International Organization for Standardization"
-msgstr "Organisation Internationale de Normalisation"
-
-#: library/classes/hybrid-media-meta.php:180
-msgid "ISO"
-msgstr "ISO"
-
-#. Translators: Camera shutter speed. "sec" is an abbreviation for "seconds".
-#: library/classes/hybrid-media-meta.php:201
-msgid "%s sec"
-msgstr "%s sec"
-
-#: library/classes/hybrid-media-meta.php:201
-msgid "Shutter Speed"
-msgstr "Vitesse d'obturation"
-
-#: library/classes/hybrid-media-meta.php:250
-#: library/classes/hybrid-media-meta.php:287
-msgid "File Name"
-msgstr "Nom du fichier"
-
-#: library/classes/hybrid-media-meta.php:258
-#: library/classes/hybrid-media-meta.php:295
-msgid "File Type"
-msgstr "Type du fichier"
-
-#: library/extensions/breadcrumb-trail.php:178
+#: library/ext/breadcrumb-trail.php:244
 msgid "Browse:"
 msgstr "Parcourir&nbsp;:&nbsp;"
 
-#: library/extensions/breadcrumb-trail.php:179
+#: library/ext/breadcrumb-trail.php:246
 msgid "Home"
 msgstr "Accueil"
 
-#: library/extensions/breadcrumb-trail.php:180
-#: library/functions/template-general.php:513
+#: library/ext/breadcrumb-trail.php:247 library/inc/template-general.php:422
 msgid "404 Not Found"
 msgstr "404 Non trouvé"
 
-#: library/extensions/breadcrumb-trail.php:181
-#: library/functions/template-general.php:339
+#: library/ext/breadcrumb-trail.php:248 library/inc/template-general.php:218
 msgid "Archives"
 msgstr "Archives"
 
 #. Translators: %s is the search query. The HTML entities are opening and
 #. closing curly quotes.
-#: library/extensions/breadcrumb-trail.php:183
-#: library/functions/template-general.php:494
+#: library/ext/breadcrumb-trail.php:250 library/inc/template-general.php:400
 msgid "Search results for &#8220;%s&#8221;"
 msgstr "Résultats de recherche pour &laquo;&nbsp;%s&nbsp;&raquo;"
 
 #. Translators: %s is the page number.
-#: library/extensions/breadcrumb-trail.php:185
+#: library/ext/breadcrumb-trail.php:252
 msgid "Page %s"
 msgstr "Page %s"
 
 #. Translators: Minute archive title. %s is the minute time format.
-#: library/extensions/breadcrumb-trail.php:187
-#: library/functions/template-general.php:455
+#: library/ext/breadcrumb-trail.php:254 library/inc/template-general.php:354
 msgid "Minute %s"
 msgstr "%s minute"
 
 #. Translators: Weekly archive title. %s is the week date format.
-#: library/extensions/breadcrumb-trail.php:189
+#: library/ext/breadcrumb-trail.php:256
 msgid "Week %s"
 msgstr "Semaine %s"
 
-#: library/extensions/breadcrumb-trail.php:1135
-#: library/extensions/breadcrumb-trail.php:1171
-#: library/extensions/breadcrumb-trail.php:1188
-#: library/extensions/breadcrumb-trail.php:1219
-msgid "Edit"
-msgstr "Modifier"
+#. Translators: Media dimensions - 1 is width and 2 is height.
+#: library/inc/class-media-meta.php:245 library/inc/template-media.php:172
+msgid "%1$s &#215; %2$s"
+msgstr "%1$s &#215; %2$s"
 
-#: library/extensions/breadcrumb-trail.php:1163
-msgid "Split"
-msgstr "Diviser"
-
-#: library/extensions/breadcrumb-trail.php:1167
-msgid "Merge"
-msgstr "Fusionner"
-
-#: library/extensions/post-stylesheets.php:286
-msgid "Stylesheet"
-msgstr "Feuille de style"
-
-#: library/extensions/theme-layouts.php:458
-#: library/extensions/theme-layouts.php:565
-#: library/extensions/theme-layouts.php:650
-msgid "Layout"
-msgstr "Mise en page"
-
-#: library/extensions/theme-layouts.php:683
+#: library/inc/functions-customize.php:95
 msgid "Global Layout"
 msgstr "Mise en page générale"
 
 #. Translators: 1 is the page title. 2 is the page number.
-#: library/functions/head.php:149
+#: library/inc/functions-head.php:140
 msgid "%1$s Page %2$s"
 msgstr "%1$s Page %2$s"
 
-#: library/functions/media.php:32
-msgid "Post Thumbnail"
-msgstr "Miniature d&rsquo;article"
+#. Translators: Used as a placeholder for untitled posts on non-singular
+#. views.
+#: library/inc/functions-utility.php:94
+msgid "(Untitled)"
+msgstr "(Sans titre)"
 
-#: library/functions/media.php:53
-msgid "File Size"
-msgstr "Taille du fichier"
+#: library/inc/template-general.php:55
+msgid "http://wordpress.org"
+msgstr ""
 
-#: library/functions/media.php:54
-msgid "Mime Type"
-msgstr "Type Mime"
-
-#: library/functions/media.php:55
-msgid "Run Time"
-msgstr "Durée"
-
-#: library/functions/media.php:60
-msgid "Genre"
-msgstr "Genre"
-
-#: library/functions/media.php:61
-msgid "Year"
-msgstr "Année"
-
-#: library/functions/media.php:62
-msgid "Composer"
-msgstr "Compositeur"
-
-#: library/functions/media.php:63
-msgid "Track"
-msgstr "Piste"
-
-#: library/functions/media.php:66
-msgid "Lyrics"
-msgstr "Paroles"
-
-#: library/functions/template-general.php:55
-msgid "State-of-the-art semantic personal publishing platform"
-msgstr "Plate-forme de publication personnelle à la pointe de la sémantique"
-
-#: library/functions/template-general.php:55
+#: library/inc/template-general.php:55
 msgid "WordPress"
 msgstr "WordPress"
 
-#. Translators: Theme name.
-#: library/functions/template-general.php:82
-#: library/functions/template-general.php:115
-msgid "%s WordPress Theme"
-msgstr "%s Thème WordPress"
-
-#: library/functions/template-general.php:305
-msgid "You are browsing the search results for &#8220;%s&#8221;"
-msgstr "Vous parcourez les résultats de la recherche pour &#8220;%s&#8221;"
-
-#: library/functions/template-general.php:311
-msgid "You are browsing the site archives by time."
-msgstr "Vous parcourez les archives du site par heure."
-
-#: library/functions/template-general.php:314
-#: library/functions/template-general.php:317
-#: library/functions/template-general.php:320
-msgid "You are browsing the site archives for %s."
-msgstr "Vous parcourez actuellement les archives de la catégorie %s."
-
-#: library/functions/template-general.php:323
-msgid "You are browsing the site archives."
-msgstr "Vous parcourez les archives du site."
-
 #. Translators: 1 is the week number and 2 is the year.
-#: library/functions/template-general.php:397
+#: library/inc/template-general.php:286
 msgid "Week %1$s of %2$s"
 msgstr "Semaine %1$s de %2$s"
-
-#. Translators: Used as a placeholder for untitled posts on non-singular
-#. views.
-#: library/functions/utility.php:88
-msgid "(Untitled)"
-msgstr "(Sans titre)"
 
 #: loop-error.php:4
 msgid "Nothing found"
@@ -550,6 +401,18 @@ msgstr "Précédent"
 #: loop-nav.php:5
 msgid "Next"
 msgstr "Suivant"
+
+#: loop-nav.php:12
+msgid "Previous page"
+msgstr "Page précédente"
+
+#: loop-nav.php:13
+msgid "Next page"
+msgstr "Page suivante"
+
+#: loop-nav.php:14
+msgid "Page"
+msgstr "Page"
 
 #: menu-primary.php:44
 msgid "Search"
@@ -589,9 +452,7 @@ msgstr "Témoignages"
 msgid "%1$s"
 msgstr "%1$s"
 
-#: theme-updater/theme-updater-admin.php:94
-#: theme-updater/theme-updater-admin.php:95
-#: theme-updater/theme-updater-admin.php:124
+#: theme-updater/theme-updater-admin.php:94 theme-updater/theme-updater-admin.php:95 theme-updater/theme-updater-admin.php:124
 msgid "Theme License"
 msgstr "Licence du thème"
 
@@ -615,8 +476,7 @@ msgstr "Désactiver la licence"
 msgid "Activate License"
 msgstr "Activer la licence"
 
-#: theme-updater/theme-updater-admin.php:323
-#: theme-updater/theme-updater-admin.php:370
+#: theme-updater/theme-updater-admin.php:323 theme-updater/theme-updater-admin.php:370
 msgid "License status is unknown."
 msgstr "L'état de la licence est inconnu."
 
@@ -710,131 +570,109 @@ msgctxt "comments navigation"
 msgid "Next"
 msgstr "Suivant"
 
-#: functions.php:234
+#: functions.php:205
 msgctxt "sidebar"
 msgid "Header"
 msgstr "En-tête"
 
-#: functions.php:239
+#: functions.php:210
 msgctxt "sidebar"
 msgid "Primary"
 msgstr "Principal"
 
-#: functions.php:244
+#: functions.php:215
 msgctxt "sidebar"
 msgid "Subsidiary"
 msgstr "Subsidiaire"
 
-#: functions.php:249
+#: functions.php:220
 msgctxt "sidebar"
 msgid "After Download"
 msgstr "Après le téléchargement"
 
-#: library/classes/customize-control-background-image.php:49
-msgctxt "theme customizer tab"
-msgid "Default"
-msgstr "Valeur par défaut"
+#: library/ext/breadcrumb-trail.php:245
+msgctxt "breadcrumbs aria label"
+msgid "Breadcrumbs"
+msgstr "Fil d'Ariane"
 
-#: library/extensions/breadcrumb-trail.php:716
-#: library/functions/template-general.php:474
+#: library/ext/breadcrumb-trail.php:708 library/inc/template-general.php:376
 msgctxt "minute and hour archives time format"
 msgid "g:i a"
 msgstr "G \\h i \\m\\i\\n"
 
-#: library/extensions/breadcrumb-trail.php:733
-#: library/functions/template-general.php:455
+#: library/ext/breadcrumb-trail.php:725 library/inc/template-general.php:354
 msgctxt "minute archives time format"
 msgid "i"
 msgstr "i"
 
-#: library/extensions/breadcrumb-trail.php:750
-#: library/functions/template-general.php:435
+#: library/ext/breadcrumb-trail.php:742 library/inc/template-general.php:330
 msgctxt "hour archives time format"
 msgid "g a"
 msgstr "g a"
 
-#: library/extensions/breadcrumb-trail.php:766
-#: library/extensions/breadcrumb-trail.php:795
-#: library/extensions/breadcrumb-trail.php:822
-#: library/extensions/breadcrumb-trail.php:849
-#: library/extensions/breadcrumb-trail.php:1036
-#: library/functions/template-general.php:377
-#: library/functions/template-general.php:397
+#: library/ext/breadcrumb-trail.php:758 library/ext/breadcrumb-trail.php:787 library/ext/breadcrumb-trail.php:814 library/ext/breadcrumb-trail.php:841 library/ext/breadcrumb-trail.php:1176
+#: library/inc/template-general.php:262 library/inc/template-general.php:286
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr "Y"
 
-#: library/extensions/breadcrumb-trail.php:767
-#: library/extensions/breadcrumb-trail.php:823
-#: library/extensions/breadcrumb-trail.php:1040
+#: library/ext/breadcrumb-trail.php:759 library/ext/breadcrumb-trail.php:815 library/ext/breadcrumb-trail.php:1180
 msgctxt "monthly archives date format"
 msgid "F"
 msgstr "F"
 
-#: library/extensions/breadcrumb-trail.php:768
-#: library/extensions/breadcrumb-trail.php:1044
+#: library/ext/breadcrumb-trail.php:760 library/ext/breadcrumb-trail.php:1184
 msgctxt "daily archives date format"
 msgid "j"
 msgstr "j"
 
-#: library/functions/template-general.php:416
+#: library/inc/template-general.php:308
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr "j F Y"
 
-#: library/extensions/breadcrumb-trail.php:796
-#: library/functions/template-general.php:397
+#: library/ext/breadcrumb-trail.php:788 library/inc/template-general.php:286
 msgctxt "weekly archives date format"
 msgid "W"
 msgstr "W"
 
-#. Translators: Default theme layout option.
-#: library/extensions/theme-layouts.php:363
-msgctxt "theme layout"
-msgid "Default"
-msgstr "Valeur par défaut"
-
 #. Translators: The %s is the sidebar name. This is used for the 'aria-label'
 #. attribute.
-#: library/functions/attr.php:203
+#: library/inc/functions-attr.php:202
 msgctxt "sidebar aria label"
 msgid "%s Sidebar"
 msgstr "Barre latérale %s"
 
 #. Translators: The %s is the menu name. This is used for the 'aria-label'
 #. attribute.
-#: library/functions/attr.php:236
+#: library/inc/functions-attr.php:235
 msgctxt "nav menu aria label"
 msgid "%s Menu"
 msgstr "Menu %s"
 
 #. Translators: Post date/time "title" attribute.
-#: library/functions/attr.php:462
+#: library/inc/functions-attr.php:476
 msgctxt "post time format"
 msgid "l, F j, Y, g:i a"
 msgstr "l j F Y g:i a"
 
 #. Translators: Comment date/time "title" attribute.
-#: library/functions/attr.php:587
+#: library/inc/functions-attr.php:601
 msgctxt "comment time format"
 msgid "l, F j, Y, g:i a"
 msgstr "l j F Y g:i a"
 
+#. Translators: Default theme layout option.
+#: library/inc/functions-layouts.php:51
+msgctxt "theme layout"
+msgid "Default"
+msgstr "Valeur par défaut"
+
 #. Translators: Separates tags, categories, etc. when displaying a post.
-#: library/functions/template-post.php:144
+#: library/inc/template-post.php:219
 msgctxt "taxonomy terms separator"
 msgid ", "
 msgstr ",&nbsp;"
-
-#: loop-nav.php:12
-msgctxt "posts navigation"
-msgid "<span class=\"previous screen-reader-text\">Previous</span>"
-msgstr "<span class=\"previous screen-reader-text\">Précédent</span>"
-
-#: loop-nav.php:13
-msgctxt "posts navigation"
-msgid "<span class=\"next screen-reader-text\">Next</span>"
-msgstr "<span class=\"next screen-reader-text\">Suivant</span>"
 
 #. Translators: %s is the nav menu name. This is the nav menu title shown to
 #. screen readers.
