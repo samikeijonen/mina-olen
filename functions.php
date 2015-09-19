@@ -233,7 +233,7 @@ function mina_olen_register_sidebars() {
 function mina_olen_enqueue_scripts() {
 	
 	/* Add Genericons font, used in the main stylesheet. */
-	wp_enqueue_style( 'genericons', trailingslashit( get_template_directory_uri() ) . 'fonts/genericons/genericons/genericons.css', array(), '3.3.1' );
+	wp_enqueue_style( 'genericons', trailingslashit( get_template_directory_uri() ) . 'fonts/genericons/genericons/genericons' . MINA_OLEN_SUFFIX . '.css', array(), '3.4' );
 	
 	/* Enqueue Fitvids. */
 	wp_enqueue_script( 'mina-olen-fitvids', trailingslashit( get_template_directory_uri() ) . 'js/fitvids/fitvids' . MINA_OLEN_SUFFIX . '.js', array( 'jquery' ), MINA_OLEN_VERSION, false );
