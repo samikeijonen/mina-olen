@@ -1127,7 +1127,8 @@ img {
 	.taxonomy-portfolio .thumbnail,
 	.archive-download .thumbnail,
 	.taxonomy-download_category .thumbnail,
-	.taxonomy-download_tag .thumbnail {
+	.taxonomy-download_tag .thumbnail,
+	.taxonomy-edd_download_info_feature .thumbnail {
 		float: none;
 	}
 
@@ -1335,6 +1336,7 @@ img {
 .archive-download #main .wrap .wrapper-inner,
 .taxonomy-download_category #main .wrap .wrapper-inner,
 .taxonomy-download_tag #main .wrap .wrapper-inner,
+.taxonomy-edd_download_info_feature #main .wrap .wrapper-inner,
 .page-template-front-page #main .wrap .wrapper-inner {
 	margin: 0 auto;
 	max-width: 1080px;
@@ -1352,6 +1354,7 @@ img {
 .archive-download .mina-olen-boxed  #main .wrap .wrapper-inner,
 .taxonomy-download_category .mina-olen-boxed  #main .wrap .wrapper-inner,
 .taxonomy-download_tag .mina-olen-boxed  #main .wrap .wrapper-inner,
+.taxonomy-edd_download_info_feature .mina-olen-boxed  #main .wrap .wrapper-inner,
 .page-template-front-page .mina-olen-boxed  #main .wrap .wrapper-inner {
 	max-width: 1176px;
 }
@@ -1360,6 +1363,7 @@ img {
 .archive-download #main .wrap,
 .taxonomy-download_category #main .wrap,
 .taxonomy-download_tag #main .wrap,
+.taxonomy-edd_download_info_feature #main .wrap,
 .page-template-front-page #main .wrap {
 	max-width: 100%;
 }
@@ -1415,6 +1419,10 @@ img {
 .taxonomy-download_category .entry-summary,
 .taxonomy-download_category .entry-content,
 .taxonomy-download_category .entry-footer,
+.taxonomy-edd_download_info_feature .entry-header,
+.taxonomy-edd_download_info_feature .entry-summary,
+.taxonomy-edd_download_info_feature .entry-content,
+.taxonomy-edd_download_info_feature .entry-footer,
 
 .taxonomy-download_tag .entry-header,
 .taxonomy-download_tag .entry-summary,
@@ -1587,6 +1595,7 @@ img {
 	.archive-download #main,
 	.taxonomy-download_category #main,
 	.taxonomy-download_tag #main,
+	.taxonomy-edd_download_info_feature #main,
 	.page-template-front-page #main {
 		padding: 0;
 	}
@@ -2628,6 +2637,7 @@ img {
 .archive-download .entry,
 .taxonomy-download_category .entry,
 .taxonomy-download_tag .entry,
+.taxonomy-edd_download_info_feature .entry,
 .page-template-front-page .entry {
 	margin-bottom: 0;
 	padding: 64px 4%;
@@ -2643,6 +2653,7 @@ img {
 .archive-download .entry:nth-child(2n+2),
 .taxonomy-download_category .entry:nth-child(2n+2),
 .taxonomy-download_tag .entry:nth-child(2n+2),
+.taxonomy-edd_download_info_feature .entry:nth-child(2n+2),
 .page-template-front-page .entry:nth-child(2n+2) {
 	background: #f6f6f6;
 }
@@ -2900,6 +2911,7 @@ a.more-link::after {
 .archive-download .loop-meta,
 .taxonomy-download_category .loop-meta,
 .taxonomy-download_tag .loop-meta,
+.taxonomy-edd_download_info_feature .loop-meta,
 .page-template-front-page .loop-meta {
 	text-align: center;
 }
@@ -2972,6 +2984,7 @@ a.more-link::after {
 .archive-download .loop-pagination,
 .taxonomy-download_category .loop-pagination,
 .taxonomy-download_tag .loop-pagination,
+.taxonomy-edd_download_info_feature .loop-pagination,
 .page-template-front-page .loop-pagination {
 	margin-top: 64px;
 	margin-top: 4rem;
@@ -3004,7 +3017,8 @@ a.more-link::after {
 .taxonomy-portfolio .entry-header,
 .archive-download .entry-header,
 .taxonomy-download_category .entry-header,
-.taxonomy-download_tag .entry-header {
+.taxonomy-download_tag .entry-header,
+.taxonomy-edd_download_info_feature .entry-header {
 	text-align: center;
 }
 
@@ -3038,7 +3052,8 @@ a.more-link::after {
 	.taxonomy-portfolio .thumbnail,
 	.archive-download .thumbnail,
 	.taxonomy-download_category .thumbnail,
-	.taxonomy-download_tag .thumbnail {
+	.taxonomy-download_tag .thumbnail,
+	.taxonomy-edd_download_info_feature .thumbnail {
 		float: right;
 	}
 	
@@ -3047,7 +3062,8 @@ a.more-link::after {
 	.taxonomy-portfolio .entry-header,
 	.archive-download .entry-header,
 	.taxonomy-download_category .entry-header,
-	.taxonomy-download_tag .entry-header {
+	.taxonomy-download_tag .entry-header,
+	.taxonomy-edd_download_info_feature .entry-header {
 		text-align: left;
 	}
 
@@ -3079,6 +3095,7 @@ a.more-link::after {
 	.archive-download .mina-olen-boxed .entry,
 	.taxonomy-download_category .mina-olen-boxed .entry,
 	.taxonomy-download_tag .mina-olen-boxed .entry,
+	.taxonomy-edd_download_info_feature .mina-olen-boxed .entry,
 	.page-template-front-page .mina-olen-boxed .entry,
 	.page-template-front-page.layout-1c .entry .entry {
 		padding: 64px 0;
