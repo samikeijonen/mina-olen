@@ -434,14 +434,12 @@ function mina_olen_customize_register_settings( $wp_customize ) {
 
 	/* Add the textarea control for the 'mina_olen_footer' setting. */
 	$wp_customize->add_control(
-		new Hybrid_Customize_Control_Textarea(
-			$wp_customize,
-			'mina-olen-footer',
-				array(
-					'label'    => esc_html__( 'Enter footer text', 'mina-olen' ),
-					'section'  => 'mina-olen-footer',
-					'settings' => 'mina_olen_footer',
-				)
+		'mina-olen-footer',
+			array(
+				'label'    => esc_html__( 'Enter footer text', 'mina-olen' ),
+				'section'  => 'mina-olen-footer',
+				'settings' => 'mina_olen_footer',
+				'type'     => 'textarea',
 			)
 		);
 
