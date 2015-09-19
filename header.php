@@ -6,7 +6,7 @@
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 
-<head>
+<head <?php hybrid_attr( 'head' ); ?>>
 
 <?php wp_head(); // wp_head hook. Hybdid Core adds wp_title and viewport automatically. And some other stuff from library/functions/head.php. ?>
 
