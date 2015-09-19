@@ -3,7 +3,7 @@ Theme Name: Mina olen
 Theme URI: https://foxland.fi/downloads/mina-olen
 Description: Mina olen WordPress Theme is made for cool business type of sites. And in the same time blogging features looks great also.
 Tags: white, one-column, two-columns, left-sidebar, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, featured-images, flexible-header, full-width-template, microformats, post-formats, sticky-post, threaded-comments, translation-ready
-Version: 1.1.4
+Version: 1.2.0
 Author: Sami Keijonen
 Author URI: https://foxland.fi
 Text Domain: mina-olen
@@ -993,8 +993,8 @@ a[href^="tel:"]::before,
 .comment-reply-login::before,
 .loop-nav a[rel="prev"]::before,
 .loop-nav a[rel="next"]::after,
-.loop-pagination a.prev::before,
-.loop-pagination a.next::after,
+.pagination a.prev::before,
+.pagination a.next::after,
 a.more-link::after {
 	-webkit-font-smoothing: antialiased;
 	display: inline-block;
@@ -1377,7 +1377,7 @@ img {
 .entry-summary,
 .entry-content,
 .entry-footer,
-.loop-pagination,
+.pagination,
 .loop-nav,
 #webshare-wrapper,
 #comments,
@@ -1472,7 +1472,7 @@ img {
 	.layout-2c-l .entry-summary,
 	.layout-2c-l .entry-content,
 	.layout-2c-l .entry-footer,
-	.layout-2c-l .loop-pagination,
+	.layout-2c-l .pagination,
 	.layout-2c-l .loop-nav,
 	.layout-2c-l #webshare-wrapper,
 	.layout-2c-l #comments,
@@ -1501,7 +1501,7 @@ img {
 	.layout-2c-r .entry-summary,
 	.layout-2c-r .entry-content,
 	.layout-2c-r .entry-footer,
-	.layout-2c-r .loop-pagination,
+	.layout-2c-r .pagination,
 	.layout-2c-r .loop-nav,
 	.layout-2c-r #webshare-wrapper,
 	.layout-2c-r #comments,
@@ -1548,7 +1548,7 @@ img {
 	.mina-olen-boxed .entry-summary,
 	.mina-olen-boxed .entry-content,
 	.mina-olen-boxed .entry-footer,
-	.mina-olen-boxed .loop-pagination,
+	.mina-olen-boxed .pagination,
 	.mina-olen-boxed .loop-nav,
 	.mina-olen-boxed #webshare-wrapper,
 	.mina-olen-boxed #comments,
@@ -2618,9 +2618,29 @@ img {
 .breadcrumb-trail a {
 	color: #656565;
 }
-.breadcrumb-trail .sep {
+
+.breadcrumbs .trail-browse,
+.breadcrumbs .trail-items,
+.breadcrumbs .trail-items li {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	text-indent: 0;
+}
+
+.breadcrumbs .trail-items {
+	list-style: none;
+}
+
+.trail-items li::after {
+	content: "\002F";
 	font-size: 85%;
-} 
+	padding: 0 0.5em;
+}
+
+.trail-items li:last-of-type::after {
+	display: none;
+}
 
 
 /* === 9.2 Post entry === */
@@ -2945,53 +2965,53 @@ a.more-link::after {
 	float: left;
 }
 .loop-nav a[rel="prev"]::before,
-.loop-pagination a.prev::before {
+.pagination a.prev::before {
 	content: '\f430';
 }
 .loop-nav a[rel="next"] {
 	float: right;
 }
 .loop-nav a[rel="next"]::after,
-.loop-pagination a.next::after {
+.pagination a.next::after {
 	content: '\f429';
 }
 .loop-nav a[rel="prev"]::before,
 .loop-nav a[rel="next"]::after,
-.loop-pagination a.prev::before,
-.loop-pagination a.next::after,
+.pagination a.prev::before,
+.pagination a.next::after,
 .bbp-pagination-links .page-numbers {
 	background: #f6f6f6;
 	padding: 1em 1.25em;
 }
-.loop-pagination a.prev.page-numbers::before,
-.loop-pagination a.next.page-numbers::after {
+.pagination a.prev.page-numbers::before,
+.pagination a.next.page-numbers::after {
 	padding: 0;
 }
-.loop-pagination a.prev.page-numbers,
-.loop-pagination a.next.page-numbers {
+.pagination a.prev.page-numbers,
+.pagination a.next.page-numbers {
 	padding: 1em;
 }
 
 /* Archive-type pages. */
 
-.loop-pagination {
+.pagination {
 	margin-bottom: 48px;
 	margin-bottom: 3rem;
 	text-align: center;
 }
-.archive-portfolio_item .loop-pagination,
-.taxonomy-portfolio .loop-pagination,
-.archive-download .loop-pagination,
-.taxonomy-download_category .loop-pagination,
-.taxonomy-download_tag .loop-pagination,
-.taxonomy-edd_download_info_feature .loop-pagination,
-.page-template-front-page .loop-pagination {
+.archive-portfolio_item .pagination,
+.taxonomy-portfolio .pagination,
+.archive-download .pagination,
+.taxonomy-download_category .pagination,
+.taxonomy-download_tag .pagination,
+.taxonomy-edd_download_info_feature .pagination,
+.page-template-front-page .pagination {
 	margin-top: 64px;
 	margin-top: 4rem;
 	text-align: center;
 }
 
-.loop-pagination a.page-numbers {
+.pagination a.page-numbers {
 	background: #f6f6f6;
 	padding: 1em 1.25em;
 }
