@@ -2,7 +2,7 @@
 
 <main <?php hybrid_attr( 'content' ); ?>>
 	
-	<?php if ( !is_front_page() && !is_singular() && !is_404() ) : // If viewing a multi-post page ?>
+	<?php if ( ! is_front_page() && hybrid_is_plural() ) : // If viewing a multi-post page ?>
 		
 		<?php get_template_part( 'loop-meta' ); // Loads the loop-meta.php template. ?>
 		
