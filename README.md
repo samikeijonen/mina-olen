@@ -23,6 +23,18 @@ And in the same time blogging features looks great also.
 
 ## Changelog
 
+### Version 1.2.0 - September 21, 2015
+
+* Update Hybrid Core to version 3.0.0.
+* Update using Core functions the_archive_title() and get_the_archive_description() in archive pages.
+* Remove callbacks for admin header. You can set Header image in the Customizer.
+* Update using Textarea control from Core in the Customizer.
+* Update headroom JS.
+* Update language files.
+* Update Genericons to version 3.4.
+* Switch to Core the_posts_pagination() function.
+* Add schema markup in head tag.
+
 ### Version 1.1.4 - June 30, 2015
 
 * Update language files.
