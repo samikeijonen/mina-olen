@@ -26,7 +26,7 @@
 /**
  * The current version of the theme.
  */
-define( 'MINA_OLEN_VERSION', '1.2.0' );
+define( 'MINA_OLEN_VERSION', '1.2.1' );
 
 /**
  * The suffix to use for scripts.
@@ -113,7 +113,7 @@ function mina_olen_theme_setup() {
 	
 	/* Add support for Message Board Plugin. This means that theme handles the CSS. */
 	add_theme_support( 'message-board' );
-
+	
 	/* Handle content width for embeds and images. */
 	hybrid_set_content_width( 1080 );
 	
@@ -288,10 +288,10 @@ function mina_olen_one_column() {
 	elseif ( is_attachment() && wp_attachment_is_image() ) {
 		add_filter( 'theme_mod_theme_layout', 'mina_olen_theme_layout_one_column' );
 	}
-	elseif ( is_post_type_archive( 'portfolio_item' ) || is_post_type_archive( 'download' ) ) {
+	elseif ( is_post_type_archive( 'portfolio_project' ) || is_post_type_archive( 'download' ) ) {
 		add_filter( 'theme_mod_theme_layout', 'mina_olen_theme_layout_one_column' );
 	}
-	elseif ( is_tax( 'portfolio' ) || is_tax( 'download_tag' ) || is_tax( 'download_category' ) || is_tax( 'edd_download_info_feature' ) ) {
+	elseif ( is_tax( 'portfolio_category' ) || is_tax( 'download_tag' ) || is_tax( 'download_category' ) || is_tax( 'edd_download_info_feature' ) ) {
 		add_filter( 'theme_mod_theme_layout', 'mina_olen_theme_layout_one_column' );
 	}
 	elseif ( is_page_template( 'pages/front-page.php' ) ) {
@@ -619,5 +619,26 @@ function mina_olen_archive_description( $attr ) {
 	return $attr;
 }
 add_filter( 'hybrid_attr_archive-description', 'mina_olen_archive_description' );
+
+/**
+ * Show only featured downloads in front page.
+ *
+ * @since  1.2.1
+ * @return array
+ */
+function mina_olen_download_arguments( $args ) {
+	
+	/* Get download tag and check if it is set. */
+	$mina_olen_download_tag = get_theme_mod( 'download_tag' );
+	
+	if ( isset( $mina_olen_download_tag ) && '' != $mina_olen_download_tag ) {
+		$args['download_tag'] = sanitize_key( $mina_olen_download_tag );
+		$args['orderby']      = 'rand';
+	}
+	
+	return $args;
+	
+}
+add_filter( 'mina_olen_front_page_latest_download_arguments', 'mina_olen_download_arguments' );
 
 ?>

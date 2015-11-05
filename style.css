@@ -3,7 +3,7 @@ Theme Name: Mina olen
 Theme URI: https://foxland.fi/downloads/mina-olen
 Description: Mina olen WordPress Theme is made for cool business type of sites. And in the same time blogging features looks great also.
 Tags: white, one-column, two-columns, left-sidebar, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, featured-images, flexible-header, full-width-template, microformats, post-formats, sticky-post, threaded-comments, translation-ready
-Version: 1.2.0
+Version: 1.2.1
 Author: Sami Keijonen
 Author URI: https://foxland.fi
 Text Domain: mina-olen
@@ -829,7 +829,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
-.mina-olen-project-url a.mina-olen-portfolio-item-link,
+a.project-link,
 a.mina-olen-callout-button,
 body .edd-submit.button.mina-olen-theme-color,
 body .edd-submit.mina-olen-theme-color,
@@ -853,24 +853,28 @@ body .mina-olen-theme-color#edd-purchase-button,
 body .edd-cart-saving-button.edd-submit.button.mina-olen-theme-color {
 	margin-top: 0;
 }
+a.project-link {
+	margin: 0 0 32px;
+	margin: 0 0 2rem;
+}
 
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover,
-.mina-olen-project-url a.mina-olen-portfolio-item-link:hover,
+a.project-link:hover,
 a.mina-olen-callout-button:hover,
 button:focus,
 input[type="submit"]:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
-.mina-olen-project-url a.mina-olen-portfolio-item-link:focus,
+a.project-link:focus,
 a.mina-olen-callout-button:focus,
 button:active,
 input[type="submit"]:active,
 input[type="button"]:active,
 input[type="reset"]:active,
-.mina-olen-project-url a.mina-olen-portfolio-item-link:active,
+a.project-link:active,
 a.mina-olen-callout-button:active,
 body .edd-submit.button.mina-olen-theme-color:hover,
 body .edd-submit.mina-olen-theme-color:hover,
@@ -2794,7 +2798,7 @@ img {
 .entry-terms.category::before {
 	content: '\f301';
 }
-.entry-terms.portfolio::before {
+.entry-terms.portfolio_category::before {
 	content: '\f460';
 }
 .entry-terms.literary_form::before {
