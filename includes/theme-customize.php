@@ -28,31 +28,31 @@ function mina_olen_customize_register_settings( $wp_customize ) {
 	
 	while( $k < absint( apply_filters( 'mina_olen_how_many_pages', 7 ) ) ) {
 	
-	/* Add the 'front_page_*' setting. */
-	$wp_customize->add_setting(
-		'front_page_' . $k,
-		array(
-			'default'           => 0,
-			'type'              => 'theme_mod',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'absint'
-		)
-	);
-	
-	/* Add front page control. */
-	$wp_customize->add_control(
-		'front-page-control-' . $k,
+		/* Add the 'front_page_*' setting. */
+		$wp_customize->add_setting(
+			'front_page_' . $k,
 			array(
-				/* Translators: %s stands for number. For example Select page 1. */
-				'label'    => sprintf( esc_html__( 'Select page %s', 'mina-olen' ), $k ),
-				'section'  => 'front-page',
-				'settings' => 'front_page_' . $k,
-				'type'     => 'dropdown-pages',
-				'priority' => $k+100
-			) 
+				'default'           => 0,
+				'type'              => 'theme_mod',
+				'capability'        => 'edit_theme_options',
+				'sanitize_callback' => 'absint'
+			)
 		);
+	
+		/* Add front page control. */
+		$wp_customize->add_control(
+			'front-page-control-' . $k,
+				array(
+					/* Translators: %s stands for number. For example Select page 1. */
+					'label'    => sprintf( esc_html__( 'Select page %s', 'mina-olen' ), $k ),
+					'section'  => 'front-page',
+					'settings' => 'front_page_' . $k,
+					'type'     => 'dropdown-pages',
+					'priority' => $k+100
+				) 
+			);
 		
-	$k++; // Add one before loop ends.
+		$k++; // Add one before loop ends.
 		
 	}
 	
@@ -144,6 +144,28 @@ function mina_olen_customize_register_settings( $wp_customize ) {
 				'type'     => 'text'
 			)
 		);
+		
+		/* Add the downloads tag setting. */
+		$wp_customize->add_setting(
+			'download_tag',
+			array(
+				'default'           => '',
+				'sanitize_callback' => 'sanitize_key'
+			)
+		);
+	
+		/* Add the downloads tag control. */
+		$wp_customize->add_control(
+			'download_tag',
+			array(
+				'label'       => esc_html__( 'Featured Downloads', 'mina-olen' ),
+				'description' => esc_html__( 'Enter download tag slug if you want to show downloads randomly only from that tag. Leave empty if you want to show latest downloads.', 'mina-olen' ) . ' <a href="' . esc_url( admin_url( 'edit-tags.php?taxonomy=download_tag&post_type=download' ) ) . '">' . esc_html__( 'Show download tags.', 'mina-olen' ) . '</a>',
+				'section'     => 'front-page',
+				'priority'    => 56,
+				'type'        => 'text'
+			)
+		);
+		
 	}
 	
 	/* Show option for latest portfolio if post type exist. */
