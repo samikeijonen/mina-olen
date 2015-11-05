@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2.0.
 msgid ""
 msgstr ""
-"Project-Id-Version: Mina olen 1.2.0\n"
+"Project-Id-Version: Mina olen 1.2.1\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2015-09-21 14:14:47+00:00\n"
+"POT-Creation-Date: 2015-11-05 11:23:25+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -134,6 +134,10 @@ msgid_plural "This gallery contains %s items."
 msgstr[0] ""
 msgstr[1] ""
 
+#: content-portfolio_project.php:44
+msgid "Visit Project"
+msgstr ""
+
 #: footer.php:30
 msgid "Back to top"
 msgstr ""
@@ -251,59 +255,73 @@ msgstr ""
 msgid "Label for latests downloads"
 msgstr ""
 
-#: includes/theme-customize.php:167
+#: includes/theme-customize.php:161
+msgid "Featured Downloads"
+msgstr ""
+
+#: includes/theme-customize.php:162
+msgid ""
+"Enter download tag slug if you want to show downloads randomly only from "
+"that tag. Leave empty if you want to show latest downloads."
+msgstr ""
+
+#: includes/theme-customize.php:162
+msgid "Show download tags."
+msgstr ""
+
+#: includes/theme-customize.php:189
 msgid "Show random portfolios on front page"
 msgstr ""
 
-#: includes/theme-customize.php:188
+#: includes/theme-customize.php:210
 msgid "Label for latests portfolios"
 msgstr ""
 
-#: includes/theme-customize.php:214
+#: includes/theme-customize.php:236
 msgid "Show random testimonials on front page"
 msgstr ""
 
-#: includes/theme-customize.php:235
+#: includes/theme-customize.php:257
 msgid "Label for latests testimonials"
 msgstr ""
 
-#: includes/theme-customize.php:258
+#: includes/theme-customize.php:280
 msgid "Use boxed layout in all pages."
 msgstr ""
 
-#: includes/theme-customize.php:282
+#: includes/theme-customize.php:304
 msgid "Show WPML flags in Primary menu."
 msgstr ""
 
-#: includes/theme-customize.php:303
+#: includes/theme-customize.php:325
 msgid "Show WPML flags in Subsidiary menu."
 msgstr ""
 
-#: includes/theme-customize.php:325
+#: includes/theme-customize.php:347
 msgid "Flag width (px)."
 msgstr ""
 
-#: includes/theme-customize.php:345
+#: includes/theme-customize.php:367
 msgid "Flag height (px)."
 msgstr ""
 
-#: includes/theme-customize.php:369
+#: includes/theme-customize.php:391
 msgid "Show full content of pages in front page. Default is excerpt."
 msgstr ""
 
-#: includes/theme-customize.php:383
+#: includes/theme-customize.php:405
 msgid "Logo Upload"
 msgstr ""
 
-#: includes/theme-customize.php:405
+#: includes/theme-customize.php:427
 msgid "Upload custom logo."
 msgstr ""
 
-#: includes/theme-customize.php:418
+#: includes/theme-customize.php:440
 msgid "Footer text"
 msgstr ""
 
-#: includes/theme-customize.php:439
+#: includes/theme-customize.php:461
 msgid "Enter footer text"
 msgstr ""
 

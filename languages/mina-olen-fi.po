@@ -6,23 +6,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mina olen\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2015-09-19 10:03:34+00:00\n"
-"PO-Revision-Date: 2015-09-19 10:05+0000\n"
+"POT-Creation-Date: 2015-11-05 13:23+0200\n"
+"PO-Revision-Date: 2015-11-05 13:25+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
-"Language-Team: Finnish (http://www.transifex.com/wp-translations/mina-olen/language/fi/)\n"
+"Language-Team: Finnish (http://www.transifex.com/wp-translations/mina-olen/"
+"language/fi/)\n"
+"Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fi\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: grunt-wp-i18n 0.5.0\n"
+"X-Generator: Poedit 1.8.5\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-Country: UNITED STATES\n"
-"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
-"X-Poedit-Language: English\n"
-"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
 
 #: attachment-image.php:28 pages/front-page.php:147
 msgid "Pages:"
@@ -101,7 +101,9 @@ msgstr "%s sitten"
 msgid ""
 "Comments are closed, but <a href=\"%s\">trackbacks</a> and pingbacks are "
 "open."
-msgstr "Kommentointi on suljettu, mutta <a href=\"%s\">paluuviitteet</a> ja päivitysilmoitukset ovat avoinna."
+msgstr ""
+"Kommentointi on suljettu, mutta <a href=\"%s\">paluuviitteet</a> ja "
+"päivitysilmoitukset ovat avoinna."
 
 #: comments-loop-error.php:15
 msgid "Comments are closed."
@@ -134,63 +136,69 @@ msgid_plural "This gallery contains %s items."
 msgstr[0] "Tässä galleriassa on %s kuva."
 msgstr[1] "Tässä galleriassa on %s kuvaa."
 
+#: content-portfolio_project.php:44
+msgid "Visit Project"
+msgstr "Näytä sivusto"
+
 #: footer.php:30
 msgid "Back to top"
 msgstr "Takaisin ylös"
 
-#: functions.php:183
+#: functions.php:180
 msgid "Primary menu"
 msgstr "Päävalikko"
 
-#: functions.php:185
+#: functions.php:182
 msgid "Subsidiary menu"
 msgstr "Alapalkin valikko"
 
-#: functions.php:187
+#: functions.php:184
 msgid "Social menu"
 msgstr "Somevalikko"
 
-#: functions.php:190
+#: functions.php:187
 msgid "Easy Digital Download menu"
 msgstr "Easy Digital Downloads -menu"
 
-#: functions.php:206
+#: functions.php:203
 msgid "A sidebar located in the top of the site."
 msgstr "Tähän liitetyt vimpaimet näkyvät sivun yläreunassa."
 
-#: functions.php:211
+#: functions.php:208
 msgid ""
 "The main sidebar. It is displayed on either the left or right side of the "
 "page based on the chosen layout."
-msgstr "Tähän liitetyt vimpaimet näkyvät sisällön vasemmalla tai oikealla puolella riippuen valitusta ulkoasusta."
+msgstr ""
+"Tähän liitetyt vimpaimet näkyvät sisällön vasemmalla tai oikealla puolella "
+"riippuen valitusta ulkoasusta."
 
-#: functions.php:216
+#: functions.php:213
 msgid "A sidebar located in the footer of the site."
 msgstr "Tähän liitetyt vimpaimet näkyvät sivun alareunassa."
 
-#: functions.php:221
+#: functions.php:218
 msgid "A sidebar located after singular download."
 msgstr "Tähän liitetyt vimpaimet näkyvät yksittäisen latauksen alapuolella."
 
 #. Translators: The %s is the post title shown to screen readers.
-#: functions.php:407
+#: functions.php:390
 msgid "Read more %s"
 msgstr "Lue lisää %s"
 
 #. Translators: The %s is the post title shown to screen readers.
-#: functions.php:443
+#: functions.php:426
 msgid "Visit site %s"
 msgstr "Vieraile sivulla %s"
 
-#: functions.php:580
+#: functions.php:563
 msgid "1 Column"
 msgstr "1 sarake"
 
-#: functions.php:581
+#: functions.php:564
 msgid "2 Columns: Content / Sidebar"
 msgstr "2 saraketta: sisältö / sivupalkki"
 
-#: functions.php:582
+#: functions.php:565
 msgid "2 Columns: Sidebar / Content"
 msgstr "2 saraketta: sivupalkki / sisältö"
 
@@ -251,59 +259,76 @@ msgstr "Näytä viimeisimmät lataukset etusivulla"
 msgid "Label for latests downloads"
 msgstr "Otsikko latauksille"
 
-#: includes/theme-customize.php:167
+#: includes/theme-customize.php:161
+msgid "Featured Downloads"
+msgstr "Nostetut lataukset (Featured)"
+
+#: includes/theme-customize.php:162
+msgid ""
+"Enter download tag slug if you want to show downloads randomly only from "
+"that tag. Leave empty if you want to show latest downloads."
+msgstr ""
+"Kirjoita lautauksen avainsanan polkutunnus (slug), jos haluat näyttää "
+"etusivulla satunnaisesti vain lataukset tästä avainsanasta. Jätä tyhjäksi, "
+"jos haluat näyttää viimeisimmät lataukset."
+
+#: includes/theme-customize.php:162
+msgid "Show download tags."
+msgstr "Näytä latauksien avainsanat."
+
+#: includes/theme-customize.php:189
 msgid "Show random portfolios on front page"
 msgstr "Näytä satunnaiset portfoliot etusivulla"
 
-#: includes/theme-customize.php:188
+#: includes/theme-customize.php:210
 msgid "Label for latests portfolios"
 msgstr "Otsikko portfolioille"
 
-#: includes/theme-customize.php:214
+#: includes/theme-customize.php:236
 msgid "Show random testimonials on front page"
 msgstr "Näytä satunnaiset suositukset etusivulla"
 
-#: includes/theme-customize.php:235
+#: includes/theme-customize.php:257
 msgid "Label for latests testimonials"
 msgstr "Otsikko suosituksille"
 
-#: includes/theme-customize.php:258
+#: includes/theme-customize.php:280
 msgid "Use boxed layout in all pages."
 msgstr "Käytä \"laatikko\"-ulkoasua kaikilla sivuilla."
 
-#: includes/theme-customize.php:282
+#: includes/theme-customize.php:304
 msgid "Show WPML flags in Primary menu."
 msgstr "Näytä WPML-liput päävalikossa."
 
-#: includes/theme-customize.php:303
+#: includes/theme-customize.php:325
 msgid "Show WPML flags in Subsidiary menu."
 msgstr "Näytä WPML-liput alapalkin valikossa."
 
-#: includes/theme-customize.php:325
+#: includes/theme-customize.php:347
 msgid "Flag width (px)."
 msgstr "Lipun leveys (px)."
 
-#: includes/theme-customize.php:345
+#: includes/theme-customize.php:367
 msgid "Flag height (px)."
 msgstr "Lipun korkeus (px)."
 
-#: includes/theme-customize.php:369
+#: includes/theme-customize.php:391
 msgid "Show full content of pages in front page. Default is excerpt."
 msgstr "Näytä sivun koko sisältö etusivulla. Oletuksena näytetään ote."
 
-#: includes/theme-customize.php:383
+#: includes/theme-customize.php:405
 msgid "Logo Upload"
 msgstr "Logon lataus"
 
-#: includes/theme-customize.php:405
+#: includes/theme-customize.php:427
 msgid "Upload custom logo."
 msgstr "Lataa logo."
 
-#: includes/theme-customize.php:418
+#: includes/theme-customize.php:440
 msgid "Footer text"
 msgstr "Alapalkin teksti"
 
-#: includes/theme-customize.php:439
+#: includes/theme-customize.php:461
 msgid "Enter footer text"
 msgstr "Kirjoita alapalkin teksti"
 
@@ -371,8 +396,7 @@ msgstr "Globaali ulkoasu"
 msgid "%1$s Page %2$s"
 msgstr "%1$s Sivu %2$s"
 
-#. Translators: Used as a placeholder for untitled posts on non-singular
-#. views.
+#. Translators: Used as a placeholder for untitled posts on non-singular views.
 #: library/inc/functions-utility.php:94
 msgid "(Untitled)"
 msgstr "(Ei otsikkoa)"
@@ -397,7 +421,9 @@ msgstr "Mitään ei löytynyt"
 #: loop-error.php:12
 msgid ""
 "You tried going to %s, which doesn't exist. You can try navigate or search."
-msgstr "Yritit mennä sivulle %s mutta sitä ei enää ole. Koita navigoida tai etsiä haluamasi sivu."
+msgstr ""
+"Yritit mennä sivulle %s mutta sitä ei enää ole. Koita navigoida tai etsiä "
+"haluamasi sivu."
 
 #: loop-error.php:18
 msgid "Apologies, but no entries were found."
@@ -540,14 +566,19 @@ msgstr "Sivusto ei ole aktiivinen."
 msgid ""
 "Updating this theme will lose any customizations you have made. 'Cancel' to "
 "stop, 'OK' to update."
-msgstr "Teeman päivittäminen poistaa kaikki teemaan tehdyt muutokset (ei alateemaan tehtyjä muutoksia). Klikkaa 'OK' jatkaaksesi ja 'Peruta' lopettaaksesi."
+msgstr ""
+"Teeman päivittäminen poistaa kaikki teemaan tehdyt muutokset (ei alateemaan "
+"tehtyjä muutoksia). Klikkaa 'OK' jatkaaksesi ja 'Peruta' lopettaaksesi."
 
 #: theme-updater/theme-updater-class.php:66
 msgid ""
-"<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox\""
-" title=\"%4s\">Check out what's new</a> or <a href=\"%5$s\"%6$s>update "
-"now</a>."
-msgstr "<strong>%1$s %2$s</strong> on valmiina. <a href=\"%3$s\" class=\"thickbox\" title=\"%4s\">Katso mitä uutta teemassa on</a> tai <a href=\"%5$s\"%6$s>päivitä nyt</a>."
+"<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox\" "
+"title=\"%4s\">Check out what's new</a> or <a href=\"%5$s\"%6$s>update now</"
+"a>."
+msgstr ""
+"<strong>%1$s %2$s</strong> on valmiina. <a href=\"%3$s\" class=\"thickbox\" "
+"title=\"%4s\">Katso mitä uutta teemassa on</a> tai <a href=\"%5$s"
+"\"%6$s>päivitä nyt</a>."
 
 #. Theme Name of the plugin/theme
 msgid "Mina olen"
@@ -561,7 +592,9 @@ msgstr "https://foxland.fi/downloads/mina-olen"
 msgid ""
 "Mina olen WordPress Theme is made for cool business type of sites. And in "
 "the same time blogging features looks great also."
-msgstr "Minä olen WordPress-teema on tehty yritystyylisille sivuille blogitoimintoja unohtamatta."
+msgstr ""
+"Minä olen WordPress-teema on tehty yritystyylisille sivuille blogitoimintoja "
+"unohtamatta."
 
 #. Author of the plugin/theme
 msgid "Sami Keijonen"
@@ -589,22 +622,22 @@ msgctxt "comments navigation"
 msgid "Next"
 msgstr "Seuraava"
 
-#: functions.php:205
+#: functions.php:202
 msgctxt "sidebar"
 msgid "Header"
 msgstr "Yläsivupalkki"
 
-#: functions.php:210
+#: functions.php:207
 msgctxt "sidebar"
 msgid "Primary"
 msgstr "Pääsivupalkki"
 
-#: functions.php:215
+#: functions.php:212
 msgctxt "sidebar"
 msgid "Subsidiary"
 msgstr "Alapalkin vimpainalue"
 
-#: functions.php:220
+#: functions.php:217
 msgctxt "sidebar"
 msgid "After Download"
 msgstr "Latauksen jälkeen"
