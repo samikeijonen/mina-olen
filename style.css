@@ -70,7 +70,7 @@ http://foxnet.fi/en
  *         12.5 -  Testimonials CSS
  *         12.6 -  Webshare CSS
  *         12.7 -  WPML CSS
- *         12.8 - Message Board CSS
+ *         12.8 -  Message Board CSS
  * ----------------------------------------------------------------------------
  */
 
@@ -779,7 +779,8 @@ input[type="time"],
 input[type="url"],
 input[type="week"],
 textarea,
-select {
+select,
+body #subscribe-email input {
 	display: block;
 	padding: 0.75em;
 	-webkit-transition: all 0.25s ease-in-out;
@@ -800,7 +801,8 @@ input[type="time"],
 input[type="url"],
 input[type="week"],
 textarea,
-select {
+select,
+body #subscribe-email input {
 	width: 100%;
 }
 textarea {
@@ -956,6 +958,9 @@ img.alignright  {
 	clear: both;
 	margin: 32px 0;
 	margin: 2rem 0;
+}
+p .alignnone {
+	margin: 0;
 }
 .entry-media .alignnone {
 	margin: 0;
@@ -1299,6 +1304,20 @@ img {
 .format-status .avatar {
 	float: left;
 	margin: 0 32px 32px 0;
+}
+
+/* Emojis. */
+
+img.wp-smiley,
+img.emoji {
+	display: inline;
+	box-shadow: none;
+	max-height: 1em;
+	width: 1em;
+	margin: 0.07em;
+	padding: 0;
+	border: none;
+	background: transparent;
 }
 
 
