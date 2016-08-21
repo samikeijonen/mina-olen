@@ -23,6 +23,11 @@ And in the same time blogging features looks great also.
 
 ## Changelog
 
+### Version 1.2.1 - August 21, 2016
+
+* Add emoji styles.
+* Add selective refresh for widgets.
+
 ### Version 1.2.0 - September 21, 2015
 
 * Update Hybrid Core to version 3.0.0.
