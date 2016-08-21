@@ -156,6 +156,9 @@ function mina_olen_theme_setup() {
 	
 	/* Add WPML flags. */
 	add_filter( 'wp_nav_menu_items', 'mina_olen_add_wpml_flags', 10, 2 );
+	
+	/* Add theme support for refresh widgets. */
+	add_theme_support( 'customize-selective-refresh-widgets' );
 
 }
 
