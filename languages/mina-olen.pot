@@ -1,18 +1,18 @@
-# Copyright (C) 2015 Sami Keijonen
+# Copyright (C) 2016 Sami Keijonen
 # This file is distributed under the GNU General Public License v2.0.
 msgid ""
 msgstr ""
 "Project-Id-Version: Mina olen 1.2.1\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2015-11-05 11:23:25+00:00\n"
+"POT-Creation-Date: 2016-08-21 09:27:48+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: WP-Translations (http://wp-translations.org/)\n"
 "Language-Team: WP-Translations "
 "(http://www.transifex.com/projects/p/wp-translations/)\n"
-"X-Generator: grunt-wp-i18n 0.5.0\n"
+"X-Generator: grunt-wp-i18n 0.5.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Language: English\n"
@@ -142,59 +142,59 @@ msgstr ""
 msgid "Back to top"
 msgstr ""
 
-#: functions.php:180
+#: functions.php:183
 msgid "Primary menu"
 msgstr ""
 
-#: functions.php:182
+#: functions.php:185
 msgid "Subsidiary menu"
 msgstr ""
 
-#: functions.php:184
+#: functions.php:187
 msgid "Social menu"
 msgstr ""
 
-#: functions.php:187
+#: functions.php:190
 msgid "Easy Digital Download menu"
 msgstr ""
 
-#: functions.php:203
+#: functions.php:206
 msgid "A sidebar located in the top of the site."
 msgstr ""
 
-#: functions.php:208
+#: functions.php:211
 msgid ""
 "The main sidebar. It is displayed on either the left or right side of the "
 "page based on the chosen layout."
 msgstr ""
 
-#: functions.php:213
+#: functions.php:216
 msgid "A sidebar located in the footer of the site."
 msgstr ""
 
-#: functions.php:218
+#: functions.php:221
 msgid "A sidebar located after singular download."
 msgstr ""
 
-#: functions.php:390
+#: functions.php:393
 #. Translators: The %s is the post title shown to screen readers.
 msgid "Read more %s"
 msgstr ""
 
-#: functions.php:426
+#: functions.php:429
 #. Translators: The %s is the post title shown to screen readers.
 msgid "Visit site %s"
 msgstr ""
 
-#: functions.php:563
+#: functions.php:566
 msgid "1 Column"
 msgstr ""
 
-#: functions.php:564
+#: functions.php:567
 msgid "2 Columns: Content / Sidebar"
 msgstr ""
 
-#: functions.php:565
+#: functions.php:568
 msgid "2 Columns: Sidebar / Content"
 msgstr ""
 
@@ -605,22 +605,22 @@ msgctxt "comments navigation"
 msgid "Next"
 msgstr ""
 
-#: functions.php:202
+#: functions.php:205
 msgctxt "sidebar"
 msgid "Header"
 msgstr ""
 
-#: functions.php:207
+#: functions.php:210
 msgctxt "sidebar"
 msgid "Primary"
 msgstr ""
 
-#: functions.php:212
+#: functions.php:215
 msgctxt "sidebar"
 msgid "Subsidiary"
 msgstr ""
 
-#: functions.php:217
+#: functions.php:220
 msgctxt "sidebar"
 msgid "After Download"
 msgstr ""
