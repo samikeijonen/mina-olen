@@ -35,19 +35,19 @@
 
 					<div id="branding">
 						<?php if ( get_theme_mod( 'logo_upload') ) { // Use logo if is set. Else use bloginfo name. ?>	
-							<h1 id="site-title">
+							<h1 class="site-title" id="site-title">
 								<a href="<?php echo esc_url( home_url() ); ?>" rel="home">
 									<img class="mina-olen-logo" src="<?php echo esc_url( get_theme_mod( 'logo_upload' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
 								</a>
 							</h1>
 						<?php } else { ?>
-							<h1 id="site-title">
+							<h1 class="site-title" id="site-title">
 								<a href="<?php echo esc_url( home_url() ); ?>" rel="home">
 									<?php bloginfo( 'name' ); ?>
 								</a>
 							</h1>
 						<?php } ?>
-						<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
+						<h2 class="site-description" id="site-description"><?php bloginfo( 'description' ); ?></h2>
 					</div><!-- #branding -->
 				
 				<?php }
