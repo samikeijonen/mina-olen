@@ -464,6 +464,18 @@ function mina_olen_customize_register_settings( $wp_customize ) {
 				'type'     => 'textarea',
 			)
 		);
+	
+	/* Add selectice refresh for site title and description. */
+	if ( isset( $wp_customize->selective_refresh ) ) {
+		$wp_customize->selective_refresh->add_partial( 'blogname', array(
+			'selector' => '.site-title a',
+			'render_callback' => 'mina_olen_customize_partial_blogname',
+		) );
+		$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
+			'selector' => '.site-description',
+			'render_callback' => 'mina_olen_customize_partial_blogdescription',
+		) );
+	}
 
 }
 
@@ -501,6 +513,30 @@ function mina_olen_customize_sanitize( $setting, $object ) {
 	/* Return the sanitized setting. */
 	return $setting;
 	
+}
+
+/**
+ * Render the site title for the selective refresh partial.
+ *
+ * @since 1.2.2
+ * @see mina_olen_customize_register()
+ *
+ * @return void
+ */
+function mina_olen_customize_partial_blogname() {
+	bloginfo( 'name' );
+}
+
+/**
+ * Render the site tagline for the selective refresh partial.
+ *
+ * @since 1.2.2
+ * @see mina_olen_customize_register()
+ *
+ * @return void
+ */
+function mina_olen_customize_partial_blogdescription() {
+	bloginfo( 'description' );
 }
 
 ?>
