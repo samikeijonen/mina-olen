@@ -26,7 +26,7 @@
 /**
  * The current version of the theme.
  */
-define( 'MINA_OLEN_VERSION', '1.2.1' );
+define( 'MINA_OLEN_VERSION', '1.2.2' );
 
 /**
  * The suffix to use for scripts.
@@ -643,5 +643,3 @@ function mina_olen_download_arguments( $args ) {
 	
 }
 add_filter( 'mina_olen_front_page_latest_download_arguments', 'mina_olen_download_arguments' );
-
-?>
