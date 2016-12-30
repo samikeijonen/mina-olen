@@ -23,6 +23,12 @@ And in the same time blogging features looks great also.
 
 ## Changelog
 
+### Version 1.2.2 - December 30, 2016
+
+* Add selective refresh for site title and desc.
+* Fix skip to content script.
+* Update screen-reader-text class.
+
 ### Version 1.2.1 - August 21, 2016
 
 * Add emoji styles.
